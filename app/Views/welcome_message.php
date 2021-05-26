@@ -31,7 +31,7 @@
             margin-bottom: 30px;
         }
         .jumbotron {
-            background-color: #f4511e;
+            background-color: #AB3E5B;
             color: #fff;
             padding: 100px 25px;
             font-family: Montserrat, sans-serif;
