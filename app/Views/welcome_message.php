@@ -233,7 +233,7 @@
 
 	<h1>About this page</h1>
 
-	<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+	<p>Aquí deciía que la página se genera dinámicamente con CI.</p>
 
 	<p>If you would like to edit this page you will find it located at:</p>
 
