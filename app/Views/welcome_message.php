@@ -217,6 +217,7 @@
 <div class="jumbotron text-center">
     <h1>DELIVERY CHILE</h1>
     <p>Lleva el control de tus envíos</p>
+    <p>Actualmente en desarrollo</p>
     <form>
         <div class="input-group">
             <input type="email" class="form-control" size="50" placeholder="Email Address" required>
