@@ -233,7 +233,7 @@
 
 	<h1>About this page</h1>
 
-	<p>Aquí deciía que la página se genera dinámicamente con CI.</p>
+	<p>Aquí decía que la página se genera dinámicamente con CI.</p>
 
 	<p>If you would like to edit this page you will find it located at:</p>
 
