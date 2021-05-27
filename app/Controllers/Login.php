@@ -3,9 +3,9 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\ModeloUsuario;
+use App\Models\UserModel;
 
-class LoginController extends Controller
+class Login extends Controller
 {
     public function index()
     {
@@ -16,7 +16,7 @@ class LoginController extends Controller
     public function auth()
     {
         $session = session();
-        $model = new ModeloUsuario();
+        $model = new UserModel();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
         $data = $model->where('email_usuario', $email)->first();
