@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <style type="text/css">
+    <style>
         body {
             background-color: rgba(0, 50, 100, 0.5);
             padding-top: 5%;
@@ -34,7 +34,7 @@
             <?php if(session()->getFlashdata('msg')):?>
                 <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
             <?php endif;?>
-            <form action="/login/auth" method="post">
+            <form action="login/auth" method="post">
                 <div class="mb-3">
                     <label for="InputEmail" class="form-label">Email</label>
                     <input type="email" name="email" class="form-control" id="InputEmail" value="<?= set_value('email') ?>">
