@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Controllers;
+<?php namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UserModel;
@@ -19,25 +17,25 @@ class Login extends Controller
         $model = new UserModel();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-        $data = $model->where('email_usuario', $email)->first();
-        if ($data) {
-            $pass = $data['password_usuario'];
+        $data = $model->where('user_email', $email)->first();
+        if($data){
+            $pass = $data['user_password'];
             $verify_pass = password_verify($password, $pass);
-            if ($verify_pass) {
+            if($verify_pass){
                 $ses_data = [
-                    'user_id' => $data['id_usuario'],
-                    'user_name' => $data['nombre_usuario'],
-                    'user_email' => $data['email_usuario'],
-                    'logged_in' => TRUE
+                    'user_id'       => $data['user_id'],
+                    'user_name'     => $data['user_name'],
+                    'user_email'    => $data['user_email'],
+                    'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
                 return redirect()->to('/dashboard');
-            } else {
-                $session->setFlashdata('msg', 'Contraseña Incorrecta');
+            }else{
+                $session->setFlashdata('msg', 'Wrong Password');
                 return redirect()->to('/login');
             }
-        } else {
-            $session->setFlashdata('msg', 'El email no está registrado');
+        }else{
+            $session->setFlashdata('msg', 'Email not Found');
             return redirect()->to('/login');
         }
     }
