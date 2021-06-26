@@ -32,7 +32,7 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'valefor.delivery-chile.cl',
+		'hostname' => 'valefor.servidoresph.com',
 		'username' => 'deliver2_dcla',
 		'password' => '/-791348265-/',
 		'database' => 'deliver2_bddeliverycl',
