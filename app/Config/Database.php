@@ -33,9 +33,9 @@ class Database extends Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'codeigniter',
+		'username' => 'deliver2_dcla',
+		'password' => '/-791348265-/',
+		'database' => 'deliver2_bddeliverycl',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
