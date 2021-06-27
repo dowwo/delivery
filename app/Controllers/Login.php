@@ -29,7 +29,7 @@ class Login extends Controller
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('../../../delivery-chile.cl/dashboard');
+                return redirect()->to('/dashboard');
             }else{
                 $session->setFlashdata('msg', 'Wrong Password');
                 return redirect()->to('/login');
