@@ -32,6 +32,9 @@
                     <input type="text" name="apellido_m" class="form-control" id="InputForApellidoMaterno" value="<?= set_value('apellido_m') ?>">
                 </div>
                 <div class="mb-3">
+                    <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha de registro: <?php echo @date('d-m-Y'); ?></label>
+                </div>
+                <div class="mb-3">
                     <label for="InputForEmail" class="form-label">Correo electrónico</label>
                     <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
                 </div>
