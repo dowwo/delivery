@@ -19,7 +19,7 @@ class Register extends Controller
         helper(['form']);
         //set rules validation form
         $rules = [
-            'name'          => 'required|min_length[3]|max_length[20]',
+            'nombre'          => 'required|min_length[3]|max_length[20]',
             'apellido_p'          => 'required|min_length[3]|max_length[20]',
             'apellido_m'          => 'required|min_length[3]|max_length[20]',
             'email'         => 'required|min_length[6]|max_length[50]|valid_email|is_unique[usuario.email]',
