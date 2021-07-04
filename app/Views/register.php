@@ -20,7 +20,7 @@
             <?php endif;?>
             <form action="/register/save" method="post">
                 <div class="mb-3">
-                    <label for="InputForName" class="form-label">Name</label>
+                    <label for="InputForName" class="form-label">Nombre</label>
                     <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                 </div>
                 <div class="mb-3">
