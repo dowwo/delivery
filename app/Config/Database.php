@@ -30,6 +30,8 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
+	/*Para modificar los parametros de la base de datos a un entorno local solo hay que cambiar los valores
+	hostname= 'localhost', username= 'root', password = '', database='mydb' */
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'valefor.servidoresph.com',
