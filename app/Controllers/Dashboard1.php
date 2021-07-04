@@ -7,6 +7,6 @@ class Dashboard1 extends Controller
     public function index()
     {
         $session = session();
-        echo "Bienvenido, ".$session->get('nombre ' + 'apellido_p ' + 'apellido_m');
+        echo "Bienvenido, ".$session->get('nombre ');
     }
 }
