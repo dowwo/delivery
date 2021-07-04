@@ -24,6 +24,14 @@
                     <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                 </div>
                 <div class="mb-3">
+                    <label for="InputForName" class="form-label">Name</label>
+                    <input type="text" name="apellido_p" class="form-control" id="InputForApellidoPaterno" value="<?= set_value('apellido_p') ?>">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForName" class="form-label">Name</label>
+                    <input type="text" name="apellido_m" class="form-control" id="InputForApellidoMaterno" value="<?= set_value('apellido_m') ?>">
+                </div>
+                <div class="mb-3">
                     <label for="InputForEmail" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
                 </div>
