@@ -21,7 +21,7 @@
             <form action="/register/save" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
-                    <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
+                    <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('name') ?>">
                 </div>
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Apellido Paterno</label>
