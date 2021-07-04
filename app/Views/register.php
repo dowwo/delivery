@@ -24,23 +24,23 @@
                     <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForName" class="form-label">Name</label>
+                    <label for="InputForName" class="form-label">Apellido Paterno</label>
                     <input type="text" name="apellido_p" class="form-control" id="InputForApellidoPaterno" value="<?= set_value('apellido_p') ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForName" class="form-label">Name</label>
+                    <label for="InputForName" class="form-label">Apellido Materno</label>
                     <input type="text" name="apellido_m" class="form-control" id="InputForApellidoMaterno" value="<?= set_value('apellido_m') ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForEmail" class="form-label">Email address</label>
+                    <label for="InputForEmail" class="form-label">Correo electrónico</label>
                     <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForPassword" class="form-label">Password</label>
+                    <label for="InputForPassword" class="form-label">Contraseña</label>
                     <input type="password" name="password" class="form-control" id="InputForPassword">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForConfPassword" class="form-label">Confirm Password</label>
+                    <label for="InputForConfPassword" class="form-label">Confirmar Contraseña</label>
                     <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
                 </div>
                 <button type="submit" class="btn btn-primary">Register</button>
