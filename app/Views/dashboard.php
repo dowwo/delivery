@@ -72,7 +72,7 @@ if(isset($_SESSION['msg'])){
     <div class="row">
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url('/images/user_card.jpg') ?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Administrar usuarios</h5>
                     <p class="card-text">Visualice las opciones para la administración de los usuarios.</p>
@@ -97,7 +97,7 @@ if(isset($_SESSION['msg'])){
         </div>
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo base_url('images/tarjeta_solicitudes.jpg') ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url('/images/tarjeta_solicitudes.jpg') ?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Solicitudes</h5>
                     <p class="card-text">Visualice las opciones para la administración de las solicitudes.</p>
@@ -119,7 +119,7 @@ if(isset($_SESSION['msg'])){
         </div>
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo base_url('images/tarjeta_registros.jpg') ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url('/images/tarjeta_registros.jpg') ?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Administrar registros</h5>
                     <p class="card-text">Visualice las opciones para la administración de los registros.</p>
