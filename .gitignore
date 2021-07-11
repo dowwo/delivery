@@ -125,3 +125,7 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+public/.htaccess
+public/favicon.ico
+public/index.php
+public/robots.txt
