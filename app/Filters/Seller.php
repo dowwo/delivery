@@ -11,9 +11,9 @@ class Seller implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Si el usuario no es igual a 47274
-        if(session()->get('user_id')!=47274){
+        if(session()->get('id_usuario')!=47274){
             // redirige al dashboard de vendedor //
-            return redirect()->to('/dashboard1');
+            return redirect()->to('/dashboardSeller');
 
         }
     }
