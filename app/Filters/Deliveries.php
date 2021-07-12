@@ -11,9 +11,9 @@ class Deliveries implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Si el usuario no es igual a 47374
-        if(session()->get('user_id')!=47374){
+        if(session()->get('id_usuario')!=47374){
             // redirige al dashboard de repartidor //
-            return redirect()->to('/dashboard2');
+            return redirect()->to('/dashboardDeliverires');
 
         }
     }
