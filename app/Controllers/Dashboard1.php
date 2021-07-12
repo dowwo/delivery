@@ -4,6 +4,7 @@ use CodeIgniter\Controller;
 
 class Dashboard1 extends Controller
 {
+    //Esta función redirige al dashboard para un vendedor
     public function index()
     {
         $session = session();
