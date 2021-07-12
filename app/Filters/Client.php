@@ -11,9 +11,9 @@ class Client implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Si el usuario no es igual a 47474
-        if(session()->get('user_id')!=47474){
+        if(session()->get('id_usuario')!=47474){
             // redirige al dashboard de cliente //
-            return redirect()->to('/dashboard3');
+            return redirect()->to('/dashboardClients');
 
         }
     }
