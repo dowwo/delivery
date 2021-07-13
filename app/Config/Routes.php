@@ -41,8 +41,8 @@ $routes->get('/dashboard1', 'Dashboard1::index',['filter' => 'auth']);
 //$routes->get('/dashboard', 'Dashboard::index',['filter' => 'admin']);
 
 //Ruta que da acceso a la página de registro de usuario
-$routes->get('/registro', 'Registro::index',['filter' => 'admin']);
-$routes->get('/lista_usuarios','Usuarios::index',['filter' => 'admin']);
+$routes->get('/registro', 'Register::index',['filter' => 'admin']);
+$routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 
 //
 
