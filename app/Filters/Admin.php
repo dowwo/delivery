@@ -11,7 +11,7 @@ class Admin implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Si el usuario no es igual a 47174
-        if(! session()->get('rol_id_rol')==47174){
+        if(session()->get('rol_id_rol')==47174){
             // redirige al dashboard de administrador //
             return redirect()->to('/dashboard');
 

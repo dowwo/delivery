@@ -37,7 +37,7 @@ $routes->setAutoRoute(true);
 // 'ruta con el nombre del archivo','nombre para acceder del navegador::funcion en el controlador', luego ya se aplican los filtros
 
 $routes->get('/', 'Home::index');
-$routes->get('/dashboard1', 'Dashboard1::index',['filter' => 'auth']);
+$routes->get('/dashboard1', 'Dashboard1::index',['filter' => 'auth','admin']);
 //$routes->get('/dashboard', 'Dashboard::index',['filter' => 'admin']);
 
 //Ruta que da acceso a la página de registro de usuario
