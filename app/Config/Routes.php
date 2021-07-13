@@ -32,9 +32,21 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// Las rutas se configuran de la siguiente manera
+// 'ruta con el nombre del archivo','nombre para acceder del navegador::funcion en el controlador', luego ya se aplican los filtros
+
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard1', 'Dashboard1::index',['filter' => 'auth']);
-$routes->get('/dashboard', 'Dashboard::index',['filter' => 'admin']);
+//$routes->get('/dashboard', 'Dashboard::index',['filter' => 'admin']);
+
+//Ruta que da acceso a la página de registro de usuario
+$routes->get('/registro', 'Registro::index',['filter' => 'admin']);
+$routes->get('/lista_usuarios','Usuarios::index',['filter' => 'admin']);
+
+//
+
+
 
 /*
  * --------------------------------------------------------------------
