@@ -19,6 +19,11 @@
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form action="/register/save" method="post">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="47474">Usuario</option>
+                    <option value="47274">Vendedor</option>
+                </select>
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>">
@@ -46,6 +51,7 @@
                     <label for="InputForConfPassword" class="form-label">Confirmar Contraseña</label>
                     <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
                 </div>
+
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
