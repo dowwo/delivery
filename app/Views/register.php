@@ -19,7 +19,7 @@
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form action="/register/save" method="post">
-                <select class="form-select" aria-label="Default select example">
+                <select id="rol" class="form-select" aria-label="Default select example">
                     <option selected>Open this select menu</option>
                     <option value="47474">Usuario</option>
                     <option value="47274">Vendedor</option>
