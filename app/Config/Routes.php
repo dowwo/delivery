@@ -38,7 +38,7 @@ $routes->setAutoRoute(true);
 
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard1', 'Dashboard1::index',['filter' => 'auth']);
-$routes->get('/dashboard3', 'DashboardAdmin::index',['filter' => 'auth']);
+$routes->get('/dashboard3', 'DashboardAdmin::index',['filter' => 'admin']);
 
 //$routes->get('/dashboard', 'Dashboard::index',['filter' => 'admin']);
 
