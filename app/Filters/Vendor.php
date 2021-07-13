@@ -6,14 +6,14 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class Client implements FilterInterface
+class Vendor implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        // Si el usuario no es igual a 47474
-        if(session()->get('rol_id_rol')!=47474){
-            // redirige al dashboard de cliente //
-            return redirect()->to('/dashboardClients');
+        // Si el usuario no es igual a 47274
+        if(session()->get('rol_id_rol')!=47274){
+            // redirige al dashboard de vendedor //
+            return redirect()->to('/d_vendor');
 
         }
     }
