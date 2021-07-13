@@ -11,7 +11,7 @@ class UsuarioController extends Controller
         $data['usuarios'] = $modeloUsuario->orderBy('id_usuario', 'DESC')->findAll();
         // Para las vistas que se encuentran en subvcarpetas se realiza de la siguiente manera
         // return view('carpeta/vista', $data);
-        return view('Usuario/lista_usuarios', $data);
+        return view('lista_usuarios', $data);
     }
 
     // show single user
