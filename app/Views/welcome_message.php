@@ -204,8 +204,8 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#quienes_somos">¿QUIENES SOMOS?</a></li>
+                <li><a href="#nuestros_valores">NUESTROS VALORES</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#pricing">PRICING</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -229,8 +229,8 @@
     </form>
 </div>
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<!-- Container (Seccion Acerca de) -->
+<div id="quienes_somos" class="container-fluid">
     <div class="row">
         <div class="col-sm-8">
             <h2>¿Quienes somos?</h2>
@@ -248,7 +248,7 @@
     </div>
 </div>
 
-<div class="container-fluid bg-grey">
+<div id="nuestros_valores" class="container-fluid bg-grey">
     <div class="row">
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-globe logo slideanim"></span>
