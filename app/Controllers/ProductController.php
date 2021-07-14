@@ -8,11 +8,12 @@ class ProductController extends Controller
 
     // lista los productos
     public function index(){
-        $user_id = $_SESSION['id_usuario'];
+        $user_id = $_SESSION['d_usuarioi'];
 
         $ModeloProducto = new ProductModel();
 
-        $data['producto'] = $ModeloProducto->orderBy('id_producto', 'DESC')->findAll();
+        $data['producto'] = $ModeloProducto->where('id_usuario= '+ $user_id)->orderBy('id_producto', 'DESC')->findAll();
+        //$data['producto'] = $ModeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
         return view('lista_productos', $data);
     }
