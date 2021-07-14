@@ -233,10 +233,12 @@
 <div id="about" class="container-fluid">
     <div class="row">
         <div class="col-sm-8">
-            <h2>About Company Page</h2><br>
+            <h2>¿Quienes somos?</h2>
+            <p>Somos una empresa que ayuda a las diferentes tiendas y vendedores con su sistema de logistica en delivery, ademas de proveer a sus clientes la posibilidad de realizar pedidos a traves de nuestra aplicacion movil</p>
+ <!--           <h2>About Company Page</h2><br>
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <br><button class="btn btn-default btn-lg">Get in Touch</button>
+            <br><button class="btn btn-default btn-lg">Get in Touch</button>-->
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-signal logo"></span>
