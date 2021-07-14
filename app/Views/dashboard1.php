@@ -72,7 +72,7 @@ if(isset($_SESSION['msg'])){
     <div class="row">
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-                <a href="dashboard3.php">
+                <a href="dashboard3">
                     <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
                 </a>
 
