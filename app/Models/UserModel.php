@@ -14,5 +14,5 @@ class UserModel extends Model
     //
     //Con la base de datos real, debería ir así
     protected $table = 'usuario';
-    protected $allowedFields = ['nombre','apellido_p','apellido_m','fecha_registro','email','password'];
+    protected $allowedFields = ['nombre','apellido_p','apellido_m','fecha_registro','email','password','ro._id_rol'];
 }
