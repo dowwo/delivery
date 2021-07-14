@@ -72,11 +72,20 @@ if(isset($_SESSION['msg'])){
     <div class="row">
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
+                <a href="dashboard3.php">
+                    <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
+                </a>
+
                 <div class="card-body">
                     <h5 class="card-title">Administrador</h5>
                     <p class="card-text">Visualice las opciones para la administración.</p>
                 </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <!--Redireccionar al registro de usuario-->
+                        <a href="dashboard3" class="card-link">Dashboard Admin</a>
+                    </li>
+                </ul>
 
                 <div class="card-body">
 
