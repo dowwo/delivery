@@ -17,7 +17,7 @@ class UsuarioController extends Controller
     // show single user
     public function singleUser($id = null){
         $modeloUsuario = new UserModel();
-        $data['user_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
+        $data['usuario_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
         return view('edit_user', $data);
     }
 
@@ -27,7 +27,10 @@ class UsuarioController extends Controller
         $id = $this->request->getVar('id');
         $data = [
             'name' => $this->request->getVar('nombre_usuario'),
+            'apellido_p' => $this->request->getVar('apellido_p'),
+            'apellido_m' => $this->request->getVar('aellido_m'),
             'email'  => $this->request->getVar('email_usuario'),
+            'rol' => $this->request->getVar('rol_id_rol'),
         ];
         $modeloUsuario->update($id, $data);
         return $this->response->redirect(site_url('/lista-usuarios'));
