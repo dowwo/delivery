@@ -102,6 +102,12 @@ if(isset($_SESSION['msg'])){
                     <h5 class="card-title">Vendedor</h5>
                     <p class="card-text">Visualice las opciones para vendedor.</p>
                 </div>
+                <li class="list-group-item">
+                    <a href="#" class="card-link">Productos</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="card-link">Pedidos</a>
+                </li>
                 <div class="card-body">
 
 
