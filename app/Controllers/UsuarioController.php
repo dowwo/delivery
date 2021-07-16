@@ -18,7 +18,7 @@ class UsuarioController extends Controller
     public function singleUser($id = null){
         $modeloUsuario = new UserModel();
         $data['usuario_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
-        return view('edit_user', $data);
+        return view('modificar_usuario', $data);
     }
 
     // update user data
