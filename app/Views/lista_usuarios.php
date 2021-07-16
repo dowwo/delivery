@@ -88,7 +88,7 @@ if(isset($_SESSION['msg'])){
                         <td><?php echo $usuario['nombre']; ?></td>
                         <td><?php echo $usuario['apellido_p']; ?></td>
                         <td><?php echo $usuario['apellido_m']; ?></td>
-                        <td><?php echo $usuario['fecha_Registro']; ?></td>
+                        <td><?php echo $usuario['fecha_registro']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td><?php echo $usuario['rol_id_rol']; ?></td>
                         <td>
