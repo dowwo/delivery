@@ -84,13 +84,11 @@
                         <tr>
                             <td><?php echo $tienda['id_tienda']; ?></td>
                             <td><?php echo $tienda['nombre']; ?></td>
-                            <!--
                             <td><?php echo $tienda['fecha_registro']; ?></td>
                             <td><?php echo $tienda['usuario_id_usuario']; ?></td>
                             <td><?php echo $tienda['tipo_tienda_id_tipo_tienda']; ?></td>
                             <td><?php echo $tienda['comuna_id_comuna']; ?></td>
                             <td><?php echo $tienda['verificacion']; ?></td>
-                            -->
                             <td>
                                 <a href="<?php echo base_url('modificar_tienda/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Editar</a>
                                 <a href="<?php echo base_url('delete/'.$tienda['id_tienda']);?>" class="btn btn-danger btn-sm">Eliminar</a>
