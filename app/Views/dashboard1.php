@@ -75,7 +75,6 @@ if(isset($_SESSION['msg'])){
                 <a href="dashboard3">
                     <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
                 </a>
-
                 <div class="card-body">
                     <h5 class="card-title">Administrador</h5>
                     <p class="card-text">Visualice las opciones para la administración.</p>
@@ -86,14 +85,9 @@ if(isset($_SESSION['msg'])){
                         <a href="dashboard3" class="card-link">Dashboard Admin</a>
                     </li>
                 </ul>
-
                 <div class="card-body">
-
-
                 </div>
             </div>
-
-
         </div>
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
@@ -102,6 +96,15 @@ if(isset($_SESSION['msg'])){
                     <h5 class="card-title">Vendedor</h5>
                     <p class="card-text">Visualice las opciones para vendedor.</p>
                 </div>
+
+                <!--AGREGADO SOLO PARA REVISAR EL LISTAR TIENDA-->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <!--Redireccionar al listar_tienda-->
+                        <a href="lista_tienda" class="card-link">Listar Tienda</a>
+                    </li>
+                </ul>
+<!-- COMENTADO POR MIENTRAS POR CONFUSION MIA :(
                 <li class="list-group-item">
                     <a href="#" class="card-link">Productos</a>
                 </li>
@@ -109,8 +112,10 @@ if(isset($_SESSION['msg'])){
                     <a href="#" class="card-link">Pedidos</a>
                 </li>
                 <div class="card-body">
+-->
 
 
+                <div class="card-body">
                 </div>
             </div>
         </div>
@@ -130,15 +135,10 @@ if(isset($_SESSION['msg'])){
                     </li>
                 </ul>
                 <div class="card-body">
-
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 </body>
 </html>
