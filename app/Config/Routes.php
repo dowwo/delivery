@@ -48,10 +48,17 @@ $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 
-// Editar y Eliminar deben llevar el /(:num)
+//Ruta de acceso a vendedor
+$routes->get('/lista_tienda','TiendaController::index',['filter' => 'admin']);
+
+    // Editar y Eliminar deben llevar el /(:num)
+//Editar - Eliminar usuario
 $routes->get('/modificar_usuario/(:num)','UsuarioController::singleUser/$1');
 $routes->get('delete/(:num)','UsuarioController::delete/$1');
 
+//Editar - Eliminar tienda
+$routes->get('/modificar_tienda/(:num)','TiendaController::singletienda/$1');
+$routes->get('delete/(:num)','TiendaController::delete/$1');
 
 
 //
