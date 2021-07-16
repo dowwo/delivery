@@ -15,7 +15,8 @@ class TiendaController extends Controller
 
         $modeloTienda = new TiendaModel();
 
-        $data['tiendas'] = $modeloTienda->getWhere(['usuario_id_usuario' => $_SESSION['id_usuario']]);
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario'. $_SESSION['id_usuario'])->orderBy('id_usuario', 'DESC')->findAll();
+        
 
 
 
