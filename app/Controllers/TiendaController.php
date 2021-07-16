@@ -11,13 +11,11 @@ use CodeIgniter\Model;
 class TiendaController extends Controller
 {
     // show tienda list
-    public function index($id = null){
-
-
+    public function index(){
 
 
         $modeloTienda = new TiendaModel();
-        $data['tiendas'] = $modeloTienda->orderBy('id_tienda')->where('id_tienda', $this->session->userdata('id_usuario'))->findAll();
+        $data['tiendas'] = $modeloTienda->orderBy('id_tienda')->getWhere('id_usuario', $this->session->userdata("user_id"));
 
 
         // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
