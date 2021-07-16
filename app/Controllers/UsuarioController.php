@@ -38,7 +38,9 @@ class UsuarioController extends Controller
     // delete user
     public function delete($id = null){
         $modeloUsuario = new UserModel();
-        $data['usuarios'] = $modeloUsuario->where('id_usuario', $id)->delete($id);
+        $data['usuarios'] = $modeloUsuario->where('id_usuario', $id);
+        $modeloUsuario->delete($id, $data);
+
         return $this->response->redirect(site_url('/lista_usuarios'));
     }
 }
