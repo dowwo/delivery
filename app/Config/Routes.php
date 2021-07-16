@@ -48,7 +48,9 @@ $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 
+// Editar y Eliminar deben llevar el /(:num)
 $routes->get('/modificar_usuario/(:num)','UsuarioController::singleUser/$1');
+$routes->get('/delete/(:num)','UsuarioController::delete/$1');
 
 
 
