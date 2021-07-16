@@ -12,9 +12,11 @@ class TiendaController extends Controller
 {
     // show tienda list
     public function index(){
+        $session = session();
+        
         $modeloTienda = new TiendaModel();
-        $data['tiendas'] = $modeloTienda->orderBy('id_tienda', 'DESC')->findAll();
-        // Para las vistas que se encuentran en subvcarpetas se realiza de la siguiente manera
+        $data['tiendas'] = $modeloTienda->where('id_usuario'.$session->get('id_usuario'))->orderBy('id_tienda', 'DESC')->findAll();
+        // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
         // return view('carpeta/vista', $data);
         return view('lista_tienda', $data);
     }
