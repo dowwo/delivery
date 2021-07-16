@@ -13,9 +13,9 @@ class ProductController extends Controller
 
         $modeloProducto = new ProductModel();
 
-        //$data['productos'] = $modeloProducto->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
+        $data['productos'] = $modeloProducto->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
 
-        $data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
+        //$data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
         return view('lista_productos', $data);
     }
