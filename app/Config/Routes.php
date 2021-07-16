@@ -50,7 +50,7 @@ $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin'])
 $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
 
 //Ruta de acceso a vendedor
-$routes->get('/lista_tienda','TiendaController::index',['filter' => 'admin']);
+$routes->get('/lista_tienda','TiendaController::index',['filter' => 'admin'], ['filter' => 'auth']);
 
     // Editar y Eliminar deben llevar el /(:num)
 //Editar - Eliminar usuario
