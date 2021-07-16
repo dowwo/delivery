@@ -13,7 +13,7 @@ class TiendaController extends Controller
     // show tienda list
     public function index(){
         $modeloTienda = new TiendaModel();
-        $data['tienda'] = $modeloTienda->orderBy('id_tienda', 'DESC')->findAll();
+        $data['tiendas'] = $modeloTienda->orderBy('id_tienda', 'DESC')->findAll();
         // Para las vistas que se encuentran en subvcarpetas se realiza de la siguiente manera
         // return view('carpeta/vista', $data);
         return view('lista_tienda', $data);
