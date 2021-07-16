@@ -48,7 +48,7 @@ $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 
-$routes->get('/modificar_usuario','UsuarioController::singleUser/$1');
+$routes->get('/modificar_usuario/(:num)','UsuarioController::singleUser/$1');
 
 
 
