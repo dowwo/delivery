@@ -16,7 +16,7 @@ class TiendaController extends Controller
         $id = 3;
         $modeloTienda = new TiendaModel();
 
-        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario'.$id)->orderBy('id_tienda', 'DESC')->findAll();
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario'.$id)->findAll();
 
 
 
