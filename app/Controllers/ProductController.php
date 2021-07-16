@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
+
 use App\Models\ProductModel;
-use App\Models\ModeloTiendaProducto;
 use CodeIgniter\Controller;
 
 class ProductController extends Controller
