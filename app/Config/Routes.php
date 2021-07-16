@@ -48,9 +48,8 @@ $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 
-$routes->get('/modificar_usuario','UsuarioController::singleUser',['filter' => 'admin'])
+$routes->get('/modificar_usuario','UsuarioController::singleUser',['filter' => 'admin']);
 
-$routes->get('/add_file/(:num)', 'ArchivoController::singleArchivo/$1');
 
 
 //
