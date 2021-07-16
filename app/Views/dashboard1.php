@@ -96,6 +96,7 @@ if(isset($_SESSION['msg'])){
                     <h5 class="card-title">Vendedor</h5>
                     <p class="card-text">Visualice las opciones para vendedor.</p>
                 </div>
+
                 <!--AGREGADO SOLO PARA REVISAR EL LISTAR TIENDA-->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
@@ -103,6 +104,16 @@ if(isset($_SESSION['msg'])){
                         <a href="lista_tienda" class="card-link">Listar Tienda</a>
                     </li>
                 </ul>
+
+                <li class="list-group-item">
+                    <a href="#" class="card-link">Productos</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="card-link">Pedidos</a>
+                </li>
+                <div class="card-body">
+
+
 
                 <div class="card-body">
                 </div>
