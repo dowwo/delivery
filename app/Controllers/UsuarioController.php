@@ -28,18 +28,18 @@ class UsuarioController extends Controller
         $data = [
             'name' => $this->request->getVar('nombre_usuario'),
             'apellido_p' => $this->request->getVar('apellido_p'),
-            'apellido_m' => $this->request->getVar('apellido_m'),
+            'apellido_m' => $this->request->getVar('aellido_m'),
             'email'  => $this->request->getVar('email_usuario'),
             'rol' => $this->request->getVar('rol_id_rol'),
         ];
         $modeloUsuario->update($id, $data);
         return $this->response->redirect(site_url('/lista_usuarios'));
     }
+
     // delete user
     public function delete($id = null){
         $modeloUsuario = new UserModel();
-        $modeloUsuario->delete(['id_usuario' => $id]);
-
-        return $this->response->redirect(site_url('../lista_usuarios'));
+        $data['usuario'] = $modeloUsuario->where('id_usuario', $id)->delete($id);
+        return $this->response->redirect(site_url('/lista_usuarios'));
     }
 }
