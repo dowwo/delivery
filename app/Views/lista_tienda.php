@@ -60,7 +60,7 @@
 
     <?php
     if(isset($_SESSION['msg'])){
-        echo $_SESSION['msg'];
+        echo $_SESSION['id_usuario'];
     }
     ?>
     <div class="container mt-4">
