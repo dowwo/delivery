@@ -206,9 +206,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#quienes_somos">¿QUIENES SOMOS?</a></li>
                 <li><a href="#nuestros_valores">NUESTROS VALORES</a></li>
+                <!--
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#pricing">PRICING</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                -->
+                <li><a href="#contacto">CONTACTO</a></li>
                 <li><a href="login" class="btn btn-success">Iniciar sesión</a></li>
             </ul>
         </div>
@@ -445,13 +447,13 @@
 </div>
 -->
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contacto" class="container-fluid bg-grey">
     <h2 class="text-center">CONTACT</h2>
     <div class="row">
         <div class="col-sm-5">
             <p>Contactar con nostros entre las 08:00 y las 20:00 horas.</p>
             <p><span class="glyphicon glyphicon-map-marker"></span> Temuco, Chile</p>
-            <p><span class="glyphicon glyphicon-phone"></span> +56 949142066 o +56 </p>
+            <p><span class="glyphicon glyphicon-phone"></span> +56 949142066 o +56 NUMERO DOWWO</p>
             <p><span class="glyphicon glyphicon-envelope"></span> cristofer.sepulveda02@gmail.com</p>
             <p><span class="glyphicon glyphicon-envelope"></span> CORREO DOWWO @gmail.com</p>
         </div>
