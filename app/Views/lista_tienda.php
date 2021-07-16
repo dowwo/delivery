@@ -36,7 +36,7 @@
     <body id="navbar_distance">
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Bienvenido <?php echo $_SESSION['user_name'] ?></a>
+            <a class="navbar-brand" href="#">Bienvenido <?php echo $_SESSION['nombre'] ?></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,7 +60,7 @@
 
     <?php
     if(isset($_SESSION['msg'])){
-        echo $_SESSION['msg'];
+        echo $_SESSION['id_usuario'];
     }
     ?>
     <div class="container mt-4">

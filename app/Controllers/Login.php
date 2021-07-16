@@ -26,7 +26,7 @@ class Login extends Controller
             if($verify_pass){
                 $ses_data = [
 
-                    'id_usuario'       => $data['id_usaurio'],
+                    'id_usuario'    => $data['id_usuario'],
                     'nombre'        => $data['nombre'],
                     'email'         => $data['email'],
                     'rol_id_rol'    => $data['rol_id_rol'],
