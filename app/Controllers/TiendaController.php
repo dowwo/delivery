@@ -14,7 +14,7 @@ class TiendaController extends Controller
     public function index(){
 
         $modeloTienda = new TiendaModel();
-        $data['tiendas'] = $modeloTienda->getWhere('usuario_id_usuario'.$_SESSION['id_usuario'])->orderBy('id_tienda', 'DESC')->findAll();
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario'.$_SESSION['id_usuario'])->orderBy('id_tienda', 'DESC')->findAll();
 
 
         // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
