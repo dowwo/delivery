@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\ProductModel;
+use App\Models\ModeloTiendaProducto;
 use CodeIgniter\Controller;
 
 class ProductController extends Controller
@@ -12,9 +13,9 @@ class ProductController extends Controller
 
         $modeloProducto = new ProductModel();
 
-        $data['productos'] = $modeloProducto->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
+        //$data['productos'] = $modeloProducto->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
 
-        //$data['producto'] = $ModeloProducto->orderBy('id_producto', 'DESC')->findAll();
+        $data['producto'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
         return view('lista_productos', $data);
     }
