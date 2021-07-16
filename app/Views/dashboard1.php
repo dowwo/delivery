@@ -104,7 +104,7 @@ if(isset($_SESSION['msg'])){
                         <a href="lista_tienda" class="card-link">Listar Tienda</a>
                     </li>
                 </ul>
-
+<!-- COMENTADO POR MIENTRAS POR CONFUSION MIA :(
                 <li class="list-group-item">
                     <a href="#" class="card-link">Productos</a>
                 </li>
@@ -112,7 +112,7 @@ if(isset($_SESSION['msg'])){
                     <a href="#" class="card-link">Pedidos</a>
                 </li>
                 <div class="card-body">
-
+-->
 
 
                 <div class="card-body">
