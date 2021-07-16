@@ -93,7 +93,7 @@ if(isset($_SESSION['msg'])){
                         <td><?php echo $usuario['rol_id_rol']; ?></td>
                         <td>
                             <a href="<?php echo base_url('modificar_usuario/'.$usuario['id_usuario']);?>" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="<?php echo base_url('delete/'.$usuario['id_usuario']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="<?php echo base_url('eliminar/'.$usuario['id_usuario']);?>" class="btn btn-danger btn-sm">Eliminar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
