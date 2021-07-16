@@ -88,7 +88,7 @@ if(isset($_SESSION['msg'])){
                     </li>
                     <li class="list-group-item">
                         <!--Redireccionar al registro de usuario-->
-                        <a href="dashboard3" class="card-link">Dashboard Admin</a>
+                        <a href="lista_categorias" class="card-link">Categorías</a>
                     </li>
                 </ul>
                 <div class="card-body">
