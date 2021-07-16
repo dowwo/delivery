@@ -103,6 +103,10 @@ if(isset($_SESSION['msg'])){
                         <!--Redireccionar al listar_tienda-->
                         <a href="lista_tienda" class="card-link">Listar Tienda</a>
                     </li>
+                    <li class="list-group-item">
+                        <!--Redireccionar al listar_tienda-->
+                        <a href="lista_productos" class="card-link">Listar Producto</a>
+                    </li>
                 </ul>
 <!-- COMENTADO POR MIENTRAS POR CONFUSION MIA :(
                 <li class="list-group-item">
