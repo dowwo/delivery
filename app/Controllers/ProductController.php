@@ -8,7 +8,7 @@ class ProductController extends Controller
 
     // lista los productos
     public function index(){
-        $user_id = $_SESSION['d_usuarioi'];
+        $user_id = $_SESSION['id_usuario'];
 
         $ModeloProducto = new ProductModel();
 
