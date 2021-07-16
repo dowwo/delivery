@@ -72,7 +72,11 @@ if(isset($_SESSION['msg'])){
             <tr>
                 <th>ID Ususario</th>
                 <th>Nombre</th>
+                <th>A Paterno</th>
+                <th>A Materno</th>
+                <th>Registrado el</th>
                 <th>Email</th>
+                <th>Rol</th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -81,10 +85,11 @@ if(isset($_SESSION['msg'])){
                 <?php foreach($usuarios as $usuario): ?>
                     <tr>
                         <td><?php echo $usuario['id_usuario']; ?></td>
-                        <td><?php echo $usuario['nombre '+'apellido_p '+'apellido_m']; ?></td>
+                        <td><?php echo $usuario['nombre']; ?></td>
+                        <td><?php echo $usuario['apellido_p']; ?></td>
+                        <td><?php echo $usuario['apellido_m']; ?></td>
                         <td><?php echo $usuario['fecha_Registro']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
-                        <td><?php echo $usuario['password']; ?></td>
                         <td><?php echo $usuario['rol_id_rol']; ?></td>
                         <td>
                             <a href="<?php echo base_url('edit-view/'.$user['id']);?>" class="btn btn-primary btn-sm">Editar</a>
