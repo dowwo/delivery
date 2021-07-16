@@ -65,7 +65,7 @@
     ?>
     <div class="container mt-4">
         <div class="mt-3">
-            <table class="table table-bordered" id="lista-tiendas">
+            <table class="table table-bordered" id="lista-tienda">
                 <thead>
                 <tr>
                     <th>ID</th>
