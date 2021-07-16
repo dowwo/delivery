@@ -13,10 +13,10 @@ class TiendaController extends Controller
     // show tienda list
     public function index(){
 
-        $id = $_SESSION['id_usuario'];
+        $id = 3;
         $modeloTienda = new TiendaModel();
 
-        $data['tiendas'] = $modeloTienda->getWhere(['usuario_id_usuario' => $id]);
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario'.$id)->orderBy('id_tienda', 'DESC')->findAll();
 
 
 
