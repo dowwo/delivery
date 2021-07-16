@@ -24,7 +24,7 @@ class UsuarioController extends Controller
     // update user data
     public function update(){
         $modeloUsuario = new UserModel();
-        $id = $this->request->getVar('id');
+        $id = $this->request->getVar('id_usuario');
         $data = [
             'name' => $this->request->getVar('nombre_usuario'),
             'apellido_p' => $this->request->getVar('apellido_p'),
@@ -39,7 +39,7 @@ class UsuarioController extends Controller
     // delete user
     public function delete($id = null){
         $modeloUsuario = new UserModel();
-        $data['usuario'] = $modeloUsuario->where('id', $id)->delete($id);
+        $data['usuario'] = $modeloUsuario->where('id_usuario', $id)->delete($id);
         return $this->response->redirect(site_url('/lista-usuarios'));
     }
 }
