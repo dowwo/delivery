@@ -65,7 +65,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index">DELIVERY CHILE</a></li>
+                <li><a href="../">DELIVERY CHILE</a></li>
             </ul>
         </div>
     </div>
