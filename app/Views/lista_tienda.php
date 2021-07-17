@@ -100,7 +100,7 @@
                             <td><?php echo $tienda['verificacion']; ?></td>
                             <td>
                                 <a href="<?php echo base_url('modificar_tienda/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Editar</a>
-                                <a href="<?php echo base_url('delete/'.$tienda['id_tienda']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                                <a href="<?php echo base_url('delete/'.$tienda['id_tienda']);?>" class="btn btn-danger btn-sm">Deshabilitar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
