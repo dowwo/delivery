@@ -35,6 +35,7 @@ class TiendaController extends Controller
     //Guardar tienda
     public function guardar_tienda(){
         $id_usuario = $_SESSION['id_usuario'];
+        $nom = "hola"
         $tipo = "99999";
         $comuna = "99999";
         $val = "0";
@@ -51,7 +52,7 @@ class TiendaController extends Controller
         if($this->validate($rules)){
             $model = new TiendaModel();
             $data = [
-                'nombre'                        => $this->request->getVar('nombre'),
+                'nombre'                        => $this->request->getVar($nom),
                 'fecha_registro'                => $this->request->getVar('fecha_registro'),
                 'usuario_id_usuario'            => $this->request->getVar($id_usuario),
                 'tipo_tienda_id_tipo_tienda'    => $this->request->getVar($tipo),
