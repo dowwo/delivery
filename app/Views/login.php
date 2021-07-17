@@ -10,7 +10,7 @@
         body {
             background-color: #AB3E5B;
             <!--background-color: rgba(0, 50, 100, 0.5);-->
-            padding-top: 5%;
+            padding-top: 15%;
         }
         #formulario {
             background-color: gray;
