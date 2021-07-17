@@ -42,7 +42,7 @@
     </script>
     <!--NO ENTIENDO EL SCRIPT ANTERIOR :( -->
 </head>
-    <body id="navbar_distance">
+<body id="navbar_distance">
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Bienvenido <?php echo $_SESSION['nombre'] ?></a>
