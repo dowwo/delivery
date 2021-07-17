@@ -28,6 +28,9 @@ class TiendaController extends Controller
     }
 
     //show agregar tienda
+    public function agregar_producto(){
+        return view('agregar_tienda');
+    }
 
     //Guardar tienda
     public function guardar_tienda(){
