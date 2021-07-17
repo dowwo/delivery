@@ -34,6 +34,8 @@ class TiendaController extends Controller
 
     //Guardar tienda
     public function guardar_tienda(){
+        $id_usuario = $_SESSION['id_usuario'];
+
         //incluir helper form
         helper(['form']);
 
@@ -48,7 +50,7 @@ class TiendaController extends Controller
             $data = [
                 'nombre'                        => $this->request->getVar('nombre'),
                 'fecha_registro'                => $this->request->getVar('fecha_registro'),
-                'usuario_id_usuario'            => $this->request->getVar($_SESSION('id_usuario')),
+                'usuario_id_usuario'            => $this->request->getVar($id_usuario),
                 'tipo_tienda_id_tipo_tienda'    => $this->request->getVar('tipo_tienda'),
                 'comuna_id_comuna'              => $this->request->getVar('comuna')
                 //'verificacion'                  => $this->request-getVar()
