@@ -51,7 +51,7 @@ class TiendaController extends Controller
                 //'verificacion'                  => $this->request-getVar()
             ];
             $model->save($data);
-            return redirect()->to('/lista_tienda');
+            return redirect()->to('/dashboard1');
         }else{
             $data['validation'] = $this->validation;
             echo view('agregar_tienda', $data);
