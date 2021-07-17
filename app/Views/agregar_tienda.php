@@ -27,7 +27,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Tipo de tienda</label>
-                    <select id="rol" class="form-select" aria-label="Default select example">
+                    <select id="tipo" class="form-select" aria-label="Default select example">
                         <option selected>Seleccionar tipo de tienda</option>
                         <option value="99999">prueba</option>
                         <option value="100000">prueba2</option>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="InputForComuna" class="form-label">Comuna</label>
-                    <select id="rol" class="form-select" aria-label="Default select example">
+                    <select id="comuna" class="form-select" aria-label="Default select example">
                         <option selected>Seleccionar comuna</option>
                         <option value="99999">prueba</option>
                         <option value="0">prueba1</option>
