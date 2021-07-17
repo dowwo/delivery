@@ -75,8 +75,9 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForComuna" class="form-label">Comuna</label>
                     <select id="comuna" name="comuna" class="form-select" aria-label="Default select example">
                         <?php if($comunas): ?>
-                            <?php foreach($comunas as $comuna): ?>
-                                <option value="<?php echo $comuna['id_comuna']; ?>"> <?php echo $comuna['nombre']; ?></option>
+                            <?php foreach($comunas as $i): ?>
+                                <?php '<option value="' .$i->id_comuna .'">'. $i->nombre .'</option>'  ?>
+
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </select>
