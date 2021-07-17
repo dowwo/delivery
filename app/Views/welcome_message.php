@@ -448,10 +448,10 @@
 -->
 <!-- Container (Contact Section) -->
 <div id="contacto" class="container-fluid bg-grey">
-    <h2 class="text-center">CONTACT</h2>
+    <h2 class="text-center">CONTACTO</h2>
     <div class="row">
         <div class="col-sm-5">
-            <p>Contactar con nostros entre las 08:00 y las 20:00 horas.</p>
+            <p>Contactar con nosotros entre las 08:00 y las 20:00 horas.</p>
             <p><span class="glyphicon glyphicon-map-marker"></span> Temuco, Chile</p>
             <p><span class="glyphicon glyphicon-phone"></span> +56 949142066 o +56 975225722</p>
             <p><span class="glyphicon glyphicon-envelope"></span> cristofer.sepulveda02@gmail.com</p>
@@ -460,16 +460,16 @@
         <div class="col-sm-7 slideanim">
             <div class="row">
                 <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
                 </div>
                 <div class="col-sm-6 form-group">
                     <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>
             <div class="row">
                 <div class="col-sm-12 form-group">
-                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                    <button class="btn btn-default pull-right" type="submit">Enviar</button>
                 </div>
             </div>
         </div>
