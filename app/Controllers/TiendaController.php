@@ -33,7 +33,7 @@ class TiendaController extends Controller
     }
 
     //Guardar tienda - sin funcionar
-    public function guardar_tienda(){
+    public function guardar(){
         $id_usuario = $_SESSION['id_usuario'];
         $nom = "hola";
         $tipo = "99999";
@@ -54,9 +54,11 @@ class TiendaController extends Controller
             $data = [
                 'nombre'                        => $this->request->getVar('nombre'),
                 'fecha_registro'                => $this->request->getVar('fecha_registro'),
+                'tipo_tienda_id_tipo_tienda'    => $this->input->post('tipo'),
+                'comuna_id_comuna'              => $this->input->post('comuna'),
                 //'usuario_id_usuario'            => $this->request->getVar($id_usuario),
-                'tipo_tienda_id_tipo_tienda'    => $this->request->getVar('tipo'),
-                'comuna_id_comuna'              => $this->request->getVar('comuna')
+                //'tipo_tienda_id_tipo_tienda'    => $this->request->getVar('tipo'),
+                //'comuna_id_comuna'              => $this->request->getVar('comuna')
                 //'verificacion'                  => $this->request->getVar($val)
             ];
             $model->save($data);
