@@ -81,6 +81,16 @@ if(isset($_SESSION['msg'])){
                             ?>
                         <?php endif; ?>
                     </select>
+                    <select name="comuna">
+                        <?php
+                        foreach($comunas as $comuna)
+                        {
+                            ?>
+                            <option value="<?=$comuna['id_comuna']?>"><?=$comuna['nombre']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Guardar tienda</button>
