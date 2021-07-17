@@ -51,7 +51,7 @@ $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admi
 
 //Ruta de acceso a vendedor
 $routes->get('/lista_tienda','TiendaController::index', ['filter' => 'auth']);
-$routes->get('/agregar_tienda','TiendaController::agregar_tienda', ['filter' => 'auth']);
+$routes->get('/agregar_tienda','TiendaController::agregar', ['filter' => 'auth']);
 
 //Ruta de acceso a producto
 $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']);

@@ -10,6 +10,7 @@ class TiendaController extends Controller
     public function index(){
 
         $id_usuario = $_SESSION['id_usuario'];
+
         $modeloTienda = new TiendaModel();
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
@@ -19,16 +20,14 @@ class TiendaController extends Controller
         // return view('carpeta/vista', $data);
         return view('lista_tienda', $data);
     }
-
     //Show single tienda
     public function singleTienda($id = null){
         $modeloTienda = new TiendaModel();
         $data['tienda_obj'] = $modeloTienda->where('id_tienda', $id)->first();
         return view('modificar_tienda', $data);
     }
-
     //show agregar tienda
-    public function agregar_tienda(){
+    public function agregar(){
         return view('agregar_tienda');
     }
 
