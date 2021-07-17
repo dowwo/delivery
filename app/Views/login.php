@@ -93,7 +93,8 @@
                         <label for="InputPassword" class="form-label">Contraseña</label>
                         <input type="password" name="password" class="form-control" id="InputPassword">
                     </div>
-                    <div class="mb-3">
+                    <br>
+                    <div>
                         <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                     </div>
                     <div></div>
