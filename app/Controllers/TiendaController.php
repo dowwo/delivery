@@ -28,7 +28,7 @@ class TiendaController extends Controller
     }
 
     //show agregar tienda
-    public function agregar_producto(){
+    public function agregar_tienda(){
         return view('agregar_tienda');
     }
 
