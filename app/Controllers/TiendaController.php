@@ -29,7 +29,7 @@ class TiendaController extends Controller
     }
     //show agregar tienda
     public function agregar(){
-        $modeloComuna = new ModeloComuna();
+        $modeloComuna = new ComunaModel();
         $data['comunas'] = $modeloComuna->orderBy('id_comuna', 'DESC')->findAll();
         return view('agregar_tienda');
     }
