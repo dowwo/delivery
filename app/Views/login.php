@@ -14,9 +14,12 @@
             padding-top: 5%;
         }
         #formulario {
-            background-color: black;
+            background-color: gray;
             opacity: 0.5;
             border-radius: 2%;
+        }
+        #form {
+            opacity: 1;
         }
     </style>
 
@@ -33,7 +36,7 @@
     <div class="row justify-content-md-center">
 
         <div class="col-5" id="formulario">
-            <h1>Iniciar sesión</h1>
+            <h1 id="form">Iniciar sesión</h1>
             <?php if(session()->getFlashdata('msg')):?>
                 <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
             <?php endif;?>
