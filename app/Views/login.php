@@ -74,34 +74,41 @@
     </nav>
 
 </div>
+<div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
 
+            <div class="col-5" id="formulario">
+                <h1>Iniciar sesión</h1>
+                <?php if(session()->getFlashdata('msg')):?>
+                    <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
+                <?php endif;?>
+                <form action="login/auth" method="post">
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="InputEmail" value="<?= set_value('email') ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword" class="form-label">Contraseña</label>
+                        <input type="password" name="password" class="form-control" id="InputPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    <div></div>
+                    <br>
+                </form>
+            </div>
 
-
-<div class="container">
-    <div class="row justify-content-md-center">
-
-        <div class="col-5" id="formulario">
-            <h1>Iniciar sesión</h1>
-            <?php if(session()->getFlashdata('msg')):?>
-                <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
-            <?php endif;?>
-            <form action="login/auth" method="post">
-                <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="InputEmail" value="<?= set_value('email') ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="InputPassword" class="form-label">Contraseña</label>
-                    <input type="password" name="password" class="form-control" id="InputPassword">
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                <div></div>
-                <br>
-            </form>
         </div>
-
     </div>
 </div>
+
+
+
 
 
 <!-- Popper.js first, then Bootstrap JS -->
