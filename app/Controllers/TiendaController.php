@@ -56,7 +56,7 @@ class TiendaController extends Controller
                 'usuario_id_usuario'            => $this->request->getVar($id_usuario),
                 'tipo_tienda_id_tipo_tienda'    => $this->request->getVar($tipo),
                 'comuna_id_comuna'              => $this->request->getVar($comuna),
-                'verificacion'                  => $this->request-getVar($val)
+                'verificacion'                  => $this->request->getVar($val)
             ];
             $model->save($data);
             return redirect()->to('/dashboard1');
