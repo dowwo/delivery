@@ -20,7 +20,7 @@
             <form action="/TiendaController/guardar_tienda" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>">
+                    <input type="text" name="nombre" class="form-control" id="InputForNombre">
                 </div>
                 <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
