@@ -76,18 +76,8 @@ if(isset($_SESSION['msg'])){
                     <select id="id_comuna" name="comuna" class="form-select" aria-label="Default select example">
                         <?php
                             foreach($comunas as $comuna) {
-                            echo '<option value="' . $comuna->id_comuna . '">' . $comuna->nombre . '</option>';
+                            echo '<option value="' . $comuna->id_comuna . '">' . $comuna->comuna . '</option>';
                             }
-                        ?>
-                    </select>
-                    <select name="comuna">
-                        <?php
-                        foreach($comunas as $comuna)
-                        {
-                            ?>
-                            <option value="<?=$comuna['id_comuna']?>"><?=$comuna['nombre']?></option>
-                            <?php
-                        }
                         ?>
                     </select>
                 </div>
