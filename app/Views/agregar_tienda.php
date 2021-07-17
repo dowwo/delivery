@@ -59,6 +59,10 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                 </div>
+                <div>
+                    <label for="InputUsuario" class="form-label">Usuario</label>
+                    <input type="text" name="usuario" class="form-control" id="InputUsuario" disabled="true">
+                </div>
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Tipo de tienda</label>
                     <select id="tipo" class="form-select" aria-label="Default select example">

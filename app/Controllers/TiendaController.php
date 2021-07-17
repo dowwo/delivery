@@ -53,7 +53,7 @@ class TiendaController extends Controller
             $data = [
                 'nombre'                        => $this->request->getVar('nombre'),
                 'fecha_registro'                => $this->request->getVar('fecha_registro'),
-                'usuario_id_usuario'            => $this->request->getVar($_SESSION['id_usuario'])
+                'usuario_id_usuario'            => $this->request->get('usuario')
                 //'tipo_tienda_id_tipo_tienda'    => $this->input->post('tipo'),
                 //'comuna_id_comuna'              => $this->input->post('comuna'),
                 //'usuario_id_usuario'            => $this->request->getVar($id_usuario),
