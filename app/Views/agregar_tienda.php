@@ -74,12 +74,11 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputForComuna" class="form-label">Comuna</label>
                     <select id="id_comuna" name="comuna" class="form-select" aria-label="Default select example">
-                        <?php if($comunas): ?>
-                            <?php foreach($comunas as $comuna) {
-                                echo '<option value="' . $comuna->id_comuna . '">' . $comuna->nombre . '</option>';
+                        <?php
+                            foreach($comunas as $comuna) {
+                            echo '<option value="' . $comuna->id_comuna . '">' . $comuna->nombre . '</option>';
                             }
-                            ?>
-                        <?php endif; ?>
+                        ?>
                     </select>
                     <select name="comuna">
                         <?php
