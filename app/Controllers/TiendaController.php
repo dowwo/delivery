@@ -28,6 +28,12 @@ class TiendaController extends Controller
     }
     //show agregar tienda
     public function agregar(){
+        $id_usuario = $_SESSION['id_usuario'];
+
+        $modeloTienda = new TiendaModel();
+
+        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
         return view('agregar_tienda');
     }
 
