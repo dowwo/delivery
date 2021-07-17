@@ -20,14 +20,14 @@
             <form action="/TiendaController/guardar_tienda" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" id="InputForNombre" value="2222">
+                    <input type="text" name="nombre" class="form-control" id="InputForNombre">
                 </div>
                 <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                 </div>
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Tipo de tienda</label>
-                    <select id="rol" class="form-select" aria-label="Default select example" name="tipo_tienda">
+                    <select id="rol" class="form-select" aria-label="Default select example">
                         <option selected>Seleccionar tipo de tienda</option>
                         <option value="99999">prueba</option>
                         <option value="100000">prueba2</option>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="InputForComuna" class="form-label">Comuna</label>
-                    <select id="rol" class="form-select" aria-label="Default select example" name="comuna">
+                    <select id="rol" class="form-select" aria-label="Default select example">
                         <option selected>Seleccionar comuna</option>
                         <option value="99999">prueba</option>
                         <option value="0">prueba1</option>
