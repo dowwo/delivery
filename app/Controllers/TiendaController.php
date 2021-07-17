@@ -65,7 +65,7 @@ class TiendaController extends Controller
             return redirect()->to('/dashboard1');
         }else{
             $data['validation'] = $this->validation;
-            echo view('agregar_tienda', $data);
+            return redirect()->to('/agregar_tienda');
         }
     }
 
