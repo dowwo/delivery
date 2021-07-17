@@ -71,21 +71,6 @@ if(isset($_SESSION['msg'])){
                         <option value="100000">prueba2</option>
                     </select>
                 </div>-->
-                <div class="mb-3">
-                    <label for="InputForComuna" class="form-label">Tienda</label>
-                    <select name="comuna" id="id_comuna" class="form-select" aria-label="Default select example">
-                        <?php
-                        foreach($tiendas as $tienda)
-                        {
-                            ?>
-                            <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
-                            <?php
-                        }
-                        ?>
-                    </select>
-
-                </div>
-
                 <button type="submit" class="btn btn-primary">Guardar tienda</button>
             </form>
         </div>
