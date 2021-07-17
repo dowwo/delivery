@@ -107,7 +107,7 @@ if(isset($_SESSION['msg'])){
                         <a href="lista_tienda" class="card-link">Listar Tienda</a>
                     </li>
                     <li class="list-group-item">
-                        <a href="agregar_producto.php" class="card-link">Agregar Producto</a>
+                        <a href="agregar_producto" class="card-link">Agregar Producto</a>
                     </li>
                     <li class="list-group-item">
                         <!--Redireccionar al listar_tienda-->
