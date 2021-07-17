@@ -35,7 +35,7 @@ class TiendaController extends Controller
     //Guardar tienda
     public function guardar_tienda(){
         $id_usuario = $_SESSION['id_usuario'];
-        $nom = "hola"
+        $nom = "hola";
         $tipo = "99999";
         $comuna = "99999";
         $val = "0";
