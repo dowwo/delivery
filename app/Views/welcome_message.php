@@ -120,7 +120,7 @@
         }
         .navbar {
             margin-bottom: 0;
-            background-color: #AB3E5B;
+            background-color: rgba(59, 22, 29, 0.5);
             z-index: 9999;
             border: 0;
             font-size: 12px !important;
