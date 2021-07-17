@@ -10,21 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+
 
 
     <style>
         body {
             background-color: #AB3E5B;
-            <!--background-color: rgba(0, 50, 100, 0.5);-->
             color: #aaaaaa;
-
             padding-top: 5%;
         }
         #formulario {
             background-color:rgba(0, 0, 0, 0.5);
             color: #aaaaaa;
-
             border-radius: 2%;
         }
         .navbar {
@@ -68,14 +65,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#quienes_somos">¿QUIENES SOMOS?</a></li>
-                <li><a href="#nuestros_valores">NUESTROS VALORES</a></li>
-                <!--
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#pricing">PRICING</a></li>
-                -->
-                <li><a href="#contacto">CONTACTO</a></li>
-                <li><a href="login" class="btn btn-success">Iniciar sesión</a></li>
+                <li><a href="welcome_message">DELIVERY CHILE</a></li>
             </ul>
         </div>
     </div>
