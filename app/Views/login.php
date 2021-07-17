@@ -83,6 +83,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
 
+            <div class="col-md-3"></div>
             <div class="col-md-6" id="formulario">
                 <h1>Iniciar sesión</h1>
                 <?php if(session()->getFlashdata('msg')):?>
