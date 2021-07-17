@@ -79,9 +79,6 @@ if(isset($_SESSION['msg'])){
                                 <option value="<?php echo $comuna['id_comuna']; ?>"> <?php echo $comuna['nombre']; ?></option>
                             <?php endforeach; ?>
                         <?php endif; ?>
-                        <option selected>Seleccionar comuna</option>
-                        <option value="99999">prueba</option>
-                        <option value="0">prueba1</option>
                     </select>
                 </div>
 
