@@ -7,23 +7,25 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
-    <title>Register</title>
+    <title>Registro</title>
 </head>
 <body>
 <div class="container">
     <div class="row justify-content-md-center">
-
         <div class="col-6">
             <h1>Sign Up</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form action="/register/save" method="post">
-                <select id="rol" class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="47474">Usuario</option>
-                    <option value="47274">Vendedor</option>
-                </select>
+                <div class="mb-3">
+                    <label class="form-label">Seleccionar tipo de registro</label>
+                    <select id="rol" class="form-select" aria-label="Default select example">
+                        <option selected>Abrir para seleccionar</option>
+                        <option value="47474">Usuario</option>
+                        <option value="47274">Vendedor</option>
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>">
@@ -51,11 +53,9 @@
                     <label for="InputForConfPassword" class="form-label">Confirmar Contraseña</label>
                     <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
                 </div>
-
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
-
     </div>
 </div>
 
