@@ -14,7 +14,7 @@
             padding-top: 5%;
         }
         #formulario {
-            background-color:rgba(0, 0, 0, 0.5);
+            background-color:rgba(0, 0, 0, 1);
             opacity: 0.5;
             border-radius: 2%;
         }
