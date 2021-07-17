@@ -1,8 +1,9 @@
 <?php namespace App\Controllers;
 
 use App\Models\TiendaModel;
+use App\Models\ComunaModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
+
 
 class TiendaController extends Controller
 {
@@ -28,12 +29,8 @@ class TiendaController extends Controller
     }
     //show agregar tienda
     public function agregar(){
-        $id_usuario = $_SESSION['id_usuario'];
-
-        $modeloTienda = new TiendaModel();
-
-        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
-        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
+        $modeloComuna = new ModeloComuna();
+        $data['comunas'] = $modeloComuna->orderBy('id_comuna', 'DESC')->findAll();
         return view('agregar_tienda');
     }
 
