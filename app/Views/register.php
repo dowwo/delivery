@@ -19,7 +19,7 @@
             <?php endif;?>
             <form action="/register/save" method="post">
                 <div class="mb-3">
-                    <label class="form-label">Seleccionar tipo de registro</label>
+                    <label for="InputForName" class="form-label">Seleccionar tipo de registro</label>
                     <select id="rol" class="form-select" aria-label="Default select example">
                         <option selected>Abrir para seleccionar</option>
                         <option value="47474">Usuario</option>
