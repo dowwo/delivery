@@ -39,7 +39,7 @@ class TiendaController extends Controller
 
         //reglas guardar tienda
         $rules = [
-            'nombre' => 'required|minlength[3]|max_length[45]'
+            'nombre' => 'required|min_length[3]|max_length[45]'
         ];
 
         //verifica reglas para guardar tienda
