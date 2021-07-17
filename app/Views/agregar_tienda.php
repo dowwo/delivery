@@ -73,14 +73,7 @@ if(isset($_SESSION['msg'])){
                 </div>-->
                 <div class="mb-3">
                     <label for="InputForComuna" class="form-label">Comuna</label>
-                    <select id="id_comuna" name="comuna" class="form-select" aria-label="Default select example">
-                        <?php
-                            foreach($comunas as $comuna) {
-                            echo '<option value="' . $comuna->id_comuna . '">' . $comuna->nombre . '</option>';
-                            }
-                        ?>
-                    </select>
-                    <select name="comuna">
+                    <select name="comuna" id="id_comuna" class="form-select" aria-label="Default select example">
                         <?php
                         foreach($comunas as $comuna)
                         {
