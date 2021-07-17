@@ -54,7 +54,7 @@ class TiendaController extends Controller
                 'nombre'                        => $this->request->getVar('nombre'),
                 'fecha_registro'                => $this->request->getVar('fecha_registro'),
                 'usuario_id_usuario'            => $this->request->getVar('usuario'),
-                'tipo_tienda_id_tipo_tienda'    => $this->request->getVar('tipo'),
+                //'tipo_tienda_id_tipo_tienda'    => $this->request->getVar('tipo'),
                 'comuna_id_comuna'              => $this->request->getVar('comuna')
                 //'verificacion'                  => $this->request->getVar($val)
             ];
