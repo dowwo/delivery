@@ -83,6 +83,7 @@ if(isset($_SESSION['msg'])){
                         }
                         ?>
                     </select>
+
                 </div>
 
                 <button type="submit" class="btn btn-primary">Guardar tienda</button>

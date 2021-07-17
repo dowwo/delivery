@@ -58,7 +58,7 @@ class TiendaController extends Controller
                 'fecha_registro'                => $this->request->getVar('fecha_registro'),
                 'usuario_id_usuario'            => $this->request->getVar('usuario'),
                 //'tipo_tienda_id_tipo_tienda'    => $this->request->getVar('tipo'),
-                'comuna_id_comuna'              => $this->request->getVar('id_comuna')
+                'comuna_id_comuna'              => $this->request->getVar('comuna')
                 //'verificacion'                  => $this->request->getVar($val)
             ];
             $model->save($data);
