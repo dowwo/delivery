@@ -21,7 +21,7 @@ class ProductController extends Controller
     }
 
     // Retorna la vista agregar producto
-    public function create(){
+    public function agregar(){
         return view('agregar_producto');
     }
 
