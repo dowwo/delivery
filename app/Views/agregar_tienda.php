@@ -62,7 +62,6 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Tipo de tienda</label>
                     <select id="tipo" class="form-select" aria-label="Default select example">
-                        <option selected>Seleccionar tipo de tienda</option>
                         <option value="99999">prueba</option>
                         <option value="100000">prueba2</option>
                     </select>
