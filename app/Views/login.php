@@ -20,6 +20,11 @@
 
             border-radius: 2%;
         }
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
         h2 {
             font-size: 24px;
             text-transform: uppercase;
@@ -34,11 +39,39 @@
             font-weight: 400;
             margin-bottom: 30px;
         }
-
+        .jumbotron {
+            background-color: #AB3E5B;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        .logo-small {
+            color: #AB3E5B;
+            font-size: 50px;
+        }
+        .logo {
+            color: #AB3E5B;
+            font-size: 200px;
+        }
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
         .thumbnail img {
             width: 100%;
             height: 100%;
             margin-bottom: 10px;
+        }
+        .carousel-control.right, .carousel-control.left {
+            background-image: none;
+            color: #AB3E5B;
         }
         .carousel-indicators li {
             border-color: #AB3E5B;
@@ -56,11 +89,31 @@
         .item span {
             font-style: normal;
         }
-
+        .panel {
+            border: 1px solid #AB3E5B;
+            border-radius:0 !important;
+            transition: box-shadow 0.5s;
+        }
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
         .panel-footer .btn:hover {
             border: 1px solid #AB3E5B;
             background-color: #fff !important;
             color: #AB3E5B;
+        }
+        .panel-heading {
+            color: #fff !important;
+            background-color: #AB3E5B !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .panel-footer {
+            background-color: white !important;
         }
         .panel-footer h3 {
             font-size: 32px;
@@ -100,6 +153,14 @@
             font-size: 20px;
             margin-bottom: 20px;
             color: #AB3E5B;
+        }
+        .slideanim {visibility:hidden;}
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
         }
         @keyframes slide {
             0% {
