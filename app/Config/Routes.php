@@ -44,8 +44,8 @@ $routes->get('/dashboard3', 'DashboardAdmin::index',['filter' => 'admin']);
 
 //Ruta que da acceso a la página de registro de usuario
 
-$routes->get('/registro', 'Register::index',['filter' => 'admin']);
-$routes->get('/register','Register::index',['filter' => 'admin']);
+$routes->get('/registro', 'Register::index',['filter' => 'auth']);
+$routes->get('/register','Register::index',['filter' => 'auth']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
 
