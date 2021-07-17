@@ -223,9 +223,9 @@
     <p>Actualmente en desarrollo</p>
     <form>
         <div class="input-group">
-            <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+            <input type="email" class="form-control" size="50" placeholder="Correo electrónico" required>
             <div class="input-group-btn">
-                <button type="button" class="btn btn-danger">Subscribe</button>
+                <button type="button" class="btn btn-danger">Suscribirse</button>
             </div>
         </div>
     </form>
