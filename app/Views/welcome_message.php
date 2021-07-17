@@ -211,7 +211,7 @@
                 <li><a href="#pricing">PRICING</a></li>
                 -->
                 <li><a href="#contacto">CONTACTO</a></li>
-                <li><a href="login">Iniciar sesión</a></li>
+                <li><a href="login">INICIAR SESIÓN</a></li>
             </ul>
         </div>
     </div>
