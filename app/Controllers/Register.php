@@ -37,7 +37,7 @@ class Register extends Controller
                 'fecha_registro'    =>  $this->request->getVar('fecha_registro'),
                 'email'             => $this->request->getVar('email'),
                 'password'          => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-                'rol_id_rol'        => $this->request->getVar('rol')
+                'rol_id_rol'        => $this->request->getOption('rol_id_rol')
             ];
             $model->save($data);
             return redirect()->to('/login');
