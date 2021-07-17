@@ -10,6 +10,7 @@
         body {
             background-color: #AB3E5B;
             <!--background-color: rgba(0, 50, 100, 0.5);-->
+            color: #aaaaaa;
 
             padding-top: 5%;
         }
