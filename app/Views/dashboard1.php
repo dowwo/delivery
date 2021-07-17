@@ -32,7 +32,7 @@
     </script>
     <style type="text/css">
         body {
-            background-color: rgba(0, 50, 100, 0.5);
+            background-color: #AB3E5B;
         }
     </style>
 </head>
