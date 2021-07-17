@@ -10,10 +10,12 @@
         body {
             background-color: #AB3E5B;
             <!--background-color: rgba(0, 50, 100, 0.5);-->
-            padding-top: 15%;
+
+            padding-top: 5%;
         }
         #formulario {
-            background-color: gray;
+            background-color: black;
+            opacity: 0.5;
             border-radius: 2%;
         }
     </style>
