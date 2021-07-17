@@ -13,13 +13,14 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
-            <h1>Sign Up</h1>
+            <h1>Agregar tienda</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form action="/TiendaController/agregar_tienda" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>">
                 </div>
                 <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
