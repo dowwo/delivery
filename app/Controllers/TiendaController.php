@@ -32,7 +32,7 @@ class TiendaController extends Controller
         return view('agregar_tienda');
     }
 
-    //Guardar tienda
+    //Guardar tienda - sin funcionar
     public function guardar_tienda(){
         $id_usuario = $_SESSION['id_usuario'];
         $nom = "hola";
