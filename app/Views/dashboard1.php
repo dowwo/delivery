@@ -100,6 +100,10 @@ if(isset($_SESSION['msg'])){
                 <!--AGREGADO SOLO PARA REVISAR EL LISTAR TIENDA-->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
+                        <!--Redireccionar al agregar tienda-->
+                        <a href="agregar_tienda" class="card-link">Agregar tienda</a>
+                    </li>
+                    <li class="list-group-item">
                         <!--Redireccionar al listar_tienda-->
                         <a href="lista_tienda" class="card-link">Listar Tienda</a>
                     </li>
