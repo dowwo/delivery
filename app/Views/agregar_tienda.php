@@ -17,7 +17,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form action="/TiendaController/agregar_tienda" method="post">
+            <form action="/TiendaController/guardar_tienda" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>">
