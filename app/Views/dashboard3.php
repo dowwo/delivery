@@ -104,15 +104,15 @@ if(isset($_SESSION['msg'])){
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php echo base_url('images/tarjeta_solicitudes.jpg') ?>" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Solicitudes</h5>
-                    <p class="card-text">Visualice las opciones para la administración de las solicitudes.</p>
+                    <h5 class="card-title">Pedidos</h5>
+                    <p class="card-text">Visualice las opciones para la administración de los pedidos.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <a href="agregar_registro" class="card-link">Agregar solicitud</a>
+                        <a href="agregar_registro" class="card-link">Agregar pedido</a>
                     </li>
                     <li class="list-group-item">
-                        <a href="lista_registros" class="card-link">Ver solicitudes</a>
+                        <a href="lista_registros" class="card-link">Ver Pedidos</a>
                     </li>
 
                 </ul>
