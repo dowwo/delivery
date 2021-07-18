@@ -51,7 +51,7 @@ if(isset($_SESSION['msg'])){
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form action="/submit-form" method="post">
+            <form action="/guardar" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="InputForNombre">
