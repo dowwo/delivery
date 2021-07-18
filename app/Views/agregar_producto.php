@@ -47,7 +47,7 @@ if(isset($_SESSION['msg'])){
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
-            <h1>Agregar tienda</h1>
+            <h1>Agregar producto</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
@@ -69,7 +69,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Tienda</label>
-                    <select name="tienda" id="id_tienda" class="form-select" aria-label="Default select example">
+                    <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
                         <?php
                         foreach($tiendas as $tienda)
                         {
@@ -82,7 +82,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForCategoria" class="form-label">Categoría</label>
-                    <select name="categoria" id="id_categoria" class="form-select" aria-label="Default select example">
+                    <select name="categoria" id="categoria" class="form-select" aria-label="Default select example">
                         <?php
                         foreach($categorias as $categoria)
                         {
