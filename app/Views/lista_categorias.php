@@ -84,8 +84,8 @@ if(isset($_SESSION['msg'])){
             <?php if($categorias): ?>
                 <?php foreach($categorias as $categoria): ?>
                     <tr>
-                        <td><?php echo $categoria['id_usuario']; ?></td>
-                        <td><?php echo $categoria['nombre']; ?></td>
+                        <td><?php echo $categoria['id_categoria']; ?></td>
+                        <td><?php echo $categoria['categoria']; ?></td>
                         <td><?php echo $categoria['fecha_registro']; ?></td>
                         <td>
                             <a href="<?php echo base_url('modificar_categoria/'.$categoria['id_categoria']);?>" class="btn btn-primary btn-sm">Editar</a>
