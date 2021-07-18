@@ -61,7 +61,7 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="cantidad" class="form-control" id="InputForCantidad">
                 </div>
                 <div class="mb-3">
-                    <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
+                    <label for="InputFechaRegistro" class="form-label" name="fecha_agregado">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                 </div>
                 <div class="mb-3">
                     <label for="InputForValor" class="form-label">Valor</label>
