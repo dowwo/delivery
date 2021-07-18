@@ -36,8 +36,6 @@ class ProductController extends Controller
     // Método para insertar
     public function guardar()
     {
-
-
         //incluir helper form
         helper(['form']);
         // Aquí se especifican las reglas para el formulario
@@ -48,9 +46,9 @@ class ProductController extends Controller
             'valor'      => 'required|min_length[3]|max_length[100]'
         ];
         if($this->validate($reglas)){
-            //$model = new ModeloDocumento();
-            $modelProducto = new ProductModel();
-            $data = [
+
+            $modeloProducto = new ProductModel();
+            $data2 = [
                 'nombre'                    => $this->request->getVar('nombre'),
                 'cantidad'                  => $this->request->getVar('cantidad'),
                 'fecha_agregado'            => $this->request->getVar('fecha_registro'),
@@ -58,11 +56,11 @@ class ProductController extends Controller
                 'tienda_id_tienda'          => $this->request->getVar('tienda'),
                 'categoria_id_categoria'    => $this->request->getVar('categoria')
             ];
-            $modelProducto->save($data);
-            return redirect()->to('/dashboard1');
+            $modeloProducto->save($data2);
+            return redirect()->to('/lista_productos');
         }else{
-            $data['validation'] = $this->validator;
-            echo view('/Documentos/agregar_registro', $data);
+            $data2['validation'] = $this->validator;
+            echo view('/agregar_producto', $data2);
         }
 
     }
