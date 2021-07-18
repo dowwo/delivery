@@ -38,7 +38,7 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
-            <h1>Sign Up</h1>
+            <h1>Registro nuevo usuario</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
@@ -70,6 +70,20 @@
                 <div class="mb-3">
                     <label for="InputForConfPassword" class="form-label">Confirmar Contraseña</label>
                     <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForComuna" class="form-label">Tipo usuario</label>
+                    <select name="rol" id="rol" class="form-select" aria-label="Default select example">
+                        <?php
+                        foreach($rols as $rol)
+                        {
+                            ?>
+                            <option value="<?=$rol['id_rol']?>"><?=$rol['rol']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+
                 </div>
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Seleccionar tipo de usuario</label>
