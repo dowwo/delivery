@@ -42,8 +42,8 @@ class UsuarioController extends Controller
     public function update(){
         $modeloUsuario = new UserModel();
         $modeloUsuario->set(
-            'nombre=' .$this->request->getVar('nombre'),
-            'apellido_p=' .$this->request->getVar());
+            'id_usuario=' .$this->request->getVar('id_usuario'),
+            'apellido_p=' .$this->request->getVar('apellido_p'));
         $modeloUsuario->where('id_usuario', $this->request->getVar('id_usuario'));
         $modeloUsuario->update();
 // gives UPDATE `mytable` SET `field` = 'field+1' WHERE `id` = 2
