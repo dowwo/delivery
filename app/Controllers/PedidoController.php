@@ -12,14 +12,13 @@ class PedidoController extends Controller
 {
     //Listar pedidos
 
-
-    public function index(){
-
+    public function listar(){
         $modelo = new PedidoModel();
         $data['pedidos'] = $modelo->orderBy('id_pedido', 'DESC')->findAll();
 
         return view('lista_pedidos', $data);
     }
+
 
     // Retorna la vista agregar pedido
     public function agregar(){
