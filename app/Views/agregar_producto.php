@@ -38,6 +38,32 @@
         </div>
     </nav>
 </div>
+<div class="container">
+    <div class="row justify-content-md-center">">
+        <div class="col-6">
+            <h1>Agregar producto</h1>
+            <?php if(isset($validation)):?>
+                <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+            <?php endif;?>
+            <form action="/ProductController/guardar" method="post">
+                <div class="mb-3">
+                    <label for="InputForNombre" class="form-label">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" id="InputForNombre">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForCantidad" class="form-label">Cantidad</label>
+                    <input type="text" name="cantidad" class="form-control" id="InputForCantidad">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForFecha" class="form-label">Fecha agregado</label>
+                    <input type="text" name="fecha_agregado" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
 
 <?php
 if(isset($_SESSION['msg'])){

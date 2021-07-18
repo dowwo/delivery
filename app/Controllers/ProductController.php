@@ -49,7 +49,7 @@ class ProductController extends Controller
             $data = [
                 'nombre'                    => $this->request->getVar('nombre'),
                 'cantidad'                  => $this->request->getVar('cantidad'),
-                'fecha_agregado'            => $this->request->getVar('fecha_registro'),
+                'fecha_agregado'            => $this->request->getVar('fecha_agregado'),
                 'valor'                     => $this->request->getVar('valor'),
                 'tienda_id_tienda'          => $this->request->getVar('tienda'),
                 'categoria_id_categoria'    => $this->request->getVar('categoria')
