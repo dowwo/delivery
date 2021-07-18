@@ -72,7 +72,7 @@ $routes->get('delete/(:num)','TiendaController::delete/$1');
 
 //Editar - Eliminar categoria
 $routes->get('/modificar_categoria/(:num)','CategoriaController::singleCategoria/$1');
-$routes->get('delete/(:num)','CategoriaController::delete/$1');
+$routes->get('delete/(:num)','CategoriaController::delete/$1'); //Eliminar categoria redirecciona a lista usuario
 
 
 
