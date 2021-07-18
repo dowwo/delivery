@@ -33,7 +33,7 @@ class UsuarioController extends Controller
             'apellido_m' => $this->request->getVar('apellido_m'),
             'email'  => $this->request->getVar('email'),
         ];
-        $userModel->update($id, $data);
+        $userModel->where('id_usuario=' .$id)->update($id, $data);
         return $this->response->redirect(site_url('/lista_usuarios'));
     }
 
