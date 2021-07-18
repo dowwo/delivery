@@ -35,20 +35,11 @@ class PedidoController extends Controller
     //Listar pedidos
     public function index(){
         $id_tienda = $_SESSION['id_tienda'];
-        $session = session();
-
-
         $modeloPedido = new PedidoModel();
-
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
 
         $data['pedidos'] = $modeloPedido->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_pedido', 'DESC')->findAll();
-        $ses_data = [
-            'id_tienda'    => $data['id_tienda'],
-            'nombre'        => $data['nombre_tienda']
-        ];
-        $session->set($ses_data);
 
         return view('lista_pedidos', $data);
     }
