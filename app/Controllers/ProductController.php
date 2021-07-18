@@ -48,7 +48,7 @@ class ProductController extends Controller
             'valor'      => 'required|min_length[3]|max_length[100]'
         ];
         if($this->validate($reglas)){
-            $model = new ModeloDocumento();
+            //$model = new ModeloDocumento();
             $modelProducto = new ProductModel();
             $data = [
                 'nombre'                    => $this->request->getVar('nombre'),
