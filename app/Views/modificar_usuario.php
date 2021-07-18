@@ -21,10 +21,10 @@
 <body>
 <div class="container mt-5">
     <form method="post" id="add_create" name="add_create" action="<?= site_url('UsuarioController/update') ?>">
-        <input type="hidden" name="id_usuario" value="<?php echo $usuario_obj['id_usuario']; ?>">
+        <input name="id_usuario" value="<?php echo $usuario_obj['id_usuario']; ?>">
         <div class="form-group">
             <label>Nombre</label>
-            <input type="text" name="name" class="form-control" value="<?php echo $usuario_obj['name']; ?>">
+            <input type="text" name="name" class="form-control" value="<?php echo $usuario_obj['nombre']; ?>">
         </div>
         <div class="form-group">
             <label>Apellido Paterno</label>
