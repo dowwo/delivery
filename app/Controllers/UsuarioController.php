@@ -20,8 +20,8 @@ class UsuarioController extends Controller
         $modeloUsuario = new UserModel();
         $data['usuario_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
         $modeloRol = new RolModel();
-        $data2['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
-        return view('modificar_usuario', $data, $data2);
+        $data['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
+        return view('modificar_usuario', $data);
     }
 
     // update user data
