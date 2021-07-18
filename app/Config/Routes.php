@@ -48,6 +48,7 @@ $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
 $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
+$routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
 
 //Ruta de acceso a vendedor
 $routes->get('/lista_tienda','TiendaController::index', ['filter' => 'auth']);
