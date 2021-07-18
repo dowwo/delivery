@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready( function () {
-            $('#lista-categoria').DataTable( {
+            $('#users-list').DataTable( {
                 "language": {
                     "lengthMenu": "Mostrar _MENU_ registros por página",
                     "zeroRecords": "Lo sentimos, no se ha encontrado el registro",
@@ -104,7 +104,7 @@ if(isset($_SESSION['msg'])){
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready( function () {
-        $('#lista-categoria').DataTable( {
+        $('#users-list').DataTable( {
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "Lo sentimos, no se ha encontrado el registro",
