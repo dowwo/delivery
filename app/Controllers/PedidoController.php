@@ -41,14 +41,8 @@ class PedidoController extends Controller
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
-        $data['pedidos'] = $modeloPedido->where('tienda_id_tienda=' .$id_usuario );
+        $data['pedidos'] = $modeloPedido->where('tienda_id_tienda=' .$id_usuario )->orderBy('id_pedido', 'DESC')->findAll();
 
-        // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
-        // return view('carpeta/vista', $data);
-        return view('lista_tienda', $data);
-
-
-        $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
         return view('lista_pedidos', $data);
     }
 
