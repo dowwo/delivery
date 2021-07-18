@@ -25,17 +25,12 @@ class TiendaController extends Controller
     public function select(){
         $id_usuario = $_SESSION['id_usuario'];
 
-        $session = session();
+
         $modeloTienda = new TiendaModel();
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
 
-        $ses_data = [
-            'id_tienda'    => $data['id_tienda'],
-            'nombre'        => $data['nombre_tienda']
-        ];
-        $session->set($ses_data);
         return view('seleccionar_tienda', $data);
     }
     //Show single tienda
