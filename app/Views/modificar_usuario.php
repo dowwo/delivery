@@ -24,19 +24,19 @@
         <input type="hidden" name="id_usuario" value="<?php echo $usuario_obj['id_usuario']; ?>">
         <div class="form-group">
             <label>Nombre</label>
-            <input type="text" name="name" class="form-control" value="<?php echo $usuario_obj['name']; ?>>
+            <input type="text" name="name" class="form-control" value="<?php echo $usuario_obj['name']; ?>">
         </div>
         <div class="form-group">
             <label>Apellido Paterno</label>
-            <input type="text" name="apellido_p" class="form-control" value="<?php echo $usuario_obj['apellido_p']; ?>>
+            <input type="text" name="apellido_p" class="form-control" value="<?php echo $usuario_obj['apellido_p']; ?>">
         </div>
         <div class="form-group">
             <label>Apellido Materno</label>
-            <input type="text" name="apellido_m" class="form-control" value="<?php echo $usuario_obj['apellido_m']; ?>>
+            <input type="text" name="apellido_m" class="form-control" value="<?php echo $usuario_obj['apellido_m']; ?>">
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input type="text" name="email" class="form-control" value="<?php echo $usuario_obj['email']; ?>>
+            <input type="text" name="email" class="form-control" value="<?php echo $usuario_obj['email']; ?>">
         </div>
         <div class="mb-3">
             <label for="InputForComuna" class="form-label">Tipo usuario</label>
