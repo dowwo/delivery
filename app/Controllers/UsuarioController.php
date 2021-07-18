@@ -24,7 +24,6 @@ class UsuarioController extends Controller
         return view('modificar_usuario', $data);
     }
     // update user data
-    /*
     public function update(){
         $userModel = new UserModel();
         $id = $this->request->getVar('id_usuario');
@@ -37,17 +36,6 @@ class UsuarioController extends Controller
         ];
         $userModel->update($id, $data);
         return $this->response->redirect(site_url('/lista_usuarios'));
-    }*/
-    //
-    public function update(){
-        $modeloUsuario = new UserModel();
-        $dataUpdate = [
-            'nombre' => $this->request->getVar('name')
-
-        ];
-        $modeloUsuario->where('id_usuario', $this->request->getVar('id_usuario'));
-        $modeloUsuario->update($dataUpdate);
-// gives UPDATE `mytable` SET `field` = 'field+1' WHERE `id` = 2
     }
 
     // delete user
