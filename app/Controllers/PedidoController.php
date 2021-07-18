@@ -5,33 +5,10 @@ namespace App\Controllers;
 
 
 use App\Models\PedidoModel;
-use App\Models\TiendaModel;
 use CodeIgniter\Controller;
 
 class PedidoController extends Controller
 {
-
-    /*
-    // lista los productos
-    public function index(){
-        $id_usuario = $_SESSION['id_usuario'];
-
-        $modeloPedido = new PedidoModel();
-        // Esta query la voy a probar
-        $builder = $modeloPedido->table('pedido');
-        $builder->select('*');
-        $builder->join('pedido', 'pedido.tienda_id_tienda = tienda.id_tienda');
-        $query = $builder->get();
-
-        $data['pedidos'] = $query;
-
-        //$data['pedidos'] = $modeloPedido->where('tienda_id_tienda= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
-
-        //$data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
-
-        return view('lista_pedidos', $data);
-    }*/
-
     //Listar pedidos
     public function index(){
         $id_tienda = $_SESSION['id_tienda'];
@@ -39,7 +16,7 @@ class PedidoController extends Controller
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
 
-        $data['pedidos'] = $modeloPedido->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_pedido', 'DESC')->findAll();
+        $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
 
         return view('lista_pedidos', $data);
     }
