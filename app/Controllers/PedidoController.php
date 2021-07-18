@@ -6,15 +6,17 @@ namespace App\Controllers;
 
 use App\Models\PedidoModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Model;
 
 class PedidoController extends Controller
 {
     //Listar pedidos
-    public function index(){
-        $id_tienda = $_SESSION['id_tienda'];
-        $modeloPedido = new PedidoModel();
+    
 
-        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
+    public function index(){
+        $id_usuario = $_SESSION['id_usuario'];
+
+        $modeloPedido = new PedidoModel();
 
         $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
 
