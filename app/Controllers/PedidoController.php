@@ -10,7 +10,7 @@ use App\Models\TiendaModel;
 class PedidoController
 {
 
-    /*
+
     // lista los productos
     public function index(){
         $id_usuario = $_SESSION['id_usuario'];
@@ -29,15 +29,15 @@ class PedidoController
         //$data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
         return view('lista_pedidos', $data);
-    }*/
-
+    }
+/*
     //Listar pedidos
     public function index(){
         $modeloPedido = new PedidoModel();
         $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
         return view('lista_pedidos', $data);
     }
-
+*/
     // Retorna la vista agregar pedido
     public function agregar(){
         return view('agregar_pedido');
