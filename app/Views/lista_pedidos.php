@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Listar Productos</title>
+    <title>Listar Pedidos</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Con esta versión de bootstrap funcionan bien las tarjetas, pero la barra de navegacion pierde la configuración-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -78,28 +78,32 @@ if(isset($_SESSION['msg'])){
         <table class="table table-bordered" id="lista-producto">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Codigo barra</th>
-                <th>Nombre</th>
-                <th>Cantidad</th>
-                <th>Fecha agregado</th>
-                <th>valor</th>
+                <th>ID Pedido</th>
+                <th>Cliente</th>
+                <th>Tienda</th>
+                <th>Producto</th>
+                <th>Direccion destino</th>
+                <th>Fecha Pedido</th>
+                <th>Valor total</th>
+                <th>Estado</th>
                 <th>Acciones</th>
             </tr>
             </thead>
             <tbody>
-            <?php if($productos): ?>
-                <?php foreach($productos as $producto): ?>
+            <?php if($pedidos): ?>
+                <?php foreach($pedidos as $pedido): ?>
                     <tr>
-                        <td><?php echo $producto['id_producto']; ?></td>
-                        <td><?php echo $producto['codigo_barra']; ?></td>
-                        <td><?php echo $producto['nombre']; ?></td>
-                        <td><?php echo $producto['cantidad']; ?></td>
-                        <td><?php echo $producto['fecha_agregado']; ?></td>
-                        <td><?php echo $producto['valor']; ?></td>
+                        <td><?php echo $pedido['id_pedido']; ?></td>
+                        <td><?php echo $pedido['usuario_id_usuario']; ?></td>
+                        <td><?php echo $pedido['tienda_id_tienda']; ?></td>
+                        <td><?php echo $pedido['producto_id_producto']; ?></td>
+                        <td><?php echo $pedido['direccion_destino']; ?></td>
+                        <td><?php echo $pedido['fecha_pedido']; ?></td>
+                        <td><?php echo $pedido['valor_total']; ?></td>
+                        <td><?php echo $pedido['estado_id_estado']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('modificar_producto/'.$producto['id_producto']);?>" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="<?php echo base_url('delete/'.$producto['id_producto']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="<?php echo base_url('modificar_/'.$['id_']);?>" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="<?php echo base_url('delete/'.$['id_']);?>" class="btn btn-danger btn-sm">Eliminar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
