@@ -67,8 +67,9 @@ $routes->get('delete/(:num)','UsuarioController::delete/$1');
 $routes->get('/modificar_tienda/(:num)','TiendaController::singletienda/$1');
 $routes->get('delete/(:num)','TiendaController::delete/$1');
 
-
-//
+//Editar - Eliminar categoria
+$routes->get('/modificar_categoria/(:num)','categoriaController::singlecategoria/$1');
+$routes->get('delete/(:num)','categoriaController::delete/$1');
 
 
 
