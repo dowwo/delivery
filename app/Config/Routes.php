@@ -47,8 +47,7 @@ $routes->get('/dashboard3', 'DashboardAdmin::index',['filter' => 'admin']);
 $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
-$routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
-$routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
+
 
 //Ruta de acceso a vendedor
 $routes->get('/lista_tienda','TiendaController::index', ['filter' => 'auth']);
@@ -58,18 +57,22 @@ $routes->get('/agregar_tienda','TiendaController::agregar', ['filter' => 'auth']
 $routes->get('/agregar_producto','ProductController::agregar', ['filter' => 'auth']);
 $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']);
 
+//Ruta de acceso a categoria
+$routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
+$routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
+
     // Editar y Eliminar deben llevar el /(:num)
 //Editar - Eliminar usuario
 $routes->get('/modificar_usuario/(:num)','UsuarioController::singleUser/$1');
 $routes->get('delete/(:num)','UsuarioController::delete/$1');
 
 //Editar - Eliminar tienda
-$routes->get('/modificar_tienda/(:num)','TiendaController::singletienda/$1');
+$routes->get('/modificar_tienda/(:num)','TiendaController::singleTienda/$1');
 $routes->get('delete/(:num)','TiendaController::delete/$1');
 
 //Editar - Eliminar categoria
-$routes->get('/modificar_categoria/(:num)','categoriaController::singlecategoria/$1');
-$routes->get('delete/(:num)','categoriaController::delete/$1');
+$routes->get('/modificar_categoria/(:num)','CategoriaController::singleCategoria/$1');
+$routes->get('delete/(:num)','CategoriaController::delete/$1');
 
 
 
