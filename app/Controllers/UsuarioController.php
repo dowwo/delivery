@@ -40,7 +40,7 @@ class UsuarioController extends Controller
     }*/
     //
     public function update(){
-        $modeloUsuario = UserModel();
+        $modeloUsuario = new UserModel();
         $modeloUsuario->set(
             'nombre=' .$this->request->getVar('nombre'),
             'apellido_p=' .$this->request->getVar());
