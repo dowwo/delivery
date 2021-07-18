@@ -20,8 +20,8 @@
 
 <body>
 <div class="container mt-5">
-    <form method="post" id="add_create" name="add_create"
-          action="<?= site_url('UsuarioController/update') ?>">
+    <form method="post" id="add_create" name="add_create" action="<?= site_url('UsuarioController/update') ?>">
+        <input type="hidden" name="id" id="id" value="<?php echo $usuario_obj['id_usuario']; ?>">
         <div class="form-group">
             <label>Nombre</label>
             <input type="text" name="name" class="form-control">
