@@ -52,9 +52,9 @@ class ProductController extends Controller
                 'nombre'                    => $this->request->getVar('nombre'),
                 'cantidad'                  => $this->request->getVar('cantidad'),
                 'fecha_agregado'            => $this->request->getVar('fecha_registro'),
-                'valor'                     => $this->request->getVar('valor'),
-                'tienda_id_tienda'          => $this->request->getVar('tienda'),
-                'categoria_id_categoria'    => $this->request->getVar('categoria')
+                'valor'                     => $this->request->getVar('valor')
+                //'tienda_id_tienda'          => $this->request->getVar('tienda'),
+                //'categoria_id_categoria'    => $this->request->getVar('categoria')
             ];
             $modeloProducto->save($data);
             return redirect()->to('/lista_productos');
