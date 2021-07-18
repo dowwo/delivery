@@ -8,9 +8,10 @@ class Register extends Controller
 {
     public function index()
     {
+        $modeloRol = new RolModel();
         //include helper form
         helper(['form']);
-        $modeloRol = new RolModel();
+
         $data['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
         echo view('register', $data);
     }

@@ -10,5 +10,5 @@ class RolModel extends Model
 
     protected $primaryKey = 'id_rol';
 
-    protected $allowedFields = 'rol';
+    protected $allowedFields = ['rol'];
 }

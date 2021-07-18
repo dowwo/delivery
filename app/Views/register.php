@@ -85,13 +85,14 @@
                     </select>
 
                 </div>
+                <!--
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Seleccionar tipo de usuario</label>
                     <select id="rol_id_rol" class="form-select" aria-label="Default select example">
                         <option value="47474">Usuario</option>
                         <option value="47274">Vendedor</option>
                     </select>
-                </div>
+                </div>-->
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
