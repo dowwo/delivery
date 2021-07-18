@@ -69,7 +69,7 @@ $routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'ad
     // Editar y Eliminar deben llevar el /(:num)
 //Editar - Eliminar usuario
 $routes->get('/modificar_usuario/(:num)','UsuarioController::singleUser/$1');
-$routes->post('/update', 'UsuarioController::update');
+
 $routes->get('/delete/(:num)','UsuarioController::delete/$1');
 
 //Editar - Eliminar tienda
