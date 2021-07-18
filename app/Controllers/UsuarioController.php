@@ -23,19 +23,17 @@ class UsuarioController extends Controller
         $data['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
         return view('modificar_usuario', $data);
     }
-
     // update user data
     public function update(){
-        $modeloUsuario = new UserModel();
+        $userModel = new UserModel();
         $id = $this->request->getVar('id_usuario');
         $data = [
             'nombre' => $this->request->getVar('name'),
             'apellido_p' => $this->request->getVar('apellido_p'),
             'apellido_m' => $this->request->getVar('apellido_m'),
             'email'  => $this->request->getVar('email'),
-            'rol_id_rol' => $this->request->getVar('rol'),
         ];
-        $modeloUsuario->update($id, $data);
+        $userModel->update($id, $data);
         return $this->response->redirect(site_url('/lista_usuarios'));
     }
 
