@@ -56,7 +56,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="InputForFecha" class="form-label">Fecha agregado</label>
-                    <input type="text" name="fecha_agregado" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true">
+                    <input type="date" name="fecha_agregado" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true">
                 </div>
             </form>
         </div>
