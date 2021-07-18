@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\ProductModel;
+use App\Models\CategoriaModel;
 use CodeIgniter\Controller;
 
 class ProductController extends Controller
@@ -22,6 +23,8 @@ class ProductController extends Controller
 
     // Retorna la vista agregar producto
     public function agregar(){
+        $modeloCategoria = new CategoriaModel();
+        $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
         return view('agregar_producto');
     }
 
