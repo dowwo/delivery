@@ -57,21 +57,34 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="nombre" class="form-control" id="InputForNombre">
                 </div>
                 <div class="mb-3">
+                    <label for="InputForCantidad" class="form-label">Cantidad</label>
+                    <input type="text" name="cantidad" class="form-control" id="InputForCantidad">
+                </div>
+                <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                 </div>
-                <div>
-                    <label for="InputUsuario" class="form-label">Usuario</label>
-                    <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
-                </div>
-                <!--
                 <div class="mb-3">
-                    <label for="InputForTipo" class="form-label">Tipo de tienda</label>
-                    <select id="tipo" class="form-select" aria-label="Default select example">
-                        <option value="99999">prueba</option>
-                        <option value="100000">prueba2</option>
+                    <label for="InputForValor" class="form-label">Valor</label>
+                    <input type="number" name="valor" class="form-control" id="InputForValor">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForTienda" class="form-label">Tienda</label>
+                    <input type="text" name="id_tienda" class="form-control" id="InputForTienda">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForCategoria" class="form-label">Categoría</label>
+                    <select name="categoria" id="id_categoria" class="form-select" aria-label="Default select example">
+                        <?php
+                        foreach($categorias as $categoria)
+                        {
+                            ?>
+                            <option value="<?=$categoria['id_categoria']?>"><?=$categoria['categoria']?></option>
+                            <?php
+                        }
+                        ?>
                     </select>
-                </div>-->
-                <button type="submit" class="btn btn-primary">Guardar tienda</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar producto</button>
             </form>
         </div>
     </div>
