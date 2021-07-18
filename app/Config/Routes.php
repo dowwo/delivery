@@ -61,7 +61,7 @@ $routes->get('/seleccionar_tienda','TiendaController::select', ['filter' => 'aut
 
 //Ruta de acceso a pedido
 $routes->get('/agregar_pedido','PedidoController::agregar', ['filter' => 'auth']);
-$routes->get('/lista_pedidos','PedidoController::listar', ['filter' => 'auth']);
+$routes->get('/lista_pedidos','PedidoController::index', ['filter' => 'auth']);
 
 
 //Ruta de acceso a categoria
