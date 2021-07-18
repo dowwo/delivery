@@ -17,11 +17,12 @@ class UsuarioController extends Controller
 
     // show single user
     public function singleUser($id = null){
-        $userModel = new UserModel();
-        $data['usuario_obj'] = $userModel->where('id_usuario', $id)->first();
+        $modeloUsuario = new UserModel();
+        $data['usuario_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
+        $modeloRol = new RolModel();
+        $data['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
         return view('modificar_usuario', $data);
     }
-
     // update user data
     public function update(){
         $userModel = new UserModel();
@@ -31,9 +32,9 @@ class UsuarioController extends Controller
             'apellido_p' => $this->request->getVar('apellido_p'),
             'apellido_m' => $this->request->getVar('apellido_m'),
             'email'  => $this->request->getVar('email'),
-            'rol_id_rol'  => $this->request->getVar('')
+            'rol_id_rol'  => $this->request->getVar('rol')
         ];
-        $userModel->where('id_usuario=' .$id)->update($id, $data);
+        $userModel->update($id, $data);
         return $this->response->redirect(site_url('/lista_usuarios'));
     }
 
