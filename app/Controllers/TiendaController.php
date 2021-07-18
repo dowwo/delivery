@@ -31,11 +31,11 @@ class TiendaController extends Controller
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
 
-        $ses_data2 = [
+        $ses_data = [
             'id_tienda'    => $data['id_tienda'],
-            'nombre'        => $data['nombre']
+            'nombre'        => $data['nombre_tienda']
         ];
-        $session->set($ses_data2);
+        $session->set($ses_data);
         return view('seleccionar_tienda', $data);
     }
     //Show single tienda
