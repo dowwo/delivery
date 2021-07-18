@@ -69,16 +69,16 @@ $routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'ad
     // Editar y Eliminar deben llevar el /(:num)
 //Editar - Eliminar usuario
 $routes->get('/modificar_usuario/(:num)','UsuarioController::singleUser/$1');
-$routes->post('update/(:num)', 'UsuarioController::update/$1');
-$routes->get('delete/(:num)','UsuarioController::delete/$1');
+$routes->post('/update', 'UsuarioController::update');
+$routes->get('/delete/(:num)','UsuarioController::delete/$1');
 
 //Editar - Eliminar tienda
 $routes->get('/modificar_tienda/(:num)','TiendaController::singleTienda/$1');
-$routes->get('delete/(:num)','TiendaController::delete/$1');
+$routes->get('/delete/(:num)','TiendaController::delete/$1');
 
 //Editar - Eliminar categoria
 $routes->get('/modificar_categoria/(:num)','CategoriaController::singleCategoria/$1');
-$routes->get('delete/(:num)','CategoriaController::delete/$1'); //Eliminar categoria redirecciona a lista usuario
+$routes->get('/delete/(:num)','CategoriaController::delete/$1'); //Eliminar categoria redirecciona a lista usuario
 
 
 
