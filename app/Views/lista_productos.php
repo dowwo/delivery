@@ -81,6 +81,8 @@
                     <th>Cantidad</th>
                     <th>Fecha agregado</th>
                     <th>valor</th>
+                    <th>Tienda</th>
+                    <th>Categoría</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -93,6 +95,8 @@
                             <td><?php echo $producto['cantidad']; ?></td>
                             <td><?php echo $producto['fecha_agregado']; ?></td>
                             <td><?php echo $producto['valor']; ?></td>
+                            <td><?php echo $producto['tienda_id_tienda']; ?></td>
+                            <td><?php echo $producto['categoria_id_categoria']; ?></td>
                             <td>
                                 <a href="<?php echo base_url('modificar_producto/'.$producto['id_producto']);?>" class="btn btn-primary btn-sm">Editar</a>
                                 <a href="<?php echo base_url('delete/'.$producto['id_producto']);?>" class="btn btn-danger btn-sm">Eliminar</a>
