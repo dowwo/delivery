@@ -21,7 +21,7 @@
 <body>
 <div class="container mt-5">
     <form method="post" id="add_create" name="add_create"
-          action="/UsuarioController/update">
+          action="<?= site_url('/update') ?>">
         <div class="form-group">
             <label>Nombre</label>
             <input type="text" name="name" class="form-control">
