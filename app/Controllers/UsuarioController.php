@@ -17,12 +17,11 @@ class UsuarioController extends Controller
 
     // show single user
     public function singleUser($id = null){
-        $modeloUsuario = new UserModel();
-        $data['usuario_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
-        $modeloRol = new RolModel();
-        $data['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
+        $userModel = new UserModel();
+        $data['usuario_obj'] = $userModel->where('id_usuario', $id)->first();
         return view('modificar_usuario', $data);
     }
+
     // update user data
     public function update(){
         $userModel = new UserModel();
