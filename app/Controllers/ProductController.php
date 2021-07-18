@@ -41,18 +41,20 @@ class ProductController extends Controller
         // Aquí se especifican las reglas para el formulario
         // Las reglas deben quedar exactamente de esta forma, si hay algún otro caracter como un | arrojará un error en el validador
         $reglas = [
-            'nombre'   => 'required|min_length[3]|max_length[100]',
-            'valor'     => 'required|min_length[3]|max_length[100]'
+            'nombre'     => 'required|min_length[3]|max_length[100]',
+            'cantidad'   => 'required|min_length[1]|max_length[2]',
+            'valor'      => 'required|min_length[3]|max_length[100]'
         ];
         if($this->validate($reglas)){
             $model = new ModeloDocumento();
 
             $data = [
-                'codigo_barra'      =>  $this->request->getVar('codigo_b'),
-                'nombre'            =>  $this->request->getVar('nombre'),
-                'cantidad'          =>  $this->request->getVar('cantidad'),
-                'fecha_agregado'    =>  $this->request->getVar('fecha_agregado'),
-                'valor'             =>  $this->request->getVar('valor')
+                'nombre'                    => $this->request->getVar('nombre'),
+                'cantidad'                  => $this->request->getVar('cantidad'),
+                'fecha_agregado'            => $this->request->getVar('fecha_registro'),
+                'valor'                     => $this->request->getVar('valor'),
+                'tienda_id_tienda'          => $this->request->getVar('tienda'),
+                'categoria_id_categoria'    => $this->request->getVar('categoria')
             ];
             $model->save($data);
             return redirect()->to('/dashboard1');
