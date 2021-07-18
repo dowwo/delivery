@@ -16,7 +16,7 @@ class PedidoController extends Controller
     public function index(){
 
         $modelo = new PedidoModel();
-        $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
+        $data['pedidos'] = $modelo->orderBy('id_pedido', 'DESC')->findAll();
 
         return view('lista_pedidos', $data);
     }
