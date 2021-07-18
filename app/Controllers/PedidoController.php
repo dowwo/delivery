@@ -13,7 +13,7 @@ class PedidoController extends Controller
 
     //Listar pedidos
     public function index(){
-        $id_usuario = $_SESSION['id_usuario'];
+        $id_usuario = $_SESSION['id_tienda'];
         $modeloTienda = new TiendaModel();
         $modeloPedido = new PedidoModel();
 
@@ -24,9 +24,7 @@ class PedidoController extends Controller
 
         // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
         // return view('carpeta/vista', $data);
-        return view('lista_tienda', $data);
-
-
+        
         $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
         return view('lista_pedidos', $data);
     }
