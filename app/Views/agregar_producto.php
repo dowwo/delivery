@@ -69,11 +69,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Tienda</label>
-                    <input type="text" name="id_tienda" class="form-control" id="InputForTienda">
-                </div>
-                <div class="mb-3">
-                    <label for="InputForCategoria" class="form-label">Categoría</label>
-                    <select name="categoria" id="id_categoria" class="form-select" aria-label="Default select example">
+                    <select name="tienda" id="id_tienda" class="form-select" aria-label="Default select example">
                         <?php
                         foreach($tiendas as $tienda)
                         {
