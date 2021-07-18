@@ -6,8 +6,9 @@ namespace App\Controllers;
 
 use App\Models\PedidoModel;
 use App\Models\TiendaModel;
+use CodeIgniter\Controller;
 
-class PedidoController
+class PedidoController extends Controller
 {
 
     /*
