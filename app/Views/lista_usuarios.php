@@ -30,7 +30,11 @@
             ;
         } );
     </script>
-
+    <style type="text/css">
+        body {
+            background-color: rgba(0, 50, 100, 0.5);
+        }
+    </style>
 </head>
 
 <body id="navbar_distance">
