@@ -40,29 +40,26 @@ class ProductController extends Controller
         helper(['form']);
         // Aquí se especifican las reglas para el formulario
         // Las reglas deben quedar exactamente de esta forma, si hay algún otro caracter como un | arrojará un error en el validador
-        $reglas = [
-            'nombre'     => 'required|min_length[3]|max_length[100]',
-            'cantidad'   => 'required|min_length[1]|max_length[2]',
-            'valor'      => 'required|min_length[3]|max_length[100]'
+        $rules = [
+            'nombre' => 'required|min_length[3]|max_length[100]'
         ];
-        if($this->validate($reglas)){
 
-            $modeloProducto = new ProductModel();
-            $data2 = [
+        if($this->validate($rules)){
+            $model = new ProductModel();
+            $data = [
                 'nombre'                    => $this->request->getVar('nombre'),
                 'cantidad'                  => $this->request->getVar('cantidad'),
-                'fecha_agregado'            => $this->request->getVar('fecha_agregado'),
+                'fecha_agregado'            => $this->request->getVar('fecha_registro'),
                 'valor'                     => $this->request->getVar('valor'),
                 'tienda_id_tienda'          => $this->request->getVar('tienda'),
                 'categoria_id_categoria'    => $this->request->getVar('categoria')
             ];
-            $modeloProducto->insert($data2);
+            $model->save($data);
             return redirect()->to('/lista_productos');
         }else{
-            $data2['validation'] = $this->validator;
-            echo view('/agregar_producto', $data2);
+            $data['validation'] = $this->validation;
+            return redirect()->to('/agregar_producto');
         }
-
     }
 
     // show single product
