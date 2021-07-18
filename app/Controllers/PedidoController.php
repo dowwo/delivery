@@ -14,7 +14,7 @@ class PedidoController extends Controller
     //Listar pedidos
     public function index(){
         $id_usuario = $_SESSION['id_tienda'];
-        $id_tienda = $_SESSION['id_tienda']
+        $id_tienda = $_SESSION['id_tienda'];
         $modeloTienda = new TiendaModel();
         $modeloPedido = new PedidoModel();
 
