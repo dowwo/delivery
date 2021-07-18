@@ -54,13 +54,13 @@ if(isset($_SESSION['msg'])){
             <form action="/CategoriaController/store" method="post">
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre categoria</label>
-                    <input type="text" name="nombre" class="form-control" id="InputForNombre">
+                    <input type="text" name="categoria" class="form-control" id="InputForNombre">
                 </div>
                 <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Guardar tienda</button>
+                <button type="submit" class="btn btn-primary">Guardar categoria</button>
             </form>
         </div>
     </div>
