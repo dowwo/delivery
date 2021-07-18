@@ -55,7 +55,7 @@ $routes->get('/agregar_tienda','TiendaController::agregar', ['filter' => 'auth']
 
 //Ruta de acceso a producto
 $routes->get('/agregar_producto','ProductController::agregar', ['filter' => 'auth']);
-$routes->post('submit-form', 'ProductModel::guardar');
+$routes->post('guardar_producto', 'ProductModel::guardar');
 $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']);
 
 //Ruta de acceso a pedido
