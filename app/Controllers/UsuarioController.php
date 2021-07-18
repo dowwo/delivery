@@ -41,11 +41,12 @@ class UsuarioController extends Controller
     //
     public function update(){
         $modeloUsuario = new UserModel();
-        $modeloUsuario->set(
-            'id_usuario=' .$this->request->getVar('id_usuario'),
-            'apellido_p=' .$this->request->getVar('apellido_p'));
+        $dataUpdate = [
+            'nombre' => $this->request->getVar('name')
+
+        ];
         $modeloUsuario->where('id_usuario', $this->request->getVar('id_usuario'));
-        $modeloUsuario->update();
+        $modeloUsuario->update($dataUpdate);
 // gives UPDATE `mytable` SET `field` = 'field+1' WHERE `id` = 2
     }
 
