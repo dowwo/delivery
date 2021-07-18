@@ -28,7 +28,7 @@ class ProductController extends Controller
         $modeloCategoria = new CategoriaModel();
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
         $modeloTienda = new TiendaModel();
-        $data2['tienda'] = $modeloTienda->where('usuario_id_usuario='.$id_usuario);
+        $data2['tiendas'] = $modeloTienda->where('usuario_id_usuario='.$id_usuario);
 
         return view('agregar_producto', $data, $data2);
     }
