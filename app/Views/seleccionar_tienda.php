@@ -15,7 +15,7 @@
     </style>
     <script type="text/javascript">
         var tiendaId = "<?php echo $_SESSION['id_usuario']; ?>";
-
+        document.getElementById("tienda").value = tiendaId;
         // Your javascript code goes here
     </script>
 </head>
