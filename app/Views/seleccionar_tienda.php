@@ -13,6 +13,12 @@
             background-color: #AB3E5B;
         }
     </style>
+    <script type="javascript">
+        var e = document.getElementById("tienda");
+        var strUser = e.value;
+        document.write(e.value);
+
+    </script>
 </head>
 <body>
 <div>
@@ -45,7 +51,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form action="/PedidoController/index" method="post">
+            <form action="#">
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
                     <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
@@ -58,9 +64,12 @@
                         }
                         ?>
                     </select>
+                    <input type="text" value="<?php  $_SESSION["id_tienda"] = "";
+                    $_SESSION["favanimal"] = "cat";
+                    echo "Session variables are set.";
+                    ?>">
                 </div>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
-                <button type="submit" class="btn btn-secondary">Buscar</button>
 
             </form>
         </div>
