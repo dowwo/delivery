@@ -8,5 +8,6 @@ use CodeIgniter\Model;
 class ProductModel extends Model
 {
     protected $table = 'producto';
-    protected $allowedFields = ['codigo_barra','nombre','cantidad','fecha_agregado','valor'];
+    protected $primaryKey = 'id_producto';
+    protected $allowedFields = ['nombre','cantidad','fecha_agregado','valor','tienda_id_tienda','categoria_id_categoria'];
 }
