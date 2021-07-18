@@ -36,7 +36,6 @@ class TiendaController extends Controller
             'nombre'        => $data['nombre']
         ];
         $session->set($ses_data2);
-
         return view('seleccionar_tienda', $data);
     }
     //Show single tienda
