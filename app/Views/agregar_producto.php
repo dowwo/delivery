@@ -58,6 +58,37 @@
                     <label for="InputForFecha" class="form-label">Fecha agregado</label>
                     <input type="text" name="fecha_agregado" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true">
                 </div>
+                <div class="mb-3">
+                    <label for="InputForValor" class="form-label">Valor</label>
+                    <input type="number" name="valor" class="form-control" id="InputForValor">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForTienda" class="form-label">Tienda</label>
+                    <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
+                        <?php
+                        foreach($tiendas as $tienda)
+                        {
+                            ?>
+                            <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="InputForCategoria" class="form-label">Categoría</label>
+                    <select name="categoria" id="categoria" class="form-select" aria-label="Default select example">
+                        <?php
+                        foreach($categorias as $categoria)
+                        {
+                            ?>
+                            <option value="<?=$categoria['id_categoria']?>"><?=$categoria['categoria']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar producto</button>
             </form>
         </div>
 
