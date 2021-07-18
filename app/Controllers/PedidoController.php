@@ -5,20 +5,31 @@ namespace App\Controllers;
 
 
 use App\Models\PedidoModel;
+use App\Models\TiendaModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
 
 class PedidoController extends Controller
 {
+
     //Listar pedidos
+    public function index(){
+        $id_usuario = $_SESSION['id_usuario'];
+        $modeloTienda = new TiendaModel();
+        $modeloPedido = new PedidoModel();
 
-    public function listar(){
-        $modelo = new PedidoModel();
-        $data['pedidos'] = $modelo->orderBy('id_pedido', 'DESC')->findAll();
 
+        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
+        $data['pedidos'] = $modeloPedido->where('tienda_id_tienda=' );
+
+        // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
+        // return view('carpeta/vista', $data);
+        return view('lista_tienda', $data);
+
+
+        $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
         return view('lista_pedidos', $data);
     }
-
 
     // Retorna la vista agregar pedido
     public function agregar(){
