@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
 
+use App\Models\RolModel;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
@@ -9,7 +10,8 @@ class Register extends Controller
     {
         //include helper form
         helper(['form']);
-        $data = [];
+        $modeloRol = new RolModel();
+        $data['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
         echo view('register', $data);
     }
 

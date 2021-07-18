@@ -68,5 +68,4 @@ class TiendaController extends Controller
             return redirect()->to('/agregar_tienda');
         }
     }
-
 }
