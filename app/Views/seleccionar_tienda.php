@@ -16,7 +16,8 @@
     <script type="javascript">
         var e = document.getElementById("tienda");
         var strUser = e.value;
-        document.write(e.value);
+
+        document.getElementById("inputTienda").value = strUser;
 
     </script>
 </head>
@@ -64,7 +65,7 @@
                         }
                         ?>
                     </select>
-                    <input type="text" value="">
+                    <input id="inputTienda" type="text">
                 </div>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
 
