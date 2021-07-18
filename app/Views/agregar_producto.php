@@ -55,8 +55,7 @@
                     <input type="text" name="cantidad" class="form-control" id="InputForCantidad">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForFecha" class="form-label">Fecha agregado</label>
-                    <label type="hidden" for="InputForFecha" class="form-label" name="fecha_agregado">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
+                    <label type="hidden" for="InputForFecha" class="form-label" name="fecha_agregado">Fecha agregado: <?php echo @date('d-m-Y'); ?></label>
                     <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" >
                 </div>
                 <div class="mb-3">
