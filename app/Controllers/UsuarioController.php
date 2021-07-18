@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use App\Models\RolModel;
 use App\Models\UserModel;
 use CodeIgniter\Controller;
 
@@ -18,7 +19,9 @@ class UsuarioController extends Controller
     public function singleUser($id = null){
         $modeloUsuario = new UserModel();
         $data['usuario_obj'] = $modeloUsuario->where('id_usuario', $id)->first();
-        return view('modificar_usuario', $data);
+        $modeloRol = new RolModel();
+        $data2['rols'] = $modeloRol->orderBy('id_rol', 'DESC')->findAll();
+        return view('modificar_usuario', $data, $data2);
     }
 
     // update user data
@@ -26,7 +29,7 @@ class UsuarioController extends Controller
         $modeloUsuario = new UserModel();
         $id = $this->request->getVar('id_usuario');
         $data = [
-            'name' => $this->request->getVar('nombre_usuario'),
+            'name' => $this->request->getVar('nombre'),
             'apellido_p' => $this->request->getVar('apellido_p'),
             'apellido_m' => $this->request->getVar('apellido_m'),
             'email'  => $this->request->getVar('email_usuario'),

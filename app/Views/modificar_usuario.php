@@ -23,15 +23,34 @@
     <form method="post" id="add_create" name="add_create"
           action="<?= site_url('/submit-form') ?>">
         <div class="form-group">
-            <label>Name</label>
+            <label>Nombre</label>
             <input type="text" name="name" class="form-control">
         </div>
-
+        <div class="form-group">
+            <label>Apellido Paterno</label>
+            <input type="text" name="apellido_p" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Apellido Materno</label>
+            <input type="text" name="apellido_m" class="form-control">
+        </div>
         <div class="form-group">
             <label>Email</label>
             <input type="text" name="email" class="form-control">
         </div>
-
+        <div class="mb-3">
+            <label for="InputForComuna" class="form-label">Tipo usuario</label>
+            <select name="rol" id="rol" class="form-select" aria-label="Default select example">
+                <?php
+                foreach($rols as $rol)
+                {
+                    ?>
+                    <option value="<?=$rol['id_rol']?>"><?=$rol['rol']?></option>
+                    <?php
+                }
+                ?>
+            </select>
+        </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Update Data</button>
         </div>
