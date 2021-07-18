@@ -35,12 +35,10 @@
                         "previous": "Anterior"
                     }
                 }
-            } )
-
-            ;
+            } );
         } );
     </script>
-    <!--NO ENTIENDO EL SCRIPT ANTERIOR :( -->
+
 </head>
 <body id="navbar_distance">
     <div>
