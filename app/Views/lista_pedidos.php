@@ -73,45 +73,7 @@ if(isset($_SESSION['msg'])){
 }
 ?>
 <!---->
-<div class="container mt-4">
-    <div class="mt-3">
-        <table class="table table-bordered" id="lista-producto">
-            <thead>
-            <tr>
-                <th>ID Pedido</th>
-                <th>Cliente</th>
-                <th>Tienda</th>
-                <th>Producto</th>
-                <th>Direccion destino</th>
-                <th>Fecha Pedido</th>
-                <th>Valor total</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php if($pedidos): ?>
-                <?php foreach($pedidos as $pedido): ?>
-                    <tr>
-                        <td><?php echo $pedido['id_pedido']; ?></td>
-                        <td><?php echo $pedido['usuario_id_usuario']; ?></td>
-                        <td><?php echo $pedido['tienda_id_tienda']; ?></td>
-                        <td><?php echo $pedido['producto_id_producto']; ?></td>
-                        <td><?php echo $pedido['direccion_destino']; ?></td>
-                        <td><?php echo $pedido['fecha_pedido']; ?></td>
-                        <td><?php echo $pedido['valor_total']; ?></td>
-                        <td><?php echo $pedido['estado_id_estado']; ?></td>
-                        <td>
-                            <a href="<?php echo base_url('modificar_/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="<?php echo base_url('delete/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
-</div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">

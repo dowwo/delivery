@@ -11,13 +11,11 @@ use CodeIgniter\Model;
 class PedidoController extends Controller
 {
     //Listar pedidos
-    
+
 
     public function index(){
-        $id_usuario = $_SESSION['id_usuario'];
 
-        $modeloPedido = new PedidoModel();
-
+        $modelo = new PedidoModel();
         $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
 
         return view('lista_pedidos', $data);
