@@ -39,7 +39,7 @@
     </nav>
 </div>
 <div class="container">
-    <div class="row justify-content-md-center">">
+    <div class="row justify-content-md-center">
         <div class="col-6">
             <h1>Agregar producto</h1>
             <?php if(isset($validation)):?>
