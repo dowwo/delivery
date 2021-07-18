@@ -41,7 +41,7 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
-            <h1>Agregar producto</h1>
+            <h1>Seleccione Tienda</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
