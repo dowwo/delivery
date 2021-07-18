@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\ProductModel;
 use App\Models\CategoriaModel;
+use App\Models\TiendaModel;
 use CodeIgniter\Controller;
 use CodeIgniter\Model;
 
@@ -23,9 +24,13 @@ class ProductController extends Controller
 
     // Retorna la vista agregar producto
     public function agregar(){
+        $id_usuario = $_SESSION['id_usuario'];
         $modeloCategoria = new CategoriaModel();
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
-        return view('agregar_producto', $data);
+        $modeloTienda = new TiendaModel();
+        $data2['tienda'] = $modeloTienda->where('usuario_id_usuario='.$id_usuario);
+
+        return view('agregar_producto', $data, $data2);
     }
 
     // Método para insertar
