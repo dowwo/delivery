@@ -47,7 +47,7 @@ if(isset($_SESSION['msg'])){
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
-            <h1>Agregar tienda</h1>
+            <h1>Agregar Categoría</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
