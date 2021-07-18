@@ -74,7 +74,14 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputForCategoria" class="form-label">Categoría</label>
                     <select name="categoria" id="id_categoria" class="form-select" aria-label="Default select example">
-                        
+                        <?php
+                        foreach($categorias as $categoria)
+                        {
+                            ?>
+                            <option value="<?=$categoria['id_categoria']?>"><?=$categoria['categoria']?></option>
+                            <?php
+                        }
+                        ?>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Guardar producto</button>
