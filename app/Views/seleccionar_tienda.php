@@ -13,12 +13,12 @@
             background-color: #AB3E5B;
         }
     </style>
-    <script type="javascript">
-        var e = document.getElementById("tienda");
-        var strUser = e.value;
+    <script type="text/javascript">
+        var tiendaId = "<?php echo $_SESSION['id_usuario']; ?>";
+        document.getElementById("inputTienda").value = tiendaId;
+        document.getElementById("inputTienda").value = "My value";
 
-        document.getElementById("inputTienda").value = strUser;
-
+        // Your javascript code goes here
     </script>
 </head>
 <body>
