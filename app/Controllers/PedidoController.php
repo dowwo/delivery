@@ -27,7 +27,7 @@ class PedidoController
 
         //$data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
-        return view('lista_productos', $data);
+        return view('lista_pedidos', $data);
     }
 
     // Retorna la vista agregar pedido

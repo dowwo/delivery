@@ -57,6 +57,11 @@ $routes->get('/agregar_tienda','TiendaController::agregar', ['filter' => 'auth']
 $routes->get('/agregar_producto','ProductController::agregar', ['filter' => 'auth']);
 $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']);
 
+//Ruta de acceso a pedido
+$routes->get('/agregar_pedido','PedidoController::agregar', ['filter' => 'auth']);
+$routes->get('/lista_pedidos','PedidoController::index', ['filter' => 'auth']);
+
+
 //Ruta de acceso a categoria
 $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
 $routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
