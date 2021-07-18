@@ -21,6 +21,20 @@ class TiendaController extends Controller
         // return view('carpeta/vista', $data);
         return view('lista_tienda', $data);
     }
+    // show tienda list
+    public function select(){
+
+        $id_usuario = $_SESSION['id_usuario'];
+
+        $modeloTienda = new TiendaModel();
+
+        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
+
+        // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
+        // return view('carpeta/vista', $data);
+        return view('selecciona_tienda', $data);
+    }
     //Show single tienda
     public function singleTienda($id = null){
         $modeloTienda = new TiendaModel();
