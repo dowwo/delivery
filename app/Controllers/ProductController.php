@@ -48,19 +48,19 @@ class ProductController extends Controller
         if($this->validate($reglas)){
 
             $modeloProducto = new ProductModel();
-            $data = [
+            $data2 = [
                 'nombre'                    => $this->request->getVar('nombre'),
                 'cantidad'                  => $this->request->getVar('cantidad'),
                 'fecha_agregado'            => $this->request->getVar('fecha_registro'),
-                'valor'                     => $this->request->getVar('valor')
-                //'tienda_id_tienda'          => $this->request->getVar('tienda'),
-                //'categoria_id_categoria'    => $this->request->getVar('categoria')
+                'valor'                     => $this->request->getVar('valor'),
+                'tienda_id_tienda'          => $this->request->getVar('tienda'),
+                'categoria_id_categoria'    => $this->request->getVar('categoria')
             ];
-            $modeloProducto->save($data);
+            $modeloProducto->save($data2);
             return redirect()->to('/lista_productos');
         }else{
-            $data['validation'] = $this->validator;
-            echo view('/agregar_producto', $data);
+            $data2['validation'] = $this->validator;
+            echo view('/agregar_producto', $data2);
         }
 
     }
