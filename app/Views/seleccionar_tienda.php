@@ -64,10 +64,7 @@
                         }
                         ?>
                     </select>
-                    <input type="text" value="<?php  $_SESSION["id_tienda"] = "";
-                    $_SESSION["favanimal"] = "cat";
-                    echo "Session variables are set.";
-                    ?>">
+                    <input type="text" value="">
                 </div>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
 
