@@ -33,7 +33,7 @@ class TiendaController extends Controller
 
         // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
         // return view('carpeta/vista', $data);
-        return view('selecciona_tienda', $data);
+        return view('seleccionar_tienda', $data);
     }
     //Show single tienda
     public function singleTienda($id = null){
