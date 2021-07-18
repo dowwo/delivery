@@ -77,7 +77,6 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Codigo barra</th>
                     <th>Nombre</th>
                     <th>Cantidad</th>
                     <th>Fecha agregado</th>
@@ -90,7 +89,6 @@
                     <?php foreach($productos as $producto): ?>
                         <tr>
                             <td><?php echo $producto['id_producto']; ?></td>
-                            <td><?php echo $producto['codigo_barra']; ?></td>
                             <td><?php echo $producto['nombre']; ?></td>
                             <td><?php echo $producto['cantidad']; ?></td>
                             <td><?php echo $producto['fecha_agregado']; ?></td>
