@@ -13,7 +13,7 @@
             background-color: #AB3E5B;
         }
     </style>
-    <script>
+    <script type="text/javascript">
         var tiendaId = "<?php echo $_SESSION['id_usuario']; ?>";
 
         // Your javascript code goes here
