@@ -92,8 +92,9 @@
         console.log(selectedValue);
         document.getElementById("tienda").value = selectedValue;
         }
-        
         getSelectValue();
+        document.write(document.getElementById("list").value;);
+        
     print(getSelectValue();)
     </script>'?>
 <?php
