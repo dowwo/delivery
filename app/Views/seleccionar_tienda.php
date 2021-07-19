@@ -106,6 +106,7 @@ $_SESSION['subject'] =  $val;
 <?php echo 'ID Usuario: ',$_SESSION['id_usuario'] ?>
 <?php echo 'Nombre usuario: ', $_SESSION['nombre'] ?>
 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
+<?php echo 'Prueba: ', $_SESSION['subject'] ?>
 
 
 <!-- Popper.js first, then Bootstrap JS -->
