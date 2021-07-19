@@ -89,12 +89,17 @@ if( isset( $_SESSION['counter'] ) ) {
     $_SESSION['counter'] = 1;
 }
 
+
 $msg = "Visitas ".  $_SESSION['counter'];
-$msg .= " in this session.";
+$msg = " ";
 ?>
 <?php  echo ( $msg ); ?>
 
 <?php
+session_start();
+if (isset($_SESSION['id_tienda'])){
+
+}
 $session = session();
 
 $ses_data = [
