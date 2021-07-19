@@ -9,29 +9,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    
+
     <!--Este script es para traducir el Datatable -->
-    <script>
-        $(document).ready( function () {
-            $('#lista_producto').DataTable( {
-                "language": {
-                    "lengthMenu": "Mostrar _MENU_ registros por página",
-                    "zeroRecords": "Lo sentimos, no se ha encontrado el registro",
-                    "info": "Mostrando página _PAGE_ de _PAGES_",
-                    "infoEmpty": "No hay registros",
 
-                    "infoFiltered": "(filtered from _MAX_ total records)",
-                    "search": "Buscar",
-                    "paginate": {
-                        "next": "Siguiente",
-                        "previous": "Anterior"
-                    }
-                }
-            } )
-
-            ;
-        } );
-    </script>
     <script>
         /* Custom filtering function which will search data in column four between two values */
         $.fn.dataTable.ext.search.push(
@@ -60,6 +40,7 @@
             } );
         } );
     </script>
+
 
     <!--NO ENTIENDO EL SCRIPT ANTERIOR :( -->
 </head>
@@ -158,5 +139,6 @@ if(isset($_SESSION['msg'])){
         ;
     } );
 </script>
+
 </body>
 </html>
