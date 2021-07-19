@@ -93,7 +93,7 @@
         document.getElementById("tienda").value = selectedValue;
         }
         getSelectValue();
-        document.write(document.getElementById("list").value;);
+        document.write(document.getElementById("list").value);
         
     print(getSelectValue();)
     </script>'?>
