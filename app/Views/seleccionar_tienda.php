@@ -55,11 +55,7 @@
                     <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
                     <?php
                 } ?>
-                <?php
-                $id_tienda = $_GET['tienda'];  //guarda desde el input tienda
-                $_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
 
-                echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
             </select>
             <input name="tienda" id="tienda" type="text" value="">
             <script>
@@ -73,6 +69,11 @@
 
                 }
                 getSelectValue();
+                <?php
+                $id_tienda = $_GET['tienda'];  //guarda desde el input tienda
+                $_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
+
+                echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
 
             </script>
         </div>
@@ -83,7 +84,6 @@
 <?php echo $_SESSION['id_usuario'] ?>
 <?php echo $_SESSION['nombre'] ?>
 <?php echo $_SESSION['id_tienda'] ?>
-<?php echo $_SESSION ?>
 
 
 <!-- Popper.js first, then Bootstrap JS -->
