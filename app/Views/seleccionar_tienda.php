@@ -60,10 +60,9 @@
 
                 </select>
                 <input name="tienda" id="tienda" type="text" value="">
-                <input type="text" name="subject" id="subject" value="Car Loan">
+                <a href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
                 <script>
-
                     function getSelectValue()
                     {
                         var selectedValue = document.getElementById("list").value;
@@ -72,8 +71,6 @@
 
                     }
                     getSelectValue();
-
-
                 </script>
 
 
