@@ -58,6 +58,8 @@
 
             </select>
             <input name="tienda" id="tienda" type="text" value="">
+            <input type="text" name="subject" id="subject" value="Car Loan">
+
             <script>
 
                 function getSelectValue()
@@ -77,6 +79,8 @@
     </div>
 
 </div>
+<?php echo $_GET['subject']; ?>
+
 <?php
 session_start();
 
