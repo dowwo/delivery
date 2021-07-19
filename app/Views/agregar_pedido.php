@@ -52,6 +52,8 @@ if(isset($_SESSION['msg'])){
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form action="/TiendaController/guardar" method="post">
+                <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
+
                 <div class="mb-3">
                     <input type="text" name="id_usuario" class="form-control" id="InputForNombre" value="<?php echo $_SESSION['id_usuario'] ?>">
                 </div>
