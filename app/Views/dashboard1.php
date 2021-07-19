@@ -133,15 +133,6 @@ if(isset($_SESSION['msg'])){
                     <li class="list-group-item">
                         <a href="lista_pedidos" class="card-link">Ver todos los pedidos</a>
                     </li>
-                    <li class="list-group-item">
-                        <a href="#" class="card-link">Ver Pedidos completados</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="card-link">Ver Pedidos en reparto</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="card-link">Ver Pedidos en espera</a>
-                    </li>
                 </ul>
                 <div class="card-body">
                 </div>
