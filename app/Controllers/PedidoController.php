@@ -45,23 +45,17 @@ class PedidoController extends Controller
     // Método para insertar
     public function guardar()
     {
+
         //incluir helper form
         helper(['form']);
         // Aquí se especifican las reglas para el formulario
-        // Las reglas deben quedar exactamente de esta forma, si hay algún otro caractér como un | arrojará un error en el validador
-        $reglas = [
-            'id_usuario'  => 'required|min_length[3]|max_length[100]',
-            'id_tienda'   => 'required|min_length[3]|max_length[100]',
-            'id_producto' => 'required|min_length[3]|max_length[100]',
-            'cantidad'    => 'required|min_length[3]|max_length[100]',
-            'direccion'   => 'required|min_length[3]|max_length[100]',
-            'fecha_pedido'=> 'required|min_length[3]|max_length[100]',
-            'total'       => 'required|min_length[3]|max_length[100]',
-            'estado'      => 'required|min_length[3]|max_length[100]'
+        // Las reglas deben quedar exactamente de esta forma, si hay algún otro caracter como un | arrojará un error en el validador
+        $rules = [
+            'cantidad' => 'required|min_length[1]|max_length[3]'
         ];
-        if($this->validate($reglas)){
-            $model = new PedidoModel();
 
+        if($this->validate($rules)){
+            $model = new PedidoModel();
             $data = [
                 'usuario_id_usuario'    =>  $this->request->getVar('id_usuario'),
                 'tienda_id_tienda'      =>  $this->request->getVar('id_tienda'),
@@ -71,15 +65,13 @@ class PedidoController extends Controller
                 'fecha_pedido'          =>  $this->request->getVar('fecha_pedido'),
                 'valor_total'           =>  $this->request->getVar('valor_total'),
                 'estado_id_estado'      =>  $this->request->getVar('id_estado')
-
             ];
             $model->save($data);
-            return redirect()->to('/dashboard1');
+            return redirect()->to('/lista_pedidos');
         }else{
-            $data['validation'] = $this->validator;
-            echo view('/agregar_pedido', $data);
+            $data['validation'] = $this->validation;
+            return redirect()->to('/agregar_pedido');
         }
-
     }
 
     // show single product
