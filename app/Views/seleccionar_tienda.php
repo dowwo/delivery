@@ -69,7 +69,7 @@
                 {
                     var selectedValue = document.getElementById("list").value;
                     console.log(selectedValue);
-                    document.getElementById("tienda").value = console.log(selectedValue);
+                    document.getElementById("tienda").value = selectedValue;
 
                 }
                 getSelectValue();
