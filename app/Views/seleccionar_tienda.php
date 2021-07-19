@@ -79,7 +79,8 @@
     </div>
 
 </div>
-<?php echo $_GET['subject']; ?>
+<?php print_r($_GET);
+?>
 
 <?php
 session_start();
