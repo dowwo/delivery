@@ -48,6 +48,11 @@ if(isset($_SESSION['msg'])){
     <div class="row justify-content-md-center">
         <div class="col-6">
             <h1>Agregar Pedido</h1>
+            <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+            </div>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
