@@ -35,8 +35,8 @@
     <script>
         $(document).ready(function() {
             // Setup - add a text input to each footer cell
-            $('#example thead tr').clone(true).appendTo( '#example thead' );
-            $('#example thead tr:eq(1) th').each( function (i) {
+            $('#lista-pedido thead tr').clone(true).appendTo( '#example thead' );
+            $('#lista-pedido thead tr:eq(1) th').each( function (i) {
                 var title = $(this).text();
                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
 
@@ -50,7 +50,7 @@
                 } );
             } );
 
-            var table = $('#example').DataTable( {
+            var table = $('#lista-pedido').DataTable( {
                 orderCellsTop: true,
                 fixedHeader: true
             } );
