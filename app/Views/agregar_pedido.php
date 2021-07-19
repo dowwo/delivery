@@ -105,36 +105,6 @@ if(isset($_SESSION['msg'])){
 
                 <button type="submit" class="btn btn-primary">Guardar producto</button>
             </form>
-
-
-            <form action="/TiendaController/guardar" method="post">
-                <div class="mb-3">
-                    Número Tienda
-                </div>
-                <div class="mb-3">
-
-                </div>
-                <div class="mb-3">
-                    <input type="text" name="id_usuario" class="form-control" id="InputForNombre" value="<?php echo $_SESSION['id_usuario'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="InputForName" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" id="InputForNombre">
-                </div>
-                <div class="mb-3">
-                    <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
-                </div>
-
-                <!--
-                <div class="mb-3">
-                    <label for="InputForTipo" class="form-label">Tipo de tienda</label>
-                    <select id="tipo" class="form-select" aria-label="Default select example">
-                        <option value="99999">prueba</option>
-                        <option value="100000">prueba2</option>
-                    </select>
-                </div>-->
-                <button type="submit" class="btn btn-primary">Guardar tienda</button>
-            </form>
         </div>
     </div>
 </div>
