@@ -101,6 +101,7 @@
 
 </div>
 <?php
+/*
 session_start();
 $_SESSION['id_tienda']=
     '<script language="JavaScript">
@@ -112,6 +113,7 @@ $_SESSION['id_tienda']=
                         
                     }
     </script>'
+*/
 ?>
 
 <?php
