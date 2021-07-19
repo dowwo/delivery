@@ -46,31 +46,44 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <select id="list" onchange="getSelectValue();">
-                <?php
-                foreach($tiendas as $tienda)
-                {
-                    ?>
-                    <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
+            <form method="get">
+                <select id="list" onchange="getSelectValue();">
                     <?php
-                } ?>
+                    foreach($tiendas as $tienda)
+                    {
+                        ?>
+                        <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
+                        <?php
+                    } ?>
 
-            </select>
-            <input name="tienda" id="tienda" type="text" value="">
-            <input type="text" name="subject" id="subject" value="Car Loan">
+                </select>
+                <input name="tienda" id="tienda" type="text" value="">
+                <input type="text" name="subject" id="subject" value="Car Loan">
 
-            <script>
-                function getSelectValue()
-                {
-                    var selectedValue = document.getElementById("list").value;
-                    console.log(selectedValue);
-                    document.getElementById("tienda").value = selectedValue;
-                }
-                getSelectValue();
-            </script>
-            <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
+                <script>
+
+                    function getSelectValue()
+                    {
+                        var selectedValue = document.getElementById("list").value;
+                        console.log(selectedValue);
+                        document.getElementById("tienda").value = selectedValue;
+
+
+
+                    }
+                    getSelectValue();
+
+
+
+                </script>
+
+            </form>
+
+
         </div>
+
     </div>
+
 </div>
 
 <?php
@@ -82,12 +95,12 @@ if( isset( $_SESSION['counter'] ) ) {
     $_SESSION['counter'] = 1;
 }
 
+
 $msg = "Visitas ".  $_SESSION['counter'];
 $msg .= " ";
 ?>
-<?php  echo ( $msg ); ?>
 
-
+<?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
 
 
 
