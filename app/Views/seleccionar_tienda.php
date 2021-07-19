@@ -89,7 +89,7 @@
     '<script>
     function getSelectValue(){
         var selectedValue = document.getElementById("list").value;
-        document.write('+ document.getElementById("list").value+""+');
+        document.write("ID QUE SE GUARDA");
 
         
     </script>'?>
