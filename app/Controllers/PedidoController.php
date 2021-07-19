@@ -71,7 +71,7 @@ class PedidoController extends Controller
             return redirect()->to('/dashboard1');
         }else{
             $data['validation'] = $this->validator;
-            echo view('/Documentos/agregar_registro', $data);
+            echo view('/Documentos/agregar_pedido', $data);
         }
 
     }
