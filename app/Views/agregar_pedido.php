@@ -55,7 +55,7 @@ if(isset($_SESSION['msg'])){
                 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
 
                 <div class="mb-3">
-                    <input type="text" name="id_usuario" class="form-control" id="InputForNombre" value="<?php echo $_SESSION['id_tienda'] ?>">
+                    <input type="text" name="id_usuario" class="form-control" id="InputForNombre" value="<?php echo $_SESSION['id_usuario'] ?>">
                 </div>
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>

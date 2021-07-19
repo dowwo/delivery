@@ -87,7 +87,7 @@
 </div>
 <?php
 $session = session();
-
+/*
 $var['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
@@ -100,26 +100,9 @@ $var['id_tienda']=
                     getSelectValue();
     </script>';
 $_SESSION['id_tienda'] = $var['id_tienda'];
-$ses_data = [
+*/
 
-    'id_tienda'    => $var['id_tienda']
-];
-$session->set($ses_data);
 ?>
-
-<?php
-session_start();
-if( isset( $_SESSION['counter'] ) ) {
-    $_SESSION['counter'] += 1;
-}else {
-    $_SESSION['counter'] = 1;
-}
-$msg = "Visitas ".  $_SESSION['counter'];
-$msg .= " ";
-?>
-
-<?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
-
 
 
 <!-- Popper.js first, then Bootstrap JS -->
