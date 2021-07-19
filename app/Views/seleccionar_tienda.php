@@ -102,8 +102,6 @@ $ses_data = [
 ];
 $session->set($ses_data);
 ?>
-<?php  echo ( $msg ); ?>
-
 
 <?php echo 'ID Usuario: ',$_SESSION['id_usuario'] ?>
 <?php echo 'Nombre usuario: ', $_SESSION['nombre'] ?>
