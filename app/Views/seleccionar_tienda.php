@@ -107,10 +107,10 @@ $_SESSION['id_tienda']=
     function getSelectValue()
                     {
                         var selectedValue = document.getElementById("list").value;
+                        
                         document.write(selectedValue);
                         
                     }
-                    getSelectValue();
     </script>'
 ?>
 
