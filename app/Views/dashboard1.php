@@ -128,19 +128,10 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <a href="seleccionar_tienda" class="card-link">Ver pedidos/Seleccionar tienda</a>
+                        <a href="seleccionar_tienda" class="card-link">Agregar pedidos</a>
                     </li>
                     <li class="list-group-item">
                         <a href="lista_pedidos" class="card-link">Ver todos los pedidos</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="card-link">Ver Pedidos completados</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="card-link">Ver Pedidos en reparto</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="card-link">Ver Pedidos en espera</a>
                     </li>
                 </ul>
                 <div class="card-body">
