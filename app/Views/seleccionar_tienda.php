@@ -52,7 +52,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form action="#" method="post" class="mb-3">
+            <form method="post" class="mb-3">
                 <h3>Choose your favorite languages</h3>
                 <select name="lang[]" multiple class="form-control">
                     <option value=""disabled selected>Choose option</option>
