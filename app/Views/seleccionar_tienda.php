@@ -57,8 +57,7 @@
                     } ?>
 
                 </select>
-                <input name="tienda" id="tienda" type="text" value="">
-                <input type="text" name="subject" id="subject" value="Car Loan">
+                <input name="tienda" id="tienda" type="text" onchange="<script type='Javascript'"> location.reload </script>" value="">
 
                 <script>
 
@@ -68,9 +67,9 @@
                         console.log(selectedValue);
                         document.getElementById("tienda").value = selectedValue;
 
-
                     }
                     getSelectValue();
+
 
 
 
@@ -87,10 +86,16 @@
 <?php $_SESSION['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
-                    {
-                        var selectedValue = document.getElementById("list").value;
-                        document.write(selectedValue);
-                    }
+        {
+            var selectedValue = document.getElementById("list").value;
+            console.log(selectedValue);
+            document.write(selectedValue);
+        }
+        getSelectValue();
+    var element = document.getElementById("list");
+    element.onchange = function() {
+    location.reload();
+}
     </script>'
 ?>
 
