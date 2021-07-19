@@ -79,8 +79,6 @@
     </div>
 
 </div>
-<?php print_r($_GET);
-?>
 
 <?php
 session_start();
@@ -97,12 +95,10 @@ $msg .= "in this session.";
 <?php  echo ( $msg ); ?>
 
 <?php
+$val = $_REQUEST['subject'];
+
 session_start();
-
-$_SESSION['id_tienda'] = $_GET['tienda'];
-
-$msg = "You have visited this page ".  $_SESSION['id_tienda'];
-$msg .= "in this session.";
+$_SESSION['subject'] =  $val;
 ?>
 <?php  echo ( $msg ); ?>
 
