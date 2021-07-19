@@ -89,7 +89,8 @@
     '<script>
     function getSelectValue(){
         var selectedValue = document.getElementById("list").value;
-        document.write(selectedValue.value);
+        document.write('+ document.getElementById("list").value+""+');
+
         
     </script>'?>
 <?php
