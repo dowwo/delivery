@@ -48,6 +48,8 @@
             <?php endif;?>
             <form method="get">
                 <select id="list" onchange="getSelectValue();">
+                    <?php echo $_SESSION == 'id_tienda' ? 'selected' : '' ?>
+
                     <?php
                     foreach($tiendas as $tienda)
                     {
