@@ -69,8 +69,10 @@
                         document.getElementById("tienda").value = selectedValue;
 
 
+
                     }
                     getSelectValue();
+
 
 
                 </script>
@@ -83,7 +85,15 @@
     </div>
 
 </div>
-
+<?php $_SESSION['id_tienda']=
+    '<script>
+    function getSelectValue(){
+        var selectedValue = document.getElementById("list").value;
+        console.log(selectedValue);
+        document.getElementById("tienda").value = selectedValue;
+        }
+        getSelectValue();
+    </script>'?>
 <?php
 session_start();
 
