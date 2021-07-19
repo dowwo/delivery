@@ -15,9 +15,9 @@ class ProductController extends Controller
 
         $modeloProducto = new ProductModel();
 
-        $data['productos'] = $modeloProducto->where('tienda_id_tienda= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
+        //$data['productos'] = $modeloProducto->where('tienda_id_tienda= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
 
-        //$data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
+        $data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
         return view('lista_productos', $data);
     }
@@ -92,71 +92,6 @@ class ProductController extends Controller
     }
 
 
-    // Este método permite la subida de archivos al servidor
-    function upload() {
-        helper(['form', 'url']);
-
-        $input = $this->validate([
-            'file' => [
-                'uploaded[file]',
-                'max_size[file,1024]',
-            ]
-        ]);
-
-        if (!$input) {
-
-            echo "<script>alert('Archivo no compatible.');</script>";
-            echo "<meta http-equiv=\"refresh\" content=\"1;url=lista_registros\"/>";
-
-
-
-
-        } else {
-
-            $archivo = $this->request->getFile('file');
-            $newName = $archivo->getRandomName();
-            $archivo->move('../uploads/'.$newName);
-
-
-            $modelo = new ModeloArchivo();
-            $data = [
-                'nombre_archivo'        =>  $this->request->getVar('nombre'),
-                'titulo_archivo'        =>  $this->request->getVar('titulo'),
-                'id_registro_documento' =>  $this->request->getVar('id_doc'),
-                'file_path'             =>  $newName
-            ];
-            $modelo->save($data);
-            //Aquí se actualizará el documento para agregar el id del archivo recién agregado
-            $modeloDoc = new ModeloDocumento();
-
-            $id_documento = $this->request->getVar('id__registro_documento');
-            $id_archivo = $this->request->getVar('id_archivo');
-
-            $data2 =
-                [
-                    'id_archivo'  => $id_archivo,
-                ];
-
-
-
-
-            echo "<script>alert('El archivo se subió correctamente');</script>";
-
-            echo "<meta http-equiv=\"refresh\" content=\"1;url=lista_registros\"/>";
-
-
-
-
-        }
-    }
-
-    public function download($id){
-
-        $this->load->helper('download');
-        $fileinfo = $this->modeloArchivo->download($id);
-        $file = 'uploads/'.$fileinfo['filename'];
-        force_download($file, NULL);
-    }
 
 
 }

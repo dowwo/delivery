@@ -37,7 +37,8 @@ class PedidoController extends Controller
         $id_tienda = $this->request->getVar('id_tienda');
 
         $modeloProducto = new ProductModel();
-        $data['productos'] = $modeloProducto->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_producto', 'DESC')->findAll();
+        //$data['productos'] = $modeloProducto->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_producto', 'DESC')->findAll();
+        $data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
         return view('agregar_pedido', $data);
     }
 
