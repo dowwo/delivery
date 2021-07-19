@@ -61,6 +61,11 @@
                     <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
                     <?php
                 } ?>
+                <?php
+                $id_tienda = $_GET['tienda'];  //guarda desde el input tienda
+                $_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
+
+                echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
             </select>
             <input name="tienda" id="tienda" type="text" value="">
             <script>
@@ -70,10 +75,7 @@
                     var selectedValue = document.getElementById("list").value;
                     console.log(selectedValue);
                     document.getElementById("tienda").value = selectedValue;
-                    <?php $id_tienda = $_GET['tienda'];  //guarda desde el input tienda
-                    $_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
 
-                    echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
 
                 }
                 getSelectValue();
