@@ -62,7 +62,7 @@
                     <?php
                 } ?>
             </select>
-            <input id="tienda" type="text" value="">
+            <input name="tienda" id="tienda" type="text" value="">
             <script>
 
                 function getSelectValue()
@@ -82,6 +82,14 @@
 </div>
 
 <?php
+
+
+session_start();
+
+$id_tienda = $_GET['tienda'];  //store 10 in id variable
+$_SESSION['id'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
+
+echo $_SESSION['id_tienda'];   // now, print the Session variable
 
 
 
