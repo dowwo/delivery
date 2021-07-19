@@ -78,12 +78,20 @@
 
 </div>
 <?php
+session_start();
 
-$id_tienda = $_GET['tienda'];  //guarda desde el input tienda
-echo $id_tienda;
-$_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
+if( isset( $_SESSION['counter'] ) ) {
+    $_SESSION['counter'] += 1;
+}else {
+    $_SESSION['counter'] = 1;
+}
 
-echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
+$msg = "You have visited this page ".  $_SESSION['counter'];
+$msg .= "in this session.";
+?>
+<?php  echo ( $msg ); ?>
+
+
 <?php echo 'ID Usuario: ',$_SESSION['id_usuario'] ?>
 <?php echo 'Nombre usuario: ', $_SESSION['nombre'] ?>
 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
