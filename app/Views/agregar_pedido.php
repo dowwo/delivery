@@ -92,7 +92,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTotal" class="form-label">Valor total</label>
-                    <input type="number" name="total" class="form-control" id="InputForTotal" disabled="true" value="">
+                    <input type="number" name="total" class="form-control" id="InputForTotal" value="">
                 </div>
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Estado</label>
