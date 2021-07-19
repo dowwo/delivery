@@ -47,11 +47,14 @@ if(isset($_SESSION['msg'])){
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
-            <h1>Agregar tienda</h1>
+            <h1>Agregar Pedido</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form action="/TiendaController/guardar" method="post">
+                <div class="mb-3">
+                    <input type="hidden" name="id_usuario" class="form-control" id="InputForNombre" value="<?php echo $_SESSION['id_usuario'] ?>">
+                </div>
                 <div class="mb-3">
                     <label for="InputForName" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="InputForNombre">
