@@ -52,7 +52,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form action="#">
+            <form action="/recibe_tienda" method="post">
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
                     <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
@@ -65,7 +65,8 @@
                         }
                         ?>
                     </select>
-                    <input id="inputTienda" type="text">
+                    <a href="TiendaController/recibe" onmousedown="this.href=this.href+'?tienda='+document.getElementById('tienda').value" class="btn btn-large">Continuar</a>
+                    <input id="inputTienda" type="text" value="">
                 </div>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
 
