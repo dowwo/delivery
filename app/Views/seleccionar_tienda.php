@@ -70,6 +70,9 @@
                         document.getElementById("tienda").value = selectedValue;
                     }
                     getSelectValue();
+                    location.reload();
+
+    
     </script>'
                 ?>
 
