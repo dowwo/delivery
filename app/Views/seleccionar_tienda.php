@@ -67,7 +67,7 @@
                         var selectedValue = document.getElementById("list").value;
                         console.log(selectedValue);
                         document.getElementById("tienda").value = selectedValue;
-                        
+
 
 
 
@@ -93,7 +93,6 @@
                         var selectedValue = document.getElementById("list").value;
                         console.log(selectedValue);
                         document.write(selectedValue);
-                        document.getElementById("tienda").value = selectedValue;
                     }
                     getSelectValue();
     </script>'
