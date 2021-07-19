@@ -62,7 +62,7 @@
                     <?php
                 } ?>
             </select>
-            <input type="hidden" id="tienda" type="text" value="">
+            <input id="tienda" type="text" value="">
             <script>
 
                 function getSelectValue()
