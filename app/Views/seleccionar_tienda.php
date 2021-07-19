@@ -85,7 +85,6 @@
                     document.getElementById("tienda").value = selectedValue;
 
                 }
-                getSelectValue();
                 document.getElementById("myButton").onclick = function () {
                     location.href = "../agregar_pedido";
                 };
@@ -101,19 +100,18 @@
 
 </div>
 <?php
-/*
+
 session_start();
 $_SESSION['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
                     {
                         var selectedValue = document.getElementById("list").value;
-                        
+                        document.getElementById("tienda").value = selectedValue;
                         document.write(selectedValue);
                         
                     }
     </script>'
-*/
 ?>
 
 <?php
