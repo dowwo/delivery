@@ -48,7 +48,7 @@
             <?php endif;?>
             <form method="get">
                 <select id="list" onchange="getSelectValue();">
-                    <option disabled>Seleccione Tienda</option>
+                    <option selected="true" disabled="disabled">Seleccione</option>
                     <?php
                     foreach($tiendas as $tienda)
                     {
