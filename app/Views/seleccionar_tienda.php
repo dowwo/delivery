@@ -70,12 +70,14 @@
 
                     }
                     getSelectValue();
-                    window.location.replace("delivery-chile.cl/agregar_pedido");
+
 
                 </script>
 
 
             </form>
+            <button onClick="location.href='../agregar_pedido'">Continuar</button>
+
 
 
         </div>
