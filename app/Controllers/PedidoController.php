@@ -34,12 +34,10 @@ class PedidoController extends Controller
 
     // Retorna la vista agregar pedido
     public function agregar(){
-        $modeloTienda = new TiendaModel();
         $id_tienda = $this->request->getVar('id_tienda');
 
-
         $modeloProducto = new ProductModel();
-        $data['productos'] = $modeloProducto->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_producto', 'DESC')->findAll();;
+        $data['productos'] = $modeloProducto->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_producto', 'DESC')->findAll();
         return view('agregar_pedido', $data);
     }
 
