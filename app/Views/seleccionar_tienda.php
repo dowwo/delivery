@@ -48,6 +48,8 @@
             <?php endif;?>
             <form method="get">
                 <select id="list" onchange="getSelectValue();">
+                    <option selected="true" disabled="disabled">Seleccione</option>
+
                     <?php
                     foreach($tiendas as $tienda)
                     {
@@ -100,14 +102,11 @@
 
 <?php
 session_start();
-
 if( isset( $_SESSION['counter'] ) ) {
     $_SESSION['counter'] += 1;
 }else {
     $_SESSION['counter'] = 1;
 }
-
-
 $msg = "Visitas ".  $_SESSION['counter'];
 $msg .= " ";
 ?>
