@@ -89,8 +89,8 @@ if( isset( $_SESSION['counter'] ) ) {
     $_SESSION['counter'] = 1;
 }
 
-$msg = "You have visited this page ".  $_SESSION['counter'];
-$msg .= "in this session.";
+$msg = "Visitas ".  $_SESSION['counter'];
+$msg .= " in this session.";
 ?>
 <?php  echo ( $msg ); ?>
 
