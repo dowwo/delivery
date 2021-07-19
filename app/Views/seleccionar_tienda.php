@@ -61,7 +61,7 @@
                 </select>
                 <input name="id_tienda" id="id_tienda" type="text" value="">
                 <?php
-                $tienda = $_POST["id_tienda"];
+                $tienda = $_GET["id_tienda"];
                 ?>
                 <a href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
