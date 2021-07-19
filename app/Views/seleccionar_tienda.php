@@ -52,10 +52,10 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form method="post">
+            <form method="POST">
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
-                    <select name="tienda" id="id_tienda" class="form-select" aria-label="Default select example">
+                    <select name="tienda" class="form-select" aria-label="Default select example">
                         <?php
                         foreach($tiendas as $tienda)
                         {
@@ -64,11 +64,11 @@
                             <?php
                         } ?>
                     </select>
-                    <input type="submit" name="submit" value="Seleccionar Tienda">
+                    <input type="submit" name="enviar" value="Seleccionar Tienda">
                 </div>
             </form>
             <?php
-                if (isset($_POST['submit']))
+                if (isset($_POST['enviar']))
                 {
                     $obtenerTienda = $_POST['tienda'];
                     echo 'Tienda seleccionada: ' .$obtenerTienda;
