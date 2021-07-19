@@ -89,6 +89,8 @@
                     location.href = "../agregar_pedido";
                 };
             </script>
+            <a href="<?php echo base_url('agregar_pedido/'.$_SESSION['id_tienda']);?>" class="btn btn-primary btn-sm">Editar</a>
+
 
             <button onClick="location.href='../agregar_pedido'">Continuar</button>
 
@@ -112,17 +114,6 @@ $_SESSION['id_tienda']=
                         
                     }
     </script>'
-?>
-
-<?php
-session_start();
-if( isset( $_SESSION['counter'] ) ) {
-    $_SESSION['counter'] += 1;
-}else {
-    $_SESSION['counter'] = 1;
-}
-$msg = "Visitas ".  $_SESSION['counter'];
-$msg .= " ";
 ?>
 
 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
