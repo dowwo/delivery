@@ -62,7 +62,7 @@
                     <?php
                 } ?>
             </select>
-            <input id="tienda" type="text" value="">
+            <input type="hidden" id="tienda" type="text" value="">
             <script>
 
                 function getSelectValue()
@@ -82,6 +82,9 @@
 </div>
 
 <?php
+
+
+
 if(isset($_SESSION['msg'])){
     echo $_SESSION['id_usuario'];
 }
