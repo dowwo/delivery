@@ -18,15 +18,12 @@ class PedidoController extends Controller
 
         $modeloTienda = new TiendaModel();
         $modeloPedido = new PedidoModel();
-        $modeloProducto = new ProductModel();
         //$id_tienda = $_SESSION['id_tienda'];
         $id_tienda = $this->request->getVar('id_tienda');
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario=' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
-        $data['productos'] = $modeloProducto->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_producto', 'DESC')->findAll();
-        $data['productos'] = $modeloPedido->orderBy('id_producto', 'DESC')->findAll();
-        $data['pedidos'] = $modeloPedido->orderBy('id_pedido', 'DESC')->findAll();
+        $data['pedidos'] = $modeloPedido->orderBy('id_pedido');
 
         // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
         // return view('carpeta/vista', $data);
