@@ -51,8 +51,14 @@ class PedidoController extends Controller
         // Aquí se especifican las reglas para el formulario
         // Las reglas deben quedar exactamente de esta forma, si hay algún otro caractér como un | arrojará un error en el validador
         $reglas = [
-            'nombre'   => 'required|min_length[3]|max_length[100]',
-            'valor'     => 'required|min_length[3]|max_length[100]'
+            'id_usuario'  => 'required|min_length[3]|max_length[100]',
+            'id_tienda'   => 'required|min_length[3]|max_length[100]',
+            'id_producto' => 'required|min_length[3]|max_length[100]',
+            'cantidad'    => 'required|min_length[3]|max_length[100]',
+            'direccion'   => 'required|min_length[3]|max_length[100]',
+            'fecha_pedido'=> 'required|min_length[3]|max_length[100]',
+            'total'       => 'required|min_length[3]|max_length[100]',
+            'estado'      => 'required|min_length[3]|max_length[100]'
         ];
         if($this->validate($reglas)){
             $model = new PedidoModel();
@@ -61,7 +67,8 @@ class PedidoController extends Controller
                 'usuario_id_usuario'    =>  $this->request->getVar('id_usuario'),
                 'tienda_id_tienda'      =>  $this->request->getVar('id_tienda'),
                 'producto_id_producto'  =>  $this->request->getVar('id_producto'),
-                'direccion_id_direccion'=>  $this->request->getVar('id_direccion'),
+                'cantidad'              =>  $this->request->getVar('cantidad'),
+                'direccion_destino'     =>  $this->request->getVar('direccion'),
                 'fecha_pedido'          =>  $this->request->getVar('fecha_pedido'),
                 'valor_total'           =>  $this->request->getVar('valor_total'),
                 'estado_id_estado'      =>  $this->request->getVar('id_estado')
