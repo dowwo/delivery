@@ -57,14 +57,14 @@ class PedidoController extends Controller
         if($this->validate($rules)){
             $model = new PedidoModel();
             $data = [
-                'usuario_id_usuario'    =>  $this->request->getVar('id_usuario'),
+                'usuario_id_usuario'    =>  $this->request->getVar('usuario'),
                 'tienda_id_tienda'      =>  $this->request->getVar('id_tienda'),
-                'producto_id_producto'  =>  $this->request->getVar('id_producto'),
+                'producto_id_producto'  =>  $this->request->getVar('producto'),
                 'cantidad'              =>  $this->request->getVar('cantidad'),
                 'direccion_destino'     =>  $this->request->getVar('direccion'),
                 'fecha_pedido'          =>  $this->request->getVar('fecha_pedido'),
-                'valor_total'           =>  $this->request->getVar('valor_total'),
-                'estado_id_estado'      =>  $this->request->getVar('id_estado')
+                'valor_total'           =>  $this->request->getVar('total'),
+                'estado_id_estado'      =>  $this->request->getVar('estado')
             ];
             $model->save($data);
             return redirect()->to('/lista_pedidos');
