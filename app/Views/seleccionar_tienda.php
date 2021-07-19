@@ -52,6 +52,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
+
             <select id="list" onchange="getSelectValue();">
                 <option value="js">JavaScript</option>
                 <option value="php">PHP</option>
@@ -80,21 +81,19 @@
                 }
             }
             ?>
-            <form method="POST">
-                <div class="mb-3">
-                    <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
-                    <select name="tienda" class="form-select" aria-label="Default select example">
+            <div class="mb-3">
+                <label for="InputForTienda" class="form-label" onchange="getSelectValue();">Seleccione Tienda</label>
+                <select id="list" class="form-select" aria-label="Default select example">
+                    <?php
+                    foreach($tiendas as $tienda)
+                    {
+                        ?>
+                        <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
                         <?php
-                        foreach($tiendas as $tienda)
-                        {
-                            ?>
-                            <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
-                            <?php
-                        } ?>
-                    </select>
-                    <input type="submit" name="enviar" value="Seleccionar Tienda">
-                </div>
-            </form>
+                    } ?>
+                </select>
+                <input type="submit" name="enviar" value="Seleccionar Tienda">
+            </div>
             <?php
                 if (isset($_POST['enviar']))
                 {
