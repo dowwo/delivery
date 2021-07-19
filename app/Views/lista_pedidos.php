@@ -43,7 +43,7 @@
     <script>
         $(document).ready(function() {
             // Setup - add a text input to each footer cell
-            $('#example thead tr').clone(true).appendTo( '#example thead' );
+            $('#example thead tr').clone(true).appendTo( '#lista-pedido thead' );
             $('#example thead tr:eq(1) th').each( function (i) {
                 var title = $(this).text();
                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
@@ -100,7 +100,7 @@ if(isset($_SESSION['msg'])){
 <!---->
 <div class="container mt-4">
     <div class="mt-3">
-        <table class="table table-bordered" id="lista-producto">
+        <table class="table table-bordered" id="lista-pedido">
             <thead>
             <tr>
                 <th>ID Pedido</th>
