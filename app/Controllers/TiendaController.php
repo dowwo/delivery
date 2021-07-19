@@ -33,6 +33,10 @@ class TiendaController extends Controller
         return view('seleccionar_tienda', $data);
     }
 
+    public function recibe(){
+        return redirect()->to('/agregar_pedido');
+    }
+
 
 
     //Show single tienda
