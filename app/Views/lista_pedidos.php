@@ -33,7 +33,6 @@
     <!--Este script es para traducir el Datatable -->
 
     <script>
-        /* Custom filtering function which will search data in column four between two values */
         $(document).ready(function() {
             // Setup - add a text input to each footer cell
             $('#example thead tr').clone(true).appendTo( '#example thead' );
