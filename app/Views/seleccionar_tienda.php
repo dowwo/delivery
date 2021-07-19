@@ -95,7 +95,7 @@ $var['id_tienda']=
                     }
                     getSelectValue();
     </script>';
-$_SESSION['id_tienda'] = $var;
+$_SESSION['id_tienda'] = $var['id_tienda'];
 ?>
 
 <?php
