@@ -52,7 +52,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form action="/recibe_tienda" method="post">
+            <form method="post">
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
                     <select name="tienda" id="id_tienda" class="form-select" aria-label="Default select example">
