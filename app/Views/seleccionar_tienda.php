@@ -46,7 +46,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form>
+            <form method="get">
                 <select id="list" onchange="getSelectValue();">
                     <?php
                     foreach($tiendas as $tienda)
