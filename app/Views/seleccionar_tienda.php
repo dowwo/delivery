@@ -86,6 +86,7 @@
 </div>
 
 <?php
+// De aquí en adelante hay puros echos de pruebas
 session_start();
 
 if( isset( $_SESSION['counter'] ) ) {
