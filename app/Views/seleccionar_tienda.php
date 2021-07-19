@@ -60,7 +60,12 @@
                 <input name="tienda" id="tienda" type="text" value="">
                 <input type="text" name="subject" id="subject" value="Car Loan">
 
-                <?php $_SESSION['id_tienda']=
+                <?php
+                /* Aquí se guarda en la variable $_SESSION el id_tienda, para poder agregar pedidos y tomar
+                   el id_tienda desde la cookie
+                   pd: aguante javascript
+                */
+                $_SESSION['id_tienda']=
                     '<script language="JavaScript">
                         function getSelectValue()
                         {
