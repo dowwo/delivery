@@ -98,9 +98,9 @@ $msg = "Visitas ".  $_SESSION['counter'];
 $msg .= " ";
 ?>
 
-<?
+<?php
 //Esto imprime un contador de visitas durante lo que dure la cookie
-php  echo ( $msg ); ?>
+  echo ( $msg ); ?>
 
 <?php echo 'Este es el id que importa: ', $_SESSION['id_tienda'] ?>
 
