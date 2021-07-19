@@ -53,7 +53,7 @@ if(isset($_SESSION['msg'])){
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
 
-            <form action="/ProductController/guardar" method="post">
+            <form action="/PedidoController/guardar" method="post">
                 <div>
                     <label for="InputUsuario" class="form-label">Usuario</label>
                     <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
@@ -103,7 +103,7 @@ if(isset($_SESSION['msg'])){
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Guardar producto</button>
+                <button type="submit" class="btn btn-primary">Registrar pedido</button>
             </form>
         </div>
     </div>
