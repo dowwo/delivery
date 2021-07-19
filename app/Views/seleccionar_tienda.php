@@ -52,6 +52,34 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
+            <form action="" method="post" class="mb-3">
+                <h3>Choose your favorite languages</h3>
+                <select name="lang[]" multiple class="form-control">
+                    <option value=""disabled selected>Choose option</option>
+                    <option value="Laravel">Laravel</option>
+                    <option value="Php">Php</option>
+                    <option value="Jquery">Jquery</option>
+                    <option value="Node Js">NodeJs</option>
+                    <option value="Bootstrap">Bootstrap</option>
+                </select>
+
+                <div>
+                    <br>
+                    <input type="submit" name="submit" vlaue="Choose options">
+                </div>
+
+            </form>
+            <?php
+            if (isset($_POST['submit'])) {
+                if (!empty($_POST['lang'])) {
+                    foreach ($_POST['lang'] as $selected) {
+                        echo '<p class="select-tag mt-3">' . $selected . '</p>';
+                    }
+                } else {
+                    echo '<p class="error alert alert-danger mt-3">Please select any value</p>';
+                }
+            }
+            ?>
             <form method="POST">
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
