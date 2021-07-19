@@ -58,7 +58,7 @@
                     } ?>
 
                 </select>
-                <input name="tienda" id="tienda" type="text" onchange="<script type='Javascript'"> location.reload </script>" value="">
+                <input name="tienda" id="tienda" type="text" value="">
 
                 <script>
 
