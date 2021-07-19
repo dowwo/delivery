@@ -52,13 +52,13 @@
                     foreach($tiendas as $tienda)
                     {
                         ?>
-                        <option onmouseleave="location.href='../agregar_pedido'" value="<?=$tienda['id_tienda']?>"><?=$tienda['id_tienda']?><?=$tienda['nombre']?></option>
+                        <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
                         <?php
                     } ?>
 
                 </select>
                 <input name="tienda" id="tienda" type="text" value="">
-
+                <input type="text" name="subject" id="subject" value="Car Loan">
 
                 <script>
 
@@ -70,31 +70,12 @@
 
                     }
                     getSelectValue();
-
+                    
 
                 </script>
 
 
             </form>
-            <button id="myButton" class="float-left submit-button" >Home</button>
-            <script type="text/javascript">
-                function getSelectValue()
-                {
-                    var selectedValue = document.getElementById("list").value;
-                    console.log(selectedValue);
-                    document.getElementById("tienda").value = selectedValue;
-
-                }
-                getSelectValue();
-                document.getElementById("myButton").onclick = function () {
-                    location.href = "../agregar_pedido";
-                };
-            </script>
-            <a href="<?php echo base_url('agregar_pedido/'.$_SESSION['id_tienda']);?>" class="btn btn-primary btn-sm">Editar</a>
-
-
-            <button onClick="location.href='../agregar_pedido'">Continuar</button>
-
 
 
         </div>
@@ -102,22 +83,28 @@
     </div>
 
 </div>
-<?php
-
-session_start();
-$var['id_tienda']=
+<?php $_SESSION['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
                     {
                         var selectedValue = document.getElementById("list").value;
-                        document.getElementById("tienda").value = selectedValue;
+                        console.log(selectedValue);
                         document.write(selectedValue);
                         
                     }
                     getSelectValue();
-    </script>';
-$_SESSION['id_tienda'] = $var;
+    </script>'
+?>
 
+<?php
+session_start();
+if( isset( $_SESSION['counter'] ) ) {
+    $_SESSION['counter'] += 1;
+}else {
+    $_SESSION['counter'] = 1;
+}
+$msg = "Visitas ".  $_SESSION['counter'];
+$msg .= " ";
 ?>
 
 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
