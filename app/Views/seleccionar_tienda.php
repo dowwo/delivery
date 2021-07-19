@@ -48,7 +48,6 @@
             <?php endif;?>
             <form method="get">
                 <select id="list" onchange="getSelectValue();">
-                    <option selected="true" disabled="disabled">Seleccione</option>
                     <?php
                     foreach($tiendas as $tienda)
                     {
@@ -59,6 +58,7 @@
 
                 </select>
                 <input name="tienda" id="tienda" type="text" value="">
+                <input type="text" name="subject" id="subject" value="Car Loan">
 
                 <script>
 
@@ -67,10 +67,12 @@
                         var selectedValue = document.getElementById("list").value;
                         console.log(selectedValue);
                         document.getElementById("tienda").value = selectedValue;
+                        
+
+
 
                     }
                     getSelectValue();
-
 
 
 
@@ -87,13 +89,13 @@
 <?php $_SESSION['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
-        {
-            var selectedValue = document.getElementById("list").value;
-            console.log(selectedValue);
-            document.write(selectedValue);
-        }
-        getSelectValue();
-}
+                    {
+                        var selectedValue = document.getElementById("list").value;
+                        console.log(selectedValue);
+                        document.write(selectedValue);
+                        document.getElementById("tienda").value = selectedValue;
+                    }
+                    getSelectValue();
     </script>'
 ?>
 
