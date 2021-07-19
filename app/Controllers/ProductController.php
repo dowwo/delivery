@@ -15,9 +15,9 @@ class ProductController extends Controller
 
         $modeloProducto = new ProductModel();
 
-        //$data['productos'] = $modeloProducto->where('tienda_id_tienda= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
+        $data['productos'] = $modeloProducto->where('tienda_id_tienda= ' .$id_usuario)->orderBy('id_producto', 'DESC')->findAll();
 
-        $data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
+        //$data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
 
         return view('lista_productos', $data);
     }
