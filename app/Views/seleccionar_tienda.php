@@ -93,7 +93,7 @@ $_SESSION['id_tienda']=
         console.log(selectedValue);
         document.getElementById("tienda").value = selectedValue;
         }
-        document.write(document.getElementById("tienda").value = selectedValue);
+        document.write(selectedValue);
     </script>';?>
 <?php
 session_start();
