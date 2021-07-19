@@ -62,17 +62,18 @@
                             ?>
                             <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
                             <?php
-                        }
-
-                        ?>
-
+                        } ?>
                     </select>
-                    <a href="TiendaController/recibe" onmouseleave="<?php $id_tienda= $_POST['id_tienda']; $_SESSION['id_tienda'] = $id_tienda ?> " class="btn btn-large">Continuar</a>
-                    <input id="inputTienda" type="text" value="">
+                    <input type="submit" name="submit" value="Seleccionar Tienda">
                 </div>
-                <button type="button" class="btn btn-primary">Seleccionar</button>
-
             </form>
+            <?php
+                if (isset($_POST['submit']))
+                {
+                    $obtenerTienda = $_POST['tienda'];
+                    echo 'Tienda seleccionada: ' .$obtenerTienda;
+                }
+            ?>
         </div>
 
     </div>
