@@ -86,6 +86,8 @@
 
 </div>
 <?php
+$session = session();
+
 $var['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
@@ -98,6 +100,11 @@ $var['id_tienda']=
                     getSelectValue();
     </script>';
 $_SESSION['id_tienda'] = $var['id_tienda'];
+$ses_data = [
+
+    'id_tienda'    => $var['id_tienda']
+];
+$session->set($ses_data);
 ?>
 
 <?php
