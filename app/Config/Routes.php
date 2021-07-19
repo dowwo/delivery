@@ -60,7 +60,7 @@ $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']
 $routes->get('/seleccionar_tienda','TiendaController::select', ['filter' => 'auth']);
 
 //Ruta de acceso a pedido
-$routes->post('/agregar_pedido','PedidoController::agregar', ['filter' => 'auth']);
+$routes->post('/agregar_pedido/(:num)','PedidoController::agregar', ['filter' => 'auth']);
 $routes->get('/lista_pedidos','PedidoController::index', ['filter' => 'auth']);
 
 
