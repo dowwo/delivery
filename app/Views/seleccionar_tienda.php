@@ -58,24 +58,25 @@
 
                 </select>
                 <input name="tienda" id="tienda" type="text" value="">
+                <input type="text" name="subject" id="subject" value="Car Loan">
+
+                <script>
+
+                    function getSelectValue()
+                    {
+                        var selectedValue = document.getElementById("list").value;
+                        console.log(selectedValue);
+                        document.getElementById("tienda").value = selectedValue;
 
 
-                <?php
-                /* Aquí se guarda en la variable $_SESSION el id_tienda, para poder agregar pedidos y tomar
-                   el id_tienda desde la cookie
-                   pd: aguante javascript
-                */
-                $_SESSION['id_tienda']=
-                    '<script language="JavaScript">
-                        function getSelectValue()
-                        {
-                            var selectedValue = document.getElementById("list").value;
-                            console.log(selectedValue);
-                            document.getElementById("tienda").value = selectedValue;
-                            document.write(selectedValue);
-                        }
-                        getSelectValue();
-                    </script>'?>
+
+                    }
+                    getSelectValue();
+
+
+
+                </script>
+
             </form>
 
 
@@ -84,7 +85,14 @@
     </div>
 
 </div>
-
+<?php $_SESSION['id_tienda']=
+    '<script language="JavaScript">
+    function getSelectValue(){
+        var selectedValue = document.getElementById("list").value;
+                        console.log(selectedValue);
+                        document.getElementById("tienda").value = selectedValue;
+    }
+    </script>'?>
 <?php
 session_start();
 
@@ -94,15 +102,24 @@ if( isset( $_SESSION['counter'] ) ) {
     $_SESSION['counter'] = 1;
 }
 
+
 $msg = "Visitas ".  $_SESSION['counter'];
 $msg .= " ";
 ?>
+<?php  echo ( $msg ); ?>
 
 <?php
-//Esto imprime un contador de visitas durante lo que dure la cookie
-  echo ( $msg ); ?>
 
-<?php echo 'Este es el id que importa: ', $_SESSION['id_tienda'] ?>
+if (!isset($_SESSION['id_tienda'])){
+    $_SESSION['id_tienda']= 'tienda';
+}
+
+
+?>
+
+<?php echo 'ID Usuario: ',$_SESSION['id_usuario'] ?>
+<?php echo 'Nombre usuario: ', $_SESSION['nombre'] ?>
+<?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
 
 
 
