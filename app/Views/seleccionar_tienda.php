@@ -93,6 +93,8 @@
                         var selectedValue = document.getElementById("list").value;
                         console.log(selectedValue);
                         document.write(selectedValue);
+                        window.open(agregar_pedido);
+                        
                     }
                     getSelectValue();
     </script>'
