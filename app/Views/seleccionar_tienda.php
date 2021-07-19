@@ -68,15 +68,12 @@
                         console.log(selectedValue);
                         document.getElementById("tienda").value = selectedValue;
 
-
-
-
                     }
                     getSelectValue();
-
-
+                    window.location.replace("delivery-chile.cl/agregar_pedido");
 
                 </script>
+
 
             </form>
 
@@ -93,7 +90,6 @@
                         var selectedValue = document.getElementById("list").value;
                         console.log(selectedValue);
                         document.write(selectedValue);
-                        window.open(agregar_pedido);
                         
                     }
                     getSelectValue();
