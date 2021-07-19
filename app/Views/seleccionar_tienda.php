@@ -47,7 +47,7 @@
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
             <form method="get">
-                <select id="list" onchange="getSelectValue();">
+                <select id="list" ">
                     <option selected="true" disabled="disabled"></option>
 
                     <?php
