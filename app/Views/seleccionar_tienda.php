@@ -85,6 +85,7 @@
                     document.getElementById("tienda").value = selectedValue;
 
                 }
+                getSelectValue();
                 document.getElementById("myButton").onclick = function () {
                     location.href = "../agregar_pedido";
                 };
