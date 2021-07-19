@@ -52,7 +52,7 @@
                     foreach($tiendas as $tienda)
                     {
                         ?>
-                        <option onmouseleave="location.href='../agregar_pedido'" value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
+                        <option onmouseleave="location.href='../agregar_pedido'" value="<?=$tienda['id_tienda']?>"><?=$tienda['id_tienda']?><?=$tienda['nombre']?></option>
                         <?php
                     } ?>
 
