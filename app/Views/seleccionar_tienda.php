@@ -79,7 +79,7 @@
     </div>
 
 </div>
-<?php print_r($_GET['subject']);
+<?php print_r($_SESSION['id_usuario']);
 ?>
 
 <?php
