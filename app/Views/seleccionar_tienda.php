@@ -113,6 +113,7 @@ $var['id_tienda']=
                         document.write(selectedValue);
                         
                     }
+                    getSelectValue();
     </script>';
 $_SESSION['id_tienda'] = $var;
 
