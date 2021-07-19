@@ -114,7 +114,7 @@ $var['id_tienda']=
                         
                     }
     </script>';
-$_SESSION[$var];
+$_SESSION['id_tienda'] = $var;
 
 ?>
 
