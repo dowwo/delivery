@@ -70,6 +70,10 @@
                     var selectedValue = document.getElementById("list").value;
                     console.log(selectedValue);
                     document.getElementById("tienda").value = selectedValue;
+                    <?php $id_tienda = $_GET['tienda'];  //guarda desde el input tienda
+                    $_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
+
+                    echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
 
                 }
                 getSelectValue();
@@ -82,12 +86,7 @@
 </div>
 <?php echo $_SESSION['id_usuario'] ?>
 <?php echo $_SESSION['nombre'] ?>
-<?php $id_tienda = $_GET['tienda'];  //guarda desde el input tienda
-$_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
 
-echo $_SESSION['id_tienda'];   // now, print the Session variable
-
-?>
 
 <!-- Popper.js first, then Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
