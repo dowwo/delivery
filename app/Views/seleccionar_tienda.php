@@ -55,7 +55,7 @@
             <form action="/recibe_tienda" method="post">
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Seleccione Tienda</label>
-                    <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
+                    <select name="tienda" id="id_tienda" class="form-select" aria-label="Default select example">
                         <?php
                         foreach($tiendas as $tienda)
                         {
@@ -67,7 +67,7 @@
                         ?>
 
                     </select>
-                    <a href="TiendaController/recibe" onmouseleave="<?php $tienda= $_POST['tienda']; echo $tienda ?> " class="btn btn-large">Continuar</a>
+                    <a href="TiendaController/recibe" onmouseleave="<?php $id_tienda= $_POST['id_tienda']; $_SESSION['id_tienda'] = $id_tienda ?> " class="btn btn-large">Continuar</a>
                     <input id="inputTienda" type="text" value="">
                 </div>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
