@@ -52,23 +52,23 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form method="post" class="mb-3">
-                <h3>Choose your favorite languages</h3>
-                <select name="lang[]" multiple class="form-control">
-                    <option value=""disabled selected>Choose option</option>
-                    <option value="Laravel">Laravel</option>
-                    <option value="Php">Php</option>
-                    <option value="Jquery">Jquery</option>
-                    <option value="Node Js">NodeJs</option>
-                    <option value="Bootstrap">Bootstrap</option>
-                </select>
+            <select id="list" onchange="getSelectValue();">
+                <option value="js">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="c#">Csharp</option>
+                <option value="java">Java</option>
+                <option value="node">Node.js</option>
+            </select>
+            <script>
 
-                <div>
-                    <br>
-                    <input type="submit" name="submit" vlaue="Choose options">
-                </div>
+                function getSelectValue()
+                {
+                    var selectedValue = document.getElementById("list").value;
+                    console.log(selectedValue);
+                }
+                getSelectValue();
 
-            </form>
+            </script>
             <?php
             if (isset($_POST['submit'])) {
                 if (!empty($_POST['lang'])) {
