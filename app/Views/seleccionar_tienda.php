@@ -46,7 +46,7 @@
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
-            <form method="get">
+            <form method="POST">
                 <select id="list" onchange="getSelectValue();">
                     <?php echo $_SESSION == 'id_tienda' ? 'selected' : '' ?>
 
@@ -60,7 +60,7 @@
 
                 </select>
                 <input name="tienda" id="tienda" type="text" value="">
-                <a href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
+                <a href="<?php echo base_url('agregar_pedido/'.$_POST['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
                 <script>
                     function getSelectValue()
