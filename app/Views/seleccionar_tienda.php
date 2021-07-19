@@ -68,9 +68,9 @@
                         console.log(selectedValue);
                         document.getElementById("tienda").value = selectedValue;
 
+
                     }
                     getSelectValue();
-                    location.reload();
 
 
 
