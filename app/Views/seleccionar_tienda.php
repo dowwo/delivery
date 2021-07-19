@@ -100,7 +100,9 @@
     </div>
 
 </div>
-<?php $_SESSION['id_tienda']=
+<?php
+session_start();
+$_SESSION['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
                     {
