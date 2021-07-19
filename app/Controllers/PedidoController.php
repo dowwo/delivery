@@ -6,6 +6,7 @@ namespace App\Controllers;
 
 use App\Models\PedidoModel;
 use App\Models\TiendaModel;
+use App\Models\ProductModel;
 use CodeIgniter\Controller;
 
 class PedidoController extends Controller
@@ -14,14 +15,14 @@ class PedidoController extends Controller
     //Listar pedidos
     public function index(){
         $id_usuario = $_SESSION['id_usuario'];
-        $id_tienda = $_SESSION['id_tienda'];
-        //$id_tienda = 100007;
+
         $modeloTienda = new TiendaModel();
         $modeloPedido = new PedidoModel();
-
+        //$id_tienda = $_SESSION['id_tienda'];
+        $id_tienda = $this->request->getVar('id_tienda');
 
         // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
-        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario=' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
         $data['pedidos'] = $modeloPedido->where('tienda_id_tienda=' .$id_tienda)->orderBy('id_pedido');
 
         // Para las vistas que se encuentran en subcarpetas se realiza de la siguiente manera
@@ -33,7 +34,13 @@ class PedidoController extends Controller
 
     // Retorna la vista agregar pedido
     public function agregar(){
-        return view('agregar_pedido');
+        $modeloTienda = new TiendaModel();
+        $id_tienda = $this->request->getVar('id_tienda');
+
+
+        $modeloProducto = new ProductModel();
+        $data['productos'] = $modeloProducto->where('tienda_id_tienda=' .$this->request->getVar('id_tienda'));
+        return view('agregar_pedido', $data);
     }
 
     // Método para insertar
