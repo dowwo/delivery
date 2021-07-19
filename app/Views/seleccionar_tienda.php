@@ -85,15 +85,16 @@
     </div>
 
 </div>
-<?php $_SESSION['id_tienda']=
+<?php
+$_SESSION['id_tienda']=
     '<script>
     function getSelectValue(){
         var selectedValue = document.getElementById("list").value;
         console.log(selectedValue);
         document.getElementById("tienda").value = selectedValue;
         }
-        document.write(document.getElementById("tienda").value = selectedValue;);
-    </script>'?>
+        document.write(document.getElementById("tienda").value = selectedValue);
+    </script>';?>
 <?php
 session_start();
 
