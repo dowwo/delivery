@@ -98,7 +98,7 @@ $msg .= "in this session.";
 $session = session();
 
 $ses_data = [
-    'id_tienda'     => $this->request->getVar('tienda')
+    'id_tienda'     => $_GET['tienda']
 ];
 $session->set($ses_data);
 ?>
