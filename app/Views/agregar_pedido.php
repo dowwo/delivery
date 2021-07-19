@@ -60,7 +60,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForNombre" class="form-label">Tienda</label>
-                    <input type="text" name="id_tienda" id="id_tienda" value="<?php
+                    <input type="text" name="id_tienda" class="form-control" id="id_tienda" value="<?php
                     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                     echo basename($actual_link);
                     ?>">
@@ -102,7 +102,7 @@ if(isset($_SESSION['msg'])){
                         <option value="3">Entregado</option>
                     </select>
                 </div>
-                
+
                 <button type="submit" class="btn btn-primary">Guardar producto</button>
             </form>
 
