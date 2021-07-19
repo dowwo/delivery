@@ -67,7 +67,7 @@
                         ?>
 
                     </select>
-                    <a href="TiendaController/recibe" onclick="<?php $tienda= $_POST['tienda']; echo $tienda ?> " class="btn btn-large">Continuar</a>
+                    <a href="TiendaController/recibe" onmouseleave="<?php $tienda= $_POST['tienda']; echo $tienda ?> " class="btn btn-large">Continuar</a>
                     <input id="inputTienda" type="text" value="">
                 </div>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
