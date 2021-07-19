@@ -47,24 +47,84 @@ if(isset($_SESSION['msg'])){
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="col-6">
+
             <h1>Agregar Pedido</h1>
-            <div class="row">
-                <div class="col-md-4">.col-md-4</div>
-                <div class="col-md-4">.col-md-4</div>
-                <div class="col-md-4">.col-md-4</div>
-            </div>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
+
+            <form action="/ProductController/guardar" method="post">
+                <div>
+                    <label for="InputUsuario" class="form-label">Usuario</label>
+                    <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForNombre" class="form-label">Tienda</label>
+                    <input type="text" name="id_tienda" id="id_tienda" value="<?php
+                    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    echo basename($actual_link);
+                    ?>">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForProducto" class="form-label">Producto</label>
+                    <select name="producto" id="producto" class="form-select" aria-label="Default select example">
+                        <?php
+                        foreach($productos as $producto)
+                        {
+                            ?>
+                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="InputForCantidad" class="form-label">Cantidad</label>
+                    <input type="numbre" name="cantidad" class="form-control" id="InputForCantidad">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForDireccion" class="form-label">Dirección destino</label>
+                    <input type="text" name="direccion" class="form-control" id="InputForDireccion">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
+                    <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
+                </div>
+                <div class="mb-3">
+                    <label for="InputForTotal" class="form-label">Valor total</label>
+                    <input type="number" name="total" class="form-control" id="InputForTotal" disabled="true" value="">
+                </div>
+                <div class="mb-3">
+                    <label for="InputForTienda" class="form-label">Estado</label>
+                    <select name="estado" id="InputForTienda" class="form-select" aria-label="Default select example">
+                        <option value="1">En espera</option>
+                        <option value="2">En reparto</option>
+                        <option value="3">Entregado</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="InputForCategoria" class="form-label">Categoría</label>
+                    <select name="categoria" id="categoria" class="form-select" aria-label="Default select example">
+                        <?php
+                        foreach($categorias as $categoria)
+                        {
+                            ?>
+                            <option value="<?=$categoria['id_categoria']?>"><?=$categoria['categoria']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar producto</button>
+            </form>
+
+
             <form action="/TiendaController/guardar" method="post">
                 <div class="mb-3">
                     Número Tienda
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="id_tienda" id="id_tienda" value="<?php
-                    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    echo basename($actual_link);
-                    ?>">
+
                 </div>
                 <div class="mb-3">
                     <input type="text" name="id_usuario" class="form-control" id="InputForNombre" value="<?php echo $_SESSION['id_usuario'] ?>">
@@ -76,10 +136,7 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                 </div>
-                <div>
-                    <label for="InputUsuario" class="form-label">Usuario</label>
-                    <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
-                </div>
+
                 <!--
                 <div class="mb-3">
                     <label for="InputForTipo" class="form-label">Tipo de tienda</label>
