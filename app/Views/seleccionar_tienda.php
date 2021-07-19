@@ -84,9 +84,9 @@ echo $id_tienda;
 $_SESSION['id_tienda'] = $id_tienda;  // now, store $id i.e, 10 in  Session variable named id.
 
 echo $_SESSION['id_tienda'];   // now, print the Session variable ?>
-<?php echo $_SESSION['id_usuario'] ?>
-<?php echo $_SESSION['nombre'] ?>
-<?php echo $_SESSION['id_tienda'] ?>
+<?php echo 'ID Usuario: ',$_SESSION['id_usuario'] ?>
+<?php echo 'Nombre usuario: ', $_SESSION['nombre'] ?>
+<?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
 
 
 <!-- Popper.js first, then Bootstrap JS -->
