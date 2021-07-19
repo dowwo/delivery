@@ -83,7 +83,9 @@
     </div>
 
 </div>
-
+<?php
+print "<p> $_REQUEST[subject]</p>\n";
+?>
 <?php
 session_start();
 
@@ -115,7 +117,7 @@ $session->set($ses_data);
 <?php echo 'ID Usuario: ',$_SESSION['id_usuario'] ?>
 <?php echo 'Nombre usuario: ', $_SESSION['nombre'] ?>
 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
-<?php echo 'Prueba: ', $_SESSION['subject'] ?>
+
 
 
 <!-- Popper.js first, then Bootstrap JS -->
