@@ -62,12 +62,15 @@
                     <?php
                 } ?>
             </select>
+            <input id="tienda" type="text" value="">
             <script>
 
                 function getSelectValue()
                 {
                     var selectedValue = document.getElementById("list").value;
                     console.log(selectedValue);
+                    document.getElementById("tienda").value = console.log(selectedValue);
+
                 }
                 getSelectValue();
 
