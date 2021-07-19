@@ -67,16 +67,9 @@
                         ?>
 
                     </select>
-                    <a href="TiendaController/recibe" onmousedown="this.href=this.href+'?tienda='+document.getElementById('tienda').value" class="btn btn-large">Continuar</a>
+                    <a href="TiendaController/recibe" onclick="<?php $tienda= $_POST['tienda']; echo $tienda ?> " class="btn btn-large">Continuar</a>
                     <input id="inputTienda" type="text" value="">
                 </div>
-                <?php
-                if(isset($_GET["id_tienda"])){
-                    $draft= $_GET["id_tienda"];
-                    echo $draft;
-                    echo '<button type="button" class="btn btn-primary">Seleccionar</button>';
-                }
-                ?>
                 <button type="button" class="btn btn-primary">Seleccionar</button>
 
             </form>
