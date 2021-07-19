@@ -54,11 +54,13 @@
             <?php endif;?>
 
             <select id="list" onchange="getSelectValue();">
-                <option value="js">JavaScript</option>
-                <option value="php">PHP</option>
-                <option value="c#">Csharp</option>
-                <option value="java">Java</option>
-                <option value="node">Node.js</option>
+                <?php
+                foreach($tiendas as $tienda)
+                {
+                    ?>
+                    <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
+                    <?php
+                } ?>
             </select>
             <script>
 
@@ -70,37 +72,6 @@
                 getSelectValue();
 
             </script>
-            <?php
-            if (isset($_POST['submit'])) {
-                if (!empty($_POST['lang'])) {
-                    foreach ($_POST['lang'] as $selected) {
-                        echo '<p class="select-tag mt-3">' . $selected . '</p>';
-                    }
-                } else {
-                    echo '<p class="error alert alert-danger mt-3">Please select any value</p>';
-                }
-            }
-            ?>
-            <div class="mb-3">
-                <label for="InputForTienda" class="form-label" onchange="getSelectValue();">Seleccione Tienda</label>
-                <select id="list" class="form-select" aria-label="Default select example">
-                    <?php
-                    foreach($tiendas as $tienda)
-                    {
-                        ?>
-                        <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
-                        <?php
-                    } ?>
-                </select>
-                <input type="submit" name="enviar" value="Seleccionar Tienda">
-            </div>
-            <?php
-                if (isset($_POST['enviar']))
-                {
-                    $obtenerTienda = $_POST['tienda'];
-                    echo 'Tienda seleccionada: ' .$obtenerTienda;
-                }
-            ?>
         </div>
 
     </div>
