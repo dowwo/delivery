@@ -58,7 +58,7 @@
 
                 </select>
                 <input name="tienda" id="tienda" type="text" value="">
-                <input type="text" name="subject" id="subject" value="Car Loan">
+
 
                 <script>
 
@@ -90,7 +90,6 @@
     function getSelectValue()
                     {
                         var selectedValue = document.getElementById("list").value;
-                        console.log(selectedValue);
                         document.write(selectedValue);
                         
                     }
