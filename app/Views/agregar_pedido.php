@@ -53,7 +53,7 @@ if(isset($_SESSION['msg'])){
             <?php endif;?>
             <form action="/TiendaController/guardar" method="post">
                 <?php /* echo 'ID Tienda: ', $_SESSION['id_tienda'] */?>
-                <input type="hidden" name="id_tienda" id="id_tienda" value="<?php echo $tienda['id_tienda']; ?>">
+                <input type="text" name="id_tienda" id="id_tienda" value="<?php echo $tienda['id_tienda']; ?>">
 
 
                 <div class="mb-3">
