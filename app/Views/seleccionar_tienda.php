@@ -95,10 +95,12 @@ $msg .= "in this session.";
 <?php  echo ( $msg ); ?>
 
 <?php
-$val = $_REQUEST['subject'];
+$session = session();
 
-session_start();
-$_SESSION['subject'] =  $val;
+$ses_data = [
+    'id_tienda'     => $this->request->getVar('tienda')
+];
+$session->set($ses_data);
 ?>
 <?php  echo ( $msg ); ?>
 
