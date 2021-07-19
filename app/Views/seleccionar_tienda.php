@@ -60,23 +60,16 @@
                 <input name="tienda" id="tienda" type="text" value="">
                 <input type="text" name="subject" id="subject" value="Car Loan">
 
-                <script>
-
-                    function getSelectValue()
-                    {
-                        var selectedValue = document.getElementById("list").value;
-                        console.log(selectedValue);
-                        document.getElementById("tienda").value = selectedValue;
-
-
-
-                    }
-                    getSelectValue();
-
-
-
-                </script>
-
+                <?php $_SESSION['id_tienda']=
+                    '<script language="JavaScript">
+                        function getSelectValue()
+                        {
+                            var selectedValue = document.getElementById("list").value;
+                            console.log(selectedValue);
+                            document.write(selectedValue);
+                        }
+                        getSelectValue();
+                    </script>'?>
             </form>
 
 
@@ -85,16 +78,7 @@
     </div>
 
 </div>
-<?php $_SESSION['id_tienda']=
-    '<script language="JavaScript">
-    function getSelectValue()
-                    {
-                        var selectedValue = document.getElementById("list").value;
-                        console.log(selectedValue);
-                        document.write(selectedValue);
-                    }
-                    getSelectValue();
-    </script>'?>
+
 <?php
 session_start();
 
