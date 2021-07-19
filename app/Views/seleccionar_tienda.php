@@ -66,6 +66,7 @@
                         {
                             var selectedValue = document.getElementById("list").value;
                             console.log(selectedValue);
+                            document.getElementById("tienda").value = selectedValue;
                             document.write(selectedValue);
                         }
                         getSelectValue();
