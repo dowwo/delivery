@@ -89,11 +89,7 @@
     '<script>
     function getSelectValue(){
         var selectedValue = document.getElementById("list").value;
-        console.log(selectedValue);
-        document.getElementById("tienda").value = selectedValue;
-        }
-        getSelectValue();
-        document.write(""selectedValue"");
+        document.write(document.getElementById("list").value;);
         
     print(getSelectValue();)
     </script>'?>
