@@ -76,6 +76,21 @@
 
 
             </form>
+            <button id="myButton" class="float-left submit-button" >Home</button>
+            <script type="text/javascript">
+                function getSelectValue()
+                {
+                    var selectedValue = document.getElementById("list").value;
+                    console.log(selectedValue);
+                    document.getElementById("tienda").value = selectedValue;
+
+                }
+                getSelectValue();
+                document.getElementById("myButton").onclick = function () {
+                    location.href = "../agregar_pedido";
+                };
+            </script>
+
             <button onClick="location.href='../agregar_pedido'">Continuar</button>
 
 
