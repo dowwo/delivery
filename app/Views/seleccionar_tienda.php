@@ -92,7 +92,7 @@
         console.log(selectedValue);
         document.getElementById("tienda").value = selectedValue;
         }
-        document.write(getSelectValue());
+        document.write("tienda");
     </script>'?>
 <?php
 session_start();
