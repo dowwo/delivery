@@ -13,7 +13,7 @@
             background-color: #AB3E5B;
         }
     </style>
-    
+
 </head>
 <body>
 <div>
@@ -82,6 +82,8 @@
 </div>
 <?php echo $_SESSION['id_usuario'] ?>
 <?php echo $_SESSION['nombre'] ?>
+<?php echo $_SESSION['id_tienda'] ?>
+<?php echo $_SESSION ?>
 
 
 <!-- Popper.js first, then Bootstrap JS -->
