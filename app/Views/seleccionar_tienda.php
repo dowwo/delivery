@@ -104,7 +104,7 @@
 <?php
 
 session_start();
-$_SESSION['id_tienda']=
+$var['id_tienda']=
     '<script language="JavaScript">
     function getSelectValue()
                     {
@@ -113,7 +113,9 @@ $_SESSION['id_tienda']=
                         document.write(selectedValue);
                         
                     }
-    </script>'
+    </script>';
+$_SESSION[$var];
+
 ?>
 
 <?php echo 'ID Tienda: ', $_SESSION['id_tienda'] ?>
