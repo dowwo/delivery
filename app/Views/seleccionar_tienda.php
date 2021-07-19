@@ -93,9 +93,6 @@
             document.write(selectedValue);
         }
         getSelectValue();
-    var element = document.getElementById("list");
-    element.onchange = function() {
-    location.reload();
 }
     </script>'
 ?>
