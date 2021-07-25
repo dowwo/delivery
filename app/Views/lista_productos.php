@@ -99,7 +99,7 @@
                             <td><?php echo $producto['categoria_id_categoria']; ?></td>
                             <td>
                                 <a href="<?php echo base_url('modificar_producto/'.$producto['id_producto']);?>" class="btn btn-primary btn-sm">Editar</a>
-                                <a href="<?php echo base_url('delete/'.$producto['id_producto']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                                <a href="<?php echo base_url('eliminar/'.$producto['id_producto']);?>" class="btn btn-danger btn-sm">Eliminar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

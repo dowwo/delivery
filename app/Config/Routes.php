@@ -61,7 +61,7 @@ $routes->get('/agregar_producto','ProductController::agregar', ['filter' => 'aut
 $routes->post('/guardar_producto', 'ProductController::guardar');
 $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']);
 $routes->get('modificar_producto/(:num)','ProductController::singleProduct/$1');
-$routes->get('/delete/(:num)', 'ProductController::delete/$1');
+$routes->get('/eliminar/(:num)', 'ProductController::eliminar/$1');
 
 
 $routes->get('/seleccionar_tienda','TiendaController::select', ['filter' => 'auth']);
