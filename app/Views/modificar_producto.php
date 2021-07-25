@@ -57,13 +57,13 @@
         <div class="mb-3">
             <label for="InputForTienda" class="form-label">Tienda</label>
             <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
-                <?php
+                <?php /*
                 foreach($tiendas as $tienda)
                 {
                     ?>
                     <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
                     <?php
-                }
+                }*/
                 ?>
             </select>
         </div>-->
