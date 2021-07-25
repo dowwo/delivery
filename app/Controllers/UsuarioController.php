@@ -26,7 +26,7 @@ class UsuarioController extends Controller
     // update user data
     public function update(){
         $userModel = new UserModel();
-        $id = $this->request->getVar('usuario');
+        $id = $this->request->getVar('id_usuario');
         $data = [
             'nombre' => $this->request->getVar('name'),
             'apellido_p' => $this->request->getVar('apellido_p'),
