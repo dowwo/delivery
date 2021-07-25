@@ -28,6 +28,45 @@
             <input type="text" class="form-control" value="<?php echo $producto_obj['nombre']; ?>">
             <label>Nuevo nombre de producto</label>
             <input type="text" name="categoria" class="form-control">
+
+        </div>
+        <div class="mb-3">
+            <label for="InputForCantidad" class="form-label">Cantidad</label>
+            <input type="text" name="cantidad" class="form-control" id="InputForCantidad">
+        </div>
+        <div class="mb-3">
+            <label for="InputForFecha" class="form-label" name="fecha_agregado">Fecha agregado: <?php echo @date('d-m-Y'); ?></label>
+            <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
+        </div>
+        <div class="mb-3">
+            <label for="InputForValor" class="form-label">Valor</label>
+            <input type="number" name="valor" class="form-control" id="InputForValor">
+        </div>
+        <div class="mb-3">
+            <label for="InputForTienda" class="form-label">Tienda</label>
+            <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
+                <?php
+                foreach($tiendas as $tienda)
+                {
+                    ?>
+                    <option value="<?=$tienda['id_tienda']?>"><?=$tienda['nombre']?></option>
+                    <?php
+                }
+                ?>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="InputForCategoria" class="form-label">Categoría</label>
+            <select name="categoria" id="categoria" class="form-select" aria-label="Default select example">
+                <?php
+                foreach($categorias as $categoria)
+                {
+                    ?>
+                    <option value="<?=$categoria['id_categoria']?>"><?=$categoria['categoria']?></option>
+                    <?php
+                }
+                ?>
+            </select>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Guardar</button>

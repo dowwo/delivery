@@ -63,9 +63,13 @@ class ProductController extends Controller
     }
 
     // show single product
-    public function singleProducto($id = null){
+    public function singleProduct($id = null){
         $ModeloProducto = new ProductModel();
         $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
+        $modeloCategoria = new CategoriaModel();
+        $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
+        $modeloTienda = new TiendaModel();
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
         return view('edit_producto', $data);
     }
 

@@ -60,6 +60,8 @@ $routes->get('/agregar_tienda','TiendaController::agregar', ['filter' => 'auth']
 $routes->get('/agregar_producto','ProductController::agregar', ['filter' => 'auth']);
 $routes->post('/guardar_producto', 'ProductController::guardar');
 $routes->get('/lista_productos','ProductController::index', ['filter' => 'auth']);
+$routes->get('modificar_producto/(:num)','ProductController::singleProduct/$1');
+
 $routes->get('/seleccionar_tienda','TiendaController::select', ['filter' => 'auth']);
 
 //Ruta de acceso a pedido
