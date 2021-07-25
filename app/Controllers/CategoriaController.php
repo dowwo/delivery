@@ -30,7 +30,7 @@ class CategoriaController extends Controller
     }
 
     //
-    public function singleCategoria($id = null){
+    public function singleCat($id = null){
         $categoriaModel = new CategoriaModel();
         $data['categoria_obj'] = $categoriaModel->where('id_categoria', $id)->first();
         return view('modificar_categoria', $data);
