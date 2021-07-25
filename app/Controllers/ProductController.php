@@ -64,6 +64,8 @@ class ProductController extends Controller
 
     // show single product
     public function singleProduct($id = null){
+        $id_usuario = $_SESSION['id_usuario'];
+
         $ModeloProducto = new ProductModel();
         $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
         $modeloCategoria = new CategoriaModel();
