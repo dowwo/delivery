@@ -65,7 +65,7 @@ class ProductController extends Controller
     // show single product
     public function singleProduct($id = null){
         $id_usuario = $_SESSION['id_usuario'];
-
+/*
         $db = \Config\Database::connect();
         $builder = $db->table('tienda');
         $builder->select("id_tienda, nombre");
@@ -73,7 +73,7 @@ class ProductController extends Controller
         $query = $builder->get();
         $followingdata = $query->getResult();
         $data['tiendas'] = $followingdata;
-
+*/
 
         $ModeloProducto = new ProductModel();
         $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
