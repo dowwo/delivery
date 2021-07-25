@@ -71,7 +71,7 @@ class ProductController extends Controller
         $builder->select("id_tienda, nombre");
         $builder->where('usuario_id_usuario', $id_usuario);
         $query = $builder->get();
-        $followingdata = $query->fetch_assoc();
+        $followingdata = $query->fetch_array(MYSQLI_ASSOC);
         $data['tiendas'] = $followingdata;
 
 
