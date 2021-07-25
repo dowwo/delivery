@@ -74,8 +74,8 @@ class ProductController extends Controller
         $builder = $modeloTienda->db->table("tienda");
 
         $builder->select('*');
-        $builder->where('usuario_id_usuario=' .$id_usuario);
-        $data['tiendas'] = $builder->get();
+        $builder->where('usuario_id_usuario=' .$id_usuario)->findAll();
+        $data['tiendas'] = $builder;
         return view('modificar_producto', $data);
     }
 
