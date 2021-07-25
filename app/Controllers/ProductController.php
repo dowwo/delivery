@@ -71,7 +71,8 @@ class ProductController extends Controller
         $builder->select("id_tienda, nombre");
         $builder->where('usuario_id_usuario', $id_usuario);
         $query = $builder->get();
-        $data['tiendas'] = $query;
+        $followingdata = $query->fetch_assoc();
+        $data['tiendas'] = $followingdata;
 
 
         $ModeloProducto = new ProductModel();
