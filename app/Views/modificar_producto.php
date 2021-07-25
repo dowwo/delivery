@@ -23,7 +23,7 @@
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/ProductController/update') ?>">
         <div class="form-group">
             <label>ID</label>
-            <input type="text" name="id_categoria" class="form-control" value="<?php echo $producto_obj['id_producto']; ?>">
+            <input type="text" name="id_producto" class="form-control" value="<?php echo $producto_obj['id_producto']; ?>">
         </div>
         <div>
             <label>Nombre actual</label>
