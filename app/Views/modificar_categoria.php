@@ -22,8 +22,12 @@
 <div class="container mt-5">
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/CategoriaController/update') ?>">
         <div class="form-group">
-            <label>Nombre de la categoría</label>
-            <input type="text" name="categoria" class="form-control" value="<?php echo $categoria_obj['categoria']; ?>">
+            <label>ID</label>
+            <input type="text" name="id_categoria" class="form-control" value="<?php echo $categoria_obj['id_categoria']; ?>">
+            <label>Nombre actual</label>
+            <input type="text" class="form-control" value="<?php echo $categoria_obj['categoria']; ?>">
+            <label>Nuevo nombre de la categoría</label>
+            <input type="text" name="categoria" class="form-control">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Update Data</button>
