@@ -84,7 +84,7 @@ class ProductController extends Controller
             'categoria_id_categoria'  => $this->request->getVar('categoria')
         ];
         $ModeloProducto->update($id, $data);
-        return $this->response->redirect(site_url('/lista-productos'));
+        return $this->response->redirect(site_url('/lista_productos'));
     }
 
     // Eliminar producto
