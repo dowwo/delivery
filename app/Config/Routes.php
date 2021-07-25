@@ -69,6 +69,8 @@ $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admi
 $routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
 $routes->get('modificar_categoria/(:num)', 'CategoriaController::singleCategoria/$1');
 $routes->post('update', 'CategoriaController::update');
+$routes->get('delete/(:num)', 'CategoriaController::delete/$1');
+
 
 
     // Editar y Eliminar deben llevar el /(:num)
