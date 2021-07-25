@@ -24,19 +24,18 @@
         <div class="form-group">
             <label>ID</label>
             <input type="text" name="id_categoria" class="form-control" value="<?php echo $producto_obj['id_producto']; ?>">
+        </div>
+        <div>
             <label>Nombre actual</label>
             <input type="text" class="form-control" value="<?php echo $producto_obj['nombre']; ?>">
+        </div>
+        <div>
             <label>Nuevo nombre de producto</label>
             <input type="text" name="categoria" class="form-control">
-
         </div>
         <div class="mb-3">
             <label for="InputForCantidad" class="form-label">Cantidad</label>
             <input type="text" name="cantidad" class="form-control" id="InputForCantidad">
-        </div>
-        <div class="mb-3">
-            <label for="InputForFecha" class="form-label" name="fecha_agregado">Fecha agregado: <?php echo @date('d-m-Y'); ?></label>
-            <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
         </div>
         <div class="mb-3">
             <label for="InputForValor" class="form-label">Valor</label>
