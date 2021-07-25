@@ -31,7 +31,7 @@
         </div>
         <div>
             <label>Nuevo nombre de producto</label>
-            <input type="text" name="categoria" class="form-control">
+            <input type="text" name="nombre" class="form-control">
         </div>
         <div class="mb-3">
             <label for="InputForCantidad" class="form-label">Cantidad</label>
