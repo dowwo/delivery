@@ -70,7 +70,7 @@ class ProductController extends Controller
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
         $modeloTienda = new TiendaModel();
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
-        return view('edit_producto', $data);
+        return view('modificar_producto', $data);
     }
 
     // Actualizar datos de producto
