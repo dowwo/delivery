@@ -47,8 +47,10 @@ $routes->get('/dashboard3', 'DashboardAdmin::index',['filter' => 'admin']);
 $routes->get('/registro', 'Register::index',['filter' => 'admin']);
 $routes->get('/register','Register::index',['filter' => 'admin']);
 $routes->get('/lista_usuarios','UsuarioController::index',['filter' => 'admin']);
-$routes->post('update', 'CategoriaController::update');
-$routes->get('/delete/(:num)', 'CategoriaController::delete/$1');
+$routes->get('modificar_usuario/(:num)','UsuarioController::singleUser/$1');
+$routes->post('update', 'UsuarioController::update');
+$routes->get('delete/(:num)','UsuarioController::delete/$1');
+
 
 //Ruta de acceso a vendedor
 $routes->get('/lista_tienda','TiendaController::index', ['filter' => 'auth']);
@@ -75,10 +77,6 @@ $routes->get('/delete/(:num)', 'CategoriaController::delete/$1');
 
 
     // Editar y Eliminar deben llevar el /(:num)
-//Editar - Eliminar usuario
-$routes->get('modificar_usuario/(:num)','UsuarioController::singleUser/$1');
-$routes->post('modificar_usuario', 'UsuarioController::update');
-$routes->get('delete/(:num)','UsuarioController::delete/$1');
 
 
 //Editar - Eliminar tienda
