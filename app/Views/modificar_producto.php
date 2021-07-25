@@ -53,7 +53,7 @@
                 }
                 ?>
             </select>
-        </div>
+        </div><!--
         <div class="mb-3">
             <label for="InputForTienda" class="form-label">Tienda</label>
             <select name="tienda" id="tienda" class="form-select" aria-label="Default select example">
@@ -66,7 +66,7 @@
                 }
                 ?>
             </select>
-        </div>
+        </div>-->
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Guardar</button>
         </div>
