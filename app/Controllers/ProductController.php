@@ -70,8 +70,6 @@ class ProductController extends Controller
         $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
         $modeloCategoria = new CategoriaModel();
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
-        $modeloTienda = new TiendaModel();
-        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario= ' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
         return view('modificar_producto', $data);
     }
 
