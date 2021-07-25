@@ -70,7 +70,8 @@ class ProductController extends Controller
         $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
         $modeloCategoria = new CategoriaModel();
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
-        $builder = $this->db->table("tienda");
+        $modeloTienda = new TiendaModel();
+        $builder = $modeloTienda->db->table("tienda");
 
         $builder->select('*');
         $builder->where('usuario_id_usuario=' .$id_usuario);
