@@ -8,11 +8,8 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    // Lo comento por si hay errores, luego deberiamos quitar estas lineas comentadas
-    //protected $table = 'user';
-    //protected $allowedFields = ['user_name','user_email','user_password','user_created_at'];
-    //
-    //Con la base de datos real, debería ir así
+    // Nunca debe faltar el $primaryKey
     protected $table = 'usuario';
+    protected $primaryKey = 'id_usuario';
     protected $allowedFields = ['nombre','apellido_p','apellido_m','fecha_registro','email','password','rol_id_rol'];
 }
