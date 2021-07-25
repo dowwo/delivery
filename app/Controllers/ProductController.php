@@ -78,11 +78,10 @@ class ProductController extends Controller
         $ModeloProducto = new ProductModel();
         $id = $this->request->getVar('id_producto');
         $data = [
-            'codigo_barra' => $this->request->getVar('codigo_b'),
             'nombre'  => $this->request->getVar('nombre'),
             'cantidad'  => $this->request->getVar('cantidad'),
-            'fecha_agregado'  => $this->request->getVar('fecha_agregado'),
             'valor'  => $this->request->getVar('valor'),
+            'categoria_id_categoria'  => $this->request->getVar('categoria')
         ];
         $ModeloProducto->update($id, $data);
         return $this->response->redirect(site_url('/lista-productos'));
