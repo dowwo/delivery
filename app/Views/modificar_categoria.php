@@ -23,7 +23,7 @@
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/CategoriaController/update') ?>">
         <div class="form-group">
             <label>Nombre de la categoría</label>
-            <input type="text" name="name" class="form-control" value="<?php echo $categoria_obj['categoria']; ?>">
+            <input type="text" name="categoria" class="form-control" value="<?php echo $categoria_obj['categoria']; ?>">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Update Data</button>
