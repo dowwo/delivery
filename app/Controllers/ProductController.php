@@ -70,6 +70,8 @@ class ProductController extends Controller
         $builder = $db->table('tienda');
         $builder->select("id_tienda, nombre");
         $builder->where('usuario_id_usuario', $id_usuario);
+        $query = $builder->get();
+        $data['tiendas'] = $query;
 
 
         $ModeloProducto = new ProductModel();
