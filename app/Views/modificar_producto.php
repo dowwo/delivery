@@ -54,11 +54,11 @@
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/ProductController/update') ?>">
         <div class="form-group">
             <label for="InputForID" class="form-label">ID</label>
-            <input contenteditable="false" type="text" name="id_producto" class="form-control" value="<?php echo $producto_obj['id_producto']; ?>">
+            <input type="text" name="id_producto" class="form-control" value="<?php echo $producto_obj['id_producto']; ?>">
         </div>
         <div>
             <label for="InputForNombre" class="form-label">Nombre actual</label>
-            <input contenteditable="false" type="text" class="form-control" value="<?php echo $producto_obj['nombre']; ?>">
+            <input type="text" class="form-control" value="<?php echo $producto_obj['nombre']; ?>">
         </div>
         <div>
             <label for="InputForNuevoNombre" class="form-label">Nuevo nombre de producto</label>
