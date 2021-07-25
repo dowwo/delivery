@@ -66,15 +66,19 @@ class ProductController extends Controller
     public function singleProduct($id = null){
         $id_usuario = $_SESSION['id_usuario'];
 
+        $db = \Config\Database::connect();
+        $builder = $db->table('tienda');
+        $builder->select("id_tienda, nombre");
+        $builder->where('usuario_id_usuario', $id_usuario);
+
+
         $ModeloProducto = new ProductModel();
         $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
         $modeloCategoria = new CategoriaModel();
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
-        $modeloTienda = new TiendaModel();
-        $builder = $modeloTienda->db->table("tienda");
 
-        $builder->select('*')->from('tienda')->where('usuario_id_usuario=' .$id_usuario)->findAll();
-        $data['tiendas'] = $builder;
+
+
         return view('modificar_producto', $data);
     }
 
