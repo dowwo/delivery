@@ -67,6 +67,9 @@ $routes->get('/lista_pedidos','PedidoController::index', ['filter' => 'auth']);
 //Ruta de acceso a categoria
 $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admin']);
 $routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
+$routes->get('modificar_categoria/(:num)', 'CategoriaController::singleCategoria/$1');
+$routes->post('update', 'CategoriaController::update');
+
 
     // Editar y Eliminar deben llevar el /(:num)
 //Editar - Eliminar usuario
