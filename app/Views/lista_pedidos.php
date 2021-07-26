@@ -104,6 +104,7 @@ if(isset($_SESSION['msg'])){
                 <th>Cliente</th>
                 <th>Tienda</th>
                 <th>Producto</th>
+                <th>Cantidad</th>
                 <th>Direccion destino</th>
                 <th>Fecha Pedido</th>
                 <th>Valor total</th>
@@ -119,6 +120,7 @@ if(isset($_SESSION['msg'])){
                         <td><?php echo $pedido['usuario_id_usuario']; ?></td>
                         <td><?php echo $pedido['tienda_id_tienda']; ?></td>
                         <td><?php echo $pedido['producto_id_producto']; ?></td>
+                        <td><?php echo $pedido['cantidad']; ?></td>
                         <td><?php echo $pedido['direccion_destino']; ?></td>
                         <td><?php echo $pedido['fecha_pedido']; ?></td>
                         <td><?php echo $pedido['valor_total']; ?></td>
