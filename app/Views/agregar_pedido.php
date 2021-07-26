@@ -73,7 +73,7 @@ if(isset($_SESSION['msg'])){
                         foreach($productos as $producto)
                         {
                             ?>
-                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?><?=$producto['valor']?></option>
+                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?></option>
                             <?php
                         }
                         ?>
