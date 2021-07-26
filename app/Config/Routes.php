@@ -41,6 +41,8 @@ $routes->get('/dashboard1', 'Dashboard1::index',['filter' => 'auth']);
 $routes->get('/dashboard3', 'DashboardAdmin::index',['filter' => 'admin']);
 
 //$routes->get('/dashboard', 'Dashboard::index',['filter' => 'admin']);
+// TENER EN CUENTA que no se repita el nombre con el que se accede, osea el primero, por ejemplo el delete, son similares pero con distinto controlador, por
+// lo que es mejor utilizar otro nombre para cada eliminar.
 
 //Ruta que da acceso a la página de registro de usuario
 
@@ -80,7 +82,7 @@ $routes->get('/lista_categorias','CategoriaController::index',['filter' => 'admi
 $routes->get('/agregar_categoria','CategoriaController::create',['filter' => 'admin']);
 $routes->get('/modificar_categoria/(:num)', 'CategoriaController::singleCat/$1');
 $routes->post('update', 'CategoriaController::update');
-$routes->get('/delete/(:num)', 'CategoriaController::delete/$1');
+$routes->get('/delete_categoria/(:num)', 'CategoriaController::delete/$1');
 
 
 

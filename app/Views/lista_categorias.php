@@ -89,7 +89,7 @@ if(isset($_SESSION['msg'])){
                         <td><?php echo $categoria['fecha_registro']; ?></td>
                         <td>
                             <a href="<?php echo base_url('modificar_categoria/'.$categoria['id_categoria']);?>" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="<?php echo base_url('delete/'.$categoria['id_categoria']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="<?php echo base_url('delete_categoria/'.$categoria['id_categoria']);?>" class="btn btn-danger btn-sm">Eliminar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
