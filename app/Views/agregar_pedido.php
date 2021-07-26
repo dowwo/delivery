@@ -81,7 +81,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForCantidad" class="form-label">Cantidad</label>
-                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onkeyup="calcularTotal()" >
+                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
