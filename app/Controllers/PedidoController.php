@@ -88,25 +88,36 @@ class PedidoController extends Controller
     }
 
     // show single product
-    public function singleProducto($id = null){
-        $ModeloProducto = new ProductModel();
-        $data['producto_obj'] = $ModeloProducto->where('id_producto', $id)->first();
-        return view('edit_producto', $data);
+    public function singlePedido($id = null){
+        $id_usuario = $_SESSION['id_usuario'];
+
+        $modeloTienda = new TiendaModel();
+        $modeloPedido = new PedidoModel();
+        //$id_tienda = $_SESSION['id_tienda'];
+        $id_tienda = $this->request->getVar('id_tienda');
+
+        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
+        $data['tiendas'] = $modeloTienda->where('usuario_id_usuario=' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
+
+        $ModeloPedido = new PedidoModel();
+        $data['pedido_obj'] = $ModeloPedido->where('id_pedido', $id)->first();
+        return view('modificar_pedido', $data);
     }
 
     // Actualizar datos de producto
     public function update(){
-        $ModeloProducto = new ProductModel();
-        $id = $this->request->getVar('id_producto');
+        $ModeloPedido = new PedidoModel();
+        $id = $this->request->getVar('id_pedido');
         $data = [
-            'codigo_barra' => $this->request->getVar('codigo_b'),
-            'nombre'  => $this->request->getVar('nombre'),
+            'producto_id_producto'  => $this->request->getVar('id_producto'),
             'cantidad'  => $this->request->getVar('cantidad'),
-            'fecha_agregado'  => $this->request->getVar('fecha_agregado'),
-            'valor'  => $this->request->getVar('valor'),
+            'direccion_destino'  => $this->request->getVar('destino'),
+            'valor_total'  => $this->request->getVar('total'),
+            'estado_id_estado'  => $this->request->getVar('estado'),
+            'fecha_modificacion'  => $this->request->getVar('fecha_modificacion')
         ];
-        $ModeloProducto->update($id, $data);
-        return $this->response->redirect(site_url('/lista-productos'));
+        $ModeloPedido->update($id, $data);
+        return $this->response->redirect(site_url('/lista_pedidos'));
     }
 
     // Eliminar producto
