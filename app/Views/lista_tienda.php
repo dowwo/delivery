@@ -81,7 +81,6 @@
                     <th>Nombre</th>
                     <th>Fecha registro</th>
                     <th>Usuario (Dueño)</th>
-                    <th>Tipo tienda</th>
                     <th>Comuna</th>
                     <th>Verificacion</th>
                     <th>Acciones</th>
@@ -95,7 +94,6 @@
                             <td><?php echo $tienda['nombre']; ?></td>
                             <td><?php echo $tienda['fecha_registro']; ?></td>
                             <td><?php echo $tienda['usuario_id_usuario']; ?></td>
-                            <td><?php echo $tienda['tipo_tienda_id_tipo_tienda']; ?></td>
                             <td><?php echo $tienda['comuna_id_comuna']; ?></td>
                             <td><?php echo $tienda['verificacion']; ?></td>
                             <td>
