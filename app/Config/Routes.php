@@ -71,7 +71,7 @@ $routes->get('/agregar_pedido/(:num)','PedidoController::agregar/$1', ['filter' 
 $routes->get('/lista_pedidos','PedidoController::index', ['filter' => 'auth']);
 $routes->get('modificar_pedido/(:num)','PedidoController::singlePedido/$1');
 $routes->post('update', 'PedidoController::update');
-$routes->get('eliminar/(:num)','PedidoController::eliminar/$1');
+$routes->get('eliminar_pedido/(:num)','PedidoController::eliminar/$1');
 
 
 
