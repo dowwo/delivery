@@ -105,7 +105,7 @@ class PedidoController extends Controller
 
     // Actualizar datos de producto
     public function update(){
-        $ModeloPedido = new PedidoModel();
+        $modeloPedido = new PedidoModel();
         $id = $this->request->getVar('id_pedido');
         $data = [
             'producto_id_producto'  => $this->request->getVar('id_producto'),
@@ -115,7 +115,7 @@ class PedidoController extends Controller
             'estado_id_estado'  => $this->request->getVar('estado'),
             'fecha_modificacion'  => $this->request->getVar('fecha')
         ];
-        $ModeloPedido->update($id, $data);
+        $modeloPedido->update($id, $data);
         return $this->response->redirect(site_url('/lista_pedidos'));
     }
 
