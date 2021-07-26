@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
-    <title>Agregar Producto</title>
+    <title>Modificar Pedido</title>
     <style type="text/css">
         body {
             background-color: #AB3E5B;
@@ -49,7 +49,7 @@ if(isset($_SESSION['msg'])){
     <div class="row justify-content-md-center">
         <div class="col-6">
 
-            <h1>Agregar Pedido</h1>
+            <h1>Modificar Pedido</h1>
             <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
