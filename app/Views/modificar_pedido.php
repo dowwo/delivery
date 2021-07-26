@@ -74,11 +74,11 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForCantidad" class="form-label">Cantidad</label>
-                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onkeyup="calcularTotal()" ">
+                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onkeyup="calcularTotal()" value="<?php echo $pedido_obj['cantidad']; ?>" ">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
-                    <input type="text" name="direccion" class="form-control" id="InputForDireccion">
+                    <input type="text" name="direccion" class="form-control" id="InputForDireccion" value="<?php echo $pedido_obj['direccion_destino']; ?>">
                 </div>
                 <!--
                 <div>
@@ -93,14 +93,16 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTotal" class="form-label">Valor total</label>
-                    <input type="number" name="total" class="form-control" id="InputForTotal">
+                    <input type="number" name="total" class="form-control" id="InputForTotal" value="<?php echo $pedido_obj['valor_total']; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForTienda" class="form-label">Estado</label>
-                    <select name="estado" id="InputForTienda" class="form-select" aria-label="Default select example">
-                        <option value="1">En espera</option>
-                        <option value="2">En reparto</option>
-                        <option value="3">Entregado</option>
+                    <label class="form-label">Estado pedido actual</label>
+                    <input type="text" class="form-control" value="<?php echo $pedido_obj['estado_id_estado']; ?>">
+                    <label for="InputForEstado" class="form-label">Estado</label>
+                    <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
+                        <option value="1">1 En espera</option>
+                        <option value="2">2 En reparto</option>
+                        <option value="3">3 Entregado</option>
                     </select>
                 </div>
 
