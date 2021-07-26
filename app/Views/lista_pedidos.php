@@ -105,9 +105,9 @@ if(isset($_SESSION['msg'])){
                 <th>Tienda</th>
                 <th>Producto</th>
                 <th>Cantidad</th>
-                <th>Direccion destino</th>
-                <th>Fecha Pedido</th>
-                <th>Valor total</th>
+                <th>Destino</th>
+                <th>Realizado el</th>
+                <th>Total</th>
                 <th>Estado</th>
                 <th>Acciones</th>
             </tr>
