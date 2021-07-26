@@ -92,15 +92,11 @@ class PedidoController extends Controller
         $id_usuario = $_SESSION['id_usuario'];
 
         $modeloTienda = new TiendaModel();
-        $modeloPedido = new PedidoModel();
-        //$id_tienda = $_SESSION['id_tienda'];
-        $id_tienda = $this->request->getVar('id_tienda');
-
-        // Esta si funciona--- QUE NADIE LA TOQUE POR FAVOR!!!!!!
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario=' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
 
-        $ModeloPedido = new PedidoModel();
-        $data['pedido_obj'] = $ModeloPedido->where('id_pedido', $id)->first();
+        $modeloPedido = new PedidoModel();
+        $data['pedido_obj'] = $modeloPedido->where('id_pedido', $id)->first();
+
         return view('modificar_pedido', $data);
     }
 
