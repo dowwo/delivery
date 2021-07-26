@@ -13,6 +13,11 @@
             background-color: #AB3E5B;
         }
     </style>
+    <script type="text/javascript">
+        $cantidad = document.getElementById('InputForCantidad');
+        $valor = document.getElementById('InputForValor');
+        $total= document.getElementById('InputForTotal');
+    </script>
 </head>
 <body>
 <div>
@@ -82,9 +87,19 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForCantidad" class="form-label">Cantidad</label>
                     <input type="numbre" name="cantidad" class="form-control" id="InputForCantidad">
                 </div>
+                <div>
+                    <label for="InputForCantidad" class="form-label">Valor producto</label>
+                    <input type="numbre" name="cantidad" class="form-control" id="InputForCantidad">
+                </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion">
+                </div>
+                <div>
+                    <label for="InputForLatitud" class="form-label">Latitud</label>
+                    <input type="text" name="latitud" class="form-control" id="InputForLatitud">
+                    <label for="InputForLongitud" class="form-label">Longitud</label>
+                    <input type="text" name="longitud" class="form-control" id="InputForLongitud">
                 </div>
                 <div class="mb-3">
                     <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>

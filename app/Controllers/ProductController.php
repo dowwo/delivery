@@ -80,8 +80,6 @@ class ProductController extends Controller
         $modeloCategoria = new CategoriaModel();
         $data['categorias'] = $modeloCategoria->orderBy('id_categoria', 'DESC')->findAll();
 
-
-
         return view('modificar_producto', $data);
     }
 
@@ -105,9 +103,5 @@ class ProductController extends Controller
         $data['producto'] = $ModeloProducto->where('id_producto', $id)->delete($id);
         return $this->response->redirect(site_url('/lista_productos'));
     }
-
-
-
-
 
 }
