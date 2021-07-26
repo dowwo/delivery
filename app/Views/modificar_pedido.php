@@ -55,13 +55,13 @@ if(isset($_SESSION['msg'])){
             <?php endif;?>
 
             <form action="/PedidoController/guardar" method="post">
-                <div>
-                    <label for="InputUsuario" class="form-label">Usuario</label>
-                    <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
+                <div class="form-group">
+                    <label for="InputForID" class="form-label">ID</label>
+                    <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['id_pedido']; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="InputForNombre" class="form-label">Tienda</label>
-                    <input type="text" name="id_tienda" class="form-control" id="id_tienda" value="<?php
+                    <input type="text" disabled="true" name="id_tienda" class="form-control" id="id_tienda" value="<?php
                     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                     echo basename($actual_link);
                     ?>">
