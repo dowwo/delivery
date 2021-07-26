@@ -16,7 +16,8 @@
     <script type="text/javascript">
         $cantidad = document.getElementById('InputForCantidad');
         $valor = document.getElementById('InputForValor');
-        $total= document.getElementById('InputForTotal');
+        $total = $cantidad * $valor;
+        document.getElementById('InputForTotal').value = $total;
     </script>
 </head>
 <body>
