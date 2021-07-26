@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Listar Pedidos</title>
+    <title>Lista de Pedidos</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Con esta versión de bootstrap funcionan bien las tarjetas, pero la barra de navegacion pierde la configuración-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -100,13 +100,13 @@ if(isset($_SESSION['msg'])){
         <table class="table table-bordered" id="lista-pedido">
             <thead>
             <tr>
-                <th>ID Pedido</th>
+                <th>ID</th>
                 <th>Cliente</th>
                 <th>Tienda</th>
                 <th>Producto</th>
                 <th>Cantidad</th>
                 <th>Destino</th>
-                <th>Realizado el</th>
+                <th>Fecha</th>
                 <th>Total</th>
                 <th>Estado</th>
                 <th>Acciones</th>
