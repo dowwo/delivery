@@ -60,13 +60,6 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['id_pedido']; ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForNombre" class="form-label">Tienda</label>
-                    <input type="text" disabled="true" name="id_tienda" class="form-control" id="id_tienda" value="<?php
-                    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    echo basename($actual_link);
-                    ?>">
-                </div>
-                <div class="mb-3">
                     <label for="InputForProducto" class="form-label">Producto</label>
                     <select name="producto" id="producto" class="form-select" aria-label="Default select example">
                         <?php
