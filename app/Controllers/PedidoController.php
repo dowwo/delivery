@@ -121,9 +121,9 @@ class PedidoController extends Controller
 
     // Eliminar producto
     public function eliminar($id = null){
-        $ModeloProducto = new ProductModel();
-        $data['producto'] = $ModeloProducto->where('id_producto', $id)->delete($id);
-        return $this->response->redirect(site_url('/lista_productos'));
+        $modeloPedido = new PedidoModel();
+        $data['pedido'] = $modeloPedido->where('id_pedido', $id)->delete($id);
+        return $this->response->redirect(site_url('/lista_pedidos'));
     }
 
 
