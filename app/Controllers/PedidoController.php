@@ -67,7 +67,9 @@ class PedidoController extends Controller
                 'estado_id_estado'      =>  $this->request->getVar('estado')
             ];
             $model->save($data);
+
             //Aquí se actualiza el stock despues de agregar el pedido
+            /*
             $ModeloProducto = new ProductModel();
 
             $id_producto = $this->request->getVar('producto');
@@ -77,7 +79,7 @@ class PedidoController extends Controller
             $data2 = [
                 'cantidad'  => $this->request->getVar($cantidadNueva)
             ];
-            $ModeloProducto->stock($id_producto, $data2);
+            $ModeloProducto->stock($id_producto, $data2);*/
             return redirect()->to('/lista_pedidos');
         }else{
             $data['validation'] = $this->validation;
