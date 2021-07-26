@@ -81,7 +81,7 @@ class PedidoController extends Controller
             return redirect()->to('/lista_pedidos');
         }else{
             $data['validation'] = $this->validation;
-            return redirect()->to('../');
+            return redirect()->to('../seleccionar_tienda');
         }
     }
 
