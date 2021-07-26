@@ -127,7 +127,7 @@ if(isset($_SESSION['msg'])){
                         <td><?php echo $pedido['estado_id_estado']; ?></td>
                         <td>
                             <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="<?php echo base_url('delete/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                            <a href="<?php echo base_url('eliminar/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -59,6 +59,14 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForID" class="form-label">ID</label>
                     <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['id_pedido']; ?>">
                 </div>
+                <div class="form-group">
+                    <label for="InputForUsuario" class="form-label">ID</label>
+                    <input type="text" name="id_usuario" class="form-control" value="<?php echo $pedido_obj['usuario_id_usuario']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="InputForID" class="form-label">ID</label>
+                    <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['tienda_id_tienda']; ?>">
+                </div>
                 <div class="mb-3">
                     <label for="InputForProducto" class="form-label">Producto</label>
                     <select name="producto" id="producto" class="form-select" aria-label="Default select example">
