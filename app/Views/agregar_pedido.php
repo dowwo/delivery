@@ -89,11 +89,11 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForCantidad" class="form-label">Cantidad</label>
-                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onchange="calcularTotal()">
+                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onkeyup="calcularTotal()" ">
                 </div>
                 <div>
                     <label for="InputForValor" class="form-label">Valor producto</label>
-                    <input type="number" name="valor" class="form-control" id="InputForValor" onchange="calcularTotal()">
+                    <input type="number" name="valor" class="form-control" id="InputForValor" onkeyup="calcularTotal()" ">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
@@ -111,7 +111,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTotal" class="form-label">Valor total</label>
-                    <input type="number" name="total" class="form-control" id="InputForTotal" onchange="calcularTotal()" value="">
+                    <input type="number" name="total" class="form-control" id="InputForTotal">
                 </div>
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Estado</label>
