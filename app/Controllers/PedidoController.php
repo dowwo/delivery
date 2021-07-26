@@ -94,6 +94,9 @@ class PedidoController extends Controller
         $modeloTienda = new TiendaModel();
         $data['tiendas'] = $modeloTienda->where('usuario_id_usuario=' .$id_usuario)->orderBy('id_tienda', 'DESC')->findAll();
 
+        $modeloProducto = new ProductModel();
+        $data['productos'] = $modeloProducto->orderBy('id_producto', 'DESC')->findAll();
+
         $modeloPedido = new PedidoModel();
         $data['pedido_obj'] = $modeloPedido->where('id_pedido', $id)->first();
 
