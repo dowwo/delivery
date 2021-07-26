@@ -13,7 +13,7 @@
             background-color: #AB3E5B;
         }
     </style>
-    <script type="text/javascript">
+    <script>
         function calcularTotal{
             $cantidad = document.getElementById('InputForCantidad');
             $valor = document.getElementById('InputForValor');
