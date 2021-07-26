@@ -60,7 +60,7 @@
                     } ?>
 
                 </select>
-                <input name="id_tienda" id="id_tienda" type="text" value="">
+                <!--<input name="id_tienda" id="id_tienda" type="text" value="">-->
 
                 <a href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
