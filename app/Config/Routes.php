@@ -70,6 +70,8 @@ $routes->get('/seleccionar_tienda','TiendaController::select', ['filter' => 'aut
 $routes->get('/agregar_pedido/(:num)','PedidoController::agregar/$1', ['filter' => 'auth']);
 $routes->get('/lista_pedidos','PedidoController::index', ['filter' => 'auth']);
 $routes->get('modificar_pedido/(:num)','PedidoController::singlePedido/$1');
+$routes->post('update', 'PedidoController::update');
+
 
 
 //Ruta de acceso a categoria
