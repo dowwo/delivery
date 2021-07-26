@@ -88,7 +88,7 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud">
                 </div>-->
                 <div class="mb-3">
-                    <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
+                    <label for="InputForFecha" class="form-label" name="fecha">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
                     <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
                 </div>
                 <div class="mb-3">

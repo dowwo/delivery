@@ -110,10 +110,10 @@ class PedidoController extends Controller
         $data = [
             'producto_id_producto'  => $this->request->getVar('id_producto'),
             'cantidad'  => $this->request->getVar('cantidad'),
-            'direccion_destino'  => $this->request->getVar('destino'),
+            'direccion_destino'  => $this->request->getVar('direccion'),
             'valor_total'  => $this->request->getVar('total'),
             'estado_id_estado'  => $this->request->getVar('estado'),
-            'fecha_modificacion'  => $this->request->getVar('fecha_modificacion')
+            'fecha_modificacion'  => $this->request->getVar('fecha')
         ];
         $ModeloPedido->update($id, $data);
         return $this->response->redirect(site_url('/lista_pedidos'));
