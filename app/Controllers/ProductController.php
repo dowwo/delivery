@@ -96,6 +96,15 @@ class ProductController extends Controller
         $ModeloProducto->update($id, $data);
         return $this->response->redirect(site_url('/lista_productos'));
     }
+    // Actualizar datos de producto
+    public function stock(){
+        $ModeloProducto = new ProductModel();
+        $id = $this->request->getVar('id_producto');
+        $data = [
+            'cantidad'  => $this->request->getVar('cantidad')
+        ];
+        $ModeloProducto->update($id, $data);
+    }
 
     // Eliminar producto
     public function eliminar($id = null){

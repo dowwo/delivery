@@ -73,7 +73,7 @@ if(isset($_SESSION['msg'])){
                         foreach($productos as $producto)
                         {
                             ?>
-                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?></option>
+                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
                             <?php
                         }
                         ?>
@@ -82,10 +82,6 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputForCantidad" class="form-label">Cantidad</label>
                     <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onkeyup="calcularTotal()" ">
-                </div>
-                <div>
-                    <label for="InputForValor" class="form-label">Valor producto</label>
-                    <input type="number" name="valor" class="form-control" id="InputForValor" onkeyup="calcularTotal()" ">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
