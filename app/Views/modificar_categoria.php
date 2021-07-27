@@ -20,6 +20,7 @@
 
 <body>
 <div class="container mt-5">
+    <h1>Modificar Categoría</h1>
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/CategoriaController/update') ?>">
         <div class="form-group">
             <label>ID</label>
