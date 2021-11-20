@@ -97,7 +97,8 @@ $routes->get('/delete/(:num)','TiendaController::delete/$1');
 $routes->get('/modificar_categoria/(:num)','CategoriaController::singleCategoria/$1');
 $routes->get('/delete/(:num)','CategoriaController::delete/$1'); //Eliminar categoria redirecciona a lista usuario
 
-
+// Lista pedidos para aplicacion movil
+$routes->get('/listaMovilPedidos','PedidoMovilController::index');
 
 /*
  * --------------------------------------------------------------------
