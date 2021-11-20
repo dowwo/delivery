@@ -9,6 +9,6 @@ class PedidoMovilController extends Controller
     public function index()
     {
         helper(['form']);
-        echo view('');
+        echo view('listaMovilPedidos');
     }
 }
