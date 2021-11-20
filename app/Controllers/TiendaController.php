@@ -3,6 +3,7 @@
 use App\Models\TiendaModel;
 use App\Models\ComunaModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Model;
 
 
 class TiendaController extends Controller
