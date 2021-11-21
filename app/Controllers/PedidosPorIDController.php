@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
-
-class listaMovilPedidosPorID extends Controller
+class PedidosPorIDController extends Controller
 {
     public function index()
     {

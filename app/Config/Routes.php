@@ -99,7 +99,8 @@ $routes->get('/delete/(:num)','CategoriaController::delete/$1'); //Eliminar cate
 
 // Lista pedidos para aplicacion movil
 $routes->get('/listaMovilPedidos','PedidoMovilController::index');
-$routes->get('/listaMovilPedidosPorID','listaMovilPedidosPoID::index');
+
+$routes->get('/listaMovilPedidosPorID','PedidosPorIDController::index');
 
 /*
  * --------------------------------------------------------------------
