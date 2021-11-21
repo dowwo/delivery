@@ -2,7 +2,7 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria INNER JOIN producto ON producto.tienda_id_tienda=tienda.id_tienda WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
+if($resultset=getSQLResultSet("SELECT * FROM producto INNER JOIN tienda ON producto.tienda_id_tienda=tienda.id_tienda WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
