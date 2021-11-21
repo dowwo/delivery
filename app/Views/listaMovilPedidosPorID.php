@@ -18,6 +18,7 @@ if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE t
         $e['categoria_id_categoria'] = $row[9];
         $e['nombre_categoria'] = $row[10];
         array_push($array,$e);
+        // HAY QUE ORDENAR LOS DATOS 
     }
     echo json_encode($array);
 }
