@@ -5,7 +5,7 @@ $array = array();
 //if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
 if($resultset=getSQLResultSet("
 SELECT  *
-FROM producto p, tienda t, categoria c 
+FROM producto, tienda, categoria 
 WHERE producto.tienda_id_tienda = tienda.id_tienda 
   AND producto.categoria_id_categoria= categoria.id_categoria")){
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
