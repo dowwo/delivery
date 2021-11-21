@@ -2,7 +2,7 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_Tienda = tienda.id_tienda")){
+if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda, categoria_id_categoria= categoria.id_categoria")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
