@@ -4,17 +4,10 @@ include('functions.php');
 $array = array();
 //if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
 if($resultset=getSQLResultSet("
-SELECT 
-       id_producto, 
-       nombre_producto, 
-       cantidad, 
-       fecha_agregado, 
-       valor, 
-       nombre_tienda, 
-       nombre_categoria 
-FROM producto, tienda, categoria
-WHERE producto.tienda_id_tienda = tienda.id_tienda 
-  AND producto.categoria_id_categoria= categoria.id_categoria")){
+SELECT id_producto 
+FROM producto, tienda, categoria 
+WHERE tienda_id_tienda = tienda.id_tienda 
+  AND categoria_id_categoria= categoria.id_categoria")){
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
         $e['id_producto'] = $row[0];
