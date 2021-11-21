@@ -5,8 +5,13 @@ $array = array();
 //if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
 if($resultset=getSQLResultSet("
 SELECT  *
-FROM producto 
-JOIN tienda ON producto.id_tienda  
+FROM producto.id_producto,
+     producto.nombre_producto,
+     producto.cantidad,
+     producto.fecha_agregado,
+     producto.valor,
+     tienda.nombre_tienda,
+     categoria.nombre_categoria  
 WHERE producto.tienda_id_tienda = tienda.id_tienda 
   AND producto.categoria_id_categoria= categoria.id_categoria")){
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
@@ -18,10 +23,10 @@ WHERE producto.tienda_id_tienda = tienda.id_tienda
         $e['valor'] = $row[4];
         $e['tienda_id_tienda'] = $row[5];
         $e['categoria_id_categoria'] = $row[6];
-        $e['tienda_id_tienda'] = $row[7];
+        /*$e['tienda_id_tienda'] = $row[7];
         $e['nombre_tienda'] = $row[8];
         $e['categoria_id_categoria'] = $row[9];
-        $e['nombre_categoria'] = $row[10];
+        $e['nombre_categoria'] = $row[10];*/
         array_push($array,$e);
         // HAY QUE ORDENAR LOS DATOS 
     }
