@@ -2,8 +2,8 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT p.id_pedido, t.nombre_tienda, pr.nombre_producto 
-FROM pedido AS p, tienda AS t, producto AS pr
+if($resultset=getSQLResultSet("SELECT * FROM pedido, tienda, producto 
+
 RIGHT JOIN pedido ON pedido.id_tienda = tienda.id_tienda RIGHT JOIN pedido ON pedido.id_producto = producto.id_producto
 
 GROUP BY t.id_tienda")){
