@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 
-class PedidosPorIDController extends Controller
+class ProductosPorIDController extends Controller
 {
     public function index()
     {
         helper(['form']);
-        echo view('listaMovilPedidosPorID');
+        echo view('listaMovilProductosPorID');
     }
 }
