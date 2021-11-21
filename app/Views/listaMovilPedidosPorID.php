@@ -2,14 +2,16 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM pedido")){
+if($resultset=getSQLResultSet("SELECT p.id_pedido, p.usuario_id_usuario, t.nombre_tienda, pr.nombre_producto, p.cantidad, p.direccion_destino,
+       p.fecha_pedido, p.valor_total, p.estado_id_estado, p.fecha_modificacion
+FROM pedido p, tienda t, producto pr, WHERE p.id_tienda= t.id_tienda, p.id_producto=pr.id_producto")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
         $e['id_pedido'] = $row[0];
         $e['usuario_id_usuario'] = $row[1];
-        $e['tienda_id_tienda'] = $row[2];
-        $e['producto_id_producto'] = $row[3];
+        $e['nombre_tienda'] = $row[2];
+        $e['nombre_producto'] = $row[3];
         $e['cantidad'] = $row[4];
         $e['direccion_destino'] = $row[5];
         $e['fecha_pedido'] = $row[6];
