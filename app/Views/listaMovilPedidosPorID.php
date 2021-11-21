@@ -4,7 +4,13 @@ include('functions.php');
 $array = array();
 //if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
 if($resultset=getSQLResultSet("
-SELECT id_producto 
+SELECT id_producto, 
+       nombre_producto,
+       cantidad,
+       fecha_agregado,
+       valor,
+       tienda_id_tienda,
+       categoria_id_categoria
 FROM producto, tienda, categoria 
 WHERE tienda_id_tienda = tienda.id_tienda 
   AND categoria_id_categoria= categoria.id_categoria")){
