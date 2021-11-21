@@ -15,7 +15,7 @@ if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE t
         $e['categoria_id_categoria'] = $row[6];
         $e['tienda_id_tienda'] = $row[7];
         $e['nombre_tienda'] = $row[8];
-        $e['tienda_id_tienda'] = $row[9];
+        $e['categoria_id_categoria'] = $row[9];
         $e['nombre_categoria'] = $row[10];
         array_push($array,$e);
     }
