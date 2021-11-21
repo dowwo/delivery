@@ -4,7 +4,7 @@ include('functions.php');
 $array = array();
 if($resultset=getSQLResultSet("SELECT p.id_pedido, p.usuario_id_usuario, t.nombre_tienda, pr.nombre_producto, p.cantidad, p.direccion_destino,
        p.fecha_pedido, p.valor_total, p.estado_id_estado, p.fecha_modificacion
-FROM pedido p, tienda t, producto pr, WHERE p.id_tienda= t.id_tienda, p.id_producto=pr.id_producto")){
+FROM pedido p, tienda t, producto pr")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
