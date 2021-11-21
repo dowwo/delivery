@@ -8,7 +8,7 @@ FROM pedido p, tienda t, producto pr, WHERE p.id_tienda= t.id_tienda, p.id_produ
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
-        $e['id_pedido'] = $row[0];
+        $e['p.id_pedido'] = $row[0];
         $e['usuario_id_usuario'] = $row[1];
         $e['nombre_tienda'] = $row[2];
         $e['nombre_producto'] = $row[3];
