@@ -6,16 +6,13 @@ if($resultset=getSQLResultSet("SELECT * FROM producto")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
-        $e['id_pedido'] = $row[0];
-        $e['usuario_id_usuario'] = $row[1];
-        $e['nombre_tienda'] = $row[2];
-        $e['nombre_producto'] = $row[3];
-        $e['cantidad'] = $row[4];
-        $e['direccion_destino'] = $row[5];
-        $e['fecha_pedido'] = $row[6];
-        $e['valor_total'] = $row[7];
-        $e['estado_id_estado'] = $row[8];
-        $e['fecha_modificacion'] = $row[9];
+        $e['id_producto'] = $row[0];
+        $e['nombre_producto'] = $row[1];
+        $e['cantidad'] = $row[2];
+        $e['fecha_agregado'] = $row[3];
+        $e['valor'] = $row[4];
+        $e['tienda_id_tienda'] = $row[5];
+        $e['categoria_id_categoria'] = $row[6];
         array_push($array,$e);
     }
     echo json_encode($array);
