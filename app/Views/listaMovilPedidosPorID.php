@@ -2,8 +2,12 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
-
+//if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria WHERE tienda_id_tienda = tienda.id_tienda AND categoria_id_categoria= categoria.id_categoria")){
+if($resultset=getSQLResultSet("
+SELECT  p.id_producto, p.nombre_producto, p.cantidad, p.fecha_agregado, p.valor, t.nombre_tienda, c.nombre_categoria
+FROM producto p, tienda t, categoria c 
+WHERE p.tienda_id_tienda = t.id_tienda 
+  AND p.categoria_id_categoria= c.id_categoria")){
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
         $e['id_producto'] = $row[0];
