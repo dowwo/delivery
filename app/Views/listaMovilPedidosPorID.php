@@ -2,7 +2,10 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT producto.id_producto, producto.nombre_producto, producto.cantidad, producto.fecha_agregado, producto.valor, tienda.nombre_tienda, categoria.nombre_categoria  FROM producto, tienda, categoria ")){
+if($resultset=getSQLResultSet("SELECT id_producto, nombre_producto, cantidad, fecha_agregado, valor, nombre_tienda, nombre_categoria 
+FROM producto, tienda, categoria
+WHERE pedido.tienda_id_tienda = id_tienda
+GROUP BY pedid.id_tienda")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
