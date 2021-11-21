@@ -2,11 +2,7 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM pedido, tienda, producto 
-
-RIGHT JOIN pedido ON pedido.id_tienda = tienda.id_tienda RIGHT JOIN pedido ON pedido.id_producto = producto.id_producto
-
-GROUP BY t.id_tienda")){
+if($resultset=getSQLResultSet("SELECT * FROM producto")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
