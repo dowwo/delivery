@@ -2,7 +2,7 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT p.id_producto, p.nombre_producto, p.cantidad, p.fecha_agregado, p.valor, t.id_tienda, t.nombre_tienda , c.id_categoria, c.nombre_Categoria FROM producto p, tienda t, categoria c RIGHT JOIN pedido ON t.id_tienda = p.id_tienda")){
+if($resultset=getSQLResultSet("SELECT p.id_producto, p.nombre_producto, p.cantidad, p.fecha_agregado, p.valor, t.id_tienda, t.nombre_tienda , c.id_categoria, c.nombre_Categoria FROM producto p, tienda t, categoria c")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
