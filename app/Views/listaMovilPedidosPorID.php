@@ -8,9 +8,7 @@ SELECT id_producto,
        nombre,
        cantidad,
        fecha_agregado,
-       valor,
-       tienda_id_tienda,
-       categoria_id_categoria
+       valor
 FROM producto, tienda, categoria 
 WHERE tienda_id_tienda = tienda.id_tienda 
   AND categoria_id_categoria= categoria.id_categoria")){
