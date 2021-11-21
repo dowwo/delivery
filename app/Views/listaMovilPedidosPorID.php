@@ -11,8 +11,8 @@ if($resultset=getSQLResultSet("SELECT * FROM producto, tienda, categoria")){
         $e['cantidad'] = $row[2];
         $e['fecha_agregado'] = $row[3];
         $e['valor'] = $row[4];
-        $e['nombre_tienda'] = $row[5];
-        $e['nombre_categoria'] = $row[6];
+        $e['tienda.nombre_tienda'] = $row[5];
+        $e['categoria.nombre_categoria'] = $row[6];
         array_push($array,$e);
     }
     echo json_encode($array);
