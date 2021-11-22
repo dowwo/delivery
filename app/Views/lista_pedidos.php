@@ -13,7 +13,7 @@
         body {
             background-color: #AB3E5B;
         }
-        #lista-tienda {
+        #lista-pedido {
             background-color: rgba(255, 255, 255, 1);
 
         }
