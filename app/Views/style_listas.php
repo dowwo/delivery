@@ -14,7 +14,7 @@
         background-color: rgba(255, 255, 255, 1);
 
     }
-    #lista-tienda {
+    #lista-producto {
         background-color: rgba(255, 255, 255, 1);
 
     }
