@@ -102,6 +102,9 @@ $routes->get('/listaMovilPedidos','PedidoMovilController::index');
 
 $routes->get('/listaMovilProductosPorID','ProductosPorIDController::index');
 
+//
+$routes->get('/loginMovil','LoginMovilController::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
