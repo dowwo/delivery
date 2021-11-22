@@ -62,7 +62,7 @@
         );
 
         $(document).ready(function() {
-            var table = $('#lista-pedido').DataTable();
+            var table = $('#lista-tienda').DataTable();
 
             // Event listener to the two range filtering inputs to redraw on input
             $('#min, #max').keyup( function() {
