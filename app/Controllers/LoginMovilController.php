@@ -9,6 +9,6 @@ class LoginMovilController extends Controller
     public function index()
     {
         helper(['form']);
-        echo view('login');
+        echo view('loginMovil');
     }
 }
