@@ -102,7 +102,7 @@ $routes->get('/listaMovilPedidos','PedidoMovilController::index');
 
 $routes->get('/listaMovilProductosPorID','ProductosPorIDController::index');
 
-//
+// Retorna la vista en JSON par ael inicio de sesion en la aplicacion movil
 $routes->get('/loginMovil','LoginMovilController::index');
 
 /*
