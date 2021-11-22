@@ -6,4 +6,20 @@
         background-color: rgba(255, 255, 255, 1);
 
     }
+    #lista-pedidos {
+        background-color: rgba(255, 255, 255, 1);
+
+    }
+    #lista-usuarios {
+        background-color: rgba(255, 255, 255, 1);
+
+    }
+    #lista-tienda {
+        background-color: rgba(255, 255, 255, 1);
+
+    }
+    #lista-tienda {
+        background-color: rgba(255, 255, 255, 1);
+
+    }
 </style>
