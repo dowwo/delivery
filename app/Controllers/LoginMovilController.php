@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
 use CodeIgniter\Controller;
 
 class LoginMovilController extends Controller
@@ -10,5 +11,13 @@ class LoginMovilController extends Controller
     {
         helper(['form']);
         echo view('loginMovil');
+    }
+
+    public function loginapp(){
+        $model = new UserModel();
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
+
+
     }
 }
