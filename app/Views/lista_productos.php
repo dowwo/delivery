@@ -50,8 +50,11 @@
         );
 
         $(document).ready(function() {
-            var table = $('#lista-producto').DataTable();
-            responsive: true
+            var table = $('#lista-producto').DataTable(){
+                responsive: true
+            };
+            new $.fn.dataTable.FixedHeader( table );
+
 
             // Event listener to the two range filtering inputs to redraw on input
             $('#min, #max').keyup( function() {
