@@ -101,7 +101,7 @@
     ?>
     <!---->
     <div class="container mt-4">
-        <div class="mt-3">
+        <div class="mt-3 table-responsive">
             <table class="table table-striped table-bordered nowrap" style="width:100%" id="lista-producto">
                 <thead>
                 <tr>
