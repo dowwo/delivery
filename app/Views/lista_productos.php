@@ -56,9 +56,6 @@
 
         $(document).ready(function() {
             var table = $('#lista-producto').DataTable(){
-                rowReorder: {
-                    selector: 'td:nth-child(2)'
-                },
                 responsive: true
             };
             new $.fn.dataTable.FixedHeader( table );
