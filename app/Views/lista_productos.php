@@ -97,7 +97,7 @@
     <!---->
     <div class="container mt-4">
         <div class="mt-3">
-            <table class="table table-bordered" id="lista-producto">
+            <table class="table table-striped table-bordered nowrap" id="lista-producto">
                 <thead>
                 <tr>
                     <th>ID</th>
