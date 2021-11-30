@@ -17,7 +17,5 @@ class LoginMovilController extends Controller
         $model = new UserModel();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-
-
     }
 }
