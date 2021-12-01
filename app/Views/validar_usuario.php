@@ -1,7 +1,7 @@
 <?php
 include 'conexion.php';
 $usu_email=$_POST['rogges.morales@gmail.com'];
-$usu_password=$_POST['123456'];
+$usu_password=$_POST['e10adc3949ba59abbe56e057f20f883e'];
 
 $sentencia= $conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
 $sentencia->bind_param('ss', $usu_email, $usu_password);
