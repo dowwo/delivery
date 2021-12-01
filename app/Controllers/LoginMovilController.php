@@ -22,6 +22,7 @@ class LoginMovilController extends ResourceController
     }
 
     //Yo probare por aca - Dowwo
+    //ESTO NO FUNCIONA, POR AHORA??
 
     protected $modelName = 'app\Models\UserModel';
     protected $format    = 'json';
