@@ -13,7 +13,7 @@ $array = array();
 $query = "SELECT * FROM usuario WHERE email=" .$usu_email +" AND password=" .$usu_password;
 //if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='repartidor@gmail.com' AND password='asd123'")){
 if($resultset=getSQLResultSet($query)){
-    }
+
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
@@ -24,6 +24,8 @@ if($resultset=getSQLResultSet($query)){
         array_push($array,$e);
     }
     echo json_encode($array);
+}else{
+    echo "Ocurrio un problema";
 }
 
 
