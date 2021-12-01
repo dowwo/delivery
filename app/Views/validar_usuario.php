@@ -7,7 +7,8 @@ $usu_email=$_POST['repartidor@gmail.com'];
 $usu_password=$_POST['asd123'];
 
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=? AND password=?")){
+$sentencia= "SELECT * FROM usuario WHERE email=? AND password=?";
+if($resultset=getSQLResultSet($sentencia)){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
@@ -22,7 +23,7 @@ if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=? AND password=
 
 
 
-$sentencia= $conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
+
 $sentencia->bind_param('ss', $usu_email, $usu_password);
 $sentencia->execute();
 
