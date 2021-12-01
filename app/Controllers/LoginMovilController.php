@@ -28,7 +28,7 @@ class LoginMovilController extends ResourceController
 
     public function mLogin()
     {
-        return $this->respond($this->model->findAll());
+        echo $this->respond($this->model->findAll());
     }
 
     // ...
