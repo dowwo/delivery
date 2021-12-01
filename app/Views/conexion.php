@@ -2,7 +2,12 @@
 $hostname='valefor.servidoresph.com';
 $database='deliver2_bddeliverycl';
 $username='deliver2_dcla';
-$passwrod='/-791348265-/';
+$password='/-791348265-/';
+
+$conexion= new mysqli($hostname, $username, $password, $database);
+if ($conexion->connect_errno){
+    echo "El sitio web esta experimentando problemas";
+}
 
 
 ?>
