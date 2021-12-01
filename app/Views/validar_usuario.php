@@ -23,7 +23,7 @@ if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=$usu_email AND 
     }
     echo json_encode($array);
 }else{
-    echo
+    echo "Ocurrio un problema";
 }
 
 
