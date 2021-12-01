@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
-class loginMovilJavaController
+use CodeIgniter\Controller;
+
+class loginMovilJavaController extends Controller
 {
     public function validarUser()
     {
