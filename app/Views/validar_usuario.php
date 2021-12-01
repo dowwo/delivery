@@ -13,7 +13,7 @@ if ($fila = $resultado->fetch_assoc()){
     echo "Respuesta correcta";
     echo json_encode($fila, JSON_UNESCAPED_UNICODE);
 }else{
-    echo "<br/>Respuesta sin resultado";
+    echo "<br/>Error en la respuesta";
     echo json_encode($fila, JSON_UNESCAPED_UNICODE);
 }
 $sentencia->close();
