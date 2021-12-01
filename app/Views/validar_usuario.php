@@ -24,19 +24,5 @@ if($resultset=getSQLResultSet($sentencia)){
 
 
 
-$sentencia->bind_param('ss', $usu_email, $usu_password);
-$sentencia->execute();
-
-$resultado = $sentencia->get_result();
-
-if ($fila = $resultado->fetch_assoc()){
-    echo "Respuesta correcta";
-    echo json_encode($fila, JSON_UNESCAPED_UNICODE);
-}else{
-    echo "<br/>Error en la respuesta: ";
-    echo json_encode($fila, JSON_UNESCAPED_UNICODE);
-}
-$sentencia->close();
-$conexion->close();
 
 ?>
