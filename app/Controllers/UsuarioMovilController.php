@@ -6,11 +6,6 @@ use CodeIgniter\RESTful\ResourceController;
 
 class UsuarioMovilController extends ResourceController
 {
-    function __construct(){
-        parent::__construct();
-
-    }
-
     public function register_post(){
         $nombre=$this->post('nombre');
         $apellido_p=$this->post('apellido_p');
