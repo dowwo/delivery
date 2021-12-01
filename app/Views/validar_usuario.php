@@ -11,7 +11,7 @@ $array = array();
 /*if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=? AND password=?")){*/
 //if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='repartidor@gmail.com' AND password='asd123'")){
 if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='repartidor@gmail.com' AND password='asd123'")){
-if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='$usu_email' AND password='$usu_password'")){
+if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=''+ .$usu_email+'' AND password=''+ .$usu_password+''")){
     }
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
