@@ -108,7 +108,7 @@ $routes->get('/loginMovil','LoginMovilController::index');
 
 //Probando otro login 01-12-2021
 $routes->get('/validar_usuario', 'loginMovilJavaController::validarUser');
-$routes->get('/conexion', 'loginMovilJavaController::conexion');
+$routes->get('/conexion', 'loginMovilJavaConexion::conexion');
 
 
 // Retorna la vista en JSON para listar pedidos y tomar su id para enviar un SMS
