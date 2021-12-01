@@ -20,8 +20,8 @@ class UsuarioMovilController extends ResourceController
     }
 
     public function login_post(){
-        $email=$this->post('email');
-        $pass=$this->post('pass');
+        $email=$this->login_post('email');
+        $pass=$this->login_post('pass');
 
         $login = $this->UserModel->logins($email, $pass);
         if (!$login){
