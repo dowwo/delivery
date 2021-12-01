@@ -1,6 +1,6 @@
 <?php
 
-<!--include 'conexion.php';-->
+include 'conexion.php';
 include 'functions.php';
 
 $usu_email=$_POST['repartidor@gmail.com'];
