@@ -1,8 +1,8 @@
 <?php
 $hostname='valefor.servidoresph.com';
 $database='deliver2_bddeliverycl';
-$username='deliver2_dcla';
-$password='/-791348265-/';
+$username='deliver2_appmovil';
+$password='A7s4D1F8g5';
 
 $conexion= new mysqli($hostname, $username, $password, $database);
 if ($conexion->connect_errno){
