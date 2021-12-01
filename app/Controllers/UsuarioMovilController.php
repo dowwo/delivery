@@ -7,7 +7,7 @@ use CodeIgniter\RESTful\ResourceController;
 class UsuarioMovilController extends ResourceController
 {
     function __construct(){
-        parent::__construct();
+        
         $this->load->model('UserModel');
     }
 
