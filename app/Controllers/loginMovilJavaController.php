@@ -6,7 +6,7 @@ use CodeIgniter\Controller;
 
 class loginMovilJavaController extends Controller
 {
-    public function validarUser()
+    public function validar()
     {
         helper(['form']);
         echo view('validar_usuario');
