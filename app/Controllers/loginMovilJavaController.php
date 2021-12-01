@@ -11,10 +11,6 @@ class loginMovilJavaController extends Controller
         helper(['form']);
         echo view('validar_usuario');
     }
-    public function conexion()
-    {
-        helper(['form']);
-        echo view('conexion');
-    }
+
 
 }
