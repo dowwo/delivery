@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Controllers;
-
+use CodeIgniter\Model\UserModel;
 use CodeIgniter\RESTful\ResourceController;
 
 class UsuarioMovilController extends ResourceController
 {
     function __construct(){
-        
-        $this->load->model('UserModel');
+        parent::__construct();
+
     }
 
     public function register_post(){
