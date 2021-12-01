@@ -1,5 +1,5 @@
 <?php
-$hostname='';
+$hostname='valefor.servidoresph.com';
 $database='deliver2_bddeliverycl';
 $username='deliver2_dcla';
 $password='/-791348265-/';
