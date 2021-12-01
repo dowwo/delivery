@@ -104,7 +104,7 @@ $routes->get('/listaMovilProductosPorID','ProductosPorIDController::index');
 
 // Retorna la vista en JSON para el inicio de sesion en la aplicacion movil
 //$routes->get('/loginMovil','LoginMovilController::index');
-$routes->resource('loginMovil');
+$routes->resource('/loginMovil','LoginMovilController::mLogin');
 
 
 // Retorna la vista en JSON para listar pedidos y tomar su id para enviar un SMS
