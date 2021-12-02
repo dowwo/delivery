@@ -34,11 +34,6 @@ if($resultset=ejecutarSQLCommand("SELECT * FROM usuario WHERE email='dowwo@gmail
         array_push($array,$e);
     }
     echo json_encode($array);
-}else{
-    echo "Ocurrio un problema";
-    echo $usu_email;
-    echo $usu_password;
-    echo json_encode($array);
 }
 
 ?>
