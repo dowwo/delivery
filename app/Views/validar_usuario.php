@@ -3,12 +3,11 @@
 //include 'conexion.php';
 include 'functions.php';
 
-$usu_email=$_POST['cristofer.sepulveda02@gmail.com'];
-$usu_password=$_POST[password_hash('Animexdotaku15', PASSWORD_DEFAULT)];
+$usu_email=$_GET['cristofer.sepulveda02@gmail.com'];
+$usu_password=$_GET[password_hash('Animexdotaku15', PASSWORD_DEFAULT)];
 
 echo $usu_email;
 echo $usu_password;
-
 
 $array = array();
 // Esta linea ingresa directamente lo que obtiene por POST, pero en esta caso estan directamente puestos
