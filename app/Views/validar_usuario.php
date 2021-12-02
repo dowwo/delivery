@@ -6,7 +6,7 @@ include 'conexion.php';
 //$usu_password=$_POST['password'];
 
 $usu_email = "dowwo@gmail.com";
-$usu_password = "123456";
+$usu_password = "12345";
 
 
 $sentencia=$conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
