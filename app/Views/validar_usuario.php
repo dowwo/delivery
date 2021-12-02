@@ -1,14 +1,14 @@
 <?php
 
 include 'conexion.php';
-include 'functions.php';
+//include 'functions.php';
 
 
-$usu_email = $_POST['cristofer.sepulveda02@gmail.com'];
-$usu_password = $_POST['Animexdotaku15'];
+//$usu_email = $_POST['cristofer.sepulveda02@gmail.com'];
+//$usu_password = $_POST['Animexdotaku15'];
 
-//$usu_email = "cristofer.sepulveda02@gmail.com";
-//$usu_password = "Animexdotaku15";
+$usu_email = "cristofer.sepulveda02@gmail.com";
+$usu_password = "Animexdotaku15";
 
 $sentencia =  $conexion->prepare("
     SELECT * FROM usuario WHERE email=? AND password=?");
