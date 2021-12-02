@@ -21,16 +21,17 @@ $array = array();
 /*if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=? AND password=?")){*/
 //if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='repartidor@gmail.com' AND password='asd123'")){
 //$query = "SELECT * FROM usuario WHERE email="+ $usu_email +" AND password="+ $usu_password;
-if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='dowwo@gmail.com' AND password='123456'")){
+if($resultset=getSQLResultSet("SELECT id_usuario, email, password, rol_id_rol FROM usuario WHERE email='dowwo@gmail.com' AND password='123456'")){
 
 
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
         $e['id_usuario'] = $row[0];
-        $e['nombre'] = $row[1];
-        $e['email'] = $row[2];
-        $e['password'] = $row[3];
+        $e['email'] = $row[1];
+        $e['password'] = $row[2];
+        $e['rol_id_rol'] = $row[3];
+        
         array_push($array,$e);
     }
     echo json_encode($array);
