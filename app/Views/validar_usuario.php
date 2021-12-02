@@ -1,13 +1,13 @@
 <?php
-use CodeIgniter\Controller;
-use App\Models\UserModel;
 
 include 'conexion.php';
 include 'functions.php';
 
 $email = 'cristofer.sepulveda02@gmail.com';
-$data = $model->where('email', $email)->first();
-$pass = password_verify('Animexdotaku15', $data);
+$hash = ejecutarSQLCommand("SELECT password FROM usuario WHERE email=".$email);
+echo $hash;
+
+$pass = password_verify('Animexdotaku15', $hash);
 
 echo $email , $pass;
 
