@@ -22,7 +22,7 @@ $array = array();
 //if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='repartidor@gmail.com' AND password='asd123'")){
 //$query = "SELECT * FROM usuario WHERE email="+ $usu_email +" AND password="+ $usu_password;
 //if($resultset=getSQLResultSet("SELECT id_usuario, email, password, rol_id_rol FROM usuario WHERE email='dowwo@gmail.com' AND password='123456'")){
-/*
+
 if($resultset=getSQLResultSet("SELECT id_usuario, email, password, rol_id_rol FROM usuario WHERE email=? AND password=?")){
 
 
@@ -38,8 +38,8 @@ if($resultset=getSQLResultSet("SELECT id_usuario, email, password, rol_id_rol FR
     }
     echo json_encode($array);
 }
-*/
 
+/*
 $sentencia = $conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
 $sentencia->bind_param('ss',$usu_email, $usu_password);
 $sentencia->execute();
@@ -50,5 +50,5 @@ if ($fila = $resultado->fetch_assoc()){
 }
 $sentencia->close();
 $conexion->close();
-
+*/
 ?>
