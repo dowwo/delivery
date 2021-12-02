@@ -37,9 +37,11 @@ class Register extends Controller
                 'nombre'            => $this->request->getVar('nombre'),
                 'apellido_p'        => $this->request->getVar('apellido_p'),
                 'apellido_m'        => $this->request->getVar('apellido_m'),
-                'fecha_registro'    =>  $this->request->getVar('fecha_registro'),
+                'fecha_registro'    => $this->request->getVar('fecha_registro'),
                 'email'             => $this->request->getVar('email'),
-                'password'          => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'password'          => $this->request->getVar('password'),
+                /*
+                'password'          => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),*/
                 'rol_id_rol'        => $this->request->getVar('rol')
             ];
             $model->save($data);
