@@ -4,12 +4,10 @@ include 'conexion.php';
 include 'functions.php';
 
 $email = 'cristofer.sepulveda02@gmail.com';
-$hash = getSQLResultSet("SELECT password FROM usuario WHERE email=".$email);
-echo $hash;
+$pass = 'Animexdotaku15';
 
-$pass = password_verify('Animexdotaku15', $hash);
-
-echo $email , $pass;
+echo $email;
+echo $pass;
 
 
 
