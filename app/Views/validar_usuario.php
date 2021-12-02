@@ -2,9 +2,11 @@
 <?php
 
 include 'conexion.php';
-$usu_email=$_POST['email'];
-$usu_password=$_POST['password'];
+//$usu_email=$_POST['email'];
+//$usu_password=$_POST['password'];
 
+$usu_email = "dowwo@gmail.com";
+$usu_password = "123456";
 
 
 $sentencia=$conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
