@@ -9,8 +9,7 @@ $email = 'cristofer.sepulveda02@gmail.com';
 $data = $model->where('email', $email)->first();
 $pass = password_verify('Animexdotaku15', $data);
 
-echo $email;
-echo $pass;
+echo $email , $pass;
 
 
 
