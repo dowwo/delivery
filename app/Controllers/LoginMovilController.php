@@ -18,7 +18,8 @@ class LoginMovilController extends ResourceController
     public function loginapp(){
         $model = new UserModel();
         $email = $this->request->getVar('email');
-        $password = $this->request->getVar('password');
+        $password = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+        //$password = $this->request->getVar('password');
     }
 
     //Yo probare por aca - Dowwo
