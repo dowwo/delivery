@@ -8,7 +8,7 @@ $usu_password=$_POST['password'];
 
 
 $sentencia=$conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
-$sentencia->bind_param('ss', $usu_usuario, $usu_password);
+$sentencia->bind_param('ss', $usu_email, $usu_password);
 $sentencia->execute();
 
 $resultado = $sentencia->get_result();
