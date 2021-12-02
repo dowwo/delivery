@@ -26,7 +26,7 @@ include 'conexion.php';
 $usu_usuario="aroncal@gmail.com";
 $usu_password="12345678";
 
-$sentencia=$conexion->prepare("SELECT * FROM usuario WHERE usu_usuario=? AND usu_password=?");
+$sentencia=$conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
 $sentencia->bind_param('ss', $usu_usuario, $usu_password);
 $sentencia->execute();
 
