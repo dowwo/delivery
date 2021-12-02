@@ -20,11 +20,10 @@ if($resultset=getSQLResultSet("SELECT id_usuario, email, password, rol_id_rol FR
 <?php
 
 include 'conexion.php';
-//$usu_email=$_POST['email'];
-//$usu_password=$_POST['password'];
+$usu_email=$_POST['email'];
+$usu_password=$_POST['password'];
 
-$usu_usuario="aroncal@gmail.com";
-$usu_password="12345678";
+
 
 $sentencia=$conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
 $sentencia->bind_param('ss', $usu_usuario, $usu_password);
