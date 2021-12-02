@@ -4,7 +4,7 @@ include 'conexion.php';
 include 'functions.php';
 
 $email = 'cristofer.sepulveda02@gmail.com';
-$hash = ejecutarSQLCommand("SELECT password FROM usuario WHERE email=".$email);
+$hash = getSQLResultSet("SELECT password FROM usuario WHERE email=".$email);
 echo $hash;
 
 $pass = password_verify('Animexdotaku15', $hash);
@@ -21,7 +21,7 @@ $array = array();
 /*if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=? AND password=?")){*/
 //if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email='repartidor@gmail.com' AND password='asd123'")){
 //$query = "SELECT * FROM usuario WHERE email="+ $usu_email +" AND password="+ $usu_password;
-if($resultset=ejecutarSQLCommand("SELECT * FROM usuario WHERE email=".$email." AND password=".$pass)){
+if($resultset=getSQLResultSet("SELECT * FROM usuario WHERE email=".$email." AND password=".$pass)){
 
 
 
