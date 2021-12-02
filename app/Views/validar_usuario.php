@@ -1,5 +1,7 @@
 <?php
+use CodeIgniter\Controller;
 use App\Models\UserModel;
+
 include 'conexion.php';
 include 'functions.php';
 
