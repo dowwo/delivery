@@ -10,13 +10,15 @@ include 'conexion.php';
 $usu_email = "cristofer.sepulveda02@gmail.com";
 $usu_password = "Animexdotaku15";
 
-$sentencia =  $conexion->prepare("
-    SELECT * FROM usuario WHERE email=? AND password=?");
+$sentencia =  $conexion->prepare("SELECT * FROM usuario WHERE email=? AND password=?");
 $sentencia->bind_param('ss', $usu_email, $usu_password);
 $sentencia->execute();
 
 $resultado = $sentencia->get_result();
 if ($fila = $resultado->fetch_assoc()){
+    echo json_encode($fila, JSON_UNESCAPED_UNICODE);
+}
+else{
     echo json_encode($fila, JSON_UNESCAPED_UNICODE);
 }
 $sentencia->close();
