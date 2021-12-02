@@ -3,8 +3,8 @@
 include 'conexion.php';
 include 'functions.php';
 
-$usu_email=$_POST['repartidor@gmail.com'];
-$usu_password=$_POST['asd123'];
+$usu_email=$_POST['cristofer.sepulveda02@gmail.com'];
+$usu_password=$_POST[password_verify('Animexdotaku15')];
 
 $array = array();
 // Esta linea ingresa directamente lo que obtiene por POST, pero en esta caso estan directamente puestos
