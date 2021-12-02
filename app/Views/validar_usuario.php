@@ -4,7 +4,7 @@ include 'conexion.php';
 include 'functions.php';
 
 $email = 'cristofer.sepulveda02@gmail.com';
-$pass = password_verify('Animexdotaku15', PASSWORD_DEFAULT);
+$pass = password_verify('Animexdotaku15', $email);
 
 echo $email;
 echo $pass;
