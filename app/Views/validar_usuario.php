@@ -1,10 +1,11 @@
 <?php
-
+use App\Models\UserModel;
 include 'conexion.php';
 include 'functions.php';
 
 $email = 'cristofer.sepulveda02@gmail.com';
-$pass = password_verify('Animexdotaku15', $email);
+$data = $model->where('email', $email)->first();
+$pass = password_verify('Animexdotaku15', $data);
 
 echo $email;
 echo $pass;
