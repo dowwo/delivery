@@ -31,7 +31,7 @@ if($resultset=getSQLResultSet("SELECT id_usuario, email, password, rol_id_rol FR
         $e['email'] = $row[1];
         $e['password'] = $row[2];
         $e['rol_id_rol'] = $row[3];
-        
+
         array_push($array,$e);
     }
     echo json_encode($array);
