@@ -27,7 +27,7 @@ $usu_usuario="aroncal@gmail.com";
 $usu_password="12345678";
 
 $sentencia=$conexion->prepare("SELECT * FROM usuario WHERE usu_usuario=? AND usu_password=?");
-$sentencia->bind_param('ss',$usu_email,$usu_password);
+$sentencia->bind_param('ss', $usu_usuario, $usu_password);
 $sentencia->execute();
 
 $resultado = $sentencia->get_result();
