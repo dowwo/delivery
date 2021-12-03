@@ -64,7 +64,7 @@
         <div class="sidebar-wrapper" id="sidebar-wrapper">
             <ul class="nav">
                 <li class="active ">
-                    <a href="dashboard1.php">
+                    <a href="dashboard1">
                         <i class="now-ui-icons design_app"></i>
                         <p>Administracion</p>
                     </a>
