@@ -1,7 +1,9 @@
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url('public/img/apple-icon.png')?>">
+    <link rel="icon" type="image/png" href="<?php echo base_url('public/img/favicon.png')?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Delivery Chile</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Con esta versión de bootstrap funcionan bien las tarjetas, pero la barra de navegacion pierde la configuración-->
