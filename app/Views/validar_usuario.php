@@ -12,9 +12,7 @@ $sentencia->execute();
 
 $resultado = $sentencia->get_result();
 if ($fila = $resultado->fetch_assoc()) {
-    echo json_encode($fila).str_replace(array("\r\n", "\n", "\r"),
-            '',
-            file_get_contents('https://delivery-chile.cl/validar_usuario'));
+    echo json_encode($fila);
 }
 $sentencia->close();
 $conexion->close();
