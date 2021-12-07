@@ -10,10 +10,10 @@ $sentencia=$conexion->prepare("SELECT id_usuario, nombre, email, password, rol_i
 $sentencia->bind_param('ss', $usu_email, $usu_password);
 $sentencia->execute();
 
-$resultado = $sentencia->get_result().str_replace("\n","","");
+$resultado = $sentencia->get_result();
 
 if ($fila = $resultado->fetch_assoc()) {
-    echo json_encode($fila);
+    echo json_encode($fila).str_replace("\n","","");
 }
 $sentencia->close();
 $conexion->close();
