@@ -14,7 +14,7 @@ $sentencia->execute();
 $resultado = $sentencia->get_result();
 
 if ($fila = $resultado->fetch_assoc()) {
-    $datos = json_encode($fila).str_replace("\n", "", "$datos");
+    $datos = json_encode($fila).str_replace("\\n", "", "$datos");
     echo $datos;
 }
 $sentencia->close();
