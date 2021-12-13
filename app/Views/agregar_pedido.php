@@ -132,7 +132,7 @@ if(isset($_SESSION['msg'])){
             document.getElementById('autocomplete'),
             {
                 types: ['establishment'],
-                componentRestrictions: {'country': ['CL']},
+                componentRestrictions: {'country': ['AU']},
                 fields: ['place_id', 'geometry','name']
             });
 
