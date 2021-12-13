@@ -19,7 +19,7 @@
             autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'),
                 {
                     types: ['establishment'],
-                    componentRestrictions: {'country': ['AU']},
+                    componentRestrictions: {'country': ['CL']},
                     fields: ['place_id', 'geometry','name']
                 });
 
