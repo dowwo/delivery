@@ -132,7 +132,7 @@ if(isset($_SESSION['msg'])){
             document.getElementById('autocomplete'),
             {
                 types: ['establishment'],
-                componentRestrictions: {'country': ['AU']},
+                componentRestrictions: {'country': ['CL']},
                 fields: ['place_id', 'geometry','name']
             });
 
@@ -152,6 +152,7 @@ if(isset($_SESSION['msg'])){
 
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
+<!--La api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 <script src="https://maps.googleapis.com/maps/api/js?
 key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" async defer>
 </script>
