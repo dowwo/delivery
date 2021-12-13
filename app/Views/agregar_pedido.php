@@ -13,7 +13,10 @@
             background-color: #AB3E5B;
         }
     </style>
-
+    <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initMap">
+    </script>
 
 
 </head>
