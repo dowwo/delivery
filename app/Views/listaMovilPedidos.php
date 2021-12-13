@@ -12,10 +12,12 @@ if($resultset=getSQLResultSet("SELECT * FROM pedido")){
         $e['producto_id_producto'] = $row[3];
         $e['cantidad'] = $row[4];
         $e['direccion_destino'] = $row[5];
-        $e['fecha_pedido'] = $row[6];
-        $e['valor_total'] = $row[7];
-        $e['estado_id_estado'] = $row[8];
-        $e['fecha_modificacion'] = $row[9];
+        $e['latitud'] = $row[6];
+        $e['longitud'] = $row[7];
+        $e['fecha_pedido'] = $row[8];
+        $e['valor_total'] = $row[9];
+        $e['estado_id_estado'] = $row[10];
+        $e['fecha_modificacion'] = $row[11];
         array_push($array,$e);
     }
     echo json_encode($array);
