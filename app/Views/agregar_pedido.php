@@ -13,6 +13,40 @@
             background-color: #AB3E5B;
         }
     </style>
+    <script>
+        let autocomplete;
+        function initAutocomplete() {
+            autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'),
+                {
+                    types: ['establishment'],
+                    componentRestrictions: {'country': ['AU']},
+                    fields: ['place_id', 'geometry','name']
+                });
+
+            autocomplete.addListener('place_changed', onPlaceChanged);
+        }
+
+        function onPlaceChanged() {
+            var place = autocomplete.getPlace();
+
+            if (!place.geometry) {
+                // User did not select a prediction; reset the input field
+                document.getElementById('autocomplete').placeholder = 'Enter a place';
+            }else{
+                // Display details about eht valid place
+                document.getElementById('details').innerHTML = place.name;
+            }
+
+        }
+    </script>
+    <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
+    <script src="https://maps.googleapis.com/maps/api/js?
+        key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I
+        &libraries=places
+        &callback=initAutocomplete" async defer>
+
+    </script>
+
 
 </head>
 <body>
@@ -87,13 +121,14 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion">
                 </div>
-                <!--
+                <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
                 <div>
                     <label for="InputForLatitud" class="form-label">Latitud</label>
+                    <input id="autocomplete" placeholder="Enter a place" type="text">
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud">
-                </div>-->
+                </div>
                 <div class="mb-3">
                     <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
                     <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
