@@ -25,10 +25,20 @@
                     fields: ['place_id', 'geometry','name']
                 });
 
+            autocomplete.addListener('place_changed', onPlaceChanged);
+        }
+        function onPlaceChanged(){
+            var place = autocomplete.getPlace();
 
+            if (!place.geometry) {
+                document.getElementById('autocomplete').placeholder =
+                    'Enter a place';
+            } else {
+                document.getElementById('details').innerHTML = place.name;
+            }
         }
 
-        
+
     </script>
     <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
     <script src="https://maps.googleapis.com/maps/api/js?
