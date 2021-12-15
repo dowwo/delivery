@@ -245,23 +245,17 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 <script>
     function myMap() {
-        /*
+        var curacautin ={lat:-38.4396458, lng:-71.888786};
         var mapProp= {
             center:new google.maps.LatLng(-38.4396458,-71.888786),
             zoom:15,
+            center: curacautin
         };
 
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);*/
-        var curacautin ={lat:-38.4396458, lng:-71.888786};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: curacautin
-        });
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-        var marker = new google.maps.Marker({
-            position: curacautin,
-            map: map
-        });
+
+        
     }
 </script>
 
