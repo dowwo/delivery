@@ -241,7 +241,7 @@ if(isset($_SESSION['msg'])){
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 <script src="https://maps.googleapis.com/maps/api/js?
-key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" async defer>
+key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" async defer>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 <script>
@@ -254,7 +254,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutoco
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&callback=myMap"></script>
+
 
 
 
