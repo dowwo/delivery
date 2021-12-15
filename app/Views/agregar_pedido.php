@@ -247,7 +247,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
     function myMap() {
         var curacautin ={lat:-38.4396458, lng:-71.888786};
         var mapProp= {
-            center:new google.maps.LatLng(-38.4396458,-71.888786),
+            
             zoom:15,
             center: curacautin
         };
@@ -255,7 +255,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 
-        
+
     }
 </script>
 
