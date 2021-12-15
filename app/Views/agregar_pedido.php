@@ -10,7 +10,7 @@
     <title>Agregar Pedido</title>
     <style type="text/css">
         body {
-            background-color: #AB3E5B;
+            /*background-color: #AB3E5B;*/
         }
         .navbar.navbar-light.navbar-expand-lg.bg-white.page-navbar {
             box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);
