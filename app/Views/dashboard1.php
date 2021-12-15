@@ -70,7 +70,7 @@ if(isset($_SESSION['msg'])){
 <br>
 <div class="container">
     <div class="row">
-        <?php if($_SESSION['rol_id_rol'] == 47147): ?>
+        <?php if($_SESSION['rol_id_rol'] == 47174): ?>
             <div class="col-sm" id="div_admin">
                 <div class="card" style="width: 18rem;">
                     <a href="dashboard3">
