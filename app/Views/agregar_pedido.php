@@ -88,7 +88,7 @@
             }
         }
     </style>
-    <script src="http://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
 
@@ -174,7 +174,7 @@ if(isset($_SESSION['msg'])){
                         <div class="col-lg-6">
                             <div id="map"></div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div>
