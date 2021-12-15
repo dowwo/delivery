@@ -88,7 +88,7 @@
             }
         }
     </style>
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
 
