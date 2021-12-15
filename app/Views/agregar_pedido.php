@@ -242,7 +242,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
     function myMap() {
         var mapProp= {
             center:new google.maps.LatLng(-38.4396458,-71.888786),
-            zoom:10,
+            zoom:15,
         };
 
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
