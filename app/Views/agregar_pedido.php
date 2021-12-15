@@ -251,14 +251,15 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
             center: curacautin
         };
 
-        new google.maps.Marker({
-            position: curacautin,
-            map,
-            title: "Hello World!",
-        });
+
 
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
+        var marker = new google.maps.Marker(document.getElementById("googleMap"),mapProp{
+            position: curacautin,
+                map,
+                title: "Hello World!",
+        });
 
 
     }
