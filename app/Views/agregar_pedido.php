@@ -174,36 +174,7 @@ if(isset($_SESSION['msg'])){
                         <div class="col-lg-6">
                             <div id="map"></div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="heading">
-                                <h3>Lorem Ipsum Dolor</h3>
-                                <div class="rating">
-                                    <i class="fa fa-star icon"></i>
-                                    <i class="fa fa-star icon"></i>
-                                    <i class="fa fa-star icon"></i>
-                                    <i class="fa fa-star icon"></i>
-                                    <i class="fa fa-star-o icon"></i>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare leo porta cursus porttitor. Proin quis tempor lectus. Cras sodales nisi ut felis tincidunt suscipit. Nullam consectetur odio et lacus tempor vestibulum.</p>
-                                <p>Aenean convallis, tortor eget vehicula vestibulum, sem nibh rutrum sem, vel sodales nisl velit eu ex. Sed hendrerit efficitur sollicitudin. Maecenas tempus augue lacus.</p>
-                            </div>
-                            <div class="gallery">
-                                <h4>Photos</h4>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <a href="assets/img/image2.jpg"><img class="img-fluid image" src="assets/img/image2.jpg"></a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a href="assets/img/image3.jpg"><img class="img-fluid image" src="assets/img/image3.jpg"></a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a href="assets/img/image4.jpg"><img class="img-fluid image" src="assets/img/image4.jpg"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div>
