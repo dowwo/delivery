@@ -173,7 +173,7 @@ if(isset($_SESSION['msg'])){
                 <div class="map-example">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div id="map"></div>
+                            <div id="myMap"></div>
                         </div>
 
                     </div>
