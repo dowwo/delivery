@@ -246,8 +246,11 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
 <script>
     function myMap() {
         var curacautin ={lat:-38.4396458, lng:-71.888786};
+        var marker - new google.maps.Marker({
+            position: curacautin,
+            map: googleMap
+        });
         var mapProp= {
-            
             zoom:15,
             center: curacautin
         };
