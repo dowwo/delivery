@@ -172,6 +172,10 @@ if(isset($_SESSION['msg'])){
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
                 <div id="googleMap" style="width:100%;height:400px;"></div>
+                <h3>My Google Maps Demo</h3>
+                <!--The div element for the map -->
+                <div id="map"></div>
+
 
                 <div>
                     <label for="InputForLatitud" class="form-label">Latitud</label>
@@ -241,14 +245,26 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 <script>
     function myMap() {
+        /*
         var mapProp= {
             center:new google.maps.LatLng(-38.4396458,-71.888786),
             zoom:15,
         };
 
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);*/
+        var pune ={lat:-38.4396458, lng:-71.888786};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: pune
+        });
+
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
     }
 </script>
+
 
 
 
