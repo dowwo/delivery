@@ -30,6 +30,7 @@
             ;
         } );
     </script>
+
     <style type="text/css">
         body {
             background-color: #AB3E5B;
@@ -69,25 +70,30 @@ if(isset($_SESSION['msg'])){
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <a href="dashboard3">
-                    <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">Administrador</h5>
-                    <p class="card-text">Visualice las opciones para la administración.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <!--Redireccionar al registro de usuario-->
-                        <a href="dashboard3" class="card-link">Dashboard Admin</a>
-                    </li>
-                </ul>
-                <div class="card-body">
+        <?php if($_SESSION['rol_id_rol'] == 47147): ?>
+            <div class="col-sm" id="div_admin">
+                <div class="card" style="width: 18rem;">
+                    <a href="dashboard3">
+                        <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Administrador</h5>
+                        <p class="card-text">Visualice las opciones para la administración.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <!--Redireccionar al registro de usuario-->
+                            <a href="dashboard3" class="card-link">Dashboard Admin</a>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php else: ?>
+            <!-- Admin link goes here -->
+        <?php endif; ?>
+
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?php echo base_url('images/tarjeta_solicitudes.jpg') ?>" alt="Card image cap">
