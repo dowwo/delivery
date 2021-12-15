@@ -255,10 +255,12 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
 
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-        var marker = new google.maps.Marker({
+        new google.maps.Marker({
             position: curacautin,
-            map: googleMap
+            map,
+            title: "Hello World!",
         });
+
 
 
     }
