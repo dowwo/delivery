@@ -12,7 +12,84 @@
         body {
             background-color: #AB3E5B;
         }
+        .navbar.navbar-light.navbar-expand-lg.bg-white.page-navbar {
+            box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+            font-weight:bold;
+        }
+
+        .nav-item.item {
+            padding-right:2rem;
+        }
+
+        .navbar-nav:last-child .item:last-child, .navbar-nav:last-child .item:last-child a {
+            padding-right:0;
+        }
+
+        .map-example .heading .icon {
+            color:#ffb526;
+        }
+
+        .map-example {
+            margin-top:50px;
+            padding-bottom:100px;
+        }
+
+        .map-example .heading {
+            margin-bottom:20px;
+            border-bottom:1px solid #e4e4e4;
+            padding-bottom:30px;
+        }
+
+        .map-example .info {
+            margin-bottom:20px;
+            border-bottom:1px solid #e4e4e4;
+            padding-bottom:20px;
+            color:#636363;
+        }
+
+        .map-example .gallery h4 {
+            margin-bottom:30px;
+        }
+
+        .map-example .gallery .image {
+            margin-bottom:15px;
+            box-shadow:0px 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .map-example #map {
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .page-footer {
+            padding-top:32px;
+            border-top:1px solid #ddd;
+            text-align:center;
+            padding-bottom:20px;
+        }
+
+        .page-footer a {
+            margin:0px 10px;
+            display:inline-block;
+            color:#282b2d;
+            font-size:18px;
+        }
+
+        .page-footer .links {
+            display:inline-block;
+        }
+
+        @media(min-width: 992px){
+            .map-example #map{
+                height: 500px;
+            }
+        }
     </style>
+    <script src="http://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
 
 
@@ -91,6 +168,44 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion">
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
+
+                <div class="map-example">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="heading">
+                                <h3>Lorem Ipsum Dolor</h3>
+                                <div class="rating">
+                                    <i class="fa fa-star icon"></i>
+                                    <i class="fa fa-star icon"></i>
+                                    <i class="fa fa-star icon"></i>
+                                    <i class="fa fa-star icon"></i>
+                                    <i class="fa fa-star-o icon"></i>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare leo porta cursus porttitor. Proin quis tempor lectus. Cras sodales nisi ut felis tincidunt suscipit. Nullam consectetur odio et lacus tempor vestibulum.</p>
+                                <p>Aenean convallis, tortor eget vehicula vestibulum, sem nibh rutrum sem, vel sodales nisl velit eu ex. Sed hendrerit efficitur sollicitudin. Maecenas tempus augue lacus.</p>
+                            </div>
+                            <div class="gallery">
+                                <h4>Photos</h4>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <a href="assets/img/image2.jpg"><img class="img-fluid image" src="assets/img/image2.jpg"></a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="assets/img/image3.jpg"><img class="img-fluid image" src="assets/img/image3.jpg"></a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="assets/img/image4.jpg"><img class="img-fluid image" src="assets/img/image4.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div>
                     <label for="InputForLatitud" class="form-label">Latitud</label>
                     <input id="autocomplete" placeholder="Enter a place" type="text">
