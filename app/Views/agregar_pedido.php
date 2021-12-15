@@ -241,7 +241,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
 <script>
     function myMap() {
         var mapProp= {
-            center:new google.maps.LatLng(51.508742,-0.120850),
+            center:new google.maps.LatLng(-38.4396458,-71.888786),
             zoom:5,
         };
 
