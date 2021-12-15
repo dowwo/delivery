@@ -171,9 +171,9 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+                <h3>My Google Maps Demo</h3>
 
-                <!--The div element for the map -->
-                <div id="map"></div>
 
 
                 <div>
