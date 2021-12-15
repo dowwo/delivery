@@ -252,14 +252,14 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
         };
 
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);*/
-        var pune ={lat:-38.4396458, lng:-71.888786};
+        var curacautin ={lat:-38.4396458, lng:-71.888786};
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
-            center: pune
+            center: curacautin
         });
 
         var marker = new google.maps.Marker({
-            position: uluru,
+            position: curacautin,
             map: map
         });
     }
