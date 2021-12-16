@@ -329,6 +329,7 @@ if(isset($_SESSION['msg'])){
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
                 <div>
+                    <input id="delete-markers" type="button" value="Delete Markers" />
                     <label for="InputForLatitud" class="form-label">Latitud</label>
                     <input id="autocomplete" placeholder="Enter a place" type="text">
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud">
