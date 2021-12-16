@@ -148,8 +148,8 @@
                 });
 
             };
-            vMarker.addListener("dblclick", function() {
-                vMarker.setMap(null);
+            marker.addListener("dblclick", function() {
+                marker.setMap(null);
             });
 
 
@@ -162,7 +162,7 @@
                 map.panTo(position);
             }
             function placeMarkerAndPanTo(latLng, map) {
-                vMarker = new google.maps.Marker({
+                var marker = new google.maps.Marker({
                     position: latLng,
                     draggable: true,
                     map: map,
