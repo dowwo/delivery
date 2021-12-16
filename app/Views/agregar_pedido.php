@@ -308,7 +308,7 @@ if(isset($_SESSION['msg'])){
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
 
-            <form action="/PedidoController/guardar" method="post" id="form-pedido">
+            <form action="/PedidoController/guardar" method="post" id="form">
                 <div>
                     <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
                     <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
@@ -394,7 +394,7 @@ if(isset($_SESSION['msg'])){
 
 <script>
     document.addEventListener("DOMContentLoaded", function (){
-        document.getElementById("form-pedido").addEventListener('submit', validaciones)
+        document.getElementById("form").addEventListener('submit', validaciones)
     });
     function validaciones(evento){
         evento.preventDefault();
