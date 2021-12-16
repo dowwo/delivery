@@ -114,7 +114,7 @@
                 draggable: true
             });
 
-            map.addListener(vMarker, 'dragend', function (evt) {
+            vMarker.addListener(vMarker, 'dragend', function (evt) {
                 $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
                 $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
 
@@ -123,6 +123,16 @@
             map.setCenter(vMarker.position);
             vMarker.setMap(map);
 
+            /*
+            map.addListener(vMarker, 'dragend', function (evt) {
+                $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
+                $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
+
+                map.panTo(evt.latLng);
+            })
+            map.setCenter(vMarker.position);
+            vMarker.setMap(map);
+*/
             /*
             $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
                 movePin();
