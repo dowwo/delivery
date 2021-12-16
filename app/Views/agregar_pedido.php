@@ -171,20 +171,8 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
-
-                <div class="col-md-4">
-                    <input type="text" id="txtDireccion" class="form-control" placeholder="direccion">
-                </div>
-                <div class="col-md-4">
-                    <input type="text" id="txtCiudad" class="form-control" placeholder="ciudad">
-                </div>
-                <div class="col-md-4">
-                    <input type="text" id="txtEstado" class="form-control" placeholder="estado">
-                </div>
                 <div id="googleMap" style="width:100%;height:400px;"></div>
                 <h3>My Google Maps Demo</h3>
-
-
 
                 <div>
                     <label for="InputForLatitud" class="form-label">Latitud</label>
@@ -221,7 +209,7 @@ if(isset($_SESSION['msg'])){
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script>
-    let autocomplete;
+    /*let autocomplete;
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
             document.getElementById('autocomplete'),
@@ -243,59 +231,19 @@ if(isset($_SESSION['msg'])){
             document.getElementById('details').innerHTML = place.name;
         }
     }
-
+*/
 
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" async defer>
-</script>-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I" async defer/>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" async defer>
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 <script>
 
 
-    var map = new google.maps.Map(document.getElementById("googleMap"),{
-        zoom: 14,
-        center: new google.maps.LatLng(-38.4396458, -71.888786),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-    var vMarker = new google.maps.Marker({
-        position: new google.maps.LatLng(-38.4396458, -71.888786),
-        draggable: true
-    });
-    google.maps.event.addListener(vMarker, 'dragend', function (evt){
-        $("#InputForLatitud").val(evt.latLng.lat().fixed(6));
-        $("#InputForLongitud").val(evt.latLng.lng().fixed(6));
 
-        map.panTo(evt.latLng);
-    })
-    map.setCenter(vMarker.position);
-    vMarker.setMap(map);
-
-    $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
-        movePin();
-    });
-
-    function movePin() {
-        var geocoder = new google.maps.Geocoder();
-        var textSelectM = $("#txtCiudad").text();
-        var textSelectE = $("#txtEstado").val();
-        var inputAddress = $("#txtDireccion").val() + ' ' + textSelectM + ' ' + textSelectE;
-        geocoder.geocode({
-            "address": inputAddress
-        }, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                vMarker.setPosition(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                map.panTo(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                $("#InputForLatitud").val(results[0].geometry.location.lat());
-                $("#InputForLongitud").val(results[0].geometry.location.lng());
-            }
-
-        });
-    }
-
-    //function myMap() {
+    function myMap() {
         //var curacautin ={lat:-38.4396458, lng:-71.888786};
 
         /*var mapProp= {
@@ -303,7 +251,7 @@ if(isset($_SESSION['msg'])){
             center: curacautin
         };*/
 
-/*
+
         var map = new google.maps.Map(document.getElementById("googleMap"),{
             zoom: 14,
             center: new google.maps.LatLng(-38.4396458, -71.888786),
@@ -355,7 +303,7 @@ if(isset($_SESSION['msg'])){
 
 
 
-    //}
+    }
 </script>
 
 
