@@ -337,8 +337,12 @@ if(isset($_SESSION['msg'])){
                 </div>
                 -->
                 <div class="mb-3">
-                    <label for="InputForCantidad" class="form-label">Cantidad</label>
-                    <input type="number" name="cantidad" class="form-control" id="InputForCantidad">
+                    <label for="InputForDescripcion" class="form-label">Descripcion</label>
+                    <input type="text" name="descripcion" class="form-control" id="InputForDescripcion"><
+                </div>
+                <div class="mb-3">
+                    <label for="InputForTelefono" class="form-label">Cantidad</label>
+                    <input type="number" name="telefono" class="form-control" id="InputForTelefono">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
