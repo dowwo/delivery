@@ -152,15 +152,14 @@
                 map.setMap(null);
             });
 
-
-
-            function placeMarker(position, map) {
-                var marker = new google.maps.Marker({
-                    position: position,
-                    map: map
-                });
-                map.panTo(position);
+            document
+            .getElementById("delete-markers")
+            .addEventListener("click", deleteMarkers);
+            function deleteMarkers() {
+                hideMarkers();
+                markers = [];
             }
+
             function placeMarkerAndPanTo(latLng, map) {
                 var marker = new google.maps.Marker({
                     position: latLng,
