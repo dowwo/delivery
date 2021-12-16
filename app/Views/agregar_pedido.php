@@ -148,9 +148,7 @@
                 });
 
             };
-            map.addListener("dblclick", function() {
-                map.setMap(null);
-            });
+           
 
             document
             .getElementById("delete-markers")
