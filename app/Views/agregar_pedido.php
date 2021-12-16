@@ -114,9 +114,10 @@
                 draggable: true
             });
 
-            vMarker.addListener(vMarker, 'dragend', function (evt) {
+            map.event.addListener(vMarker, 'dragend', function (evt) {
                 $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
                 $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
+                document.write('<div></div>');
 
                 map.panTo(evt.latLng);
             })
