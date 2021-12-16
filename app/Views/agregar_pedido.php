@@ -103,6 +103,8 @@
             };*/
             var vMarker
             var map
+            var inputLatitud = document.getElementById("InputForLatitud");
+            var inputLongitud = document.getElementById("InputForLongitud");
 
             map = new google.maps.Map(document.getElementById("googleMap"),{
                 zoom: 14,
@@ -118,8 +120,10 @@
                 showInfoWindow(evt, this, service, map, infowindow);
             });
             google.maps.event.addListener(vMarker, 'dragend', function (evt) {
-                $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
-                $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
+
+                inputLatitud.val(evt.latLng.lat().toFixed(6));
+                inputLongitud.val(evt.latLng.lng().toFixed(6));
+                
                 document.write('<div></div>');
 
                 map.panTo(evt.latLng);
