@@ -59,8 +59,8 @@ class PedidoController extends Controller
             $data = [
                 'usuario_id_usuario'    =>  $this->request->getVar('usuario'),
                 'tienda_id_tienda'      =>  $this->request->getVar('id_tienda'),
-                'producto_id_producto'  =>  $this->request->getVar('producto'),
-                'cantidad'              =>  $this->request->getVar('cantidad'),
+                'descripcion'           =>  $this->request->getVar('descripcion'),
+                'telefono'              =>  $this->request->getVar('telefono'),
                 'direccion_destino'     =>  $this->request->getVar('direccion'),
                 'latitud'               =>  $this->request->getVar('latitud'),
                 'longitud'              =>  $this->request->getVar('longitud'),
@@ -111,7 +111,8 @@ class PedidoController extends Controller
         $id = $this->request->getVar('id_pedido');
         $data = [
             'producto_id_producto'  => $this->request->getVar('id_producto'),
-            'cantidad'  => $this->request->getVar('cantidad'),
+            'descripcion'  => $this->request->getVar('descripcion'),
+            'telefono'  => $this->request->getVar('telefono'),
             'direccion_destino'  => $this->request->getVar('direccion'),
             'latitud'  => $this->request->getVar('latitud'),
             'longitud'  => $this->request->getVar('longitud'),

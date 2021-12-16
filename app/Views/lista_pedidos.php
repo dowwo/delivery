@@ -111,8 +111,8 @@ if(isset($_SESSION['msg'])){
                 <th>ID</th>
                 <th>Cliente</th>
                 <th>Tienda</th>
-                <th>Producto</th>
-                <th>Cantidad</th>
+                <th>Descripcion</th>
+                <th>Telefono</th>
                 <th>Destino</th>
                 <th>Fecha</th>
                 <th>Total</th>
@@ -127,9 +127,11 @@ if(isset($_SESSION['msg'])){
                         <td><?php echo $pedido['id_pedido']; ?></td>
                         <td><?php echo $pedido['usuario_id_usuario']; ?></td>
                         <td><?php echo $pedido['tienda_id_tienda']; ?></td>
-                        <td><?php echo $pedido['producto_id_producto']; ?></td>
-                        <td><?php echo $pedido['cantidad']; ?></td>
+                        <td><?php echo $pedido['descripcion']; ?></td>
+                        <td><?php echo $pedido['telefono']; ?></td>
                         <td><?php echo $pedido['direccion_destino']; ?></td>
+                        <td><?php echo $pedido['latitud']; ?></td>
+                        <td><?php echo $pedido['longitud']; ?></td>
                         <td><?php echo $pedido['fecha_pedido']; ?></td>
                         <td><?php echo $pedido['valor_total']; ?></td>
                         <td><?php echo $pedido['estado_id_estado']; ?></td>
