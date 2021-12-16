@@ -288,7 +288,7 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <!--Botón para cerrar sesión, aplicable en cualquier parte-->
-                <a class="btn btn-outline-danger my-2 my-sm-0" href="login/logout">Cerrar sesión</a>
+                <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
             </form>
         </div>
     </nav>
