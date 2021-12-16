@@ -225,20 +225,21 @@ if(isset($_SESSION['msg'])){
             zoom:15,
             center: curacautin
         };*/
+        var vMarker
+        var map
 
 
-        var map = new google.maps.Map(document.getElementById("googleMap"),{
+        map = new google.maps.Map(document.getElementById("googleMap"),{
             zoom: 14,
             center: new google.maps.LatLng(-38.4396458, -71.888786),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-        var vMarker = new google.maps.Marker({
+        vMarker = new google.maps.Marker({
             position: new google.maps.LatLng(-38.4396458, -71.888786),
             draggable: true
         });
 
-        google.maps.event.addListener(vMarker, 'dragend', function (evt)
-        {
+        google.maps.event.addListener(vMarker, 'dragend', function (evt) {
             $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
             $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
 
