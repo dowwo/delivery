@@ -90,7 +90,7 @@ class PedidoController extends Controller
             $ModeloProducto->stock($id_producto, $data2);*/
             return redirect()->to('/lista_pedidos');
         }else{
-            $data['validation'] = $this->validation;
+            //$data['validation'] = $this->validation;
             //return redirect()->to('../dashboard1');
             echo view ('/agregar_pedido', ['validation' => $this->validation]);
         }
