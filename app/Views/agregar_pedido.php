@@ -123,9 +123,8 @@
                 document.getElementById('InputForLatitud').value(e.latLng.lat().toFixed(3));
 
                 });
-
-                alert(this.position);
-            }
+                
+            });
 
             function placeMarker(position, map) {
                 var marker = new google.maps.Marker({
