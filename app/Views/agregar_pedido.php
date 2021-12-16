@@ -145,6 +145,10 @@
                 placeMarkerAndPanTo(e.latLng, map);
                 });
 
+            vMarker.addListener('dblclick', function (e) {
+                vMarker.setMap(null);
+            });
+
 
             function placeMarkerAndPanTo(latLng, map) {
                 vMarker = new google.maps.Marker({
