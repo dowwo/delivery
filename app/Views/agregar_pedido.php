@@ -127,8 +127,8 @@
                 // Displaying the value
                 alert(inputLat);
 
-                $("#InputForLatitud").value(evt.latLng.lat().toFixed(6));
-                $("#InputForLongitud").value(evt.latLng.lng().toFixed(6));
+                inputLat.value(evt.latLng.lat().toFixed(6));
+                inputLng.value(evt.latLng.lng().toFixed(6));
                 /*
                 inputLatitud.val(evt.latLng.lat().toFixed(6));
                 inputLongitud.val(evt.latLng.lng().toFixed(6));
