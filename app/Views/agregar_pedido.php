@@ -150,9 +150,10 @@
             map.addListener("click", (event) => {
                 addMarker(event.latLng);
             });
-            vMarker.addListener('dblclick', function (e) {
-                alert('doble click');
-            });
+            map.addListener("dblclick", (event) =>{
+                deleteMarkers();
+            })
+
 
             function addMarker(position) {
                 const marker = new google.maps.Marker({
@@ -161,6 +162,13 @@
                 });
 
                 markers.push(marker);
+            }
+            function hideMarkers() {
+                setMapOnAll(null);
+            }
+            function deleteMarkers() {
+                hideMarkers();
+                markers = [];
             }
 
 
