@@ -175,6 +175,12 @@
                 hideMarkers();
                 markers = [];
             }
+            // Sets the map on all markers in the array.
+            function setMapOnAll(map) {
+                for (let i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                }
+            }
 
 
             function placeMarkerAndPanTo(latLng, map) {
