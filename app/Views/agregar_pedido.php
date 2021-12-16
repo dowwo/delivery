@@ -142,19 +142,12 @@
 
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
-
-
-
                 });
-
-            map.addListener('dblclick', function (e) {
-                document.getElementById("delete-markers").addEventListener("click", deleteMarkers);
+            marker.addListener('dblclick', function (e) {
+                
             });
 
-            function deleteMarkers() {
-                hideMarkers();
-                markers = [];
-            }
+
 
             function placeMarkerAndPanTo(latLng, map) {
                 var marker = new google.maps.Marker({
@@ -166,7 +159,7 @@
 
             }
 
-            
+
 
             };
         /*
