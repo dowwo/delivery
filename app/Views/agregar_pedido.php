@@ -345,23 +345,15 @@ if(isset($_SESSION['msg'])){
 
                 <div>
                     <input id="delete-markers" type="button" value="Delete Markers" />
+                    <br>
                     <label for="InputForLatitud" class="form-label">Latitud</label>
-                    <input id="autocomplete" placeholder="Enter a place" type="text">
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud">
                 </div>
 
                 <div id="googleMap" style="width:100%;height:400px;"></div>
-                <h3>My Google Maps Demo</h3>
-
-                <div>
-                    <label for="InputForLatitud" class="form-label">Latitud</label>
-                    <input id="autocomplete" placeholder="Enter a place" type="text">
-                    <input type="text" name="latitud" class="form-control" id="InputForLatitud">
-                    <label for="InputForLongitud" class="form-label">Longitud</label>
-                    <input type="text" name="longitud" class="form-control" id="InputForLongitud">
-                </div>
+                
                 <div class="mb-3">
                     <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
                     <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
