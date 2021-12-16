@@ -397,6 +397,7 @@ if(isset($_SESSION['msg'])){
         document.getElementById("form-pedido").addEventListener('submit', validaciones)
     });
     function validaciones(evento){
+        evento.preventDefault();
         var descripcion = document.getElementById('InputForDescripcion').value;
         var telefono = document.getElementById('InputForTelefono').value;
         var direccion = document.getElementById('InputForDireccion').value;
