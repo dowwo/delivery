@@ -121,9 +121,14 @@
             });
             google.maps.event.addListener(vMarker, 'dragend', function (evt) {
 
+                // Selecting the input element and get its value
+                let inputLatitud = document.getElementsByClassName("InputForLatitude")[0].value;
+                // Displaying the value
+                alert(inputLatitud);
+
                 inputLatitud.val(evt.latLng.lat().toFixed(6));
                 inputLongitud.val(evt.latLng.lng().toFixed(6));
-                
+
                 document.write('<div></div>');
 
                 map.panTo(evt.latLng);
