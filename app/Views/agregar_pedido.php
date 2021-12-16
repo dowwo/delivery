@@ -148,9 +148,9 @@
                 });
 
             };
-        marker.addListener("dblclick", function() {
-            marker.setMap(null);
-        });
+            map.addListener("dblclick", function() {
+                marker.setMap(null);
+            });
 
 
 
@@ -225,14 +225,7 @@
                 });
             }
 
-            //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-
-            /*new google.maps.Marker({
-                position: curacautin,
-                map,
-                title: "Hello World!",
-            });*/
 
 
 
