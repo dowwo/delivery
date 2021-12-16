@@ -133,7 +133,7 @@
                 inputLatitud.val(evt.latLng.lat().toFixed(6));
                 inputLongitud.val(evt.latLng.lng().toFixed(6));
                 */
-                 */
+                 
 
                 document.write('<div></div>');
 
