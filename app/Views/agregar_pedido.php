@@ -314,12 +314,13 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="InputForNombre" class="form-label">Tienda</label>
-                    <input type="text" name="id_tienda" class="form-control" id="id_tienda" value="<?php
+                    <label type="hidden" for="InputForNombre" class="form-label">Tienda</label>
+                    <input type="text hidden" name="id_tienda" class="form-control" id="id_tienda" value="<?php
                     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                     echo basename($actual_link);
                     ?>">
                 </div>
+                <!-- Este div se utilizaba para listar los productos disponibles
                 <div class="mb-3">
                     <label for="InputForProducto" class="form-label">Producto</label>
                     <select name="producto" id="producto" class="form-select" aria-label="Default select example">
@@ -333,6 +334,7 @@ if(isset($_SESSION['msg'])){
                         ?>
                     </select>
                 </div>
+                -->
                 <div class="mb-3">
                     <label for="InputForCantidad" class="form-label">Cantidad</label>
                     <input type="number" name="cantidad" class="form-control" id="InputForCantidad">
