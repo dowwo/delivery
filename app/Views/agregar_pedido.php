@@ -114,6 +114,9 @@
                 draggable: true
             });
 
+            google.maps.event.addListener(marker, 'click', function (evt) { // the click event function is called with the "event" as an argument
+                showInfoWindow(evt, this, service, map, infowindow);
+            });
             vMarker.event.addListener(vMarker, 'dragend', function (evt) {
                 $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
                 $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
