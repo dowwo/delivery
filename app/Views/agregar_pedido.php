@@ -121,7 +121,7 @@
                 draggable: true
             });
 
-            
+
             new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
 
                 // Selecting the input element and get its value
@@ -130,7 +130,7 @@
                 // Displaying the value
                 alert(inputLat);
 
-                $('#InputForLatitud').val(evt.LatLng.lat().toFixed(6));
+                $('#InputForLatitud').val(evt.LatLng.lat());
                 $('#InputForLongitud').val(evt.LatLng.lng().toFixed(6));
 /*
                 inputLat.value(evt.latLng.lat().toFixed(6));
