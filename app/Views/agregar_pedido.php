@@ -349,7 +349,7 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud">
-                    <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-secondary"/>
+                    <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-danger"/>
                     <br>
                 </div>
 
