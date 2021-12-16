@@ -308,7 +308,7 @@ if(isset($_SESSION['msg'])){
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
             <?php endif;?>
 
-            <form action="/PedidoController/guardar" method="post">
+            <form action="/PedidoController/guardar" method="post" id="form-pedido">
                 <div>
                     <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
                     <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
@@ -392,7 +392,27 @@ if(isset($_SESSION['msg'])){
 
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 
+<script>
+    document.addEventListener("DOMContentLoaded", function (){
+        document.getElementById("form-pedido").addEventListener('submit', validaciones)
+    });
+    function validaciones(evento){
+        var descripcion = document.getElementById('InputForDescripcion').value;
+        var telefono = document.getElementById('InputForTelefono').value;
+        var direccion = document.getElementById('InputForDireccion').value;
+        var latitud = document.getElementById('InputForLatitud').value;
+        var longitud = document.getElementById('InputForLongitud').value;
+        var valorTotal = document.getElementById('InputForValor').value;
 
+        if(descripcion.length == 0){
+            alert('Se debe agregar una descripcion');
+            return;
+        }
+
+
+        this.submit();
+    }
+</script>
 <script>
     let autocomplete;
     function initAutocomplete() {
