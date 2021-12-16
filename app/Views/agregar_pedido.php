@@ -152,7 +152,7 @@
             map.addListener("dblclick", function() {
                 map.setMap(null);
             });*/
-        map.addListener('dblclick', function (e)) {
+        map.addListener('dblclick', function (e) {
             document.getElementById("delete-markers").addEventListener("click", deleteMarkers);
         }
 
