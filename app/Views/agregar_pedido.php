@@ -106,7 +106,7 @@
                 zoom:15,
                 center: curacautin
             };*/
-            const myLatlng = { lat: -25.363, lng: 131.044 };
+            const myLatlng = { lat: -38.4396458, lng: -71.888786 };
             var vMarker
             var map
             var inputLatitud = document.getElementById("InputForLatitud");
