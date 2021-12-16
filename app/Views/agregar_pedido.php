@@ -137,11 +137,15 @@
                 infoWindow = new google.maps.InfoWindow({
                     position: mapsMouseEvent.latLng,
                 });
+                document.getElementById("InputForLatitud").value = mapsMouseEvent.latLng.lat();
+                document.getElementById("InputForLongitud").value = mapsMouseEvent.latLng.lng();
+
                 infoWindow.setContent(
                     JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
                 );
                 infoWindow.open(map);
             });
+
 /*
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
