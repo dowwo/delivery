@@ -121,10 +121,8 @@
                 draggable: true
             });
 
-            google.maps.event.addListener(vMarker, 'click', function (evt) { // the click event function is called with the "event" as an argument
-                showInfoWindow(evt, this, service, map, infowindow);
-            });
-            google.maps.event.addListener(vMarker, 'dragend', function (evt) {
+            
+            new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
 
                 // Selecting the input element and get its value
                 var inputLat = document.getElementById("InputForLatitud").value;
