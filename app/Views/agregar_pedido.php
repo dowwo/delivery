@@ -91,11 +91,6 @@
     </style>
 
 
-
-
-
-
-
 </head>
 <body>
 <div>
@@ -216,40 +211,12 @@ if(isset($_SESSION['msg'])){
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-<script>
-    let autocomplete;
-    function initAutocomplete() {
-        autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById('autocomplete'),
-            {
-                types: ['establishment'],
-                componentRestrictions: {'country': ['CL']},
-                fields: ['place_id', 'geometry','name']
-            });
 
-        autocomplete.addListener('place_changed', onPlaceChanged);
-    }
-    function onPlaceChanged(){
-        var place = autocomplete.getPlace();
-
-        if (!place.geometry) {
-            document.getElementById('autocomplete').placeholder =
-                'Enter a place';
-        } else {
-            document.getElementById('details').innerHTML = place.name;
-        }
-    }
-
-
-</script>
-<!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" async defer>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 <script>
-
-
 
     function myMap() {
         //var curacautin ={lat:-38.4396458, lng:-71.888786};
@@ -315,6 +282,33 @@ if(isset($_SESSION['msg'])){
 
     }
 </script>
+<script>
+    let autocomplete;
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete'),
+            {
+                types: ['establishment'],
+                componentRestrictions: {'country': ['CL']},
+                fields: ['place_id', 'geometry','name']
+            });
+
+        autocomplete.addListener('place_changed', onPlaceChanged);
+    }
+    function onPlaceChanged(){
+        var place = autocomplete.getPlace();
+
+        if (!place.geometry) {
+            document.getElementById('autocomplete').placeholder =
+                'Enter a place';
+        } else {
+            document.getElementById('details').innerHTML = place.name;
+        }
+    }
+
+
+</script>
+<!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 
 
 
