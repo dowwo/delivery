@@ -146,7 +146,7 @@
                 });
 
             vMarker.addListener('dblclick', function (e) {
-                vMarker.setMap(null);
+                alert('doble click');
             });
 
 
