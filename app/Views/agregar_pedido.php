@@ -119,6 +119,8 @@
 
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
+                $('#InputForLatitud').val(evt.LatLng.lat());
+                $('#InputForLongitud').val(evt.LatLng.lng().toFixed(6));
             });
 
             function placeMarker(position, map) {
@@ -136,13 +138,7 @@
                 });
                 map.panTo(latLng);
             }
-            
-            /*
-            vMarker = new google.maps.Marker({
-                position: new google.maps.LatLng(-38.4396458, -71.888786),
-                draggable: true
-            });
-*/
+
 /*
             new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
 
