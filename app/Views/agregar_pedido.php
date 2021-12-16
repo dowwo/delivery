@@ -116,12 +116,25 @@
                 center: new google.maps.LatLng(-38.4396458, -71.888786),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
+
+            map.addListener('click', function(e) {
+                placeMarker(e.latLng, map);
+            });
+
+            function placeMarker(position, map) {
+                var marker = new google.maps.Marker({
+                    position: position,
+                    map: map
+                });
+                map.panTo(position);
+            }
+            /*
             vMarker = new google.maps.Marker({
                 position: new google.maps.LatLng(-38.4396458, -71.888786),
                 draggable: true
             });
-
-
+*/
+/*
             new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
 
                 // Selecting the input element and get its value
@@ -132,13 +145,6 @@
 
                 $('#InputForLatitud').val(evt.LatLng.lat());
                 $('#InputForLongitud').val(evt.LatLng.lng().toFixed(6));
-/*
-                inputLat.value(evt.latLng.lat().toFixed(6));
-                inputLng.value(evt.latLng.lng().toFixed(6));*/
-                /*
-                inputLatitud.val(evt.latLng.lat().toFixed(6));
-                inputLongitud.val(evt.latLng.lng().toFixed(6));
-                */
 
 
                 document.write('<div></div>');
@@ -147,7 +153,7 @@
             })
             map.setCenter(vMarker.position);
             vMarker.setMap(map);
-
+*/
             /*
             map.addListener(vMarker, 'dragend', function (evt) {
                 $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
