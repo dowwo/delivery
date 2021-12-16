@@ -269,9 +269,11 @@ if(isset($_SESSION['msg'])){
             position: new google.maps.LatLng(-38.4396458, -71.888786),
             draggable: true
         });
-        google.maps.event.addListener(vMarker, 'dragend', function (evt){
-            $("#InputForLatitud").val(evt.latLng.lat().fixed(6));
-            $("#InputForLongitud").val(evt.latLng.lng().fixed(6));
+
+        google.maps.event.addListener(vMarker, 'dragend', function (evt)
+        {
+            $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
+            $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
 
             map.panTo(evt.latLng);
         })
