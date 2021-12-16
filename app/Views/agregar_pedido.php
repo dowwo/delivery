@@ -119,8 +119,9 @@
 
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
-                $('#InputForLatitud').val(e.LatLng.lat());
-                $('#InputForLongitud').val(e.LatLng.lng().toFixed(6));
+                var latitude = this.position.lat();
+                var longitude = this.position.lng();
+                alert(this.position);
             });
 
             function placeMarker(position, map) {
