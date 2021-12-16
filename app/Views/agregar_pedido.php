@@ -109,6 +109,8 @@
             const myLatlng = { lat: -38.4396458, lng: -71.888786 };
 
             var vMarker
+            let markers = [];
+
             var map
             var inputLatitud = document.getElementById("InputForLatitud");
             var inputLongitud = document.getElementById("InputForLongitud");
@@ -140,14 +142,26 @@
                 );
                 infoWindow.open(map);
             });
-
+/*
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
                 });
-
+*/
+            map.addListener("click", (event) => {
+                addMarker(event.latLng);
+            });
             vMarker.addListener('dblclick', function (e) {
                 alert('doble click');
             });
+
+            function addMarker(position) {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                });
+
+                markers.push(marker);
+            }
 
 
             function placeMarkerAndPanTo(latLng, map) {
