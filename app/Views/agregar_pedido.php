@@ -143,8 +143,9 @@
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
                 });
-            marker.addListener('dblclick', function (e) {
-                
+            map.addListener('dblclick', function (e) {
+                marker.setMap(null);
+
             });
 
 
