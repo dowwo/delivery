@@ -288,8 +288,8 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
                 if (status == google.maps.GeocoderStatus.OK) {
                     vMarker.setPosition(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
                     map.panTo(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                    $("#txtLat").val(results[0].geometry.location.lat());
-                    $("#txtLng").val(results[0].geometry.location.lng());
+                    $("#InputForLatitud").val(results[0].geometry.location.lat());
+                    $("#InputForLongitud").val(results[0].geometry.location.lng());
                 }
 
             });
