@@ -344,16 +344,17 @@ if(isset($_SESSION['msg'])){
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
                 <div>
-                    <input id="delete-markers" type="button" value="Delete Markers" />
-                    <br>
+
                     <label for="InputForLatitud" class="form-label">Latitud</label>
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud">
+                    <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-secondary"/>
+                    <br>
                 </div>
 
                 <div id="googleMap" style="width:100%;height:400px;"></div>
-                
+
                 <div class="mb-3">
                     <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
                     <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
