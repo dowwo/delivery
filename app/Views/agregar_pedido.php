@@ -95,7 +95,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
     <script>
 
-        function myMap(listener) {
+        function myMap() {
             //var curacautin ={lat:-38.4396458, lng:-71.888786};
             /*var mapProp= {
                 zoom:15,
@@ -114,7 +114,7 @@
                 draggable: true
             });
 
-            google.maps.event.addListener(vMarker, 'dragend', function (evt) {
+            map.addListener(vMarker, 'dragend', function (evt) {
                 $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
                 $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
 
@@ -122,7 +122,6 @@
             })
             map.setCenter(vMarker.position);
             vMarker.setMap(map);
-
 
             $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
                 movePin();
