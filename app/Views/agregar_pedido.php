@@ -209,7 +209,7 @@ if(isset($_SESSION['msg'])){
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script>
-    /*let autocomplete;
+    let autocomplete;
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
             document.getElementById('autocomplete'),
@@ -231,7 +231,7 @@ if(isset($_SESSION['msg'])){
             document.getElementById('details').innerHTML = place.name;
         }
     }
-*/
+
 
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
