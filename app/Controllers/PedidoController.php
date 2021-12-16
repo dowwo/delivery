@@ -51,7 +51,7 @@ class PedidoController extends Controller
         // Aquí se especifican las reglas para el formulario
         // Las reglas deben quedar exactamente de esta forma, si hay algún otro caracter como un | arrojará un error en el validador
         $rules = [
-            
+
 
         ];
 

@@ -342,7 +342,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTelefono" class="form-label">Telefono</label>
-                    <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required" minlength="9" maxlength="9">
+                    <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
