@@ -107,7 +107,7 @@
                 center: curacautin
             };*/
             const myLatlng = { lat: -38.4396458, lng: -71.888786 };
-            var vMarker
+
             var map
             var inputLatitud = document.getElementById("InputForLatitud");
             var inputLongitud = document.getElementById("InputForLongitud");
@@ -168,6 +168,8 @@
                     map: map,
                 });
                 map.panTo(latLng);
+                var inputLatitud = document.getElementById("InputForLatitud").value(latLng.lat());
+                var inputLongitud = document.getElementById("InputForLongitud").value(latLng.lng());
             }
 
 
