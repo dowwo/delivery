@@ -171,6 +171,14 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
+                <div>
+                    <label for="InputForLatitud" class="form-label">Latitud</label>
+                    <input id="autocomplete" placeholder="Enter a place" type="text">
+                    <input type="text" name="latitud" class="form-control" id="InputForLatitud">
+                    <label for="InputForLongitud" class="form-label">Longitud</label>
+                    <input type="text" name="longitud" class="form-control" id="InputForLongitud">
+                </div>
+
                 <div id="googleMap" style="width:100%;height:400px;"></div>
                 <h3>My Google Maps Demo</h3>
 
