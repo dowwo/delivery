@@ -171,6 +171,16 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
+
+                <div class="col-md-4">
+                    <input type="text" id="txtDireccion" class="form-control" placeholder="direccion">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="txtCiudad" class="form-control" placeholder="ciudad">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="txtEstado" class="form-control" placeholder="estado">
+                </div>
                 <div id="googleMap" style="width:100%;height:400px;"></div>
                 <h3>My Google Maps Demo</h3>
 
