@@ -147,14 +147,9 @@
 
                 });
 
-            };
-        /*
-            map.addListener("dblclick", function() {
-                map.setMap(null);
-            });*/
-        map.addListener('dblclick', function (e) {
-            document.getElementById("delete-markers").addEventListener("click", deleteMarkers);
-        }
+            map.addListener('dblclick', function (e) {
+                document.getElementById("delete-markers").addEventListener("click", deleteMarkers);
+            });
 
             function deleteMarkers() {
                 hideMarkers();
@@ -170,6 +165,15 @@
                 map.panTo(latLng);
 
             }
+
+            
+
+            };
+        /*
+            map.addListener("dblclick", function() {
+                map.setMap(null);
+            });*/
+
 
 
 
