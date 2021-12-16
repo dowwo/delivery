@@ -122,9 +122,10 @@
             google.maps.event.addListener(vMarker, 'dragend', function (evt) {
 
                 // Selecting the input element and get its value
-                let inputLatitud = document.getElementsById("InputForLatitude")[0].value;
+                var inputLat = document.getElementById("InputForLatitud").value;
+                var inputLng = document.getElementById("InputForLongitud").value;
                 // Displaying the value
-                alert(inputLatitud);
+                alert(inputLat);
 
                 inputLatitud.val(evt.latLng.lat().toFixed(6));
                 inputLongitud.val(evt.latLng.lng().toFixed(6));
