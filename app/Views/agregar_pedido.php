@@ -296,7 +296,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
         });
     }
 
-/*
+
     function myMap() {
         var curacautin ={lat:-38.4396458, lng:-71.888786};
 
@@ -306,6 +306,45 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
         };
 
 
+        var map = new google.maps.Map(document.getElementById("googleMap"),{
+            zoom: 14,
+            center: new google.maps.LatLng(-38.4396458, -71.888786),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var vMarker = new google.maps.Marker({
+            position: new google.maps.LatLng(-38.4396458, -71.888786),
+            draggable: true
+        });
+        google.maps.event.addListener(vMarker, 'dragend', function (evt){
+            $("#InputForLatitud").val(evt.latLng.lat().fixed(6));
+            $("#InputForLongitud").val(evt.latLng.lng().fixed(6));
+
+            map.panTo(evt.latLng);
+        })
+        map.setCenter(vMarker.position);
+        vMarker.setMap(map);
+
+        $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
+            movePin();
+        });
+
+        function movePin() {
+            var geocoder = new google.maps.Geocoder();
+            var textSelectM = $("#txtCiudad").text();
+            var textSelectE = $("#txtEstado").val();
+            var inputAddress = $("#txtDireccion").val() + ' ' + textSelectM + ' ' + textSelectE;
+            geocoder.geocode({
+                "address": inputAddress
+            }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    vMarker.setPosition(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                    map.panTo(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                    $("#txtLat").val(results[0].geometry.location.lat());
+                    $("#txtLng").val(results[0].geometry.location.lng());
+                }
+
+            });
+        }
 
         //var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
@@ -317,7 +356,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
         });*/
 
 
-*/
+
     }
 </script>
 
