@@ -162,7 +162,7 @@
                 map.panTo(position);
             }
             function placeMarkerAndPanTo(latLng, map) {
-                new google.maps.Marker({
+                var marker = new google.maps.Marker({
                     position: latLng,
                     draggable: true,
                     map: map,
