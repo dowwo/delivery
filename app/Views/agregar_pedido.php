@@ -150,6 +150,11 @@
             map.addListener("click", (event) => {
                 addMarker(event.latLng);
             });
+
+            document
+                .getElementById("delete-markers")
+                .addEventListener("click", deleteMarkers);
+
             map.addListener("dblclick", (event) =>{
                 deleteMarkers();
             })
