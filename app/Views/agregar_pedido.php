@@ -182,19 +182,6 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud">
-
-                    <div class="col-md-4">
-                        <input type="text" id="txtDireccion" class="form-control" placeholder="direccion">
-
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" id="txtCiudad" class="form-control" placeholder="ciudad">
-                    </div>
-                    <div class="col-md-4">
-
-                        <input type="text" id="txtEstado" class="form-control" placeholder="estado">
-                    </div>
-
                 </div>
                 <div class="mb-3">
                     <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
@@ -256,7 +243,7 @@ key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" asy
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 <script>
-    
+
 
 
     function myMap() {
