@@ -117,10 +117,13 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            map.addListener('click', function(e) {
+            map.addListener('dragend', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
-                var latitude = this.position.lat();
-                var longitude = this.position.lng();
+
+                document.getElementById('InputForLatitud').value(e.latLng.lat().toFixed(3));
+
+                });
+
                 alert(this.position);
             });
 
