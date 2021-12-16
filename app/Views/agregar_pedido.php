@@ -148,8 +148,8 @@
                 });
 
             };
-            marker.addListener("dblclick", function() {
-                marker.setMap(null);
+            map.addListener("dblclick", function() {
+                map.setMap(null);
             });
 
 
@@ -168,8 +168,7 @@
                     map: map,
                 });
                 map.panTo(latLng);
-                var inputLatitud = document.getElementById("InputForLatitud").value(latLng.lat());
-                var inputLongitud = document.getElementById("InputForLongitud").value(latLng.lng());
+
             }
 
 
