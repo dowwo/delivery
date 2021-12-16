@@ -114,9 +114,9 @@ if(isset($_SESSION['msg'])){
                 <th>Descripcion</th>
                 <th>Telefono</th>
                 <th>Destino</th>
-                <th>Fecha</th>
                 <th>Lat</th>
                 <th>Lng</th>
+                <th>Fecha</th>
                 <th>Total</th>
                 <th>Estado</th>
                 <th>Acciones</th>
