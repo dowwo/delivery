@@ -143,10 +143,11 @@
             map.addListener('click', function(e) {
                 placeMarkerAndPanTo(e.latLng, map);
                 });
-            map.addListener('dblclick', function () {
-                marker.setMap(null);
-
+            marker.addListener("click", () => {
+                map.setZoom(8);
+                map.setCenter(marker.getPosition());
             });
+
 
 
 
