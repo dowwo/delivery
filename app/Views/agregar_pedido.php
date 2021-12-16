@@ -125,7 +125,7 @@
                 });
 
                 alert(this.position);
-            });
+            }
 
             function placeMarker(position, map) {
                 var marker = new google.maps.Marker({
