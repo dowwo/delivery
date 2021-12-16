@@ -310,11 +310,11 @@ if(isset($_SESSION['msg'])){
 
             <form action="/PedidoController/guardar" method="post">
                 <div>
-                    <label for="InputUsuario" class="form-label">Usuario</label>
-                    <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
+                    <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
+                    <input type="text hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
                 </div>
                 <div class="mb-3">
-                    <label type="hidden" for="InputForNombre" class="form-label">Tienda</label>
+                    <!--<label for="InputForNombre" class="form-label">Tienda</label>-->
                     <input type="text hidden" name="id_tienda" class="form-control" id="id_tienda" value="<?php
                     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                     echo basename($actual_link);
@@ -325,12 +325,13 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForProducto" class="form-label">Producto</label>
                     <select name="producto" id="producto" class="form-select" aria-label="Default select example">
                         <?php
+                /*
                         foreach($productos as $producto)
                         {
                             ?>
                             <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
                             <?php
-                        }
+                        }*/
                         ?>
                     </select>
                 </div>
