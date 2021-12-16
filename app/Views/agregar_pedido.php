@@ -309,7 +309,6 @@ if(isset($_SESSION['msg'])){
             <?php endif;?>
 
             <form action="/PedidoController/guardar" method="post">
-                <?= $validation->listErrors() ?>
                 <div>
                     <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
                     <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
