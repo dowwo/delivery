@@ -51,7 +51,7 @@ class PedidoController extends Controller
         // Aquí se especifican las reglas para el formulario
         // Las reglas deben quedar exactamente de esta forma, si hay algún otro caracter como un | arrojará un error en el validador
         $rules = [
-            'cantidad' => 'required|min_length[1]|max_length[3]'
+            'telefono' => 'required|min_length[9]|max_length[9]'
         ];
 
         if($this->validate($rules)){
@@ -85,7 +85,7 @@ class PedidoController extends Controller
             return redirect()->to('/lista_pedidos');
         }else{
             $data['validation'] = $this->validation;
-            return redirect()->to('../seleccionar_tienda');
+            return redirect()->to('../dashboard1');
         }
     }
 
