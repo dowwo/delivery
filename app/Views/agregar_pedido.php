@@ -131,10 +131,12 @@
             function placeMarkerAndPanTo(latLng, map) {
                 new google.maps.Marker({
                     position: latLng,
+                    draggable: true,
                     map: map,
                 });
                 map.panTo(latLng);
             }
+            
             /*
             vMarker = new google.maps.Marker({
                 position: new google.maps.LatLng(-38.4396458, -71.888786),
