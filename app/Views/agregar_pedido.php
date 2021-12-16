@@ -405,7 +405,7 @@ if(isset($_SESSION['msg'])){
         var longitud = document.getElementById('InputForLongitud').value;
         var valorTotal = document.getElementById('InputForValor').value;
 
-        if(descripcion.length == 0){
+        if(descripcion.length = 0){
             alert('Se debe agregar una descripcion');
             return;
         }
