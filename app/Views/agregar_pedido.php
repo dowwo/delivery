@@ -248,9 +248,10 @@ if(isset($_SESSION['msg'])){
         map.setCenter(vMarker.position);
         vMarker.setMap(map);
 
+        /*
         $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
             movePin();
-        });
+        });*/
 
         function movePin() {
             var geocoder = new google.maps.Geocoder();
