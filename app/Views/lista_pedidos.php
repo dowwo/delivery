@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <style type="text/css">
         body {
-            background-color: #AB3E5B;
+            background-color: #acacac;
         }
         #lista-pedido {
             background-color: rgba(255, 255, 255, 1);
