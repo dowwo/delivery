@@ -342,20 +342,20 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTelefono" class="form-label">Telefono</label>
-                    <input type="number" name="telefono" class="form-control" id="InputForTelefono">
+                    <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
-                    <input type="text" name="direccion" class="form-control" id="InputForDireccion">
+                    <input type="text" name="direccion" class="form-control" id="InputForDireccion" required="required">
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
 
                 <div>
 
                     <label for="InputForLatitud" class="form-label">Latitud</label>
-                    <input type="text" name="latitud" class="form-control" id="InputForLatitud">
+                    <input type="text" name="latitud" class="form-control" id="InputForLatitud" required="required">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
-                    <input type="text" name="longitud" class="form-control" id="InputForLongitud">
+                    <input type="text" name="longitud" class="form-control" id="InputForLongitud" required="required">
                     <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-danger"/>
                     <br>
                 </div>
@@ -368,7 +368,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="mb-3">
                     <label for="InputForTotal" class="form-label">Valor total</label>
-                    <input type="number" name="total" class="form-control" id="InputForTotal">
+                    <input type="number" name="total" class="form-control" id="InputForTotal" required="required">
                 </div>
                 <div class="mb-3">
                     <label for="InputForTienda" class="form-label">Estado</label>
