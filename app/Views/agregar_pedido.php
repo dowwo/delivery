@@ -122,6 +122,7 @@
             let infoWindow = new google.maps.InfoWindow({
                 content: "Click the map to get Lat/Lng!",
                 position: myLatlng,
+
             });
 
             infoWindow.open(map);
@@ -147,6 +148,9 @@
                 });
 
             };
+        marker.addListener("dblclick", function() {
+            marker.setMap(null);
+        });
 
 
 
@@ -165,6 +169,8 @@
                 });
                 map.panTo(latLng);
             }
+
+
 
 /*
             new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
