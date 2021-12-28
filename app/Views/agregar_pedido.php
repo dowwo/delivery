@@ -266,6 +266,8 @@
 
 
     </script>
+    <script src="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
 
 
 </head>
@@ -343,6 +345,18 @@ if(isset($_SESSION['msg'])){
                 <div class="mb-3">
                     <label for="InputForTelefono" class="form-label">Telefono</label>
                     <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
+                </div>
+                <div>
+                    <input autocomplete="off" id="search" type="text" />
+                    <script>
+                        var geocoder = new maptiler.Geocoder({
+                            input: 'search',
+                            key: '4jbSR40BUNdSwZdvlTHY'
+                        });
+                        geocoder.on('select', function(item) {
+                            console.log('Selected', item);
+                        });
+                    </script>
                 </div>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
