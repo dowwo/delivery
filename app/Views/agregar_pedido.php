@@ -268,6 +268,15 @@
     </script>
     <script src="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.js"></script>
     <link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@.2.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <style>
+        #map {position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;}
+    </style>
 
 
 </head>
@@ -358,6 +367,20 @@ if(isset($_SESSION['msg'])){
                         });
                     </script>
                 </div>
+                <div id="map">
+                    <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+                </div>
+                <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
+                <script>
+                    var map = L.map('map').setView([52.07931, 4.89959], 14);
+                    L.tileLayer('https://api.maptiler.com/maps/osm-standard/{z}/{x}/{y}.jpg?key=4jbSR40BUNdSwZdvlTHY',{
+                        tileSize: 512,
+                        zoomOffset: -1,
+                        minZoom: 1,
+                        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+                        crossOrigin: true
+                    }).addTo(map);
+                </script>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion" required="required">
