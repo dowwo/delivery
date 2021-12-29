@@ -443,7 +443,7 @@ if(isset($_SESSION['msg'])){
                 markers.push(marker);
             }
 
-            document.getElementById('InputForDireccion').addListener("places_changed", (event) => {
+            document.getElementById('InputForDireccion').addEventListener("places_changed", (event) => {
                 addMarker(event.latLng);
 
             })
