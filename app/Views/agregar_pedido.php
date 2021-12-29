@@ -425,7 +425,7 @@ if(isset($_SESSION['msg'])){
         } else {
             document.getElementById('InputForDireccion').innerHTML = place.name;
             document.getElementById('InputForLatitud').value = places.geometry.location.lat();
-            document.getElementById('InputForLatitud').value = places.geometry.location.lng();
+            document.getElementById('InputForLongitud').value = places.geometry.location.lng();
         }
     }
 
