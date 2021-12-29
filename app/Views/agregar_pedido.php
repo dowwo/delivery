@@ -369,6 +369,7 @@ if(isset($_SESSION['msg'])){
                 </div>
 
                 <script async="async" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
+                </script>
                 <div id="googleMap" style="width:100%;height:400px;"></div>
 
                 <div class="mb-3">
