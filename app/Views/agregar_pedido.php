@@ -270,11 +270,7 @@
     <link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
-    <style>
-        #map {
-            width: auto;
-        }
-    </style>
+
 
 
 </head>
@@ -365,7 +361,7 @@ if(isset($_SESSION['msg'])){
                         });
                     </script>
                 </div>
-                <div id="map">
+                <div id="osmap">
                     <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
                 </div>
                 <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
@@ -379,6 +375,7 @@ if(isset($_SESSION['msg'])){
                         crossOrigin: true
                     }).addTo(map);
                 </script>
+                <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/52.07926/4.90181"></iframe>
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion" required="required">
