@@ -361,6 +361,7 @@ if(isset($_SESSION['msg'])){
                         });
                     </script>
                 </div>
+                <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
                 <div id="osmap">
                     <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
                 </div>
@@ -375,7 +376,9 @@ if(isset($_SESSION['msg'])){
                         crossOrigin: true
                     }).addTo(map);
                 </script>
+                <p>Este es el frame</p>
                 <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/52.07926/4.90181"></iframe>
+
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion" required="required">
