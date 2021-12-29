@@ -104,7 +104,7 @@ if(isset($_SESSION['msg'])){
 ?>
 <!---->
 <div class="container mt-4">
-    <div class="mt-3">
+    <div class="mt-3 table-responsive">
         <table class="table table-bordered" id="lista-pedido">
             <thead>
             <tr>
