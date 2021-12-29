@@ -366,7 +366,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
                 <script>
-                    var map = L.map('map').setView([52.07931, 4.89959], 14);
+                    var map = L.map('map2').setView([52.07931, 4.89959], 14);
                     L.tileLayer('https://api.maptiler.com/maps/osm-standard/{z}/{x}/{y}.jpg?key=4jbSR40BUNdSwZdvlTHY',{
                         tileSize: 512,
                         zoomOffset: -1,
