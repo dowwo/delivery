@@ -208,9 +208,10 @@
         });
     </script>
     <!--Este script es para traducir el Datatable -->
+
     <script>
         $(document).ready( function () {
-            $('#lista_tienda').DataTable( {
+            $('#lista-tienda').DataTable( {
                 "language": {
                     "lengthMenu": "Mostrar _MENU_ registros por página",
                     "zeroRecords": "Lo sentimos, no se ha encontrado el registro",

@@ -518,6 +518,10 @@ if(isset($_SESSION['msg'])){
             <div class="mb-3">
                 <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
                 <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
+                <?php
+                $date = new EJ\DatePicker("datePicker");
+                echo $date->value(new DateTime())->render();
+                ?>
             </div>
             <div class="mb-3">
                 <label for="InputForTotal" class="form-label">Valor total</label>
