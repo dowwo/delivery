@@ -424,7 +424,10 @@ if(isset($_SESSION['msg'])){
             document.getElementById('autocomplete').placeholder =
                 'Enter a place';
         } else {
-            document.getElementById('InputForDireccion').innerHTML = place.name;
+            document.getElementById('InputForDireccion').value = place.name;
+            var location = place.geometry.location;
+            var lat = location.lat();
+            var lng = location.lng();
             document.getElementById('InputForLatitud').value = places.geometry.location.lat();
             document.getElementById('InputForLongitud').value = places.geometry.location.lng();
         }
