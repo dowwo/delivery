@@ -468,116 +468,95 @@ if(isset($_SESSION['msg'])){
             </div>
         </nav>
 
-        <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!-- Aquí ya puede ir el formulario para que se vea ordenado-->
+        <h1>Agregar Pedido</h1>
+        <?php if(isset($validation)):?>
+            <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+        <?php endif;?>
 
-
-        <div class="line"></div>
-
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <div class="line"></div>
-
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <div class="line"></div>
-
-        <h3>Lorem Ipsum Dolor</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col-6">
-
-            <h1>Agregar Pedido</h1>
-            <?php if(isset($validation)):?>
-                <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
-            <?php endif;?>
-
-            <form action="/PedidoController/guardar" method="post">
-                <div>
-                    <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
-                    <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
-                </div>
-                <div class="mb-3">
-                    <!--<label for="InputForNombre" class="form-label">Tienda</label>-->
-                    <input type="hidden" name="id_tienda" class="form-control" id="id_tienda" value="<?php
-                    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    echo basename($actual_link);
-                    ?>">
-                </div>
-                <!-- Este div se utilizaba para listar los productos disponibles
+        <form action="/PedidoController/guardar" method="post">
+            <div>
+                <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
+                <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
+            </div>
+            <div class="mb-3">
+                <!--<label for="InputForNombre" class="form-label">Tienda</label>-->
+                <input type="hidden" name="id_tienda" class="form-control" id="id_tienda" value="<?php
+                $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                echo basename($actual_link);
+                ?>">
+            </div>
+            <!-- Este div se utilizaba para listar los productos disponibles
                 <div class="mb-3">
                     <label for="InputForProducto" class="form-label">Producto</label>
                     <select name="producto" id="producto" class="form-select" aria-label="Default select example">
                         <?php
-                /*
-                        foreach($productos as $producto)
-                        {
-                            ?>
-                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
-                            <?php
-                        }*/
+            /*
+                    foreach($productos as $producto)
+                    {
                         ?>
+                        <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
+                        <?php
+                    }*/
+            ?>
                     </select>
                 </div>
                 -->
-                <div class="mb-3">
-                    <label for="InputForDescripcion" class="form-label">Descripcion</label>
-                    <input type="text" name="descripcion" class="form-control" id="InputForDescripcion" required="required">
-                </div>
-                <div class="mb-3">
-                    <label for="InputForTelefono" class="form-label">Telefono</label>
-                    <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
-                </div>
+            <div class="mb-3">
+                <label for="InputForDescripcion" class="form-label">Descripcion</label>
+                <input type="text" name="descripcion" class="form-control" id="InputForDescripcion" required="required">
+            </div>
+            <div class="mb-3">
+                <label for="InputForTelefono" class="form-label">Telefono</label>
+                <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
+            </div>
 
-                <div class="mb-3">
-                    <label for="InputForDireccion" class="form-label">Dirección destino</label>
-                    <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
-                </div>
-                <div>
+            <div class="mb-3">
+                <label for="InputForDireccion" class="form-label">Dirección destino</label>
+                <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
+            </div>
+            <div>
 
-                    <label for="InputForLatitud" class="form-label">Latitud</label>
-                    <input type="text" name="latitud" class="form-control" id="InputForLatitud" required="required">
-                    <label for="InputForLongitud" class="form-label">Longitud</label>
-                    <input type="text" name="longitud" class="form-control" id="InputForLongitud" required="required">
-                    <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>
-                    <br>
-                </div>
-
-
-                <!-- Aquí va el div para el mapa-->
-                <div id="googleMap" style="width:100%;height:400px;">
-
-                </div>
+                <label for="InputForLatitud" class="form-label">Latitud</label>
+                <input type="text" name="latitud" class="form-control" id="InputForLatitud" required="required">
+                <label for="InputForLongitud" class="form-label">Longitud</label>
+                <input type="text" name="longitud" class="form-control" id="InputForLongitud" required="required">
+                <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>
+                <br>
+            </div>
 
 
-                <div class="mb-3">
-                    <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
-                    <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
-                </div>
-                <div class="mb-3">
-                    <label for="InputForTotal" class="form-label">Valor total</label>
-                    <input type="number" name="total" class="form-control" id="InputForTotal" required="required">
-                </div>
-                <div class="mb-3">
-                    <label for="InputForTienda" class="form-label">Estado</label>
-                    <select name="estado" id="InputForTienda" class="form-select" aria-label="Default select example">
-                        <option value="1">En espera</option>
-                        <option value="2">En reparto</option>
-                        <option value="3">Entregado</option>
-                    </select>
-                </div>
+            <!-- Aquí va el div para el mapa-->
+            <div id="googleMap" style="width:100%;height:400px;">
 
-                <button type="submit" class="btn btn-primary">Registrar pedido</button>
-            </form>
-        </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
+                <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
+            </div>
+            <div class="mb-3">
+                <label for="InputForTotal" class="form-label">Valor total</label>
+                <input type="number" name="total" class="form-control" id="InputForTotal" required="required">
+            </div>
+            <div class="mb-3">
+                <label for="InputForTienda" class="form-label">Estado</label>
+                <select name="estado" id="InputForTienda" class="form-select" aria-label="Default select example">
+                    <option value="1">En espera</option>
+                    <option value="2">En reparto</option>
+                    <option value="3">Entregado</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar pedido</button>
+        </form>
+
+
+
     </div>
 </div>
+
 
 <!-- Popper.js first, then Bootstrap JS -->
 
