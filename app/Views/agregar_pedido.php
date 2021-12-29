@@ -92,9 +92,9 @@
 
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
+    <!--
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" >
-    </script>
+    </script>-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
@@ -350,6 +350,8 @@ if(isset($_SESSION['msg'])){
 
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
+
+
                     <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
