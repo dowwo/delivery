@@ -351,6 +351,9 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="direccion" class="form-control" id="InputForDireccion" required="required">
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
+                <div>
+                    <input id="autocomplete" placeholder="Enter a place" type="text">
+                </div>
 
                 <div>
 
