@@ -521,16 +521,17 @@ if(isset($_SESSION['msg'])){
                 <input type="text" name="latitud" class="form-control" id="InputForLatitud" required="required">
                 <label for="InputForLongitud" class="form-label">Longitud</label>
                 <input type="text" name="longitud" class="form-control" id="InputForLongitud" required="required">
-                <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>
+                <!--
+                <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>-->
                 <br>
             </div>
 
 
             <!-- Aquí va el div para el mapa-->
+            <!-- Comentado hasta que encuentre como hacerlo funcionar junto a la searchbox
             <div id="googleMap" style="width:100%;height:400px;">
-
             </div>
-
+            -->
 
             <div class="mb-3">
                 <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
