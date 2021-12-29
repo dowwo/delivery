@@ -178,8 +178,6 @@
                 setMapOnAll(null);
             }
             function deleteMarkers() {
-                document.getElementById('InputForLatitud').value = "";
-                document.getElementById('InputForLongitud').value = "";
                 hideMarkers();
                 markers = [];
             }
@@ -366,7 +364,7 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="latitud" class="form-control" id="InputForLatitud" required="required">
                     <label for="InputForLongitud" class="form-label">Longitud</label>
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud" required="required">
-                    <input id="delete-markers" type="button" value="Reiniciar dirección" class="btn btn-danger"/>
+                    <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-danger"/>
                     <br>
                 </div>
 
