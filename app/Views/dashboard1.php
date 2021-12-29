@@ -290,7 +290,7 @@ if(isset($_SESSION['msg'])){
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Menu</span>
+                        <span>Ver/Ocultar Menu</span>
                     </button>
 
                 </div>
