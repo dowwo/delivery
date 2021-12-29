@@ -260,11 +260,8 @@ if(isset($_SESSION['msg'])){
                 <h3>Bienvenido <?php echo $_SESSION['nombre'] ?>
                 </h3>
             </div>
-
             <ul class="list-unstyled components">
-
                 <li>
-
                     <?php if($_SESSION['rol_id_rol'] == 47174): ?>
                         <a href="dashboard3" class="card-link">Administrador</a>
                     <?php else: ?>
@@ -275,10 +272,7 @@ if(isset($_SESSION['msg'])){
                     <a href="/dashboard1">Inicio</a>
                 </li>
                 <li>
-
-                </li>
-                <li>
-                    <a href="../lista_pedidos">Ver Pedidos</a>
+                    <a href="../agregar_pedido">Agregar Pedido</a>
                 </li>
                 <li>
                     <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
