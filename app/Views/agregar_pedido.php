@@ -353,11 +353,11 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
                 </div>
-                <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
+
                 <div>
 
                 </div>
-                </script>
+                
 
                 <div>
 
