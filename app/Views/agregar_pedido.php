@@ -444,18 +444,12 @@ if(isset($_SESSION['msg'])){
 
         <ul class="list-unstyled components">
 
-            <p>
-                <a class="nav-link" href="/dashboard1">Inicio</a>
-            </p>
+            <li>
+                <a href="/dashboard1">Inicio</a>
+            </li>
             <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
             <li>
                 <a href="../lista_pedidos">Ver Pedidos</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
             </li>
             <li>
                 <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
