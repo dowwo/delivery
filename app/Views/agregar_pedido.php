@@ -95,8 +95,7 @@
     <!--
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" >
     </script>-->
-    <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
 
@@ -357,6 +356,8 @@ if(isset($_SESSION['msg'])){
                 <div>
                     <input id="autocomplete" placeholder="Enter a place" type="text">
                 </div>
+                <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
+                </script>
 
                 <div>
 
