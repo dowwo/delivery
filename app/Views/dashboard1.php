@@ -252,6 +252,47 @@ if(isset($_SESSION['msg'])){
     echo $_SESSION['msg'];
 }
 ?>
+<div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Bienvenido <?php echo $_SESSION['nombre'] ?>
+                </h3>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li>
+                    <a href="/dashboard1">Inicio</a>
+                </li>
+                <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
+                <li>
+                    <a href="../lista_pedidos">Ver Pedidos</a>
+                </li>
+                <li>
+                    <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Menu</span>
+                </button>
+
+            </div>
+        </nav>
+
+
 <br>
 <div class="container">
     <div class="row">
