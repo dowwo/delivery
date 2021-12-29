@@ -13,9 +13,6 @@
             /*background-color: #AB3E5B;*/
             background-color: white;
         }
-        .navbar.navbar-light.navbar-expand-lg.bg-white.page-navbar {
-            box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);
-        }
 
         .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
             font-weight:bold;
@@ -92,50 +89,50 @@
 
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
-
+    <!-- Maps API KEY con callback a la funcion myMap -->
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" >
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
-
-
-
+    <!-- Script con las funciones para google maps (especificamente el mapa) -->
     <script>
 
         function myMap() {
-
-            const myLatlng = { lat: -38.4396458, lng: -71.888786 };
-
+            // Esta latitud y longitud son por defecto para que el mapa aparezca en Curacautín.
+            const myLatlng = {lat: -38.4396458, lng: -71.888786};
+            // Se definen las variables para los marcadores
             var vMarker
             let markers = [];
-
+            // variables para el mapa
             var map
+            // variables para vincular con los input latitud y longitud
             var inputLatitud = document.getElementById("InputForLatitud");
             var inputLongitud = document.getElementById("InputForLongitud");
-
-            map = new google.maps.Map(document.getElementById("googleMap"),{
+            // se vincula la varible map con el id googleMap en el formulario
+            map = new google.maps.Map(document.getElementById("googleMap"), {
                 zoom: 14,
                 center: new google.maps.LatLng(-38.4396458, -71.888786),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            // Create the initial InfoWindow.
+            // Se crea una ventana de información en el mapa.
             let infoWindow = new google.maps.InfoWindow({
-                content: "Click the map to get Lat/Lng!",
+                content: "Haz click en el mapa para agregar latitud y longitud",
                 position: myLatlng,
 
             });
 
             infoWindow.open(map);
-            // Configure the click listener.
+            // Se configura el listener con su evento "click".
             map.addListener("click", (mapsMouseEvent) => {
-                // Close the current InfoWindow.
+                // Cierra la ventana de información.
                 infoWindow.close();
-                // Create a new InfoWindow.
+                // Crea una nueva ventana de información.
                 infoWindow = new google.maps.InfoWindow({
                     position: mapsMouseEvent.latLng,
                 });
+                // Se pasan los valores de latitud y longitud a los input
                 inputLatitud.value = mapsMouseEvent.latLng.lat();
                 inputLongitud.value = mapsMouseEvent.latLng.lng();
 
@@ -144,16 +141,15 @@
                 );
                 infoWindow.open(map);
             });
-
+            // Este listener funciona solo con event
             map.addListener("click", (event) => {
                 addMarker(event.latLng);
             });
+            // Se agrega un listener al boton delete-markers
+            document.getElementById("delete-markers").addEventListener("click", deleteMarkers);
 
-            document
-                .getElementById("delete-markers")
-                .addEventListener("click", deleteMarkers);
-
-            map.addListener("dblclick", (event) =>{
+            map.addListener("dblclick", (event) => {
+                // Llama a la función deleteMarkers()
                 deleteMarkers();
             })
 
@@ -165,14 +161,19 @@
 
                 markers.push(marker);
             }
+
             function hideMarkers() {
+                // Cambia todos los marcadores del mapa en null (osea dejan de existir)
                 setMapOnAll(null);
             }
+
             function deleteMarkers() {
+                // Llama a la función hideMarkers()
                 hideMarkers();
                 markers = [];
             }
-            // Sets the map on all markers in the array.
+
+            // Esta función cambia todos los markers en el array del mapa.
             function setMapOnAll(map) {
                 for (let i = 0; i < markers.length; i++) {
                     markers[i].setMap(map);
@@ -188,51 +189,8 @@
                 map.panTo(latLng);
 
             }
-
-            }
-        /*
-            map.addListener("dblclick", function() {
-                map.setMap(null);
-            });*/
-
-
-
-
+        }
 /*
-            new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
-
-                // Selecting the input element and get its value
-                var inputLat = document.getElementById("InputForLatitud").value;
-                var inputLng = document.getElementById("InputForLongitud").value;
-                // Displaying the value
-                alert(inputLat);
-
-                $('#InputForLatitud').val(evt.LatLng.lat());
-                $('#InputForLongitud').val(evt.LatLng.lng().toFixed(6));
-
-
-                document.write('<div></div>');
-
-                map.panTo(evt.latLng);
-            })
-            map.setCenter(vMarker.position);
-            vMarker.setMap(map);
-*/
-            /*
-            map.addListener(vMarker, 'dragend', function (evt) {
-                $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
-                $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
-
-                map.panTo(evt.latLng);
-            })
-            map.setCenter(vMarker.position);
-            vMarker.setMap(map);
-*/
-            /*
-            $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
-                movePin();
-            });*/
-
             function movePin() {
                 var geocoder = new google.maps.Geocoder();
                 var textSelectM = $("#txtCiudad").text();
@@ -250,14 +208,8 @@
 
                 });
             }
-
-
-
-
-
+*/
     </script>
-
-
 
 </head>
 <body>
@@ -350,15 +302,18 @@ if(isset($_SESSION['msg'])){
                     <br>
                 </div>
 
+
+                <!-- Aquí va el div para el mapa-->
+                <div id="googleMap" style="width:100%;height:400px;">
+
+                </div>
                 <!--Script para la searchbox de maps-->
                 <script async="async" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
 
                 </script>
 
-                <div id="googleMap" style="width:100%;height:400px;"></div>
-
                 <div class="mb-3">
-                    <label for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
+                    <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
                     <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
                 </div>
                 <div class="mb-3">
