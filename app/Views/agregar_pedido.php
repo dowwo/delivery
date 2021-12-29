@@ -449,21 +449,8 @@ if(isset($_SESSION['msg'])){
             </p>
             <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pedidos</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                    <li>
-                        <a href="../lista_pedidos">Ver Pedidos</a>
-                    </li>
-                </ul>
+                <a href="../lista_pedidos">Ver Pedidos</a>
+                
             </li>
             <li>
                 <a href="#">About</a>
