@@ -433,7 +433,7 @@ if(isset($_SESSION['msg'])){
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 
-<script async="async" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
+<script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
 
 
 
