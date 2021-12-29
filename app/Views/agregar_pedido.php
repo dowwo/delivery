@@ -428,8 +428,8 @@ if(isset($_SESSION['msg'])){
             var location = place.geometry.location;
             var lat = location.lat();
             var lng = location.lng();
-            document.getElementById('InputForLatitud').value = places.geometry.location.lat();
-            document.getElementById('InputForLongitud').value = places.geometry.location.lng();
+            document.getElementById('InputForLatitud').value = lat;
+            document.getElementById('InputForLongitud').value = lng;
         }
     }
 
