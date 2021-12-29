@@ -359,7 +359,7 @@ if(isset($_SESSION['msg'])){
                         var map = new L.Map('osmap');
                     </script>
                 </div>
-                <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
+                <p>Este es el mapa OSM con una posicion definida en 52.07931, 4.89959</p>
 
                 <div id="osmap" style="width: 1004px; height: 590px"></div>
                 <script type="text/javascript">
@@ -371,7 +371,7 @@ if(isset($_SESSION['msg'])){
 
                     map.setView(new L.LatLng(, ), 13).addLayer(osm);
                 </script>
-                <p>Este es el frame</p>
+                <p>Este es el frame de OSM</p>
                 <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/-38.44122564171292/-71.89560953973388"></iframe>
 
                 <div class="mb-3">
@@ -388,6 +388,9 @@ if(isset($_SESSION['msg'])){
                     <input type="text" name="longitud" class="form-control" id="InputForLongitud" required="required">
                     <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-danger"/>
                     <br>
+                </div>
+                <div>
+                    <input id="autocomplete">
                 </div>
 
                 <div id="googleMap" style="width:100%;height:400px;"></div>
