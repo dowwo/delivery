@@ -356,7 +356,6 @@ if(isset($_SESSION['msg'])){
                 <div>
                     <input id="autocomplete" placeholder="Enter a place" type="text">
                 </div>
-                <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
                 </script>
 
                 <div>
@@ -368,6 +367,7 @@ if(isset($_SESSION['msg'])){
                     <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-danger"/>
                     <br>
                 </div>
+                <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
 
                 <div id="googleMap" style="width:100%;height:400px;"></div>
 
