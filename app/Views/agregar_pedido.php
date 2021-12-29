@@ -448,16 +448,11 @@ if(isset($_SESSION['msg'])){
                 <a class="nav-link" href="/dashboard1">Inicio</a>
             </p>
             <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
-            <li class="active">
-                <a href="../lista_pedidos">Ver Pedidos</a>
-
-            </li>
             <li>
-
+                <a href="../lista_pedidos">Ver Pedidos</a>
             </li>
             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-
             </li>
             <li>
                 <a href="#">Portfolio</a>
