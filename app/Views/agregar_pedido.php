@@ -370,12 +370,12 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
 
-                <div id="map"></div>
+                <div id="osmap"></div>
 
                 <script type="text/javascript">
 
                     // This setup the leafmap object by linking the map() method to the map id (in <div> html element)
-                    var map = L.map('map', {
+                    var map = L.map('osmap', {
                         center: [51.517327, -0.120005],
                         zoom: 1.5,
                         // minZoom: 1.5,
