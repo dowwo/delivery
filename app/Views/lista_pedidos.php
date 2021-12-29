@@ -109,13 +109,13 @@ if(isset($_SESSION['msg'])){
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Cliente</th>
+                <th>Usuario</th>
                 <th>Tienda</th>
-                <th>Descripcion</th>
-                <th>Telefono</th>
+                <th>Descripción</th>
+                <th>Teléfono</th>
                 <th>Destino</th>
-                <th>Lat</th>
-                <th>Lng</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
                 <th>Fecha</th>
                 <th>Total</th>
                 <th>Estado</th>
