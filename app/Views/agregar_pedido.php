@@ -477,7 +477,7 @@ if(isset($_SESSION['msg'])){
                 <a href="#">Portfolio</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
             </li>
         </ul>
 
