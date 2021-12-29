@@ -349,6 +349,7 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForTelefono" class="form-label">Telefono</label>
                     <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
                 </div>
+                <p>Esta es la search box, para que al seleccionar una localizacion de aca, se agregue a los input lat long</p>
                 <div>
                     <input autocomplete="off" id="search" type="text" />
                     <script>
@@ -362,29 +363,15 @@ if(isset($_SESSION['msg'])){
                     </script>
                 </div>
                 <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
-                <div id="osmap">
-                    <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
-                </div><p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
-                <script>
-                    var source = new ol.source.TileJSON({
-                        url: 'https://api.maptiler.com/maps/osm-standard/tiles.json?key=4jbSR40BUNdSwZdvlTHY',
-                        tileSize: 512,
-                        crossOrigin: 'anonymous'
-                    });
+                <div id="osmap" style="width: 1004px; height: 590px"></div>
+                <script type="text/javascript">
+                    var map = new L.Map('osmap');
 
-                    var map = new ol.Map({
-                        layers: [
-                            new ol.layer.Tile({
-                                source: source
-                            })
-                        ],
-                        target: 'osmap',
-                        view: new ol.View({
-                            constrainResolution: true,
-                            center: ol.proj.fromLonLat([4.89959, 52.07931]),
-                            zoom: 14
-                        })
-                    });
+                    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        osmAttrib = 'Map data &copy; 2016 OpenStreetMap contributors',
+                        osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+
+                    map.setView(new L.LatLng(, ), 13).addLayer(osm);
                 </script>
                 <p>Este es el frame</p>
                 <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/52.07926/4.90181"></iframe>
