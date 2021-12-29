@@ -345,34 +345,6 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForTelefono" class="form-label">Telefono</label>
                     <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
                 </div>
-                <p>Esta es la search box, para que al seleccionar una localizacion de aca, se agregue a los input lat long</p>
-                <div>
-                    <input autocomplete="off" id="search" type="text" />
-                    <script>
-                        var geocoder = new maptiler.Geocoder({
-                            input: 'search',
-                            key: '4jbSR40BUNdSwZdvlTHY'
-                        });
-                        geocoder.on('select', function(item) {
-                            console.log('Selected', item);
-                        });
-                        var map = new L.Map('osmap');
-                    </script>
-                </div>
-                <p>Este es el mapa OSM con una posicion definida en 52.07931, 4.89959</p>
-
-                <div id="osmap" style="width: 1004px; height: 590px"></div>
-                <script type="text/javascript">
-                    var map = new L.Map('osmap');
-
-                    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                        osmAttrib = 'Map data &copy; 2016 OpenStreetMap contributors',
-                        osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-
-                    map.setView(new L.LatLng(, ), 13).addLayer(osm);
-                </script>
-                <p>Este es el frame de OSM</p>
-                <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/-38.44122564171292/-71.89560953973388"></iframe>
 
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
@@ -429,7 +401,8 @@ if(isset($_SESSION['msg'])){
         autocomplete = new google.maps.places.Autocomplete(
             document.getElementById('autocomplete'),
             {
-                types: ['establishment'],
+                types: ['address'],
+                //types: ['establishment'],
                 componentRestrictions: {'country': ['CL']},
                 fields: ['place_id', 'geometry','name']
             });
