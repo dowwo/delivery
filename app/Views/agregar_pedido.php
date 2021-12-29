@@ -452,7 +452,16 @@ if(isset($_SESSION['msg'])){
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pedidos</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="/lista_pedidos">Ver Pedidos</a>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                    <li>
+                        <a href="../lista_pedidos">Ver Pedidos</a>
                     </li>
                 </ul>
             </li>
