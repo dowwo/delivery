@@ -261,12 +261,35 @@
                 });
             }
 
+        let autocomplete;
+        function initAutocomplete() {
+            autocomplete = new google.maps.places.Autocomplete(
+                document.getElementById('autocomplete'),
+                {
+                    types: ['establishment'],
+                    componentRestrictions: {'country': ['CL']},
+                    fields: ['place_id', 'geometry','name']
+                });
+
+            autocomplete.addListener('place_changed', onPlaceChanged);
+        }
+        function onPlaceChanged(){
+            var place = autocomplete.getPlace();
+
+            if (!place.geometry) {
+                document.getElementById('autocomplete').placeholder =
+                    'Enter a place';
+            } else {
+                document.getElementById('details').innerHTML = place.name;
+            }
+        }
+
 
 
 
 
     </script>
-
+   
 
 
 </head>
@@ -426,32 +449,7 @@ if(isset($_SESSION['msg'])){
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 
 
-<script>
-    let autocomplete;
-    function initAutocomplete() {
-        autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById('autocomplete'),
-            {
-                types: ['establishment'],
-                componentRestrictions: {'country': ['CL']},
-                fields: ['place_id', 'geometry','name']
-            });
 
-        autocomplete.addListener('place_changed', onPlaceChanged);
-    }
-    function onPlaceChanged(){
-        var place = autocomplete.getPlace();
-
-        if (!place.geometry) {
-            document.getElementById('autocomplete').placeholder =
-                'Enter a place';
-        } else {
-            document.getElementById('details').innerHTML = place.name;
-        }
-    }
-
-
-</script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 
 
