@@ -363,6 +363,14 @@ if(isset($_SESSION['msg'])){
                     </script>
                 </div>
                 <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
+                <?php
+                $baseUrl = 'http://nominatim.openstreetmap.org/search?format=json&limit=1';
+                $name = urlencode( 'Addison, TX, US' );
+                $data = file_get_contents( "{$baseUrl}&q={$name}" );
+                $json = json_decode( $data );
+
+                var_dump( $json[0] );
+                ?>
                 <div id="osmap" style="width: 1004px; height: 590px"></div>
                 <script type="text/javascript">
                     var map = new L.Map('osmap');
