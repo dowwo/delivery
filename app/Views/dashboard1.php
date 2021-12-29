@@ -285,7 +285,7 @@ if(isset($_SESSION['msg'])){
                     </ul>
                 </li>
                 <li>
-                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pedidos</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
                             <!--Redireccionar al agregar_tienda-->
@@ -322,85 +322,5 @@ if(isset($_SESSION['msg'])){
     </div>
 </div>
 
-
-<br>
-<div class="container">
-    <div class="row">
-        <?php if($_SESSION['rol_id_rol'] == 47174): ?>
-            <div class="col-sm" id="div_admin">
-                <div class="card" style="width: 18rem;">
-                    <a href="dashboard3">
-                        <img class="card-img-top" src="<?php echo base_url('images/user_card.jpg') ?>" alt="Card image cap">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Administrador</h5>
-                        <p class="card-text">Visualice las opciones para la administración.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <!--Redireccionar al registro de usuario-->
-                            <a href="dashboard3" class="card-link">Dashboard Admin</a>
-                        </li>
-                    </ul>
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-        <?php else: ?>
-            <!-- Admin link goes here -->
-        <?php endif; ?>
-
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo base_url('images/tarjeta_solicitudes.jpg') ?>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Vendedor</h5>
-                    <p class="card-text">Visualice las opciones para vendedor.</p>
-                </div>
-
-                <!--AGREGADO SOLO PARA REVISAR EL LISTAR TIENDA-->
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <!--Redireccionar al agregar tienda-->
-                        <a href="agregar_tienda" class="card-link">Agregar tienda</a>
-                    </li>
-                    <li class="list-group-item">
-                        <!--Redireccionar al listar_tienda-->
-                        <a href="lista_tienda" class="card-link">Listar Tienda</a>
-                    </li>
-                    <!--Redireccionar al agregar producto-->
-                    <!--<li class="list-group-item">
-                        <a href="agregar_producto" class="card-link">Agregar Producto</a>
-                    </li>
-                    <li class="list-group-item">-->
-                        <!--Redireccionar al listar_producto-->
-                        <!--<a href="lista_productos" class="card-link">Listar Producto</a>
-                    </li>-->
-                </ul>
-                <div class="card-body">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="<?php echo base_url('images/tarjeta_registros.jpg') ?>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Repartidor</h5>
-                    <p class="card-text">Visualice las opciones para el repartidor.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <a href="seleccionar_tienda" class="card-link">Agregar pedidos</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="lista_pedidos" class="card-link">Ver todos los pedidos</a>
-                    </li>
-                </ul>
-                <div class="card-body">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 </html>
