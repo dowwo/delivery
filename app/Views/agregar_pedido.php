@@ -269,9 +269,6 @@
 
 
 
-
-
-
 </head>
 <body>
 <div>
@@ -392,15 +389,6 @@ if(isset($_SESSION['msg'])){
                     <input id="delete-markers" type="button" value="Delete Markers" class="btn btn-danger"/>
                     <br>
                 </div>
-                <div>
-                    <input
-                            id="pac-input"
-                            class="controls"
-                            type="text"
-                            placeholder="Search Box"
-                    />
-                    <div id="map"></div>
-                </div>
 
                 <div id="googleMap" style="width:100%;height:400px;"></div>
 
@@ -463,79 +451,6 @@ if(isset($_SESSION['msg'])){
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places">
-    function initAutocomplete() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: -33.8688, lng: 151.2195 },
-            zoom: 13,
-            mapTypeId: "roadmap",
-        });
-        // Create the search box and link it to the UI element.
-        const input = document.getElementById("pac-input");
-        const searchBox = new google.maps.places.SearchBox(input);
-
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener("bounds_changed", () => {
-            searchBox.setBounds(map.getBounds());
-        });
-
-        let markers = [];
-
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener("places_changed", () => {
-            const places = searchBox.getPlaces();
-
-            if (places.length == 0) {
-                return;
-            }
-
-            // Clear out the old markers.
-            markers.forEach((marker) => {
-                marker.setMap(null);
-            });
-            markers = [];
-
-            // For each place, get the icon, name and location.
-            const bounds = new google.maps.LatLngBounds();
-
-            places.forEach((place) => {
-                if (!place.geometry || !place.geometry.location) {
-                    console.log("Returned place contains no geometry");
-                    return;
-                }
-
-                const icon = {
-                    url: place.icon,
-                    size: new google.maps.Size(71, 71),
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25),
-                };
-
-                // Create a marker for each place.
-                markers.push(
-                    new google.maps.Marker({
-                        map,
-                        icon,
-                        title: place.name,
-                        position: place.geometry.location,
-                    })
-                );
-                if (place.geometry.viewport) {
-                    // Only geocodes have viewport.
-                    bounds.union(place.geometry.viewport);
-                } else {
-                    bounds.extend(place.geometry.location);
-                }
-            });
-            map.fitBounds(bounds);
-        });
-    }
-</script>
-
-
 <script src="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.js"></script>
 <link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
@@ -546,7 +461,6 @@ if(isset($_SESSION['msg'])){
 <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
 
 <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
-
 
 
 
