@@ -92,182 +92,15 @@
 
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <!--
+
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" >
-    </script>-->
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
 
 
-    <script>
 
-        function myMap() {
-            //var curacautin ={lat:-38.4396458, lng:-71.888786};
-            /*var mapProp= {
-                zoom:15,
-                center: curacautin
-            };*/
-            const myLatlng = { lat: -38.4396458, lng: -71.888786 };
-
-            var vMarker
-            let markers = [];
-
-            var map
-            var inputLatitud = document.getElementById("InputForLatitud");
-            var inputLongitud = document.getElementById("InputForLongitud");
-
-            map = new google.maps.Map(document.getElementById("googleMap"),{
-                zoom: 14,
-                center: new google.maps.LatLng(-38.4396458, -71.888786),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-
-            // Create the initial InfoWindow.
-            let infoWindow = new google.maps.InfoWindow({
-                content: "Click the map to get Lat/Lng!",
-                position: myLatlng,
-
-            });
-
-            infoWindow.open(map);
-            // Configure the click listener.
-            map.addListener("click", (mapsMouseEvent) => {
-                // Close the current InfoWindow.
-                infoWindow.close();
-                // Create a new InfoWindow.
-                infoWindow = new google.maps.InfoWindow({
-                    position: mapsMouseEvent.latLng,
-                });
-                document.getElementById("InputForLatitud").value = mapsMouseEvent.latLng.lat();
-                document.getElementById("InputForLongitud").value = mapsMouseEvent.latLng.lng();
-
-                infoWindow.setContent(
-                    JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
-                );
-                infoWindow.open(map);
-            });
-
-/*
-            map.addListener('click', function(e) {
-                placeMarkerAndPanTo(e.latLng, map);
-                });
-*/
-            map.addListener("click", (event) => {
-                addMarker(event.latLng);
-            });
-
-            document
-                .getElementById("delete-markers")
-                .addEventListener("click", deleteMarkers);
-
-            map.addListener("dblclick", (event) =>{
-                deleteMarkers();
-            })
-
-
-            function addMarker(position) {
-                const marker = new google.maps.Marker({
-                    position,
-                    map,
-                });
-
-                markers.push(marker);
-            }
-            function hideMarkers() {
-                setMapOnAll(null);
-            }
-            function deleteMarkers() {
-                hideMarkers();
-                markers = [];
-            }
-            // Sets the map on all markers in the array.
-            function setMapOnAll(map) {
-                for (let i = 0; i < markers.length; i++) {
-                    markers[i].setMap(map);
-                }
-            }
-
-
-            function placeMarkerAndPanTo(latLng, map) {
-                vMarker = new google.maps.Marker({
-                    position: latLng,
-                    draggable: true,
-                    map: map,
-                });
-                map.panTo(latLng);
-
-            }
-
-
-
-            };
-        /*
-            map.addListener("dblclick", function() {
-                map.setMap(null);
-            });*/
-
-
-
-
-/*
-            new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
-
-                // Selecting the input element and get its value
-                var inputLat = document.getElementById("InputForLatitud").value;
-                var inputLng = document.getElementById("InputForLongitud").value;
-                // Displaying the value
-                alert(inputLat);
-
-                $('#InputForLatitud').val(evt.LatLng.lat());
-                $('#InputForLongitud').val(evt.LatLng.lng().toFixed(6));
-
-
-                document.write('<div></div>');
-
-                map.panTo(evt.latLng);
-            })
-            map.setCenter(vMarker.position);
-            vMarker.setMap(map);
-*/
-            /*
-            map.addListener(vMarker, 'dragend', function (evt) {
-                $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
-                $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
-
-                map.panTo(evt.latLng);
-            })
-            map.setCenter(vMarker.position);
-            vMarker.setMap(map);
-*/
-            /*
-            $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
-                movePin();
-            });*/
-
-            function movePin() {
-                var geocoder = new google.maps.Geocoder();
-                var textSelectM = $("#txtCiudad").text();
-                var textSelectE = $("#txtEstado").val();
-                var inputAddress = $("#txtDireccion").val() + ' ' + textSelectM + ' ' + textSelectE;
-                geocoder.geocode({
-                    "address": inputAddress
-                }, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        vMarker.setPosition(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                        map.panTo(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                        $("#InputForLatitud").val(results[0].geometry.location.lat());
-                        $("#InputForLongitud").val(results[0].geometry.location.lng());
-                    }
-
-                });
-            }
-
-
-
-
-
-    </script>
 
 
 
@@ -402,6 +235,175 @@ if(isset($_SESSION['msg'])){
 
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 
+
+<script>
+
+    function myMap() {
+        //var curacautin ={lat:-38.4396458, lng:-71.888786};
+        /*var mapProp= {
+            zoom:15,
+            center: curacautin
+        };*/
+        const myLatlng = { lat: -38.4396458, lng: -71.888786 };
+
+        var vMarker
+        let markers = [];
+
+        var map
+        var inputLatitud = document.getElementById("InputForLatitud");
+        var inputLongitud = document.getElementById("InputForLongitud");
+
+        map = new google.maps.Map(document.getElementById("googleMap"),{
+            zoom: 14,
+            center: new google.maps.LatLng(-38.4396458, -71.888786),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        // Create the initial InfoWindow.
+        let infoWindow = new google.maps.InfoWindow({
+            content: "Click the map to get Lat/Lng!",
+            position: myLatlng,
+
+        });
+
+        infoWindow.open(map);
+        // Configure the click listener.
+        map.addListener("click", (mapsMouseEvent) => {
+            // Close the current InfoWindow.
+            infoWindow.close();
+            // Create a new InfoWindow.
+            infoWindow = new google.maps.InfoWindow({
+                position: mapsMouseEvent.latLng,
+            });
+            document.getElementById("InputForLatitud").value = mapsMouseEvent.latLng.lat();
+            document.getElementById("InputForLongitud").value = mapsMouseEvent.latLng.lng();
+
+            infoWindow.setContent(
+                JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+            );
+            infoWindow.open(map);
+        });
+
+        /*
+                    map.addListener('click', function(e) {
+                        placeMarkerAndPanTo(e.latLng, map);
+                        });
+        */
+        map.addListener("click", (event) => {
+            addMarker(event.latLng);
+        });
+
+        document
+            .getElementById("delete-markers")
+            .addEventListener("click", deleteMarkers);
+
+        map.addListener("dblclick", (event) =>{
+            deleteMarkers();
+        })
+
+
+        function addMarker(position) {
+            const marker = new google.maps.Marker({
+                position,
+                map,
+            });
+
+            markers.push(marker);
+        }
+        function hideMarkers() {
+            setMapOnAll(null);
+        }
+        function deleteMarkers() {
+            hideMarkers();
+            markers = [];
+        }
+        // Sets the map on all markers in the array.
+        function setMapOnAll(map) {
+            for (let i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
+            }
+        }
+
+
+        function placeMarkerAndPanTo(latLng, map) {
+            vMarker = new google.maps.Marker({
+                position: latLng,
+                draggable: true,
+                map: map,
+            });
+            map.panTo(latLng);
+
+        }
+
+
+
+    };
+    /*
+        map.addListener("dblclick", function() {
+            map.setMap(null);
+        });*/
+
+
+
+
+    /*
+                new google.maps.event.addListener(vMarker, 'dragend', function (evt) {
+
+                    // Selecting the input element and get its value
+                    var inputLat = document.getElementById("InputForLatitud").value;
+                    var inputLng = document.getElementById("InputForLongitud").value;
+                    // Displaying the value
+                    alert(inputLat);
+
+                    $('#InputForLatitud').val(evt.LatLng.lat());
+                    $('#InputForLongitud').val(evt.LatLng.lng().toFixed(6));
+
+
+                    document.write('<div></div>');
+
+                    map.panTo(evt.latLng);
+                })
+                map.setCenter(vMarker.position);
+                vMarker.setMap(map);
+    */
+    /*
+    map.addListener(vMarker, 'dragend', function (evt) {
+        $("#InputForLatitud").val(evt.latLng.lat().toFixed(6));
+        $("#InputForLongitud").val(evt.latLng.lng().toFixed(6));
+
+        map.panTo(evt.latLng);
+    })
+    map.setCenter(vMarker.position);
+    vMarker.setMap(map);
+*/
+    /*
+    $("#txtCiudad, #txtEstado, #txtDireccion").change(function () {
+        movePin();
+    });*/
+
+    function movePin() {
+        var geocoder = new google.maps.Geocoder();
+        var textSelectM = $("#txtCiudad").text();
+        var textSelectE = $("#txtEstado").val();
+        var inputAddress = $("#txtDireccion").val() + ' ' + textSelectM + ' ' + textSelectE;
+        geocoder.geocode({
+            "address": inputAddress
+        }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                vMarker.setPosition(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                map.panTo(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                $("#InputForLatitud").val(results[0].geometry.location.lat());
+                $("#InputForLongitud").val(results[0].geometry.location.lng());
+            }
+
+        });
+    }
+
+
+
+
+
+</script>
 
 <script>
     let autocomplete;
