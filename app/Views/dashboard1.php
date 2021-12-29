@@ -271,17 +271,20 @@ if(isset($_SESSION['msg'])){
                 <li>
                     <a href="/dashboard1">Inicio</a>
                 </li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <!--Redireccionar al agregar_tienda-->
-                        <a href="agregar_tienda" class="card-link">Agregar tienda</a>
-                    </li>
-                    <li>
-                        <!--Redireccionar al listar_tienda-->
-                        <a href="lista_tienda" class="card-link">Listar Tienda</a>
-                    </li>
-                </ul>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <!--Redireccionar al agregar_tienda-->
+                            <a href="agregar_tienda" class="card-link">Agregar tienda</a>
+                        </li>
+                        <li>
+                            <!--Redireccionar al listar_tienda-->
+                            <a href="lista_tienda" class="card-link">Listar Tienda</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li>
                     <a href="seleccionar_tienda">Agregar Pedido</a>
                 </li>
