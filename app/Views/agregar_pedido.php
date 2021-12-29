@@ -378,7 +378,7 @@ if(isset($_SESSION['msg'])){
                                 source: source
                             })
                         ],
-                        target: 'map',
+                        target: 'osmap',
                         view: new ol.View({
                             constrainResolution: true,
                             center: ol.proj.fromLonLat([4.89959, 52.07931]),
