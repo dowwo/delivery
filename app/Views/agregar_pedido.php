@@ -516,10 +516,11 @@ if(isset($_SESSION['msg'])){
                 <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
             </div>
             <div>
-
-                <label type="hidden" for="InputForLatitud" class="form-label">Latitud</label>
+                <!--
+                <label for="InputForLatitud" class="form-label">Latitud</label>-->
                 <input type="hidden" name="latitud" class="form-control" id="InputForLatitud" required="required">
-                <label type="hidden" for="InputForLongitud" class="form-label">Longitud</label>
+                <!--
+                <label for="InputForLongitud" class="form-label">Longitud</label>-->
                 <input type="hidden" name="longitud" class="form-control" id="InputForLongitud" required="required">
                 <!--
                 <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>
