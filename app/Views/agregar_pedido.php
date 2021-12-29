@@ -261,35 +261,12 @@
                 });
             }
 
-        let autocomplete;
-        function initAutocomplete() {
-            autocomplete = new google.maps.places.Autocomplete(
-                document.getElementById('autocomplete'),
-                {
-                    types: ['establishment'],
-                    componentRestrictions: {'country': ['CL']},
-                    fields: ['place_id', 'geometry','name']
-                });
-
-            autocomplete.addListener('place_changed', onPlaceChanged);
-        }
-        function onPlaceChanged(){
-            var place = autocomplete.getPlace();
-
-            if (!place.geometry) {
-                document.getElementById('autocomplete').placeholder =
-                    'Enter a place';
-            } else {
-                document.getElementById('details').innerHTML = place.name;
-            }
-        }
-
 
 
 
 
     </script>
-   
+
 
 
 </head>
@@ -368,9 +345,6 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForTelefono" class="form-label">Telefono</label>
                     <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
                 </div>
-                <p>Esta es la busqueda por places de google maps</p>
-                <input id="autocomplete" placeholder="Enter a place" type="text">
-
                 <p>Esta es la search box, para que al seleccionar una localizacion de aca, se agregue a los input lat long</p>
                 <div>
                     <input autocomplete="off" id="search" type="text" />
@@ -449,8 +423,36 @@ if(isset($_SESSION['msg'])){
 <!--AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7ILa api que utiliza el sitio web es la de Places, por lo que debe habilitarse aparte en la cuenta de google-->
 
 
+<script>
+    let autocomplete;
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete'),
+            {
+                types: ['establishment'],
+                componentRestrictions: {'country': ['CL']},
+                fields: ['place_id', 'geometry','name']
+            });
 
+        autocomplete.addListener('place_changed', onPlaceChanged);
+    }
+    function onPlaceChanged(){
+        var place = autocomplete.getPlace();
+
+        if (!place.geometry) {
+            document.getElementById('autocomplete').placeholder =
+                'Enter a place';
+        } else {
+            document.getElementById('details').innerHTML = place.name;
+        }
+    }
+
+
+</script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
+
+
+
 
 
 
