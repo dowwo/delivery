@@ -430,7 +430,7 @@ if(isset($_SESSION['msg'])){
             var lng = location.lng();
             document.getElementById('InputForLatitud').value = lat;
             document.getElementById('InputForLongitud').value = lng;
-            movePin();
+            movePin(lat, lng);
         }
     }
 
