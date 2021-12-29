@@ -430,11 +430,22 @@ if(isset($_SESSION['msg'])){
             var lng = location.lng();
             document.getElementById('InputForLatitud').value = lat;
             document.getElementById('InputForLongitud').value = lng;
-            document.getElementById('InputForDireccion').addListener("places_changed", () => {
-                const places = document.getElementById('InputForDireccion').getPlaces();
-                if (places.length == 0) {
-                    return;
-                }
+
+            var map;
+            let markers = [];
+
+            function addMarker(position) {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                });
+
+                markers.push(marker);
+            }
+
+            document.getElementById('InputForDireccion').addListener("places_changed", (event) => {
+                addMarker(event.latLng);
+
             })
 
         }
