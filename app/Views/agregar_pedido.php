@@ -372,7 +372,7 @@ if(isset($_SESSION['msg'])){
                     map.setView(new L.LatLng(, ), 13).addLayer(osm);
                 </script>
                 <p>Este es el frame</p>
-                <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/52.07926/4.90181"></iframe>
+                <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/-38.44122564171292/-71.89560953973388"></iframe>
 
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
