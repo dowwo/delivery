@@ -350,11 +350,11 @@ if(isset($_SESSION['msg'])){
 
                 <div class="mb-3">
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
-                    <input type="text" name="direccion" class="form-control" id="InputForDireccion" required="required">
+                    <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
                 </div>
                 <!-- No lo recordaba pero tenia comentado los campos latitud y longitud para utilizarlos luego xd -->
                 <div>
-                    <input id="autocomplete" placeholder="Enter a place" type="text">
+
                 </div>
                 </script>
 
@@ -407,7 +407,7 @@ if(isset($_SESSION['msg'])){
     let autocomplete;
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById('autocomplete'),
+            document.getElementById('InputForDireccion'),
             {
                 types: ['address'],
                 //types: ['establishment'],
@@ -421,7 +421,7 @@ if(isset($_SESSION['msg'])){
         var place = autocomplete.getPlace();
 
         if (!place.geometry) {
-            document.getElementById('autocomplete').placeholder =
+            document.getElementById('InputForDireccion').placeholder =
                 'Enter a place';
         } else {
             document.getElementById('InputForDireccion').value = place.name;
