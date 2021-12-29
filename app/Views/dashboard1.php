@@ -272,7 +272,7 @@ if(isset($_SESSION['msg'])){
                     <a href="/dashboard1">Inicio</a>
                 </li>
                 <li>
-                    <a href="../agregar_pedido">Agregar Pedido</a>
+                    <a href="seleccionar_tienda">Agregar Pedido</a>
                 </li>
                 <li>
                     <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
