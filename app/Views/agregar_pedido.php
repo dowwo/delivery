@@ -443,8 +443,10 @@ if(isset($_SESSION['msg'])){
         </div>
 
         <ul class="list-unstyled components">
-            <a class="nav-link" href="/dashboard1">Inicio</a>
-            
+
+            <p>
+                <a class="nav-link" href="/dashboard1">Inicio</a>
+            </p>
             <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
