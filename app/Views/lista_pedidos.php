@@ -338,9 +338,9 @@
                             <th>Tienda</th>
                             <th>Descripción</th>
                             <th>Teléfono</th>
-                            <th>Destino</th>
+                            <th>Destino</th><!--
                             <th>Latitud</th>
-                            <th>Longitud</th>
+                            <th>Longitud</th>-->
                             <th>Fecha</th>
                             <th>Total</th>
                             <th>Estado</th>
@@ -356,9 +356,9 @@
                                     <td><?php echo $pedido['tienda_id_tienda']; ?></td>
                                     <td><?php echo $pedido['descripcion']; ?></td>
                                     <td><?php echo $pedido['telefono']; ?></td>
-                                    <td><?php echo $pedido['direccion_destino']; ?></td>
+                                    <td><?php echo $pedido['direccion_destino']; ?></td><!--
                                     <td><?php echo $pedido['latitud']; ?></td>
-                                    <td><?php echo $pedido['longitud']; ?></td>
+                                    <td><?php echo $pedido['longitud']; ?></td>-->
                                     <td><?php echo $pedido['fecha_pedido']; ?></td>
                                     <td><?php echo $pedido['valor_total']; ?></td>
                                     <td><?php echo $pedido['estado_id_estado']; ?></td>
