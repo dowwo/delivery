@@ -326,75 +326,76 @@
 
                 </div>
             </nav>
+            <?php
+            if(isset($_SESSION['msg'])){
+                echo $_SESSION['id_usuario'];
+            }
+            ?>
+            <div class="container mt-4">
+                <div class="mt-3 table-responsive">
+                    <table class="table table-bordered" id="lista-tienda">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Fecha registro</th>
+                            <th>Usuario (Dueño)</th>
+                            <th>Comuna</th>
+                            <th>Verificacion</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php if($tiendas): ?>
+                            <?php foreach($tiendas as $tienda): ?>
+                                <tr>
+                                    <td><?php echo $tienda['id_tienda']; ?></td>
+                                    <td><?php echo $tienda['nombre']; ?></td>
+                                    <td><?php echo $tienda['fecha_registro']; ?></td>
+                                    <td><?php echo $tienda['usuario_id_usuario']; ?></td>
+                                    <td><?php echo $tienda['comuna_id_comuna']; ?></td>
+                                    <td><?php echo $tienda['verificacion']; ?></td>
+                                    <td>
+                                        <a href="<?php echo base_url('modificar_tienda/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Editar</a>
+                                        <a href="<?php echo base_url('delete/'.$tienda['id_tienda']);?>" class="btn btn-danger btn-sm">Deshabilitar</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+            <script>
+                $(document).ready( function () {
+                    $('#lista_tienda').DataTable( {
+                        "language": {
+                            "lengthMenu": "Mostrar _MENU_ registros por página",
+                            "zeroRecords": "Lo sentimos, no se ha encontrado el registro",
+                            "info": "Mostrando página _PAGE_ de _PAGES_",
+                            "infoEmpty": "No hay registros",
+
+                            "infoFiltered": "(filtered from _MAX_ total records)",
+                            "search": "Buscar",
+                            "paginate": {
+                                "next": "Siguiente",
+                                "previous": "Anterior"
+                            }
+                        }
+                    } )
+
+                    ;
+                } );
+            </script>
 
         </div>
         <br/>
 
-        <?php
-        if(isset($_SESSION['msg'])){
-            echo $_SESSION['id_usuario'];
-        }
-        ?>
-        <div class="container mt-4">
-            <div class="mt-3 table-responsive">
-                <table class="table table-bordered" id="lista-tienda">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Fecha registro</th>
-                        <th>Usuario (Dueño)</th>
-                        <th>Comuna</th>
-                        <th>Verificacion</th>
-                        <th>Acciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php if($tiendas): ?>
-                        <?php foreach($tiendas as $tienda): ?>
-                            <tr>
-                                <td><?php echo $tienda['id_tienda']; ?></td>
-                                <td><?php echo $tienda['nombre']; ?></td>
-                                <td><?php echo $tienda['fecha_registro']; ?></td>
-                                <td><?php echo $tienda['usuario_id_usuario']; ?></td>
-                                <td><?php echo $tienda['comuna_id_comuna']; ?></td>
-                                <td><?php echo $tienda['verificacion']; ?></td>
-                                <td>
-                                    <a href="<?php echo base_url('modificar_tienda/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Editar</a>
-                                    <a href="<?php echo base_url('delete/'.$tienda['id_tienda']);?>" class="btn btn-danger btn-sm">Deshabilitar</a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-        <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-        <script>
-            $(document).ready( function () {
-                $('#lista_tienda').DataTable( {
-                    "language": {
-                        "lengthMenu": "Mostrar _MENU_ registros por página",
-                        "zeroRecords": "Lo sentimos, no se ha encontrado el registro",
-                        "info": "Mostrando página _PAGE_ de _PAGES_",
-                        "infoEmpty": "No hay registros",
-
-                        "infoFiltered": "(filtered from _MAX_ total records)",
-                        "search": "Buscar",
-                        "paginate": {
-                            "next": "Siguiente",
-                            "previous": "Anterior"
-                        }
-                    }
-                } )
-
-                ;
-            } );
-        </script>
     </div>
 </div>
 
