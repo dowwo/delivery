@@ -430,25 +430,7 @@ if(isset($_SESSION['msg'])){
             var lng = location.lng();
             document.getElementById('InputForLatitud').value = lat;
             document.getElementById('InputForLongitud').value = lng;
-
-            var map;
-            let markers = [];
-
-            function addMarker(position) {
-                const marker = new google.maps.Marker({
-                    position,
-                    map,
-                });
-
-                markers.push(marker);
-            }
-
-            document.getElementById('InputForDireccion').addEventListener("places_changed", (event) => {
-                addMarker(event.latLng);
-
-            })
-
-        }
+                    }
     }
 
 
