@@ -438,7 +438,8 @@ if(isset($_SESSION['msg'])){
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
+            <h3>        <a class="navbar-brand" href="#">Bienvenido <?php echo $_SESSION['nombre'] ?></a>
+            </h3>
         </div>
 
         <ul class="list-unstyled components">
