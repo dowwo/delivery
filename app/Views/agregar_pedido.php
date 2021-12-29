@@ -104,11 +104,7 @@
     <script>
 
         function myMap() {
-            //var curacautin ={lat:-38.4396458, lng:-71.888786};
-            /*var mapProp= {
-                zoom:15,
-                center: curacautin
-            };*/
+
             const myLatlng = { lat: -38.4396458, lng: -71.888786 };
 
             var vMarker
@@ -149,11 +145,6 @@
                 infoWindow.open(map);
             });
 
-/*
-            map.addListener('click', function(e) {
-                placeMarkerAndPanTo(e.latLng, map);
-                });
-*/
             map.addListener("click", (event) => {
                 addMarker(event.latLng);
             });
@@ -165,7 +156,6 @@
             map.addListener("dblclick", (event) =>{
                 deleteMarkers();
             })
-
 
             function addMarker(position) {
                 const marker = new google.maps.Marker({
@@ -189,7 +179,6 @@
                 }
             }
 
-
             function placeMarkerAndPanTo(latLng, map) {
                 vMarker = new google.maps.Marker({
                     position: latLng,
@@ -200,9 +189,7 @@
 
             }
 
-
-
-            };
+            }
         /*
             map.addListener("dblclick", function() {
                 map.setMap(null);
