@@ -345,6 +345,9 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForTelefono" class="form-label">Telefono</label>
                     <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
                 </div>
+                <p>Esta es la busqueda por places de google maps</p>
+                <input id="autocomplete" placeholder="Enter a place" type="text">
+
                 <p>Esta es la search box, para que al seleccionar una localizacion de aca, se agregue a los input lat long</p>
                 <div>
                     <input autocomplete="off" id="search" type="text" />
@@ -450,19 +453,6 @@ if(isset($_SESSION['msg'])){
 
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
-
-<script src="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.js"></script>
-<link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
-
-<script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
-
-<script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
-
-
 
 
 
