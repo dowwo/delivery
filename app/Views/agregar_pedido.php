@@ -353,12 +353,6 @@ if(isset($_SESSION['msg'])){
                     <label for="InputForDireccion" class="form-label">Dirección destino</label>
                     <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
                 </div>
-
-                <div>
-
-                </div>
-                
-
                 <div>
 
                     <label for="InputForLatitud" class="form-label">Latitud</label>
@@ -369,9 +363,11 @@ if(isset($_SESSION['msg'])){
                     <br>
                 </div>
 
-
+                <!--Script para la searchbox de maps-->
                 <script async="async" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
+
                 </script>
+
                 <div id="googleMap" style="width:100%;height:400px;"></div>
 
                 <div class="mb-3">
