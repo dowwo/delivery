@@ -264,9 +264,19 @@ if(isset($_SESSION['msg'])){
             <ul class="list-unstyled components">
 
                 <li>
+
+                    <?php if($_SESSION['rol_id_rol'] == 47174): ?>
+                        <a href="dashboard3" class="card-link">Administrador</a>
+                    <?php else: ?>
+                        <!-- Admin link goes here -->
+                    <?php endif; ?>
+                </li>
+                <li>
                     <a href="/dashboard1">Inicio</a>
                 </li>
-                <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
+                <li>
+
+                </li>
                 <li>
                     <a href="../lista_pedidos">Ver Pedidos</a>
                 </li>
@@ -277,22 +287,25 @@ if(isset($_SESSION['msg'])){
         </nav>
 
 
-    <!-- Page Content  -->
-    <div id="content">
+        <!-- Page Content  -->
+        <div id="content">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
 
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                    <i class="fas fa-align-left"></i>
-                    <span>Menu</span>
-                </button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
 
-            </div>
-        </nav>
+                </div>
+            </nav>
 
+        </div>
     </div>
-    </div>
+</div>
+
+
 <br>
 <div class="container">
     <div class="row">
