@@ -339,9 +339,9 @@
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Fecha registro</th>
-                            <th>Usuario (Dueño)</th>
+                            <th>Usuario</th>
                             <th>Comuna</th>
-                            <th>Verificacion</th>
+                            <th>Verificación</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
