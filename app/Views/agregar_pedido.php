@@ -92,7 +92,7 @@
 
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    
+    <!--
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" >
     </script>-->
 
@@ -407,7 +407,7 @@ if(isset($_SESSION['msg'])){
     let autocomplete;
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById('InputForDireccion'),
+            document.getElementById('autocomplete'),
             {
                 types: ['address'],
                 //types: ['establishment'],
@@ -421,7 +421,7 @@ if(isset($_SESSION['msg'])){
         var place = autocomplete.getPlace();
 
         if (!place.geometry) {
-            document.getElementById('InputForDireccion').placeholder =
+            document.getElementById('autocomplete').placeholder =
                 'Enter a place';
         } else {
             document.getElementById('InputForDireccion').value = place.name;
