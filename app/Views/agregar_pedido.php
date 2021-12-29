@@ -271,6 +271,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
 
+    <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+
+    <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
 
 
 </head>
@@ -365,15 +370,41 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
 
-                <div id="osmap" style="width: 1004px; height: 590px"></div>
+                <div id="map"></div>
+
                 <script type="text/javascript">
-                    var map = new L.Map('osmap');
 
-                    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                        osmAttrib = 'Map data &copy; 2016 OpenStreetMap contributors',
-                        osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+                    // This setup the leafmap object by linking the map() method to the map id (in <div> html element)
+                    var map = L.map('map', {
+                        center: [51.517327, -0.120005],
+                        zoom: 1.5,
+                        // minZoom: 1.5,
+                        //  maxZoom: 1.5
+                    });
 
-                    map.setView(new L.LatLng(, ), 13).addLayer(osm);
+                    // Start adding controls as follow... L.controlName().addTo(map);
+
+                    // Control 1: This add the OpenStreetMap background tile
+                    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+
+                    // Control 2: This add a scale to the map
+                    L.control.scale().addTo(map);
+
+                    // Control 3: This add a Search bar
+                    var searchControl = new L.esri.Controls.Geosearch().addTo(map);
+
+                    var results = new L.LayerGroup().addTo(map);
+
+                    searchControl.on('results', function(data){
+                        results.clearLayers();
+                        for (var i = data.results.length - 1; i >= 0; i--) {
+                            results.addLayer(L.marker(data.results[i].latlng));
+                        }
+                    });
+
                 </script>
                 <p>Este es el frame</p>
                 <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/52.07926/4.90181"></iframe>
