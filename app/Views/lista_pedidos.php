@@ -199,7 +199,13 @@
             }
         }
     </style>
-
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 
     <script>
         $(document).ready( function () {
@@ -255,30 +261,125 @@
 
     <!--NO ENTIENDO EL SCRIPT ANTERIOR :( -->
 </head>
-<body id="navbar_distance">
-<div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Bienvenido <?php echo $_SESSION['nombre'] ?></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="dashboard1">Home <span class="sr-only">(current)</span></a>
+<div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Bienvenido <?php echo $_SESSION['nombre'] ?>
+                </h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <?php if($_SESSION['rol_id_rol'] == 47174): ?>
+                        <a href="dashboard3" class="card-link">Administrador</a>
+                    <?php else: ?>
+                        <!-- Admin link goes here -->
+                    <?php endif; ?>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li>
+                    <a href="/dashboard1">Inicio</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <!--Redireccionar al agregar_tienda-->
+                            <a href="agregar_tienda" class="card-link">Agregar tienda</a>
+                        </li>
+                        <li>
+                            <!--Redireccionar al listar_tienda-->
+                            <a href="lista_tienda" class="card-link">Listar Tienda</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pedidos</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <!--Redireccionar al agregar_tienda-->
+                            <a href="seleccionar_tienda" class="card-link">Agregar Pedido</a>
+                        </li>
+                        <li>
+                            <!--Redireccionar al listar_tienda-->
+                            <a href="lista_pedidos" class="card-link">Ver Pedidos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <!--Botón para cerrar sesión, aplicable en cualquier parte-->
-                <a class="btn btn-outline-danger my-2 my-sm-0" href="login/logout">Cerrar sesión</a>
-            </form>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Ver/Ocultar Menu</span>
+                    </button>
+
+                </div>
+            </nav>
+
+            <div class="container mt-4">
+                <div class="mt-3 table-responsive">
+                    <table class="table table-bordered" id="lista-pedido">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Usuario</th>
+                            <th>Tienda</th>
+                            <th>Descripción</th>
+                            <th>Teléfono</th>
+                            <th>Destino</th>
+                            <th>Latitud</th>
+                            <th>Longitud</th>
+                            <th>Fecha</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php if($pedidos): ?>
+                            <?php foreach($pedidos as $pedido): ?>
+                                <tr>
+                                    <td><?php echo $pedido['id_pedido']; ?></td>
+                                    <td><?php echo $pedido['usuario_id_usuario']; ?></td>
+                                    <td><?php echo $pedido['tienda_id_tienda']; ?></td>
+                                    <td><?php echo $pedido['descripcion']; ?></td>
+                                    <td><?php echo $pedido['telefono']; ?></td>
+                                    <td><?php echo $pedido['direccion_destino']; ?></td>
+                                    <td><?php echo $pedido['latitud']; ?></td>
+                                    <td><?php echo $pedido['longitud']; ?></td>
+                                    <td><?php echo $pedido['fecha_pedido']; ?></td>
+                                    <td><?php echo $pedido['valor_total']; ?></td>
+                                    <td><?php echo $pedido['estado_id_estado']; ?></td>
+                                    <td>
+                                        <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
+                                        <a href="<?php echo base_url('eliminar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
-    </nav>
+      </div>
 </div>
+
+
+
 <!-- Esto no hace nada, solo un echo, si quieres lo quitamos - Dowwo -->
 <?php
 if(isset($_SESSION['msg'])){
@@ -286,51 +387,7 @@ if(isset($_SESSION['msg'])){
 }
 ?>
 <!---->
-<div class="container mt-4">
-    <div class="mt-3 table-responsive">
-        <table class="table table-bordered" id="lista-pedido">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Usuario</th>
-                <th>Tienda</th>
-                <th>Descripción</th>
-                <th>Teléfono</th>
-                <th>Destino</th>
-                <th>Latitud</th>
-                <th>Longitud</th>
-                <th>Fecha</th>
-                <th>Total</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php if($pedidos): ?>
-                <?php foreach($pedidos as $pedido): ?>
-                    <tr>
-                        <td><?php echo $pedido['id_pedido']; ?></td>
-                        <td><?php echo $pedido['usuario_id_usuario']; ?></td>
-                        <td><?php echo $pedido['tienda_id_tienda']; ?></td>
-                        <td><?php echo $pedido['descripcion']; ?></td>
-                        <td><?php echo $pedido['telefono']; ?></td>
-                        <td><?php echo $pedido['direccion_destino']; ?></td>
-                        <td><?php echo $pedido['latitud']; ?></td>
-                        <td><?php echo $pedido['longitud']; ?></td>
-                        <td><?php echo $pedido['fecha_pedido']; ?></td>
-                        <td><?php echo $pedido['valor_total']; ?></td>
-                        <td><?php echo $pedido['estado_id_estado']; ?></td>
-                        <td>
-                            <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="<?php echo base_url('eliminar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
-</div>
+
 
 
 
