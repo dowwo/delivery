@@ -438,7 +438,7 @@ if(isset($_SESSION['msg'])){
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>        <a class="navbar-brand" href="#">Bienvenido <?php echo $_SESSION['nombre'] ?></a>
+            <h3>Bienvenido <?php echo $_SESSION['nombre'] ?>
             </h3>
         </div>
 
