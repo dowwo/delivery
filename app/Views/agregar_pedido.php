@@ -407,7 +407,7 @@ if(isset($_SESSION['msg'])){
     let autocomplete;
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById('autocomplete'),
+            document.getElementById('InputForDireccion'),
             {
                 types: ['address'],
                 //types: ['establishment'],
@@ -421,7 +421,7 @@ if(isset($_SESSION['msg'])){
         var place = autocomplete.getPlace();
 
         if (!place.geometry) {
-            document.getElementById('autocomplete').placeholder =
+            document.getElementById('InputForDireccion').placeholder =
                 'Enter a place';
         } else {
             document.getElementById('InputForDireccion').value = place.name;
