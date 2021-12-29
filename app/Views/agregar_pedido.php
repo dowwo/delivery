@@ -91,6 +91,11 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
 
+    <!-- Maps API KEY con callback a la funcion myMap -->
+    <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap&callback=initAutocomplete" >
+    </script>
+
+
 
 
     <!-- Script con las funciones para google maps (especificamente el mapa) -->
@@ -372,13 +377,7 @@ if(isset($_SESSION['msg'])){
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 
-<!-- Maps API KEY con callback a la funcion myMap -->
-<script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap" >
-</script>
-<!--Script para la searchbox de maps-->
-<script async="async" defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=initAutocomplete" >
 
-</script>
 
 
 
