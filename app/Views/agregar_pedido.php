@@ -423,7 +423,7 @@ if(isset($_SESSION['msg'])){
             document.getElementById('autocomplete').placeholder =
                 'Enter a place';
         } else {
-            document.getElementById('details').innerHTML = place.name;
+            document.getElementById('InputForDireccion').innerHTML = place.name;
         }
     }
 
