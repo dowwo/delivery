@@ -284,9 +284,18 @@ if(isset($_SESSION['msg'])){
                         </li>
                     </ul>
                 </li>
-
                 <li>
-                    <a href="seleccionar_tienda">Agregar Pedido</a>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <!--Redireccionar al agregar_tienda-->
+                            <a href="seleccionar_tienda" class="card-link">Agregar Pedido</a>
+                        </li>
+                        <li>
+                            <!--Redireccionar al listar_tienda-->
+                            <a href="lista_pedidos" class="card-link">Ver Pedidos</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
