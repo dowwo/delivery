@@ -275,8 +275,7 @@ if(isset($_SESSION['msg'])){
                 </li>
             </ul>
         </nav>
-    </div>
-</div>
+
 
     <!-- Page Content  -->
     <div id="content">
@@ -292,7 +291,8 @@ if(isset($_SESSION['msg'])){
             </div>
         </nav>
 
-
+    </div>
+    </div>
 <br>
 <div class="container">
     <div class="row">
