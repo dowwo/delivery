@@ -364,17 +364,27 @@ if(isset($_SESSION['msg'])){
                 <p>Este es el mapa con una posicion definida en 52.07931, 4.89959</p>
                 <div id="osmap">
                     <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
-                </div>
-                <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
+                </div><p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
                 <script>
-                    var map = L.map('osmap').setView([52.07931, 4.89959], 14);
-                    L.tileLayer('https://api.maptiler.com/maps/osm-standard/style.json?key=4jbSR40BUNdSwZdvlTHY',{
+                    var source = new ol.source.TileJSON({
+                        url: 'https://api.maptiler.com/maps/osm-standard/tiles.json?key=4jbSR40BUNdSwZdvlTHY',
                         tileSize: 512,
-                        zoomOffset: -1,
-                        minZoom: 1,
-                        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-                        crossOrigin: true
-                    }).addTo(map);
+                        crossOrigin: 'anonymous'
+                    });
+
+                    var map = new ol.Map({
+                        layers: [
+                            new ol.layer.Tile({
+                                source: source
+                            })
+                        ],
+                        target: 'map',
+                        view: new ol.View({
+                            constrainResolution: true,
+                            center: ol.proj.fromLonLat([4.89959, 52.07931]),
+                            zoom: 14
+                        })
+                    });
                 </script>
                 <p>Este es el frame</p>
                 <iframe width="500" height="300" src="https://api.maptiler.com/maps/osm-standard/?key=4jbSR40BUNdSwZdvlTHY#13.8/52.07926/4.90181"></iframe>
