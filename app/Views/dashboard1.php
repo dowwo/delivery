@@ -276,7 +276,7 @@
 
             var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
                 maxDeviation: 0.3,
-                categoryField: "descripcion",
+                categoryField: "MONTHNAME(fecha_pedido)",
                 renderer: xRenderer,
                 tooltip: am5.Tooltip.new(root, {})
             }));
@@ -293,9 +293,9 @@
                 name: "Series 1",
                 xAxis: xAxis,
                 yAxis: yAxis,
-                valueYField: "valor_total",
+                valueYField: "SUM(valor_total)",
                 sequencedInterpolation: true,
-                categoryXField: "descripcion",
+                categoryXField: "MONTHNAME(fecha_pedido)",
                 tooltip: am5.Tooltip.new(root, {
                     labelText:"{valueY}"
                 })
@@ -314,7 +314,7 @@
 // Set data
             var data = [];
 
-            let url = "listaMovilPedidos";
+            let url = "chartPedidos";
             fetch(url)
                 .then(response => response.json())
                 .then( datos => mostrar(datos))
