@@ -19,6 +19,11 @@
     <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
+    <!-- Maps API KEY con callback a la funcion myMap -->
+    <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap&callback=initAutocomplete" >
+    </script>
+
     <title>Modificar Pedido</title>
 
     <style>
@@ -288,13 +293,14 @@ if(isset($_SESSION['msg'])){
                                 <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['id_pedido']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="InputForUsuario" class="form-label">ID</label>
-                                <input type="text" name="id_usuario" class="form-control" value="<?php echo $pedido_obj['usuario_id_usuario']; ?>">
+                                <!--<label for="InputForUsuario" class="form-label">ID</label>-->
+                                <input type="hidden" name="id_usuario" class="form-control" value="<?php echo $pedido_obj['usuario_id_usuario']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="InputForID" class="form-label">ID</label>
-                                <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['tienda_id_tienda']; ?>">
+                                <!--<label for="InputForID" class="form-label">ID</label>-->
+                                <input type="hidden" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['tienda_id_tienda']; ?>">
                             </div>
+                            <!--
                             <div class="mb-3">
                                 <label for="InputForProducto" class="form-label">Producto</label>
                                 <select name="producto" id="producto" class="form-select" aria-label="Default select example">
@@ -307,24 +313,24 @@ if(isset($_SESSION['msg'])){
                                     }
                                     ?>
                                 </select>
-                            </div>
+                            </div>-->
+                            <!--
                             <div class="mb-3">
                                 <label for="InputForCantidad" class="form-label">Cantidad</label>
                                 <input type="number" name="cantidad" class="form-control" id="InputForCantidad" onkeyup="calcularTotal()" value="<?php echo $pedido_obj['cantidad']; ?>" ">
-                            </div>
-                            <div class="mb-3">
-                                <label for="InputForDireccion" class="form-label">Dirección destino</label>
-                                <input type="text" name="direccion" class="form-control" id="InputForDireccion" value="<?php echo $pedido_obj['direccion_destino']; ?>">
-                            </div>
-                            <!--
-                            <div>
-                                <label for="InputForLatitud" class="form-label">Latitud</label>
-                                <input type="text" name="latitud" class="form-control" id="InputForLatitud">
-                                <label for="InputForLongitud" class="form-label">Longitud</label>
-                                <input type="text" name="longitud" class="form-control" id="InputForLongitud">
                             </div>-->
                             <div class="mb-3">
-                                <label for="InputForFecha" class="form-label" name="fecha">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
+                                <label for="InputForDireccion" class="form-label">Dirección destino</label>
+                                <input type="text" name="direccion" class="form-control" id="InputForDireccion" value="<?php echo $pedido_obj['direccion_destino']; ?>" required="required">
+                            </div>
+                            <div>
+                                <!--<label for="InputForLatitud" class="form-label">Latitud</label>-->
+                                <input type="hidden" name="latitud" class="form-control" id="InputForLatitud">
+                                <!--<label for="InputForLongitud" class="form-label">Longitud</label>-->
+                                <input type="hidden" name="longitud" class="form-control" id="InputForLongitud">
+                            </div>
+                            <div class="mb-3">
+                                <label for="InputForFecha" class="form-label" name="fecha">Fecha pedido: <?php echo $pedido_obj['fecha_pedido']; ?></label>
                                 <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
                             </div>
                             <div class="mb-3">
@@ -336,9 +342,10 @@ if(isset($_SESSION['msg'])){
                                 <input type="text" class="form-control" value="<?php echo $pedido_obj['estado_id_estado']; ?>">
                                 <label for="InputForEstado" class="form-label">Estado</label>
                                 <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
-                                    <option value="1">1 En espera</option>
-                                    <option value="2">2 En reparto</option>
-                                    <option value="3">3 Entregado</option>
+                                    <option value="1">En espera</option>
+                                    <option value="2">En reparto</option>
+                                    <option value="3">Entregado</option>
+                                    <option value="4">Cancelado</option>
                                 </select>
                             </div>
 
@@ -352,6 +359,38 @@ if(isset($_SESSION['msg'])){
         </div>
     </div>
 </div>
+<script>
+    let autocomplete;
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('InputForDireccion'),
+            {
+                types: ['address'],
+                //types: ['establishment'],
+                componentRestrictions: {'country': ['CL']},
+                fields: ['place_id', 'geometry','name']
+            });
 
-</body>
+        autocomplete.addListener('place_changed', onPlaceChanged);
+    }
+    function onPlaceChanged(){
+        var place = autocomplete.getPlace();
+
+        if (!place.geometry) {
+            document.getElementById('InputForDireccion').placeholder =
+                'Enter a place';
+        } else {
+            document.getElementById('InputForDireccion').value = place.name;
+            var location = place.geometry.location;
+            var lat = location.lat();
+            var lng = location.lng();
+            document.getElementById('InputForLatitud').value = lat;
+            document.getElementById('InputForLongitud').value = lng;
+        }
+    }
+
+
+
+
+    </body>
 </html>
