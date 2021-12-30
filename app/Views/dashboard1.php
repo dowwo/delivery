@@ -19,9 +19,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Resources para amcharts 5 -->
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/charts.js"></script>
     
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -232,108 +231,49 @@
             height: 500px;
         }
     </style>
-    <!-- Chart code -->
+
     <script>
-        am5.ready(function() {
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
 
-// Create root element
-// https://www.amcharts.com/docs/v5/getting-started/#Root_element
-            var root = am5.Root.new("chartdiv");
+        chart.data = [{
+            "country": "Lithuania",
+            "litres": 501
+        }, {
+            "country": "Czechia",
+            "litres": 301
+        }, {
+            "country": "Ireland",
+            "litres": 201
+        }, {
+            "country": "Germany",
+            "litres": 165
+        }, {
+            "country": "Australia",
+            "litres": 139
+        }, {
+            "country": "Austria",
+            "litres": 128
+        }, {
+            "country": "UK",
+            "litres": 99
+        }, {
+            "country": "Belgium",
+            "litres": 60
+        }, {
+            "country": "The Netherlands",
+            "litres": 50
+        }];
 
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "country";
+        categoryAxis.title.text = "Countries";
 
-// Set themes
-// https://www.amcharts.com/docs/v5/concepts/themes/
-            root.setThemes([
-                am5themes_Animated.new(root)
-            ]);
-
-
-// Create chart
-// https://www.amcharts.com/docs/v5/charts/xy-chart/
-            var chart = root.container.children.push(am5xy.XYChart.new(root, {
-                panX: true,
-                panY: true,
-                wheelX: "panX",
-                wheelY: "zoomX"
-            }));
-
-// Add cursor
-// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-            cursor.lineY.set("visible", false);
-
-
-// Create axes
-// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-            var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
-            xRenderer.labels.template.setAll({
-                rotation: -90,
-                centerY: am5.p50,
-                centerX: am5.p100,
-                paddingRight: 15
-            });
-
-            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-                maxDeviation: 0.3,
-                categoryField: "direccion_destino",
-                renderer: xRenderer,
-                tooltip: am5.Tooltip.new(root, {})
-            }));
-
-            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-                maxDeviation: 0.3,
-                renderer: am5xy.AxisRendererY.new(root, {})
-            }));
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.title.text = "Litres sold (M)";
 
 
-// Create series
-// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-            var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-                name: "Series 1",
-                xAxis: xAxis,
-                yAxis: yAxis,
-                valueYField: "valor_total",
-                sequencedInterpolation: true,
-                categoryXField: "direccion_destino",
-                tooltip: am5.Tooltip.new(root, {
-                    labelText:"{valueY}"
-                })
-            }));
-
-            series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5 });
-            series.columns.template.adapters.add("fill", (fill, target) => {
-                return chart.get("colors").getIndex(series.columns.indexOf(target));
-            });
-
-            series.columns.template.adapters.add("stroke", (stroke, target) => {
-                return chart.get("colors").getIndex(series.columns.indexOf(target));
-            });
-
-
-// Set data
-
-            let url = 'listaMovilPedidos';
-            fetch(url)
-                .then(response => response.json() )
-                .then( datos => mostrar(datos))
-                .catch(e => console.log(e))
-
-            const mostrar = (pedidos)=> {
-
-                chart.data = pedidos
-                console.log(chart.data)
-            }
-
-
-
-
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/
-            series.appear(1000);
-            chart.appear(1000, 100);
-
-        }); // end am5.ready()
     </script>
+
 </head>
 
 <body>
