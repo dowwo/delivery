@@ -312,7 +312,7 @@
 
 // Set data
 
-            let url = 'https:www.delivery-chile.cl/listaMovilPedidos';
+            let url = 'listaMovilPedidos';
             fetch(url)
                 .then(response => response.json() )
                 .then( datos => mostrar(datos))
