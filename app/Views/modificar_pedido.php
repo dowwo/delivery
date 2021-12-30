@@ -299,6 +299,14 @@ if(isset($_SESSION['msg'])){
                                 <!--<label for="InputForID" class="form-label">ID</label>-->
                                 <input type="hidden" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['tienda_id_tienda']; ?>">
                             </div>
+                            <div class="mb-3">
+                                <label for="InputForDescripcion" class="form-label">Descripcion</label>
+                                <input type="text" name="descripcion" class="form-control" id="InputForDescripcion" required="required" value="<?php echo $pedido_obj['descripcion']; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="InputForTelefono" class="form-label">Telefono</label>
+                                <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required" value="<?php echo $pedido_obj['telefono']; ?>">
+                            </div>
                             <!--
                             <div class="mb-3">
                                 <label for="InputForProducto" class="form-label">Producto</label>
