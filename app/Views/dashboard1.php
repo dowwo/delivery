@@ -356,6 +356,7 @@
 // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
             series0.data.setAll(data);
             series1.data.setAll(data);
+        }); // end am5.ready()
     </script>
 
 </head>
