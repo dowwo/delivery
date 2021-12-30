@@ -294,7 +294,7 @@
                 yAxis: yAxis,
                 valueYField: "valor_total",
                 sequencedInterpolation: true,
-                categoryXField: "fecha_pedido",
+                categoryXField: "direccion_destino",
                 tooltip: am5.Tooltip.new(root, {
                     labelText:"{valueY}"
                 })
@@ -322,10 +322,11 @@
 
                 chart.data = pedidos
                 console.log(chart.data)
+                xAxis.data.setAll(data);
+                series.data.setAll(data);
             }
 
-            //xAxis.data.setAll(data);
-            //series.data.setAll(data);
+
 
 
 // Make stuff animate on load
