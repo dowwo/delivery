@@ -276,7 +276,7 @@
 
             var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
                 maxDeviation: 0.3,
-                categoryField: "country",
+                categoryField: "descripcion",
                 renderer: xRenderer,
                 tooltip: am5.Tooltip.new(root, {})
             }));
@@ -293,9 +293,9 @@
                 name: "Series 1",
                 xAxis: xAxis,
                 yAxis: yAxis,
-                valueYField: "value",
+                valueYField: "valor_total",
                 sequencedInterpolation: true,
-                categoryXField: "country",
+                categoryXField: "descripcion",
                 tooltip: am5.Tooltip.new(root, {
                     labelText:"{valueY}"
                 })
