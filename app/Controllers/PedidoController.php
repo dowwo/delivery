@@ -121,6 +121,7 @@ class PedidoController extends Controller
             'estado_id_estado'  => $this->request->getVar('estado'),
             'fecha_modificacion'  => $this->request->getVar('fecha')
         ];
+
         $modeloPedido->update($id, $data);
         return $this->response->redirect(site_url('/lista_pedidos'));
     }
