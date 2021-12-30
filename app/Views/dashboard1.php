@@ -311,43 +311,20 @@
 
 
 // Set data
-            var data = [{
-                country: "USA",
-                value: 2025
-            }, {
-                country: "China",
-                value: 1882
-            }, {
-                country: "Japan",
-                value: 1809
-            }, {
-                country: "Germany",
-                value: 1322
-            }, {
-                country: "UK",
-                value: 1122
-            }, {
-                country: "France",
-                value: 1114
-            }, {
-                country: "India",
-                value: 984
-            }, {
-                country: "Spain",
-                value: 711
-            }, {
-                country: "Netherlands",
-                value: 665
-            }, {
-                country: "Russia",
-                value: 580
-            }, {
-                country: "South Korea",
-                value: 443
-            }, {
-                country: "Canada",
-                value: 441
-            }];
+
+            let url = 'https:www.delivery-chile.cl/listaMovilPedidos';
+            fetch(url)
+                .then(response => response.json() )
+                .then( datos => mostrar(datos))
+                .catch(e => console.log(e))
+
+            const mostrar = (pedidos)=> {
+                pedidos.forEach(element => {
+                    chart.data.push(element.direccion_destino)
+                });
+                chart.data = log(...data: any[]): void
+                    console.log(chart.data)
+            }
 
             xAxis.data.setAll(data);
             series.data.setAll(data);
