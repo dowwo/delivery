@@ -292,9 +292,9 @@
                 name: "Series 1",
                 xAxis: xAxis,
                 yAxis: yAxis,
-                valueYField: "value",
+                valueYField: "valor_total",
                 sequencedInterpolation: true,
-                categoryXField: "country",
+                categoryXField: "pedido",
                 tooltip: am5.Tooltip.new(root, {
                     labelText:"{valueY}"
                 })
@@ -319,13 +319,13 @@
                 .catch(e => console.log(e))
 
             const mostrar = (pedidos)=> {
-                
+
                 chart.data = pedidos
                 console.log(chart.data)
             }
 
-            //xAxis.data.setAll(data);
-            //series.data.setAll(data);
+            xAxis.data.setAll(data);
+            series.data.setAll(data);
 
 
 // Make stuff animate on load
