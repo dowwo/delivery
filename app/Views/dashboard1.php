@@ -323,10 +323,10 @@
             const mostrar = (pedidos)=> {
 
                 data = pedidos
-                xAxis.data.setAll(data);
-                series.data.setAll(data);
-            }
 
+            }
+            xAxis.data.setAll(data);
+            series.data.setAll(data);
 
 
 
