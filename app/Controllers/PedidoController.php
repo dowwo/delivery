@@ -106,12 +106,11 @@ class PedidoController extends Controller
         return view('modificar_pedido', $data);
     }
 
-    // Actualizar datos de producto
+    // Actualizar datos de pedido
     public function update(){
         $modeloPedido = new PedidoModel();
         $id = $this->request->getVar('id_pedido');
         $data = [
-            'producto_id_producto'  => $this->request->getVar('id_producto'),
             'descripcion'           => $this->request->getVar('descripcion'),
             'telefono'              => $this->request->getVar('telefono'),
             'direccion_destino'     => $this->request->getVar('direccion'),
