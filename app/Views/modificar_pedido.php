@@ -286,7 +286,6 @@ if(isset($_SESSION['msg'])){
                         <?php if(isset($validation)):?>
                             <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                         <?php endif;?>
-                        <form method="post" id="add_create" name="add_create" action="<?= site_url('/UsuarioController/update') ?>">
                         <form method="post" action="<?= site_url('/PedidoController/update') ?>">
                             <div class="form-group">
                                 <label for="InputForID" class="form-label">ID</label>

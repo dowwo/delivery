@@ -112,14 +112,14 @@ class PedidoController extends Controller
         $id = $this->request->getVar('id_pedido');
         $data = [
             'producto_id_producto'  => $this->request->getVar('id_producto'),
-            'descripcion'  => $this->request->getVar('descripcion'),
-            'telefono'  => $this->request->getVar('telefono'),
-            'direccion_destino'  => $this->request->getVar('direccion'),
-            'latitud'  => $this->request->getVar('latitud'),
-            'longitud'  => $this->request->getVar('longitud'),
-            'valor_total'  => $this->request->getVar('total'),
-            'estado_id_estado'  => $this->request->getVar('estado'),
-            'fecha_modificacion'  => $this->request->getVar('fecha')
+            'descripcion'           => $this->request->getVar('descripcion'),
+            'telefono'              => $this->request->getVar('telefono'),
+            'direccion_destino'     => $this->request->getVar('direccion'),
+            'latitud'               => $this->request->getVar('latitud'),
+            'longitud'              => $this->request->getVar('longitud'),
+            'valor_total'           => $this->request->getVar('total'),
+            'estado_id_estado'      => $this->request->getVar('estado'),
+            'fecha_modificacion'    => $this->request->getVar('fecha')
         ];
 
         $modeloPedido->update($id, $data);
