@@ -322,8 +322,8 @@
                 pedidos.forEach(element => {
                     chart.data.push(element.direccion_destino)
                 });
-                chart.data = log(...data: any[]): void
-                    console.log(chart.data)
+                chart.data = pedidos
+                console.log(chart.data)
             }
 
             xAxis.data.setAll(data);
