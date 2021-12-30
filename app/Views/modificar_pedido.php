@@ -325,9 +325,9 @@ if(isset($_SESSION['msg'])){
                             </div>
                             <div>
                                 <!--<label for="InputForLatitud" class="form-label">Latitud</label>-->
-                                <input type="hidden" name="latitud" class="form-control" id="InputForLatitud">
+                                <input type="hidden" name="latitud" class="form-control" id="InputForLatitud" value="<?php echo $pedido_obj['latitud']; ?>>
                                 <!--<label for="InputForLongitud" class="form-label">Longitud</label>-->
-                                <input type="hidden" name="longitud" class="form-control" id="InputForLongitud">
+                                <input type="hidden" name="longitud" class="form-control" id="InputForLongitud" value="<?php echo $pedido_obj['longitud']; ?>>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForFecha" class="form-label" name="fecha">Fecha pedido: <?php echo $pedido_obj['fecha_pedido']; ?></label>
