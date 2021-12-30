@@ -388,6 +388,7 @@ if(isset($_SESSION['msg'])){
             document.getElementById('InputForLongitud').value = lng;
         }
     }
+</script>
 
 
 
