@@ -326,8 +326,8 @@
                 console.log(chart.data)
             }
 
-            xAxis.data.setAll(data);
-            series.data.setAll(data);
+            //xAxis.data.setAll(data);
+            //series.data.setAll(data);
 
 
 // Make stuff animate on load
