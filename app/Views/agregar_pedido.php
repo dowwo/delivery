@@ -206,9 +206,6 @@
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap&callback=initAutocomplete" >
     </script>
 
-
-
-
     <!-- Script con las funciones para google maps (especificamente el mapa) -->
     <script>
 
