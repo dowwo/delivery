@@ -440,11 +440,11 @@ if(isset($_SESSION['msg'])){
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <!--Redireccionar al agregar_tienda-->
-                            <a href="agregar_tienda" class="card-link">Agregar tienda</a>
+                            <a href="../agregar_tienda" class="card-link">Agregar tienda</a>
                         </li>
                         <li>
                             <!--Redireccionar al listar_tienda-->
-                            <a href="lista_tienda" class="card-link">Listar Tienda</a>
+                            <a href="../lista_tienda" class="card-link">Listar Tienda</a>
                         </li>
                     </ul>
                 </li>
@@ -453,11 +453,11 @@ if(isset($_SESSION['msg'])){
                     <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
                             <!--Redireccionar al agregar_tienda-->
-                            <a href="seleccionar_tienda" class="card-link">Agregar Pedido</a>
+                            <a href="../seleccionar_tienda" class="card-link">Agregar Pedido</a>
                         </li>
                         <li>
                             <!--Redireccionar al listar_tienda-->
-                            <a href="lista_pedidos" class="card-link">Ver Pedidos</a>
+                            <a href="../lista_pedidos" class="card-link">Ver Pedidos</a>
                         </li>
                     </ul>
                 </li>
