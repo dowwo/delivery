@@ -305,12 +305,13 @@ if(isset($_SESSION['msg'])){
                                 <label for="InputForProducto" class="form-label">Producto</label>
                                 <select name="producto" id="producto" class="form-select" aria-label="Default select example">
                                     <?php
+                            /*
                                     foreach($productos as $producto)
                                     {
                                         ?>
                                         <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
                                         <?php
-                                    }
+                                    }*/
                                     ?>
                                 </select>
                             </div>-->
