@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Bootstrap CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -19,86 +20,7 @@
     -->
 
     <title>Agregar Pedido</title>
-    <!--
-    <style type="text/css">
-        body {
-            /*background-color: #AB3E5B;*/
-            background-color: white;
-        }
 
-        .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-            font-weight:bold;
-        }
-
-        .nav-item.item {
-            padding-right:2rem;
-        }
-
-        .navbar-nav:last-child .item:last-child, .navbar-nav:last-child .item:last-child a {
-            padding-right:0;
-        }
-
-        .map-example .heading .icon {
-            color:#ffb526;
-        }
-
-        .map-example {
-            margin-top:50px;
-            padding-bottom:100px;
-        }
-
-        .map-example .heading {
-            margin-bottom:20px;
-            border-bottom:1px solid #e4e4e4;
-            padding-bottom:30px;
-        }
-
-        .map-example .info {
-            margin-bottom:20px;
-            border-bottom:1px solid #e4e4e4;
-            padding-bottom:20px;
-            color:#636363;
-        }
-
-        .map-example .gallery h4 {
-            margin-bottom:30px;
-        }
-
-        .map-example .gallery .image {
-            margin-bottom:15px;
-            box-shadow:0px 2px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .map-example #map {
-            height: 300px;
-            margin-bottom: 20px;
-        }
-
-        .page-footer {
-            padding-top:32px;
-            border-top:1px solid #ddd;
-            text-align:center;
-            padding-bottom:20px;
-        }
-
-        .page-footer a {
-            margin:0px 10px;
-            display:inline-block;
-            color:#282b2d;
-            font-size:18px;
-        }
-
-        .page-footer .links {
-            display:inline-block;
-        }
-
-        @media(min-width: 992px){
-            .map-example #map{
-                height: 500px;
-            }
-        }
-    </style>
-    -->
 
     <style>
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
@@ -268,8 +190,9 @@
         }
     </style>
 
-    <script type="text/javascript"
-            src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
     <script>
         $(document).ready(function () {
