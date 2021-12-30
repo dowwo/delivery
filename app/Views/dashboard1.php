@@ -319,9 +319,7 @@
                 .catch(e => console.log(e))
 
             const mostrar = (pedidos)=> {
-                pedidos.forEach(element => {
-                    chart.data.push(element.direccion_destino)
-                });
+                
                 chart.data = pedidos
                 console.log(chart.data)
             }
