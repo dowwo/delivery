@@ -101,6 +101,9 @@
     -->
 
     <style>
+        body {
+            background-color: #AB3E5B;
+        }
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
         body {
             font-family: 'Poppins', sans-serif;
