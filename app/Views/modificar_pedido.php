@@ -287,7 +287,7 @@ if(isset($_SESSION['msg'])){
                             <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                         <?php endif;?>
 
-                        <form action="/PedidoController/guardar" method="post">
+                        <form action="/PedidoController/update" method="post">
                             <div class="form-group">
                                 <label for="InputForID" class="form-label">ID</label>
                                 <input type="text" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['id_pedido']; ?>">
@@ -349,7 +349,7 @@ if(isset($_SESSION['msg'])){
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Registrar pedido</button>
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
                         </form>
                     </div>
                 </div>
@@ -378,7 +378,7 @@ if(isset($_SESSION['msg'])){
 
         if (!place.geometry) {
             document.getElementById('InputForDireccion').placeholder =
-                'Enter a place';
+                'Ingrese una dirección';
         } else {
             document.getElementById('InputForDireccion').value = place.name;
             var location = place.geometry.location;
