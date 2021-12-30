@@ -119,7 +119,7 @@ class PedidoController extends Controller
             'longitud'              => $this->request->getVar('longitud'),
             'valor_total'           => $this->request->getVar('total'),
             'estado_id_estado'      => $this->request->getVar('estado'),
-            'fecha_modificacion'    => $this->request->getVar('fecha')
+            'fecha_modificacion'    => $this->request->getVar('fecha'),
         ];
 
         $modeloPedido->update($id, $data);
