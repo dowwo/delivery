@@ -321,11 +321,8 @@
                 .catch(e => console.log(e))
 
             const mostrar = (pedidos)=> {
-                pedidos.forEach(element => {
-                    data.push(element.descripcion)
-                    data = pedidos
-                    console.log(data)
-                });
+                
+                data = pedidos
                 xAxis.data.setAll(data);
                 series.data.setAll(data);
             }
