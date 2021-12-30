@@ -204,6 +204,7 @@
 <?php
 if(isset($_SESSION['msg'])){
     echo $_SESSION['id_usuario'];
+    echo $_SESSION['nombre'];
 }
 ?>
 <div>
