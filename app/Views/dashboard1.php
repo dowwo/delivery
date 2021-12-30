@@ -275,7 +275,7 @@
 
             var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
                 maxDeviation: 0.3,
-                categoryField: "country",
+                categoryField: "direccion_destino",
                 renderer: xRenderer,
                 tooltip: am5.Tooltip.new(root, {})
             }));
@@ -322,8 +322,6 @@
 
                 chart.data = pedidos
                 console.log(chart.data)
-                xAxis.data.setAll(data);
-                series.data.setAll(data);
             }
 
 
