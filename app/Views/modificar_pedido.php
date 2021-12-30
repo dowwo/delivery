@@ -338,8 +338,8 @@ if(isset($_SESSION['msg'])){
                                 <input type="hidden" name="longitud" class="form-control" id="InputForLongitud" value="<?php echo $pedido_obj['longitud']; ?>>
                             </div>
                             <div class="mb-3">
-                                <label for="InputForFecha" class="form-label" name="fecha">Fecha pedido: <?php echo $pedido_obj['fecha_pedido']; ?></label>
-                                <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
+                                <label for="InputForFecha" class="form-label" >Fecha pedido: <?php echo $pedido_obj['fecha_pedido']; ?></label>
+                                <input type="text" name="fecha" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
                             </div>
                             <div class="mb-3">
                                 <label for="InputForTotal" class="form-label">Valor total</label>
