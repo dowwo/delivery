@@ -294,7 +294,7 @@
                 yAxis: yAxis,
                 valueYField: "valor_total",
                 sequencedInterpolation: true,
-                categoryXField: "pedido",
+                categoryXField: "direccion_destino",
                 tooltip: am5.Tooltip.new(root, {
                     labelText:"{valueY}"
                 })
