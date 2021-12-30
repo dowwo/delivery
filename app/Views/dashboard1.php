@@ -321,7 +321,7 @@
                 .catch(e => console.log(e))
 
             const mostrar = (pedidos)=> {
-                
+
                 data = pedidos
                 xAxis.data.setAll(data);
                 series.data.setAll(data);

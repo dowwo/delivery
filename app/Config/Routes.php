@@ -112,6 +112,9 @@ $routes->post('/validar_usuario', 'loginMovilJavaController::validarUser');
 
 $routes->get('/conexion', 'loginMovilJavaConexion::conexion');
 
+// Lista pedidos para el gráfico mensual
+$routes->get('/chartPedidos','pedidosChart::index');
+
 
 // Retorna la vista en JSON para listar pedidos y tomar su id para enviar un SMS
 $routes->get('/test_sms','TestSMSController::index');
