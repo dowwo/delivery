@@ -297,7 +297,7 @@ if(isset($_SESSION['msg'])){
                             </div>
                             <div class="form-group">
                                 <!--<label for="InputForID" class="form-label">ID</label>-->
-                                <input type="hidden" name="id_pedido" class="form-control" value="<?php echo $pedido_obj['tienda_id_tienda']; ?>">
+                                <input type="hidden" name="id_tienda" class="form-control" value="<?php echo $pedido_obj['tienda_id_tienda']; ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="InputForDescripcion" class="form-label">Descripcion</label>
