@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -20,7 +19,86 @@
     -->
 
     <title>Agregar Pedido</title>
+    <!--
+    <style type="text/css">
+        body {
+            /*background-color: #AB3E5B;*/
+            background-color: white;
+        }
 
+        .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+            font-weight:bold;
+        }
+
+        .nav-item.item {
+            padding-right:2rem;
+        }
+
+        .navbar-nav:last-child .item:last-child, .navbar-nav:last-child .item:last-child a {
+            padding-right:0;
+        }
+
+        .map-example .heading .icon {
+            color:#ffb526;
+        }
+
+        .map-example {
+            margin-top:50px;
+            padding-bottom:100px;
+        }
+
+        .map-example .heading {
+            margin-bottom:20px;
+            border-bottom:1px solid #e4e4e4;
+            padding-bottom:30px;
+        }
+
+        .map-example .info {
+            margin-bottom:20px;
+            border-bottom:1px solid #e4e4e4;
+            padding-bottom:20px;
+            color:#636363;
+        }
+
+        .map-example .gallery h4 {
+            margin-bottom:30px;
+        }
+
+        .map-example .gallery .image {
+            margin-bottom:15px;
+            box-shadow:0px 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .map-example #map {
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .page-footer {
+            padding-top:32px;
+            border-top:1px solid #ddd;
+            text-align:center;
+            padding-bottom:20px;
+        }
+
+        .page-footer a {
+            margin:0px 10px;
+            display:inline-block;
+            color:#282b2d;
+            font-size:18px;
+        }
+
+        .page-footer .links {
+            display:inline-block;
+        }
+
+        @media(min-width: 992px){
+            .map-example #map{
+                height: 500px;
+            }
+        }
+    </style>
+    -->
 
     <style>
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
@@ -190,9 +268,8 @@
         }
     </style>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
     <script>
         $(document).ready(function () {
@@ -205,6 +282,9 @@
     <!-- Maps API KEY con callback a la funcion myMap -->
     <script async="async" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp3qUeUUevPEBWY1v-3dJJs8yEgtNrP7I&libraries=places&callback=myMap&callback=initAutocomplete" >
     </script>
+
+
+
 
     <!-- Script con las funciones para google maps (especificamente el mapa) -->
     <script>
@@ -331,137 +411,135 @@ if(isset($_SESSION['msg'])){
     echo $_SESSION['id_usuario'];
 }
 ?>
-<div>
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Bienvenido <?php echo $_SESSION['nombre'] ?>
-                </h3>
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Bienvenido <?php echo $_SESSION['nombre'] ?>
+            </h3>
+        </div>
+
+        <ul class="list-unstyled components">
+
+            <li>
+                <a href="/dashboard1">Inicio</a>
+            </li>
+            <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
+            <li>
+                <a href="../lista_pedidos">Ver Pedidos</a>
+            </li>
+            <li>
+                <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Menu</span>
+                </button>
+
             </div>
-
-            <ul class="list-unstyled components">
-
-                <li>
-                    <a href="/dashboard1">Inicio</a>
-                </li>
-                <!-- Esta NAVBAR será la que mueva al usuario entre opciones-->
-                <li>
-                    <a href="../lista_pedidos">Ver Pedidos</a>
-                </li>
-                <li>
-                    <a class="btn btn-outline-danger my-2 my-sm-0" href="../login/logout">Cerrar sesión</a>
-                </li>
-            </ul>
         </nav>
 
-        <!-- Page Content  -->
-        <div id="content">
+        <!-- Aquí ya puede ir el formulario para que se vea ordenado-->
+        <h1>Agregar Pedido</h1>
+        <?php if(isset($validation)):?>
+            <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+        <?php endif;?>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Menu</span>
-                    </button>
-
-                </div>
-            </nav>
-
-            <!-- Aquí ya puede ir el formulario para que se vea ordenado-->
-            <h1>Agregar Pedido</h1>
-            <?php if(isset($validation)):?>
-                <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
-            <?php endif;?>
-
-            <form action="/PedidoController/guardar" method="post">
-                <div>
-                    <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
-                    <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
-                </div>
-                <div class="mb-3">
-                    <!--<label for="InputForNombre" class="form-label">Tienda</label>-->
-                    <input type="hidden" name="id_tienda" class="form-control" id="id_tienda" value="<?php
-                    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                    echo basename($actual_link);
-                    ?>">
-                </div>
-                <!-- Este div se utilizaba para listar los productos disponibles
+        <form action="/PedidoController/guardar" method="post">
+            <div>
+                <!--<label for="InputUsuario" class="form-label">Usuario</label>-->
+                <input type="hidden" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
+            </div>
+            <div class="mb-3">
+                <!--<label for="InputForNombre" class="form-label">Tienda</label>-->
+                <input type="hidden" name="id_tienda" class="form-control" id="id_tienda" value="<?php
+                $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                echo basename($actual_link);
+                ?>">
+            </div>
+            <!-- Este div se utilizaba para listar los productos disponibles
                 <div class="mb-3">
                     <label for="InputForProducto" class="form-label">Producto</label>
                     <select name="producto" id="producto" class="form-select" aria-label="Default select example">
                         <?php
-                /*
-                        foreach($productos as $producto)
-                        {
-                            ?>
-                            <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
-                            <?php
-                        }*/
-                ?>
+            /*
+                    foreach($productos as $producto)
+                    {
+                        ?>
+                        <option value="<?=$producto['id_producto']?>"><?=$producto['nombre']?>, Valor= <?=$producto['valor']?>, Stock= <?=$producto['cantidad']?> </option>
+                        <?php
+                    }*/
+            ?>
                     </select>
                 </div>
                 -->
-                <div class="mb-3">
-                    <label for="InputForDescripcion" class="form-label">Descripcion</label>
-                    <input type="text" name="descripcion" class="form-control" id="InputForDescripcion" required="required">
-                </div>
-                <div class="mb-3">
-                    <label for="InputForTelefono" class="form-label">Telefono</label>
-                    <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
-                </div>
+            <div class="mb-3">
+                <label for="InputForDescripcion" class="form-label">Descripcion</label>
+                <input type="text" name="descripcion" class="form-control" id="InputForDescripcion" required="required">
+            </div>
+            <div class="mb-3">
+                <label for="InputForTelefono" class="form-label">Telefono</label>
+                <input type="number" name="telefono" class="form-control" id="InputForTelefono" required="required">
+            </div>
 
-                <div class="mb-3">
-                    <label for="InputForDireccion" class="form-label">Dirección destino</label>
-                    <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
-                </div>
-                <div>
-                    <!--
-                    <label for="InputForLatitud" class="form-label">Latitud</label>-->
-                    <input type="hidden" name="latitud" class="form-control" id="InputForLatitud" required="required">
-                    <!--
-                    <label for="InputForLongitud" class="form-label">Longitud</label>-->
-                    <input type="hidden" name="longitud" class="form-control" id="InputForLongitud" required="required">
-                    <!--
-                    <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>
-                    <br>-->
-                </div>
-
-
-                <!-- Aquí va el div para el mapa-->
-                <!-- Comentado hasta que encuentre como hacerlo funcionar junto a la searchbox
-                <div id="googleMap" style="width:100%;height:400px;">
-                </div>
-                -->
-
-                <div class="mb-3">
-                    <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
-                    <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
-
-                </div>
-                <div class="mb-3">
-                    <label for="InputForTotal" class="form-label">Valor total</label>
-                    <input type="number" name="total" class="form-control" id="InputForTotal" required="required">
-                </div>
-                <div class="mb-3">
-                    <label for="InputForTienda" class="form-label">Estado</label>
-                    <select name="estado" id="InputForTienda" class="form-select" aria-label="Default select example">
-                        <option value="1">En espera</option>
-                        <option value="2">En reparto</option>
-                        <option value="3">Entregado</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Registrar pedido</button>
-            </form>
+            <div class="mb-3">
+                <label for="InputForDireccion" class="form-label">Dirección destino</label>
+                <input name="direccion" class="form-control" id="InputForDireccion" placeholder="Ingrese los campos: Calle, Número, Ciudad" type="text" required="required">
+            </div>
+            <div>
+                <!--
+                <label for="InputForLatitud" class="form-label">Latitud</label>-->
+                <input type="hidden" name="latitud" class="form-control" id="InputForLatitud" required="required">
+                <!--
+                <label for="InputForLongitud" class="form-label">Longitud</label>-->
+                <input type="hidden" name="longitud" class="form-control" id="InputForLongitud" required="required">
+                <!--
+                <input id="delete-markers" type="button" value="Limpiar dirección" class="btn btn-danger"/>
+                <br>-->
+            </div>
 
 
+            <!-- Aquí va el div para el mapa-->
+            <!-- Comentado hasta que encuentre como hacerlo funcionar junto a la searchbox
+            <div id="googleMap" style="width:100%;height:400px;">
+            </div>
+            -->
 
-        </div>
+            <div class="mb-3">
+                <label type="hidden" for="InputForFecha" class="form-label" name="fecha_pedido">Fecha pedido: <?php echo @date('d-m-Y'); ?></label>
+                <input type="text" class="form-control" id="InputForFecha" value="<?php echo @date('d-m-Y'); ?>" disabled="true" >
+
+            </div>
+            <div class="mb-3">
+                <label for="InputForTotal" class="form-label">Valor total</label>
+                <input type="number" name="total" class="form-control" id="InputForTotal" required="required">
+            </div>
+            <div class="mb-3">
+                <label for="InputForTienda" class="form-label">Estado</label>
+                <select name="estado" id="InputForTienda" class="form-select" aria-label="Default select example">
+                    <option value="1">En espera</option>
+                    <option value="2">En reparto</option>
+                    <option value="3">Entregado</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar pedido</button>
+        </form>
+
+
+
     </div>
 </div>
-
 
 
 
