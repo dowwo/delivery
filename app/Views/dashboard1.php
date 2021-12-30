@@ -323,7 +323,7 @@
                 value: 441
             }];
 
-            let url 'listaMovilPedidos';
+            let url = "listaMovilPedidos";
             fetch(url)
                 .then(response => response.json())
                 .then( datos => mostrar(datos))
