@@ -375,6 +375,7 @@ if(isset($_SESSION['msg'])){
 
                 </div>
             </nav>
+            <h1>Total ganancias por mes</h1>
             <div id="chartdiv"></div>
 
         </div>
