@@ -339,9 +339,8 @@ if(isset($_SESSION['msg'])){
                                 <input type="number" name="total" class="form-control" id="InputForTotal" value="<?php echo $pedido_obj['valor_total']; ?>">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Estado pedido actual</label>
-                                <input type="text" class="form-control" value="<?php echo $pedido_obj['estado_id_estado']; ?>">
-                                <label for="InputForEstado" class="form-label">Estado</label>
+                                <label class="form-label">Estado pedido actual <?php echo $pedido_obj['estado_id_estado']; ?></label>
+                                <label for="InputForEstado" class="form-label">Nuevo Estado</label>
                                 <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
                                     <option value="1">En espera</option>
                                     <option value="2">En reparto</option>
