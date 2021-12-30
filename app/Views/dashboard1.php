@@ -312,16 +312,7 @@
 
 
 // Set data
-            var data = [{
-                country: "USA",
-                value: 2025
-            }, {
-                country: "China",
-                value: 1882
-            }, {
-                country: "Canada",
-                value: 441
-            }];
+            var data = [];
 
             let url = "listaMovilPedidos";
             fetch(url)
