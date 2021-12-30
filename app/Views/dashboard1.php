@@ -241,101 +241,121 @@
 // https://www.amcharts.com/docs/v5/getting-started/#Root_element
             var root = am5.Root.new("chartdiv");
 
-
 // Set themes
 // https://www.amcharts.com/docs/v5/concepts/themes/
             root.setThemes([
                 am5themes_Animated.new(root)
             ]);
 
-
 // Create chart
-// https://www.amcharts.com/docs/v5/charts/xy-chart/
-            var chart = root.container.children.push(am5xy.XYChart.new(root, {
-                panX: true,
-                panY: true,
-                wheelX: "panX",
-                wheelY: "zoomX"
-            }));
-
-// Add cursor
-// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-            cursor.lineY.set("visible", false);
-
-
-// Create axes
-// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-            var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
-            xRenderer.labels.template.setAll({
-                rotation: -90,
-                centerY: am5.p50,
-                centerX: am5.p100,
-                paddingRight: 15
-            });
-
-            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-                maxDeviation: 0.3,
-                categoryField: "MONTHNAME(fecha_pedido)",
-                renderer: xRenderer,
-                tooltip: am5.Tooltip.new(root, {})
-            }));
-
-            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-                maxDeviation: 0.3,
-                renderer: am5xy.AxisRendererY.new(root, {})
-            }));
-
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+            var chart = root.container.children.push(
+                am5percent.PieChart.new(root, {
+                    startAngle: 160, endAngle: 380
+                })
+            );
 
 // Create series
-// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-            var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-                name: "Series 1",
-                xAxis: xAxis,
-                yAxis: yAxis,
-                valueYField: "SUM(valor_total)",
-                sequencedInterpolation: true,
-                categoryXField: "MONTHNAME(fecha_pedido)",
-                tooltip: am5.Tooltip.new(root, {
-                    labelText:"{valueY}"
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+
+            var series0 = chart.series.push(
+                am5percent.PieSeries.new(root, {
+                    valueField: "litres",
+                    categoryField: "country",
+                    startAngle: 160,
+                    endAngle: 380,
+                    radius: am5.percent(70),
+                    innerRadius: am5.percent(65)
                 })
-            }));
+            );
 
-            series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5 });
-            series.columns.template.adapters.add("fill", (fill, target) => {
-                return chart.get("colors").getIndex(series.columns.indexOf(target));
+            var colorSet = am5.ColorSet.new(root, {
+                colors: [series0.get("colors").getIndex(0)],
+                passOptions: {
+                    lightness: -0.05,
+                    hue: 0
+                }
             });
 
-            series.columns.template.adapters.add("stroke", (stroke, target) => {
-                return chart.get("colors").getIndex(series.columns.indexOf(target));
-            });
+            series0.set("colors", colorSet);
 
+            series0.ticks.template.set("forceHidden", true);
+            series0.labels.template.set("forceHidden", true);
+
+            var series1 = chart.series.push(
+                am5percent.PieSeries.new(root, {
+                    startAngle: 160,
+                    endAngle: 380,
+                    valueField: "bottles",
+                    innerRadius: am5.percent(80),
+                    categoryField: "country"
+                })
+            );
+
+            series1.ticks.template.set("forceHidden", true);
+            series1.labels.template.set("forceHidden", true);
+
+            var label = chart.seriesContainer.children.push(
+                am5.Label.new(root, {
+                    textAlign: "center",
+                    centerY: am5.p100,
+                    centerX: am5.p50,
+                    text: "[fontSize:18px]total[/]:\n[bold fontSize:30px]1647.9[/]"
+                })
+            );
+
+            var data = [
+                {
+                    country: "Lithuania",
+                    litres: 501.9,
+                    bottles: 1500
+                },
+                {
+                    country: "Czech Republic",
+                    litres: 301.9,
+                    bottles: 990
+                },
+                {
+                    country: "Ireland",
+                    litres: 201.1,
+                    bottles: 785
+                },
+                {
+                    country: "Germany",
+                    litres: 165.8,
+                    bottles: 255
+                },
+                {
+                    country: "Australia",
+                    litres: 139.9,
+                    bottles: 452
+                },
+                {
+                    country: "Austria",
+                    litres: 128.3,
+                    bottles: 332
+                },
+                {
+                    country: "UK",
+                    litres: 99,
+                    bottles: 150
+                },
+                {
+                    country: "Belgium",
+                    litres: 60,
+                    bottles: 178
+                },
+                {
+                    country: "The Netherlands",
+                    litres: 50,
+                    bottles: 50
+                }
+            ];
 
 // Set data
-            var data = [];
-
-            let url = "chartPedidos";
-            fetch(url)
-                .then(response => response.json())
-                .then( datos => mostrar(datos))
-                .catch(e => console.log(e))
-
-            const mostrar = (pedidos)=> {
-
-                data = pedidos
-
-            }
-            xAxis.data.setAll(data);
-            series.data.setAll(data);
-
-
-
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/
-            series.appear(1000);
-            chart.appear(1000, 100);
-
-        }); // end am5.ready()
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+            series0.data.setAll(data);
+            series1.data.setAll(data);
     </script>
 
 </head>
