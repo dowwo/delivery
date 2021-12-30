@@ -312,8 +312,17 @@
 
 
 // Set data
-            var data = 'chartPedidos';
+            let url = 'chartPedidos';
+            fetch(url)
+                .then(response => response.json() )
+                .then( datos => mostrar(datos))
+                .catch( e => console.log(e))
 
+            const mostrar = (chartPedidos)=> {
+                chart.data = chartPedidos
+                console.log(chart.data)
+            }
+            
             xAxis.data.setAll(data);
             series.data.setAll(data);
 
