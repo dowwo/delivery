@@ -11,9 +11,9 @@ $sentencia=$conexion->prepare("SELECT * FROM pedido WHERE usuario_id_usuario=?")
 $sentencia->bind_param('s', $usuario_id_usuario);
 $sentencia->execute();
 
-//$resultado1 = $sentencia->get_result();
+$resultado = $sentencia->get_result();
 //if ($resultado1 = $sentencia->get_result()){
-    while ($row = $sentencia->fetch()){
+    while ($row = $resultado->fetch_assoc()){
         $e = array();
         $e['id_pedido'] = $row[0];
         $e['usuario_id_usuario'] = $row[1];
