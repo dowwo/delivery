@@ -211,7 +211,17 @@
             <ul class="list-unstyled components">
                 <li>
                     <?php if($_SESSION['rol_id_rol'] == 47174): ?>
-                        <a href="dashboard3" class="card-link">Administrador</a>
+                        <a href="#pageSubmenuAdmin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrador</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenuAdmin">
+                            <li>
+                                <!--Redireccionar al agregar_tienda-->
+                                <a href="registro" class="card-link">Agregar Usuario</a>
+                            </li>
+                            <li>
+                                <!--Redireccionar al listar_tienda-->
+                                <a href="lista_usuarios" class="card-link">Listar Usuarios</a>
+                            </li>
+                        </ul>
                     <?php else: ?>
                         <!-- Admin link goes here -->
                     <?php endif; ?>
