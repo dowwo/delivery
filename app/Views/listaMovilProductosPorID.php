@@ -12,7 +12,6 @@ $sentencia->bind_param('s', $usuario_id_usuario);
 $sentencia->execute();
 
 $resultado1 = $sentencia->get_result();
-if ($resultado1 = $sentencia->get_result()){
     while ($row = $resultado1->fetch_array(MYSQLI_NUM)){
         $e = array();
         $e['id_pedido'] = $row[0];
@@ -30,7 +29,7 @@ if ($resultado1 = $sentencia->get_result()){
         array_push($array,$e);
     }
     echo json_encode($array);
-}
+
 $sentencia->close();
 $conexion->close();
 
