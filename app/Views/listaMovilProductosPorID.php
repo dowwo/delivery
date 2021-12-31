@@ -3,7 +3,7 @@
 include 'conexion.php';
 
 $array = array();
-$usuario_id_usuario=$_GET['usuario_id_usuario'];
+$usuario_id_usuario=$_POST['usuario_id_usuario'];
 
 //$usuario_id_usuario=18;
 
