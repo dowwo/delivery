@@ -100,7 +100,12 @@ $routes->get('/delete/(:num)','CategoriaController::delete/$1'); //Eliminar cate
 // Lista pedidos para aplicacion movil
 $routes->get('/listaMovilPedidos','PedidoMovilController::index');
 
+$routes->get('/listaMovilProductosPorID','ProductosPorIDController::index');
 $routes->post('/listaMovilProductosPorID','ProductosPorIDController::index');
+
+//Update estado pedido desde la appmovil
+$routes->get('/updatePedidoMovil','updatePedidoMovilController::index');
+$routes->post('/updatePedidoMovil','updatePedidoMovilController::index');
 
 // Retorna la vista en JSON para el inicio de sesion en la aplicacion movil
 $routes->get('/loginMovil','LoginMovilController::index');
