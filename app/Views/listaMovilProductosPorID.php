@@ -7,12 +7,15 @@ $usuario_id_usuario=$_POST['usuario_id_usuario'];
 
 //$usuario_id_usuario=18;
 
-$sentencia=$conexion->prepare("SELECT * FROM pedido WHERE usuario_id_usuario=?");
-$sentencia->bind_param('s', $usuario_id_usuario);
-$sentencia->execute();
+//$sentencia=$conexion->prepare("SELECT * FROM pedido WHERE usuario_id_usuario=?");
+//$sentencia->bind_param('s', $usuario_id_usuario);
+//$sentencia->execute();
 
-$resultado1 = $sentencia->get_result();
-    while ($row = $resultado1->fetch_array(MYSQLI_NUM)){
+$sql = "SELECT * FROM pedido WHERE usuario_id_usuario=".$usuario_id_usuario."";
+$result = mysqli_query($conexion, $sql) or die("Error en seleccionar ".mysqli_error($conexion));
+
+//$resultado1 = $sentencia->get_result();
+    while ($row = mysqli_fetch_array($result)){
         $e = array();
         $e['id_pedido'] = $row[0];
         $e['usuario_id_usuario'] = $row[1];
@@ -30,8 +33,9 @@ $resultado1 = $sentencia->get_result();
     }
     echo json_encode($array);
 
-$sentencia->close();
-$conexion->close();
+    mysqli_close($conexion);
+//$sentencia->close();
+//$conexion->close();
 
 ?>
 
