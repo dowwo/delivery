@@ -8,7 +8,7 @@ $array = array();
 $usuario_id_usuario=18;
 
 $sentencia=$conexion->prepare("SELECT * FROM pedido WHERE usuario_id_usuario=?");
-$sentencia->bind_param('i', $usuario_id_usuario);
+$sentencia->bind_param('s', $usuario_id_usuario);
 $sentencia->execute();
 
 if ($resultado1 = $sentencia->get_result()){
