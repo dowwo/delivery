@@ -13,7 +13,7 @@ $sentencia->execute();
 
 $resultado = $sentencia->get_result();
 //if ($resultado1 = $sentencia->get_result()){
-    while ($row = $resultado->fetch_assoc()){
+    while ($row = $resultado->fetch_array(MYSQLI_NUM)){
         $e = array();
         $e['id_pedido'] = $row[0];
         $e['usuario_id_usuario'] = $row[1];
