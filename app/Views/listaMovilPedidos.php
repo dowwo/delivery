@@ -2,7 +2,7 @@
 include('functions.php');
 //$tipo = $_GET['txtTi'];
 $array = array();
-if($resultset=getSQLResultSet("SELECT * FROM pedido")){
+if($resultset=getSQLResultSet("SELECT * FROM pedido WHERE estado_id_estado=1")){
 
     while ($row = $resultset->fetch_array(MYSQLI_NUM)){
         $e = array();
