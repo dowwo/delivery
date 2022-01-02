@@ -384,6 +384,8 @@ if(isset($_SESSION['msg'])){
                                 <div></div>
                                 <label for="InputForEstado" class="form-label">Nuevo Estado</label>
                                 <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
+                                    <option <?php if ($est=" 1") echo 'selected'; ?> value="1"En espera</option>
+
                                     <option value="1">En espera</option>
                                     <option value="2">En reparto</option>
                                     <option value="3">Entregado</option>
