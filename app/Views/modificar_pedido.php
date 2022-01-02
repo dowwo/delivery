@@ -359,7 +359,7 @@ if(isset($_SESSION['msg'])){
                                 <label class="form-label">Estado pedido actual
                                     <?php
 
-                                    switch ($pedido['estado_id_estado']) {
+                                    switch ($pedido_obj['estado_id_estado']) {
                                         case 1:
                                             echo "En espera";
                                             break;
