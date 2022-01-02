@@ -356,7 +356,25 @@ if(isset($_SESSION['msg'])){
                                 <input type="number" name="total" class="form-control" id="InputForTotal" value="<?php echo $pedido_obj['valor_total']; ?>">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Estado pedido actual <?php echo $pedido_obj['estado_id_estado']; ?></label>
+                                <label class="form-label">Estado pedido actual
+                                    <?php
+
+                                    switch ($pedido['estado_id_estado']) {
+                                        case 1:
+                                            echo "En espera";
+                                            break;
+                                        case 2:
+                                            echo "En reparto";
+                                            break;
+                                        case 3:
+                                            echo "Entregado";
+                                            break;
+                                        case 4:
+                                            echo "Cancelado";
+                                            break;
+                                    }
+                                    ?>
+                                </label>
                                 <label for="InputForEstado" class="form-label">Nuevo Estado</label>
                                 <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
                                     <option value="1">En espera</option>
