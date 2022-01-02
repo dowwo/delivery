@@ -354,7 +354,7 @@
                             <th>Fecha</th>
                             <th>Total</th>
                             <th>Estado</th>
-                            <th>Modificaco el</th>
+                            <th>F. Modif.</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
