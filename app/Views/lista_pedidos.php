@@ -345,7 +345,6 @@
                         <tr>
                             <th>ID</th>
                             <th>Usuario</th>
-                            <th>Tienda</th>
                             <th>Descripción</th>
                             <th>Teléfono</th>
                             <th>Destino</th><!--
@@ -364,7 +363,6 @@
                                 <tr>
                                     <td><?php echo $pedido['id_pedido']; ?></td>
                                     <td><?php echo $pedido['usuario_id_usuario']; ?></td>
-                                    <td><?php echo $pedido['tienda_id_tienda']; ?></td>
                                     <td><?php echo $pedido['descripcion']; ?></td>
                                     <td><?php echo $pedido['telefono']; ?></td>
                                     <td><?php echo $pedido['direccion_destino']; ?></td><!--
