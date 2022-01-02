@@ -386,11 +386,11 @@ if(isset($_SESSION['msg'])){
                                 <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
                                     <option
                                         <?php if ($pedido_obj['estado_id_estado']=="1")
-                                            echo 'selected'; ?>
+                                            echo ' selected'; ?>
                                             value="1"En Espera</option>
-                                    <option <?php if ($pedido_obj['estado_id_estado']=="2") echo 'selected'; ?> value="2"En Reparto</option>
-                                    <option <?php if ($pedido_obj['estado_id_estado']=="3") echo 'selected'; ?> value="3"Entregado</option>
-                                    <option <?php if ($pedido_obj['estado_id_estado']=="4") echo 'selected'; ?> value="4"Cancelado</option>
+                                    <option <?php if ($pedido_obj['estado_id_estado']=="2") echo ' selected'; ?> value="2"En Reparto</option>
+                                    <option <?php if ($pedido_obj['estado_id_estado']=="3") echo ' selected'; ?> value="3"Entregado</option>
+                                    <option <?php if ($pedido_obj['estado_id_estado']=="4") echo ' selected'; ?> value="4"Cancelado</option>
 
                                 </select>
                             </div>
