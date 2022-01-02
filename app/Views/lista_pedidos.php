@@ -354,6 +354,7 @@
                             <th>Fecha</th>
                             <th>Total</th>
                             <th>Estado</th>
+                            <th>Modificaco el</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
@@ -372,6 +373,7 @@
                                     <td><?php echo $pedido['fecha_pedido']; ?></td>
                                     <td><?php echo $pedido['valor_total']; ?></td>
                                     <td><?php echo $pedido['estado_id_estado']; ?></td>
+                                    <td><?php echo $pedido['fecha_modificacion']; ?></td>
                                     <td>
                                         <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
                                         <a href="<?php echo base_url('eliminar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
