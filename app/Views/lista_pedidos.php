@@ -386,9 +386,8 @@
                                                 echo "Cancelado";
                                                 break;
                                         }
-
-
-                                        echo $pedido['estado_id_estado']; ?></td>
+                                        ?>
+                                    </td>
                                     <td><?php echo $pedido['fecha_modificacion']; ?></td>
                                     <td>
                                         <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
