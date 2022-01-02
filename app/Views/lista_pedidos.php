@@ -370,7 +370,25 @@
                                     <td><?php echo $pedido['longitud']; ?></td>-->
                                     <td><?php echo $pedido['fecha_pedido']; ?></td>
                                     <td><?php echo $pedido['valor_total']; ?></td>
-                                    <td><?php echo $pedido['estado_id_estado']; ?></td>
+                                    <td><?php
+
+                                        switch ($pedido['estado_id_estado']) {
+                                            case 1:
+                                                echo "En espera";
+                                                break;
+                                            case 2:
+                                                echo "En reparto";
+                                                break;
+                                            case 3:
+                                                echo "Entregado";
+                                                break;
+                                            case 4:
+                                                echo "Cancelado";
+                                                break;
+                                        }
+
+
+                                        echo $pedido['estado_id_estado']; ?></td>
                                     <td><?php echo $pedido['fecha_modificacion']; ?></td>
                                     <td>
                                         <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
