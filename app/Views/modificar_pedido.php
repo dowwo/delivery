@@ -384,10 +384,10 @@ if(isset($_SESSION['msg'])){
                                 <div></div>
                                 <label for="InputForEstado" class="form-label">Nuevo Estado</label>
                                 <select name="estado" id="InputForEstado" class="form-select" aria-label="Default select example">
-                                    <option <?php if ($est="1") echo 'selected'; ?> value="1"En Espera</option>
-                                    <option <?php if ($est="2") echo 'selected'; ?> value="2"En Reparto</option>
-                                    <option <?php if ($est="3") echo 'selected'; ?> value="3"Entregado</option>
-                                    <option <?php if ($est="4") echo 'selected'; ?> value="4"Cancelado</option>
+                                    <option <?php if ($pedido_obj="estado_id_estado"=="1") echo 'selected'; ?> value="1"En Espera</option>
+                                    <option <?php if ($pedido_obj="estado_id_estado"=="2") echo 'selected'; ?> value="2"En Reparto</option>
+                                    <option <?php if ($pedido_obj="estado_id_estado"=="3") echo 'selected'; ?> value="3"Entregado</option>
+                                    <option <?php if ($pedido_obj="estado_id_estado"=="4") echo 'selected'; ?> value="4"Cancelado</option>
 
                                 </select>
                             </div>
