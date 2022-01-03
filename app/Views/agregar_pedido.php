@@ -625,7 +625,9 @@ if(isset($_SESSION['msg'])){
 </script>
 <!--Este script es para utilizar el autocompletado y validacion de direcciones de google maps-->
 
-
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25266980.js"></script>
+<!-- End of HubSpot Embed Code -->
 
 
 
