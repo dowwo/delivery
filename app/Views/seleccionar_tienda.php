@@ -310,6 +310,7 @@
                                         console.log(selectedValue);
                                         document.getElementById("tienda").value = selectedValue;
                                     }else{
+                                        alert("Debe agregar una tienda antes de agregar pedidos");
                                         window.location.href = "../dashboard1";
                                     }
 
