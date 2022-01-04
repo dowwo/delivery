@@ -196,6 +196,17 @@
             });
         });
     </script>
+    <script>
+        if (document.getElementById("list").value!=="") {
+
+            document.getElementById("btnEnviar").disabled=false;
+
+        }
+        else{
+            document.getElementById("list").disabled=true;
+
+        }
+    </script>
 
 </head>
 <body>
@@ -297,17 +308,7 @@
 
                             </select>
                             <!--<input name="id_tienda" id="id_tienda" type="text" value="">-->
-                            <script>
-                                if (document.getElementById("list").value!=="") {
 
-                                    document.getElementById("btnEnviar").disabled=false;
-
-                                }
-                                else{
-                                    document.getElementById("list").disabled=true;
-
-                                }
-                            </script>
 
                             <a id="btnEnviar" href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
