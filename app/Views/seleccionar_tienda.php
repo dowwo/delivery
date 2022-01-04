@@ -199,11 +199,11 @@
     <script>
         if (document.getElementById("list").value!=="") {
 
-            document.getElementById("btnEnviar").disabled=false;
 
         }
         else{
             document.getElementById("list").disabled=true;
+            window.location.href = "../";
 
         }
     </script>
