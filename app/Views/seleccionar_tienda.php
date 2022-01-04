@@ -202,7 +202,7 @@
 
         }
         else{
-            document.getElementById("list").disabled=true;
+            
             window.location.href = "../";
 
         }
