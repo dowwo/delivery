@@ -44,6 +44,7 @@
             color: #fff !important;
         }
     </style>
+    
     <title>Iniciar sesión</title>
 </head>
 <body>
@@ -96,8 +97,6 @@
         </div>
     </div>
 <!-- Popper.js first, then Bootstrap JS -->
-
-
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25266980.js"></script>
     <!-- End of HubSpot Embed Code -->
