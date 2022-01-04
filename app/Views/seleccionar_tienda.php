@@ -190,21 +190,6 @@
         }
     </style>
     <script>
-        function getSelectValue()
-        {
-            if (document.getElementById("list").value!==""){
-                var selectedValue = document.getElementById("list").value;
-                console.log(selectedValue);
-                document.getElementById("tienda").value = selectedValue;
-            }else{
-                window.location.href = "../dashboard1";
-            }
-
-
-        }
-        getSelectValue();
-    </script>
-    <script>
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
@@ -317,7 +302,21 @@
 
                             <a id="btnEnviar" href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
+                            <script>
+                                function getSelectValue()
+                                {
+                                    if (document.getElementById("list").value!==""){
+                                        var selectedValue = document.getElementById("list").value;
+                                        console.log(selectedValue);
+                                        document.getElementById("tienda").value = selectedValue;
+                                    }else{
+                                        window.location.href = "../dashboard1";
+                                    }
 
+
+                                }
+                                getSelectValue();
+                            </script>
 
                         </form>
                     </div>
