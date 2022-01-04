@@ -310,14 +310,14 @@
                                         console.log(selectedValue);
                                         document.getElementById("tienda").value = selectedValue;
                                     }else{
-                                        window.location.href = "../";
+                                        window.location.href = "../dashboard1";
                                     }
 
 
                                 }
                                 getSelectValue();
                             </script>
-                            
+
                         </form>
                     </div>
                 </div>
