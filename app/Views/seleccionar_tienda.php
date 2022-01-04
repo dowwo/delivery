@@ -196,17 +196,7 @@
             });
         });
     </script>
-    <script>
-        if (document.getElementById("list").value!=="") {
 
-
-        }
-        else{
-            
-            window.location.href = "../";
-
-        }
-    </script>
 
 </head>
 <body>
@@ -315,13 +305,19 @@
                             <script>
                                 function getSelectValue()
                                 {
-                                    var selectedValue = document.getElementById("list").value;
-                                    console.log(selectedValue);
-                                    document.getElementById("tienda").value = selectedValue;
+                                    if (document.getElementById("list").value!==""){
+                                        var selectedValue = document.getElementById("list").value;
+                                        console.log(selectedValue);
+                                        document.getElementById("tienda").value = selectedValue;
+                                    }else{
+                                        window.location.href = "../";
+                                    }
+
 
                                 }
                                 getSelectValue();
                             </script>
+                            
                         </form>
                     </div>
                 </div>
