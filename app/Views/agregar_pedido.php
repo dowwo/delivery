@@ -431,11 +431,11 @@ if(isset($_SESSION['msg'])){
                         <ul class="collapse list-unstyled" id="pageSubmenuAdmin">
                             <li>
                                 <!--Redireccionar al agregar_tienda-->
-                                <a href="registro" class="card-link">Agregar Usuario</a>
+                                <a href="../registro" class="card-link">Agregar Usuario</a>
                             </li>
                             <li>
                                 <!--Redireccionar al listar_tienda-->
-                                <a href="lista_usuarios" class="card-link">Listar Usuarios</a>
+                                <a href="../lista_usuarios" class="card-link">Listar Usuarios</a>
                             </li>
                         </ul>
                     <?php else: ?>
