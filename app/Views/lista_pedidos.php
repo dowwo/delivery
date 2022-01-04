@@ -392,6 +392,7 @@
                                     <td>
                                         <a href="<?php echo base_url('modificar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-primary btn-sm">Editar</a>
                                         <a href="<?php echo base_url('eliminar_pedido/'.$pedido['id_pedido']);?>" class="btn btn-danger btn-sm">Eliminar</a>
+                                        <a></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
