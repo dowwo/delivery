@@ -289,14 +289,14 @@ if(isset($_SESSION['msg'])){
                         <form action="/TiendaController/guardar" method="post">
                             <div class="mb-3">
                                 <label for="InputForName" class="form-label">Nombre</label>
-                                <input type="text" name="nombre" class="form-control" id="InputForNombre">
+                                <input type="text" name="nombre" class="form-control" id="InputForNombre" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha registro: <?php echo @date('d-m-Y'); ?></label>
                             </div>
                             <div>
                                 <label for="InputUsuario" class="form-label">Usuario</label>
-                                <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>">
+                                <input type="text" name="usuario" class="form-control" id="InputUsuario" value="<?php echo $_SESSION['id_usuario'] ?>" hidden>
                             </div>
                             <!--
                             <div class="mb-3">

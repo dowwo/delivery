@@ -283,7 +283,7 @@
                             <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                         <?php endif;?>
                         <form method="get">
-                            <select id="list" onchange="getSelectValue();">
+                            <select name="list" id="list" onchange="getSelectValue();" required>
                                 <?php echo $_SESSION == 'id_tienda' ? 'selected' : '' ?>
 
                                 <?php
@@ -297,8 +297,19 @@
 
                             </select>
                             <!--<input name="id_tienda" id="id_tienda" type="text" value="">-->
+                            <script>
+                                if (document.getElementById("list").value!=="") {
 
-                            <a href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
+                                    document.getElementById("btnEnviar").disabled=false;
+
+                                }
+                                else{
+                                    document.getElementById("list").disabled=true;
+
+                                }
+                            </script>
+
+                            <a id="btnEnviar" href="<?php echo base_url('agregar_pedido/'.$tienda['id_tienda']);?>" class="btn btn-primary btn-sm">Continuar</a>
 
                             <script>
                                 function getSelectValue()
