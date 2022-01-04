@@ -288,30 +288,30 @@
 
                             <div class="mb-3">
                                 <label for="InputForName" class="form-label">Nombre</label>
-                                <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>">
+                                <input type="text" name="nombre" class="form-control" id="InputForNombre" value="<?= set_value('nombre') ?>" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForName" class="form-label">Apellido Paterno</label>
-                                <input type="text" name="apellido_p" class="form-control" id="InputForApellidoPaterno" value="<?= set_value('apellido_p') ?>">
+                                <input type="text" name="apellido_p" class="form-control" id="InputForApellidoPaterno" value="<?= set_value('apellido_p') ?>" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForName" class="form-label">Apellido Materno</label>
-                                <input type="text" name="apellido_m" class="form-control" id="InputForApellidoMaterno" value="<?= set_value('apellido_m') ?>">
+                                <input type="text" name="apellido_m" class="form-control" id="InputForApellidoMaterno" value="<?= set_value('apellido_m') ?>" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputFechaRegistro" class="form-label" name="fecha_registro">Fecha de registro: <?php echo @date('d-m-Y'); ?></label>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForEmail" class="form-label">Correo electrónico</label>
-                                <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
+                                <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForPassword" class="form-label">Contraseña</label>
-                                <input type="password" name="password" class="form-control" id="InputForPassword">
+                                <input type="password" name="password" class="form-control" id="InputForPassword" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForConfPassword" class="form-label">Confirmar Contraseña</label>
-                                <input type="password" name="confpassword" class="form-control" id="InputForConfPassword">
+                                <input type="password" name="confpassword" class="form-control" id="InputForConfPassword" required>
                             </div>
                             <div class="mb-3">
                                 <label for="InputForComuna" class="form-label">Tipo usuario</label>
